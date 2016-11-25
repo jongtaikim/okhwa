@@ -71,15 +71,26 @@ function hy_add() {
 		return;
 	}
 
-    if( !f.celphone.value ) {
+    if( !f.celphone1.value ) {
         alert("연락처를 입력하여 주시기 바랍니다.");
-        f.celphone.focus();
+        f.celphone1.focus();
+        return;
+    }
+ 
+    if( !f.celphone2.value ) {
+        alert("연락처를 입력하여 주시기 바랍니다.");
+        f.celphone2.focus();
+        return;
+    }
+    if( !f.celphone3.value ) {
+        alert("연락처를 입력하여 주시기 바랍니다.");
+        f.celphone3.focus();
         return;
     }
 
-    if( !f.email.value ) {
+    if( !f.email_full.value ) {
         alert("이메일을 입력하여 주시기 바랍니다.");
-        f.email.focus();
+        f.email_full.focus();
         return;
     }
 

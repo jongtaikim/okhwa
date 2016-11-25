@@ -50,14 +50,14 @@ $active_record = TRUE;
 
 if (strpos(strtolower(getenv('OS')),"window") !== FALSE) {
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'hospi';
+$db['default']['username'] = 'okhwa';
 $db['default']['password'] = '1q2w3e';
-$db['default']['database'] = 'hospi';
+$db['default']['database'] = 'okhwa';
 }else{
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'hospi';
+$db['default']['username'] = 'okhwa';
 $db['default']['password'] = '1q2w3e';
-$db['default']['database'] = 'hospi';
+$db['default']['database'] = 'okhwa';
 }
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';

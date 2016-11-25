@@ -1,7 +1,7 @@
 ;<?php die(')'); /* WebApp Configuration File : DO NOT EDIT MANUALY */?>
-oname = "하스피"
-ophone = "02-441-7712"
-title = "하스피::의료기기 전문기업"
+oname = "옥화용소절경펜션"
+ophone = "043-225-8811"
+title = "옥화용소절경펜션"
 email = ""
 admin_id = "admin"
 admin_pw = "e10adc3949ba59abbe56e057f20f883e"

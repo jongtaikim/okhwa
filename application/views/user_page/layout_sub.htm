@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8" />
  
-  <meta name="description" content="" />
+  <meta name="description" content="대표제품 MOTOmed, InMotion, Galileo, Qualisys, Optogait, IM(Interactive Metronome), TLP(The Listening Program)">
+  <meta name="naver-site-verification" content="bb6dc04d0368b1d5b712607a50ce4a1ebc3741e0"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
   <link rel="stylesheet" href="/uiset/assets/animate.css/animate.css" type="text/css" />
   <link rel="stylesheet" href="/uiset/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
   <link rel="stylesheet" href="/uiset/assets/material-design-icons/material-design-icons.css" type="text/css" />
@@ -60,10 +62,35 @@
 
 
             <? if($s_view == 'user/product'){ ?>
-				<!--LEFT-->
+
+                <!--LEFT-->
 				<div class="col-sm-12  col-md-3 col-lg-2  hidden-sm opa00" id="user_box" style="margin-top:0px;width:30%" ani_s="fadeInLeft" delay="300" >
-					{#LNB}
+					<div class="" id="user_box2">
+                        {#LNB}
+                    </div>
 				</div>
+
+            <script type="text/javascript">
+               /* var sts='';
+                $(window).scroll(function(){
+                    if($(this).scrollTop() >500){
+                        $('#user_box2').addClass('pos_f');
+                    }else{
+                        $('#user_box2').removeClass('pos_f');
+                    }
+
+                    if(!sts) {
+                        sts='y';
+
+                        setTimeout(function(){
+                            sts='';
+                            $('#user_box2').animate({"top": ($(this).scrollTop() - 480)+"px"}, 100);
+                        },200);
+                    }else{
+
+                    }
+                })*/
+            </script>
 				<!--LEFT-->
 				<div class="col-sm-12  col-md-9 col-lg-10 opa00 " style="width:70%" ani_s="fadeInUp" delay="700" >
 
@@ -92,7 +119,7 @@
 					
 					
 					
-					<div  class="col-md-12 "  id="" style="margin-bottom:30px;min-height:500px">
+					<div  class="col-md-12 "  id="" style="margin-bottom:30px;min-height:500px;padding-bottom: 60px">
 					    {str_menu_top}
 					    {doc_text}
 					    {#CONTENT}

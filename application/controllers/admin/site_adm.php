@@ -113,17 +113,69 @@ class Site_adm extends CI_Controller {
 		$this->load->model('admin/member');
 		$this->load->model('user/mdl_bf');
 		$this->load->model('user/mdl_online');
-		$online_cu = $this->mdl_online->load_total();
 
-		$tpl->assign($online_cu);
-		
-		
-		//전체 회원수
+
+
+        $main_menu = array(
+            array(
+                'col'=>'col-sm-4',
+                'title'=>'홈페이지관리',
+                'title_color'=>'',
+                'img'=>'/application/views/admin/images/adm_menu1.jpg',
+                'icon'=>'<i class="fa fa-cogs"></i>',
+                'text'=>'사이트에 각종 약관 및 관리자 정보, 상단 타이틀, 팝업등 홈페이지를 관리하기 위한 기능입니다.',
+                'link'=>'/admin/site_adm/common/?PageNum=010101',
+                'btn_color'=>'brown',
+            ),
+            array(
+                'col'=>'col-sm-4',
+                'title'=>'가격정책설정',
+                'title_color'=>'#fff',
+                'img'=>'/application/views/admin/images/adm_menu2.jpg',
+                'icon'=>'<i class="fa fa-credit-card" aria-hidden="true"></i>',
+                'text'=>'펜션 신청을 받기위한  월별, 일별 가격정책을 설정,관리합니다.',
+                'link'=>'/admin/month_price/index/?PageNum=030101',
+                'btn_color'=>'bg-white',
+                'btn_text_color'=>'#000',
+            ),
+
+            array(
+                'col'=>'col-sm-4',
+                'title'=>'부대시설관리',
+                'title_color'=>'#fff',
+                'img'=>'/application/views/admin/images/adm_menu3.jpg',
+                'icon'=>'<i class="fa fa-shopping-basket" aria-hidden="true"></i>',
+                'text'=>'펜션 부대시설 정보를 등록/관리합니다.',
+                'link'=>'/admin/room_option/index/?PageNum=030301',
+                'btn_color'=>'indigo',
+                'btn_text_color'=>'',
+            ),
+
+            array(
+                'col'=>'col-sm-4',
+                'title'=>'예약관리',
+                'title_color'=>'#fff',
+                'img'=>'/application/views/admin/images/adm_menu6.jpg',
+                'icon'=>'<i class="fa fa-shopping-basket" aria-hidden="true"></i>',
+                'text'=>'예약현황을 확인하거나 입금확인 처리를 관리합니다.',
+                'link'=>'/admin/reserve/index/?PageNum=040101',
+                'btn_color'=>'pink',
+                'btn_text_color'=>'',
+            ),
+        );
+
+
+/*		//전체 회원수
 		$tpl->assign(array(
 				'member_count'=>$this->member->total_member(),
 				'bf_count'=>$this->mdl_bf->load_total(),
 			));
-		
+
+        $online_cu = $this->mdl_online->load_total();
+        $tpl->assign($online_cu);
+        */
+
+        $this->display->assign('LIST',$main_menu);
 		
 		$tpl->define("CONTENT", $this->display->getTemplate("admin/main.htm"));
 		

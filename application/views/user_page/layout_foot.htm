@@ -8,12 +8,21 @@
 		</div>
         <div class="col-md-2 text-right" id="" style="padding:5px">
             <div class="btn-group dropdown dropup" style="margin-top:8px;width:100%;margin-right:-40px">
-                <button class="btn white">Family Site</button>
-                <button class="btn white dropdown-toggle" data-toggle="dropdown" aria-expanded="false"></button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="http://www.hospicare.co.kr/" target="_blank">하스피케어</a>
-                    <a class="dropdown-item" href="http://linexmall.com/shop/main/index.php" target="_blank">라이넥스</a>
+                <button class="btn white" onclick="bie();">Family Site</button>
+                <button class="btn white dropdown-toggle" data-toggle="dropdown" onclick="bie();"></button>
+                <div class="dropdown-menu" style="z-index:999" id="fsixe">
+
+                    <a class="dropdown-item " ><strong>계열사 홈페이지</strong></a>
+                    <a class="dropdown-item" href="http://www.hospicare.co.kr/" target="_blank">(주)하스피케어</a>
+                    <a class="dropdown-item" href="http://www.emmi-dent.co.kr/shop/main/index.php" target="_blank">(주)라이넥스</a>
                     <div class="dropdown-divider"></div>
+                    <a class="dropdown-item " ><strong>제품 홈페이지</strong></a>
+                    <a class="dropdown-item" href="http://im-korea.kr/" target="_blank">Interactive Metronome
+                    </a>
+                    <a class="dropdown-item" href="http://tlpkorea.co.kr" target="_blank">The Listening Program
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item " ><strong>제품 블로그</strong></a>
                     <a class="dropdown-item" href="http://blog.naver.com/hospicare83" target="_blank">IM/TLP/Rehacom</a>
                     <a class="dropdown-item" href="http://blog.naver.com/galileotraining" target="_blank">Galileo</a>
                     <a class="dropdown-item" href="http://blog.naver.com/gaitanalysis" target="_blank">Qualisys/Optogait</a>
@@ -21,8 +30,22 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-1" id="" style="padding:10px">
+        <div class="col-md-1 hide" id="" style="padding:10px">
             <img src="/images/logo_3.png" alt="" style="width:40px"/>
         </div>
 	</div>
 </div>
+<script type="text/javascript">
+// <![CDATA[
+var fsix = '';
+function bie(){
+	if(!fsix){
+		fsix='y';
+		$('#fsixe').show();
+	}else{
+		fsix='';
+		$('#fsixe').hide();
+	}
+}
+// ]]>
+</script>

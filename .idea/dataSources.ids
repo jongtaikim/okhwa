@@ -1,0 +1,1279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - okhwa@localhost" uuid="46bb81d3-5f95-42e7-a02e-87eceacd0eca">
+    <database-info product="MySQL" version="5.5.46" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="okhwa"/>
+      <table id="2" parent="1" name="ci_sessions"/>
+      <table id="3" parent="1" name="t_consultation"/>
+      <table id="4" parent="1" name="t_consultation_reply"/>
+      <table id="5" parent="1" name="tab_board"/>
+      <table id="6" parent="1" name="tab_board_category"/>
+      <table id="7" parent="1" name="tab_board_category2"/>
+      <table id="8" parent="1" name="tab_board_config"/>
+      <table id="9" parent="1" name="tab_comment"/>
+      <table id="10" parent="1" name="tab_content_url"/>
+      <table id="11" parent="1" name="tab_doc_html"/>
+      <table id="12" parent="1" name="tab_files"/>
+      <table id="13" parent="1" name="tab_group"/>
+      <table id="14" parent="1" name="tab_menu"/>
+      <table id="15" parent="1" name="tab_menu_right"/>
+      <table id="16" parent="1" name="tab_organ"/>
+      <table id="17" parent="1" name="tababoard"/>
+      <table id="18" parent="1" name="tamember"/>
+      <table id="19" parent="1" name="rooms"/>
+      <column id="20" parent="2" name="session_id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="21" parent="2" name="ip_address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(16)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="22" parent="2" name="user_agent">
+        <mandatory>1</mandatory>
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="23" parent="2" name="last_activity">
+        <mandatory>1</mandatory>
+        <data-type>int(10) unsigned</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="24" parent="2" name="user_data">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <index id="25" parent="2" name="last_activity_idx">
+        <columns>last_activity</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="26" parent="2" name="PRIMARY">
+        <columns>session_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="27" parent="3" name="ind">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="28" parent="3" name="mode">
+        <comment>0온라인,1qna,2비공개</comment>
+        <mandatory>1</mandatory>
+        <data-type>smallint(6)</data-type>
+      </column>
+      <column id="29" parent="3" name="subject">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="30" parent="3" name="subjectext">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="31" parent="3" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="32" parent="3" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="33" parent="3" name="ip">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="34" parent="3" name="date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <column id="35" parent="3" name="ref">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="36" parent="3" name="isret">
+        <mandatory>1</mandatory>
+        <data-type>tinyint(4)</data-type>
+      </column>
+      <column id="37" parent="3" name="title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="38" parent="3" name="comment">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="39" parent="3" name="recomment">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="40" parent="3" name="delete">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="41" parent="3" name="file1">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="42" parent="3" name="file2">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="43" parent="3" name="pw">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="44" parent="3" name="phone">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="45" parent="3" name="email">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="46" parent="3" name="view">
+        <mandatory>1</mandatory>
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <key id="47" parent="3" name="PRIMARY">
+        <columns>ind</columns>
+        <primary>1</primary>
+      </key>
+      <column id="48" parent="4" name="ind">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="49" parent="4" name="lind">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="50" parent="4" name="id">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="51" parent="4" name="name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="52" parent="4" name="text">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="53" parent="4" name="ip">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="54" parent="4" name="date">
+        <mandatory>1</mandatory>
+        <data-type>datetime</data-type>
+      </column>
+      <key id="55" parent="4" name="PRIMARY">
+        <columns>ind</columns>
+        <primary>1</primary>
+      </key>
+      <column id="56" parent="5" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="57" parent="5" name="NUM_MCODE">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="58" parent="5" name="NUM_SERIAL">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="59" parent="5" name="NUM_NOTICE">
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="60" parent="5" name="NUM_GROUP">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="61" parent="5" name="NUM_STEP">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="62" parent="5" name="NUM_DEPTH">
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="63" parent="5" name="STR_USER">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="64" parent="5" name="STR_NAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="65" parent="5" name="STR_PASS">
+        <mandatory>1</mandatory>
+        <data-type>varchar(70)</data-type>
+      </column>
+      <column id="66" parent="5" name="STR_EMAIL">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="67" parent="5" name="STR_RE_USER">
+        <data-type>varchar(25)</data-type>
+      </column>
+      <column id="68" parent="5" name="STR_TITLE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="69" parent="5" name="STR_TEXT">
+        <data-type>text</data-type>
+      </column>
+      <column id="70" parent="5" name="STR_RE_TEXT">
+        <data-type>text</data-type>
+      </column>
+      <column id="71" parent="5" name="CHR_HTML">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="72" parent="5" name="DT_DATE">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="73" parent="5" name="NUM_HIT">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="74" parent="5" name="NUM_COMMENT">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="75" parent="5" name="NUM_FILE">
+        <mandatory>1</mandatory>
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="76" parent="5" name="NUM_IMAGE">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="77" parent="5" name="STR_IP">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="78" parent="5" name="STR_THUMB">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="79" parent="5" name="STR_HAK">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="80" parent="5" name="NUM_INPUT_PASS">
+        <mandatory>1</mandatory>
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="81" parent="5" name="STR_ICON">
+        <data-type>int(2)</data-type>
+      </column>
+      <column id="82" parent="5" name="STR_MAIN">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="83" parent="5" name="STR_CATEGORY">
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;일반&apos;</default-expression>
+      </column>
+      <column id="84" parent="5" name="STR_CATEGORY2">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="85" parent="5" name="NUM_RANK">
+        <data-type>int(6)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="86" parent="5" name="STR_TMP1">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="87" parent="5" name="STR_TMP2">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="88" parent="5" name="STR_TMP3">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="89" parent="5" name="STR_TMP4">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="90" parent="5" name="STR_TMP5">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="91" parent="5" name="STR_TMP6">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="92" parent="5" name="STR_TMP7">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="93" parent="5" name="STR_TMP8">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="94" parent="5" name="STR_TMP9">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="95" parent="5" name="STR_TMP10">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="96" parent="5" name="STR_TAG">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="97" parent="5" name="STR_COMENT">
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="98" parent="5" name="STR_SCRAB">
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="99" parent="5" name="STR_RSS">
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="100" parent="5" name="STR_NICK">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="101" parent="5" name="STR_MOV">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="102" parent="5" name="NUM_UNIX_TIME">
+        <data-type>int(12)</data-type>
+      </column>
+      <column id="103" parent="5" name="STR_VIEW">
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="104" parent="5" name="STR_FILE_URL1">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="105" parent="5" name="STR_FILE_URL2">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="106" parent="5" name="STR_VR_NO">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <key id="107" parent="5" name="PRIMARY">
+        <columns>NUM_OID
+NUM_MCODE
+NUM_SERIAL</columns>
+        <primary>1</primary>
+      </key>
+      <column id="108" parent="6" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="109" parent="6" name="NUM_MCODE">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="110" parent="6" name="NUM_SERIAL">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="111" parent="6" name="STR_CATEGORY">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="112" parent="6" name="PRIMARY">
+        <columns>NUM_OID
+NUM_MCODE
+NUM_SERIAL</columns>
+        <primary>1</primary>
+      </key>
+      <column id="113" parent="7" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="114" parent="7" name="NUM_MCODE">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="115" parent="7" name="NUM_SERIAL">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="116" parent="7" name="STR_CATEGORY">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="117" parent="7" name="PRIMARY">
+        <columns>NUM_OID
+NUM_MCODE
+NUM_SERIAL</columns>
+        <primary>1</primary>
+      </key>
+      <column id="118" parent="8" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="119" parent="8" name="NUM_MCODE">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="120" parent="8" name="STR_TITLE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="121" parent="8" name="STR_SKIN">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;default&apos;</default-expression>
+      </column>
+      <column id="122" parent="8" name="NUM_LISTNUM">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;30&apos;</default-expression>
+      </column>
+      <column id="123" parent="8" name="NUM_NAVNUM">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;10&apos;</default-expression>
+      </column>
+      <column id="124" parent="8" name="NUM_TITLELEN">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;200&apos;</default-expression>
+      </column>
+      <column id="125" parent="8" name="CHR_LISTTYPE">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;B&apos;</default-expression>
+      </column>
+      <column id="126" parent="8" name="CHR_ODDCOLOR">
+        <data-type>varchar(7)</data-type>
+        <default-expression>&apos;#FFFFFF&apos;</default-expression>
+      </column>
+      <column id="127" parent="8" name="CHR_EVENCOLOR">
+        <data-type>varchar(7)</data-type>
+        <default-expression>&apos;#FFFFFF&apos;</default-expression>
+      </column>
+      <column id="128" parent="8" name="CHR_COMMENT">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="129" parent="8" name="CHR_RECENT">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="130" parent="8" name="CHR_UPLOAD">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="131" parent="8" name="CHR_NUM">
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="132" parent="8" name="CHR_STATS">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="133" parent="8" name="CHR_HAK">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="134" parent="8" name="STR_TOP">
+        <data-type>text</data-type>
+      </column>
+      <column id="135" parent="8" name="STR_TOP2">
+        <data-type>text</data-type>
+      </column>
+      <column id="136" parent="8" name="NUM_MAIN_VIEW">
+        <data-type>int(1)</data-type>
+      </column>
+      <column id="137" parent="8" name="NUM_BOARD_POINT">
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="138" parent="8" name="NUM_COMMINT_POINT">
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="139" parent="8" name="NUM_REPALY_POINT">
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="140" parent="8" name="STR_WIDTH">
+        <data-type>varchar(8)</data-type>
+        <default-expression>&apos;100&apos;</default-expression>
+      </column>
+      <column id="141" parent="8" name="STR_FILE_TYPE">
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;zip, arj, rar, gz, tgz, ace, Z, exe, pdf, doc, docx, hwp, xls, xlsx, ppt, pptx, bmp, jpg, jpeg, png, gif, txt, mp3, mp4, ogg, aiff, avi, mpg, mpeg, mov, rm, swf, flv, wmv, wma, ra, html, htm, alz, dat, ios, psd&apos;</default-expression>
+      </column>
+      <column id="142" parent="8" name="STR_ADMIN_ID">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="143" parent="8" name="STR_LIST_VIEW">
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="144" parent="8" name="STR_RSS_URL">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="145" parent="8" name="STR_DOWNLOAD">
+        <mandatory>1</mandatory>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="146" parent="8" name="NUM_RSS_COUNT">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;10&apos;</default-expression>
+      </column>
+      <column id="147" parent="8" name="STR_ICONV">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;UTF-8&apos;</default-expression>
+      </column>
+      <column id="148" parent="8" name="STR_RSS_CATE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="149" parent="8" name="STR_CATEGORY_USE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(2)</data-type>
+      </column>
+      <column id="150" parent="8" name="STR_CATEGORY_USE2">
+        <data-type>varchar(2)</data-type>
+      </column>
+      <key id="151" parent="8" name="PRIMARY">
+        <columns>NUM_OID
+NUM_MCODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="152" parent="9" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="153" parent="9" name="NUM_CODE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="154" parent="9" name="NUM_SERIAL">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="155" parent="9" name="NUM_GROUP">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="156" parent="9" name="NUM_DTB">
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="157" parent="9" name="NUM_STEP">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="158" parent="9" name="STR_USER">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="159" parent="9" name="STR_NAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;GUEST&apos;</default-expression>
+      </column>
+      <column id="160" parent="9" name="STR_PASS">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+        <default-expression>&apos;1111&apos;</default-expression>
+      </column>
+      <column id="161" parent="9" name="STR_COMMENT">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="162" parent="9" name="DT_DATE">
+        <data-type>date</data-type>
+      </column>
+      <column id="163" parent="9" name="STR_IP">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="164" parent="9" name="CHR_MTYPE">
+        <data-type>varchar(1)</data-type>
+      </column>
+      <column id="165" parent="9" name="STR_TMP1">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="166" parent="9" name="STR_TMP2">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="167" parent="9" name="STR_TMP3">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="168" parent="9" name="NUM_MAIN_SERIAL">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="169" parent="9" name="NUM_DEL">
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <key id="170" parent="9" name="PRIMARY">
+        <columns>NUM_OID
+NUM_CODE
+NUM_SERIAL</columns>
+        <primary>1</primary>
+      </key>
+      <column id="171" parent="10" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="172" parent="10" name="NUM_MCODE">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="173" parent="10" name="NUM_CATE">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="174" parent="10" name="STR_TITLE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="175" parent="10" name="STR_URL">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;#&apos;</default-expression>
+      </column>
+      <column id="176" parent="10" name="STR_TARGET">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;_self&apos;</default-expression>
+      </column>
+      <column id="177" parent="10" name="DT_DATE">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+        <default-expression>&apos;0000-00-00&apos;</default-expression>
+      </column>
+      <column id="178" parent="10" name="STR_HEIGHT">
+        <data-type>varchar(4)</data-type>
+        <default-expression>&apos;600&apos;</default-expression>
+      </column>
+      <key id="179" parent="10" name="PRIMARY">
+        <columns>NUM_OID
+NUM_MCODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="180" parent="11" name="NUM_SERIAL">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="181" parent="11" name="STR_DCODE">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="182" parent="11" name="STR_TITLE">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="183" parent="11" name="STR_IMG">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="184" parent="11" name="STR_TEXT1">
+        <data-type>text</data-type>
+      </column>
+      <column id="185" parent="11" name="STR_SU_TEXT">
+        <data-type>varchar(200)</data-type>
+      </column>
+      <column id="186" parent="11" name="NUM_OID">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="187" parent="11" name="NUM_MCODE">
+        <data-type>int(10)</data-type>
+      </column>
+      <key id="188" parent="11" name="PRIMARY">
+        <columns>NUM_SERIAL</columns>
+        <primary>1</primary>
+      </key>
+      <column id="189" parent="12" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="190" parent="12" name="STR_SECT">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="191" parent="12" name="NUM_SERIAL">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="192" parent="12" name="STR_TYPE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="193" parent="12" name="STR_UPFILE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="194" parent="12" name="STR_REFILE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="195" parent="12" name="STR_THUM">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="196" parent="12" name="STR_FTYPE">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="197" parent="12" name="NUM_DOWN">
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="198" parent="12" name="NUM_SIZE">
+        <data-type>int(30)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="199" parent="12" name="STR_MIME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="200" parent="12" name="DT_DATE">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="201" parent="12" name="STR_SSID">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <key id="202" parent="12" name="PRIMARY">
+        <columns>NUM_OID
+STR_SECT
+NUM_SERIAL</columns>
+        <primary>1</primary>
+      </key>
+      <column id="203" parent="13" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="204" parent="13" name="STR_GROUP">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="205" parent="13" name="STR_GROUP_NAME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="206" parent="13" name="PRIMARY">
+        <columns>NUM_OID
+STR_GROUP</columns>
+        <primary>1</primary>
+      </key>
+      <column id="207" parent="14" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="208" parent="14" name="NUM_STEP">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="209" parent="14" name="NUM_MCODE">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="210" parent="14" name="NUM_CATE">
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="211" parent="14" name="STR_TITLE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="212" parent="14" name="STR_TITLE2">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="213" parent="14" name="STR_TYPE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;MENU&apos;</default-expression>
+      </column>
+      <column id="214" parent="14" name="NUM_VIEW">
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="215" parent="14" name="NUM_ENABLE_REMOVE">
+        <mandatory>1</mandatory>
+        <data-type>int(1)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="216" parent="14" name="STR_INT">
+        <data-type>varchar(8)</data-type>
+      </column>
+      <column id="217" parent="14" name="STR_TEXT">
+        <data-type>text</data-type>
+      </column>
+      <column id="218" parent="14" name="STR_LAYOUT">
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;@sub&apos;</default-expression>
+      </column>
+      <column id="219" parent="14" name="STR_SUBTITLEBAR">
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="220" parent="14" name="STR_WIDTH">
+        <data-type>varchar(4)</data-type>
+        <default-expression>&apos;100%&apos;</default-expression>
+      </column>
+      <column id="221" parent="14" name="STR_W">
+        <data-type>varchar(1)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="222" parent="14" name="STR_MEMO">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="223" parent="14" name="STR_TOPMENU_SKIN">
+        <data-type>varchar(16)</data-type>
+      </column>
+      <column id="224" parent="14" name="NUM_STEP_BACK">
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="225" parent="14" name="STR_USE">
+        <data-type>enum(&apos;N&apos;, &apos;Y&apos;)</data-type>
+        <default-expression>&apos;Y&apos;</default-expression>
+      </column>
+      <column id="226" parent="14" name="STR_INC_FILE">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="227" parent="14" name="STR_INC_FILE2">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="228" parent="14" name="STR_INC_FILE3">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="229" parent="14" name="STR_INC_FILE4">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="230" parent="14" name="STR_MENU_TOP">
+        <data-type>text</data-type>
+      </column>
+      <column id="231" parent="14" name="STR_MENU_BOTTOM">
+        <data-type>text</data-type>
+      </column>
+      <column id="232" parent="14" name="STR_LNB_FILE">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="233" parent="14" name="STR_MOBILE_INC_FILE">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="234" parent="14" name="STR_MOBILE_INC_FILE2">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="235" parent="14" name="STR_MOBILE_TEXT">
+        <data-type>text</data-type>
+      </column>
+      <key id="236" parent="14" name="PRIMARY">
+        <columns>NUM_OID
+NUM_MCODE</columns>
+        <primary>1</primary>
+      </key>
+      <column id="237" parent="15" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="238" parent="15" name="STR_SECT">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="239" parent="15" name="STR_CODE">
+        <mandatory>1</mandatory>
+        <data-type>varchar(22)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="240" parent="15" name="STR_GROUP">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="241" parent="15" name="STR_RIGHT">
+        <mandatory>1</mandatory>
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <key id="242" parent="15" name="PRIMARY">
+        <columns>NUM_OID
+STR_SECT
+STR_CODE
+STR_GROUP</columns>
+        <primary>1</primary>
+      </key>
+      <column id="243" parent="16" name="NUM_OID">
+        <mandatory>1</mandatory>
+        <data-type>int(8)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="244" parent="16" name="STR_ORGAN">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="245" parent="16" name="STR_TITLE">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="246" parent="16" name="STR_HOST">
+        <mandatory>1</mandatory>
+        <data-type>varchar(50)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="247" parent="16" name="STR_DOMAIN">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="248" parent="16" name="STR_THEME">
+        <mandatory>1</mandatory>
+        <data-type>varchar(20)</data-type>
+        <default-expression>&apos;default&apos;</default-expression>
+      </column>
+      <column id="249" parent="16" name="STR_PASSWORD">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;isch2006&apos;</default-expression>
+      </column>
+      <column id="250" parent="16" name="STR_CEO_NAME">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="251" parent="16" name="STR_CEO_EMAIL">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="252" parent="16" name="STR_PHONE">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="253" parent="16" name="STR_FAX">
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="254" parent="16" name="CHR_ZIP">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="255" parent="16" name="STR_ADDR1">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="256" parent="16" name="STR_ADDR2">
+        <mandatory>1</mandatory>
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="257" parent="16" name="STR_MASTER_NAME">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="258" parent="16" name="STR_MASTER_EMAIL">
+        <data-type>varchar(50)</data-type>
+      </column>
+      <column id="259" parent="16" name="STR_MASTER_PHONE">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="260" parent="16" name="STR_MASTER_MOBILE">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="261" parent="16" name="DT_DATE">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="262" parent="16" name="STR_MTYPES">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="263" parent="16" name="STR_HOMETYPE">
+        <data-type>varchar(10)</data-type>
+        <default-expression>&apos;SCHOOL&apos;</default-expression>
+      </column>
+      <column id="264" parent="16" name="STR_END_DATE">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="265" parent="16" name="STR_NUM_STEP">
+        <data-type>varchar(12)</data-type>
+      </column>
+      <column id="266" parent="16" name="NUM_LOGIN_POINT">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="267" parent="16" name="NUM_BOARD_POINT">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="268" parent="16" name="NUM_COMMINT_POINT">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="269" parent="16" name="NUM_REPALY_POINT">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="270" parent="16" name="NUM_JOIN_POINT">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="271" parent="16" name="STR_BI">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="272" parent="16" name="STR_MEMO">
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="273" parent="16" name="STR_SA_NUMBER">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="274" parent="16" name="STR_HG_CODE">
+        <data-type>varchar(13)</data-type>
+      </column>
+      <column id="275" parent="16" name="STR_ST">
+        <data-type>int(2)</data-type>
+        <default-expression>&apos;1&apos;</default-expression>
+      </column>
+      <column id="276" parent="16" name="NUM_DISK">
+        <data-type>int(15)</data-type>
+      </column>
+      <column id="277" parent="16" name="NUM_UPLOAD_SIZE">
+        <data-type>int(15)</data-type>
+      </column>
+      <column id="278" parent="16" name="STR_G_CODE">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="279" parent="16" name="STR_SCHOOL">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="280" parent="16" name="STR_GI_ID">
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="281" parent="16" name="STR_GI_PW">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="282" parent="16" name="STR_ARBA">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="283" parent="16" name="STR_PRO1">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="284" parent="16" name="STR_PRO2">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="285" parent="16" name="STR_PRO3">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="286" parent="16" name="STR_PRO4">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="287" parent="16" name="STR_PRO5">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="288" parent="16" name="STR_DEF_ORGAN">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="289" parent="16" name="STR_PRO6">
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="290" parent="16" name="STR_ARBA_COUNT">
+        <data-type>int(8)</data-type>
+      </column>
+      <column id="291" parent="16" name="STR_TEXT">
+        <data-type>text</data-type>
+      </column>
+      <column id="292" parent="16" name="STR_TEXT2">
+        <data-type>text</data-type>
+      </column>
+      <column id="293" parent="16" name="STR_MEMBER_SKIN">
+        <data-type>varchar(30)</data-type>
+        <default-expression>&apos;basic&apos;</default-expression>
+      </column>
+      <key id="294" parent="16" name="PRIMARY">
+        <columns>NUM_OID</columns>
+        <primary>1</primary>
+      </key>
+      <column id="295" parent="17" name="baboard_idx">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="296" parent="17" name="userid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="297" parent="17" name="baboard_title">
+        <data-type>varchar(128)</data-type>
+      </column>
+      <column id="298" parent="17" name="baboard_contents">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <column id="299" parent="17" name="baboard_section">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="300" parent="17" name="baboard_regdate">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="301" parent="17" name="baboard_photo_b">
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="302" parent="17" name="baboard_photo_a">
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="303" parent="17" name="baboard_refcnt">
+        <data-type>int(11)</data-type>
+        <default-expression>&apos;0&apos;</default-expression>
+      </column>
+      <column id="304" parent="17" name="baboard_isbest">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="305" parent="17" name="baboard_isnotice">
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <index id="306" parent="17" name="fk_taBABoard_taMember1_idx">
+        <columns>userid</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="307" parent="17" name="PRIMARY">
+        <columns>baboard_idx</columns>
+        <primary>1</primary>
+      </key>
+      <column id="308" parent="18" name="userid">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="309" parent="18" name="username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(40)</data-type>
+      </column>
+      <column id="310" parent="18" name="password">
+        <mandatory>1</mandatory>
+        <data-type>varchar(32)</data-type>
+      </column>
+      <column id="311" parent="18" name="zipcode">
+        <mandatory>1</mandatory>
+        <data-type>varchar(7)</data-type>
+      </column>
+      <column id="312" parent="18" name="addr">
+        <mandatory>1</mandatory>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="313" parent="18" name="celphone">
+        <mandatory>1</mandatory>
+        <data-type>varchar(15)</data-type>
+      </column>
+      <column id="314" parent="18" name="phone">
+        <data-type>varchar(30)</data-type>
+      </column>
+      <column id="315" parent="18" name="regdate">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="316" parent="18" name="isAdmin">
+        <data-type>char(1)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="317" parent="18" name="birth">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="318" parent="18" name="birth2">
+        <data-type>date</data-type>
+      </column>
+      <column id="319" parent="18" name="gender">
+        <mandatory>1</mandatory>
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="320" parent="18" name="email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="321" parent="18" name="addr2">
+        <mandatory>1</mandatory>
+        <data-type>varchar(256)</data-type>
+      </column>
+      <column id="322" parent="18" name="ip_addr">
+        <data-type>varchar(23)</data-type>
+      </column>
+      <column id="323" parent="18" name="edit_date">
+        <data-type>datetime</data-type>
+      </column>
+      <column id="324" parent="18" name="email_ch">
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="325" parent="18" name="ckyog">
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="326" parent="18" name="etc_1">
+        <data-type>varchar(100)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="327" parent="18" name="etc_2">
+        <data-type>varchar(80)</data-type>
+        <default-expression>&apos;&apos;</default-expression>
+      </column>
+      <column id="328" parent="18" name="delcheck">
+        <data-type>enum(&apos;Y&apos;, &apos;N&apos;)</data-type>
+        <default-expression>&apos;N&apos;</default-expression>
+      </column>
+      <column id="329" parent="18" name="in_path">
+        <data-type>enum(&apos;mobile&apos;, &apos;web&apos;)</data-type>
+        <default-expression>&apos;web&apos;</default-expression>
+      </column>
+      <key id="330" parent="18" name="PRIMARY">
+        <columns>userid</columns>
+        <primary>1</primary>
+      </key>
+      <column id="331" parent="19" name="no">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="332" parent="19" name="room_name">
+        <data-type>varchar(100)</data-type>
+      </column>
+      <column id="333" parent="19" name="room_number">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="334" parent="19" name="price_json">
+        <data-type>text</data-type>
+      </column>
+      <column id="335" parent="19" name="option_json">
+        <data-type>text</data-type>
+      </column>
+      <column id="336" parent="19" name="human_min">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="337" parent="19" name="human_max">
+        <data-type>int(3)</data-type>
+      </column>
+      <column id="338" parent="19" name="add_human_price">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="339" parent="19" name="created">
+        <data-type>datetime</data-type>
+      </column>
+      <key id="340" parent="19" name="PRIMARY">
+        <columns>no</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

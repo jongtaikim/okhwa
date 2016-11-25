@@ -29,16 +29,18 @@
 	<li class="item ">
 		<div style="background:url(./images/main_visual/bg.jpg) no-repeat center top;width:100%;height:629px">
 
-			<div class="text-center opa00 main_v_text main_v_text1 " style="margin:0px auto;width:400px;padding-top:80px" ani="fadeIn" delay="700"  >
+			<div class="text-center opa00 main_v_text main_v_text1 " style="margin:0px auto;width:400px;padding-top:70px" ani="fadeIn" delay="700"  >
 				<img src="./images/main_visual/txt_01.png" alt="" />
 			</div>
 
-			<div class="text-center opa00 main_v_text main_v_text2" style="margin:0px auto;width:917px;padding-top:50px" ani="fadeIn" delay="1200" >
+			<div class="text-center opa00 main_v_text main_v_text2" style="margin:0px auto;width:917px;padding-top:40px" ani="fadeIn" delay="1200" >
 				<img src="./images/main_visual/txt_02.png" alt="" />
 			</div>
 
-			<div class="text-center opa00 main_v_text main_v_text3" style="margin:0px auto;width:737px;padding-top:70px" ani="fadeIn" delay="1500" >
-				<img src="./images/main_visual/txt_03.png" alt="" />
+			<div class="text-center opa00 main_v_text main_v_text3" style="margin:0px auto;width:997px;padding-top:40px;color:#fff" ani="fadeIn" delay="1500" >
+			`재활이 곧 희망이다` 라는 의미를 되새기며, 고객의 행복을 함께 만들어가는 하스피입니다.<br>
+				20여년간 축적된 의료기기의 기술과 경험을 바탕으로 국민건강의 질을 향상시키는데 
+기여할 수 있도록 차별화된 제품을 끊임없이 발굴하고 보급하는 데 앞장서겠습니다.
 			</div>
 
 
@@ -92,7 +94,7 @@ $(document).ready(function(){
 				{@ gong_LIST}
 				<tr>
 					<td>
-						<img src="./images/notice_but.gif" alt="" class="m-r10" /> <a href="/user/board/read_view/{.num_mcode}/{.num_serial}?cate=1110&ch=">{.str_title} </a>
+						<img src="./images/notice_but.gif" alt="" class="m-r10" /> <a href="/user/board/read_view/{.num_mcode}/{.num_serial}?cate=1315&ch=">{.str_title} </a>
 					</td>
 				</tr>
 				{/}
@@ -103,10 +105,10 @@ $(document).ready(function(){
 	</div>
 
 	<div class="col-md-5" style="width:40%">
-		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/list_view/1410?cate=1410&db_title=s1"><img src="./images/banner1.gif" alt="" /></a></div>
-		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/list_view/1411?cate=1411&db_title=s2"><img src="./images/banner2.gif" alt="" /></a></div>
-		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/list_view/1412?cate=1412&db_title=s3"><img src="./images/banner3.gif" alt="" /></a></div>
-		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/list_view/1413?cate=1413&db_title=s4"><img src="./images/banner4.gif" alt="" /></a></div>
+		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/item_add/1410/1?cate=1410&db_title=s1"><img src="./images/banner1.gif" alt="" /></a></div>
+		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/item_add/1411/1?cate=1411&db_title=s2"><img src="./images/banner2.gif" alt="" /></a></div>
+		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/item_add/1412/1?cate=1412&db_title=s3"><img src="./images/banner3.gif" alt="" /></a></div>
+		<div class="col-md-6 over_plus" style="padding:10px"><a href="/user/ctl_online/item_add/1812/1?cate=1812&db_title=s8"><img src="./images/banner4.gif" alt="" /></a></div>
 	</div>
 
 </div>
@@ -149,7 +151,7 @@ $(document).ready(function(){
             <div class=" ">
                 <div class="pull-left m-r" style="display: table">
 
-                        <div class=" b" style="width:116px;height:116px;overflow:hidden;border-radius: 300px;border:2px solid #ededed;">
+                        <div class=" b" style="width:116px;height:116px;overflow:hidden;border-radius: 300px;border:2px solid #ededed;background-color: #fff">
 						    <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class=" " summary="^!" style="height: 116px">
 						    	<tbody>
 						    		<tr>
@@ -166,9 +168,9 @@ $(document).ready(function(){
                     <h4 class="m-a-0 text-lg _300" style="height:164px">
                         <a href="/user/product/view/{.idx}">
                             <div class="text1">{.상품명2}</div>
-                            <div class="text2" >{.상품명}</div>
-                            <div class="text3" >
-                                {.상품설명}
+                            <div class="text2" {? .idx==13}style="font-size:14px"{/} {? .idx==18}style="font-size:16px"{/}>{? .idx == 13}InMotion 3.0 Wrist Robot / 2.0 Shoulder-Elbow Robot{:}{.상품명}{/}</div>
+                            <div class="text3" style="font-size: 12px" >
+                                {=nl2br(.상품설명)}
                             </div>
                         </a>
                     </h4>

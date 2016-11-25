@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - okhwa@localhost" uuid="46bb81d3-5f95-42e7-a02e-87eceacd0eca">
+      <secret-storage>master_key</secret-storage>
+      <user-name>okhwa</user-name>
+      <ssh-properties>
+        <enabled>true</enabled>
+        <proxy-host>okhwa.it-company.kr</proxy-host>
+        <proxy-port>22</proxy-port>
+        <secret-storage>master_key</secret-storage>
+        <user>okhwa</user>
+        <use-password>true</use-password>
+      </ssh-properties>
+    </data-source>
+  </component>
+</project>

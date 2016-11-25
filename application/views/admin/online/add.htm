@@ -10,25 +10,33 @@
         </div>
       </div>
 
+     <div class="col-sm-12">
+         <div class="md-form-group">
+             <input class="md-input" name="db_product_name" id="db_product_name" value="{product_name}" readonly="readonly" placeholder="제품명 입력">
+             <label>제품명</label>
+         </div>
+     </div>
 
 	<div class="col-sm-6">
         <div class="md-form-group">
           <input class="md-input f_l"  value="{phone}" readonly="readonly" style="width:80%">
-		<a href="javascript:sms_send('{phone }')" class="btn btn-xs btn-default f_l"><!--i class=" mdi-action-question-answer i-10"></i>SMS</a-->
+
           <label>전화번호</label>
         </div>
       </div>
 
-	<div class="col-sm-6">
+
+
+     <div class="col-sm-6">
         <div class="md-form-group">
-          <input class="md-input"  value="{email}" readonly="readonly" >
+          <input class="md-input"  value="{email}" name="email" readonly="readonly" >
           <label>이메일</label>
         </div>
       </div>
 
 	<div class="col-sm-12">
         <div class="md-form-group">
-		<div class="md-input " readonly="readonly" style="height:160px;overflow:auto;">{comment}</div>
+		<div class="md-input " readonly="readonly" style="height:100px;overflow:auto;">{comment}</div>
           <label>내용</label>
         </div>
       </div>
@@ -36,20 +44,20 @@
 
 	<div class="col-sm-12">
         <div class="md-form-group">
-		<textarea name="re_text" id="re_text"  class="md-input" style="height:160px;overflow:auto;line-height:210%">{text}</textarea>
+		<textarea name="re_text" id="re_text"  class="md-input" style="height:100px;overflow:auto;line-height:210%">{text}</textarea>
 
           <label>답변하기</label>
         </div>
       </div>
-	
-	
-	
 
-	
 
-	
-	
-	
+
+
+
+
+
+
+
 </form>
 </div>
 <script type="text/javascript" src="/trunk/scripts/jquery.form.js"></script>
@@ -65,11 +73,11 @@ function submit_data(){
 			return false;
 		}
 	});
-	
+
 
 
 	if(validated_t == "Y"){
-		
+
 		var frm = $("#bfForm");
 		var stringData = $("#bfForm").serialize();
 		frm.ajaxSubmit({
@@ -78,10 +86,10 @@ function submit_data(){
 			data : stringData, //json 형태로 form data변경
 			dataType : 'html',//( default : xml,json,script,text,html )
 			success : function(data){
-			
-				
+
+
 				alert('답변이 등록되었습니다.');
-				
+
 				$('#onlineModal').modal('hide');
 				reload_online_table();
 			},
@@ -91,8 +99,8 @@ function submit_data(){
 			}
 		});
 
-		
-		
+
+
 	}
 }
 

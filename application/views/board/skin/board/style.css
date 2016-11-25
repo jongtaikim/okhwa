@@ -8,7 +8,7 @@
 #boardList .listWrap {width: 100%;float: left;border-top: 2px solid #818181;border-bottom: 2px solid #818181;}
 #boardList .listWrap table {width: 100%}
 #boardList .listWrap thead th {background: #f5f5f5;height: 50px;border-bottom: 2px solid #818181;vertical-align: middle;text-transform: uppercase; font-size: 1.2em;}
-#boardList .listWrap thead th.subject {text-align: left;padding-left: 27px;font-size:13px}
+#boardList .listWrap thead th.subject {text-align: center;padding-left: 27px;}
 #boardList .listWrap tbody td {color: #616161;text-align: center;font-size:1.15em;height: 50px;border-top: 1px solid #cfcfcf;vertical-align: middle;}
 #boardList .listWrap tbody tr:first-child td {border-top: none;}
 #boardList .listWrap tbody td p.title {display: block;width: 380px;padding-left:27px;overflow: hidden;white-space: nowrap;text-overflow:ellipsis;text-align: left;}
