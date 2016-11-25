@@ -1,0 +1,236 @@
+<style type="text/css" title="">
+    .tables {margin-top:20px;margin-bottom: 20px}
+    .tables td{padding:10px;padding-top:18px;padding-left:25px}
+    .blur {
+        filter:blur(1px);
+        -ms-filter:blur(1px);
+        -moz-filter:blur(1px);
+        -webkit-filter:blur(1px);
+    }
+</style>
+
+    <div class="col-md-12 " id="" style="margin-bottom:30px;min-height:500px">
+        <div class="text-right m-b20 ">
+            <img src="/images/product/{idx}/logo.jpg" style="width:140px" />
+        </div>
+        <div class="pos_r" >
+
+            <div class="">
+                <img src="/images/product/{idx}/bg.jpg" style="width:100%" class="blur1  b-t b-l b-r b-b box-shadow" />
+            </div>
+
+            <div class="pos_a opa70" style="width:94%;{? seq =="6"}height:89%;{:}height:93%;{/}margin:20px;border:10px solid #fff;z-index: 2;top:0px;left:0px">
+
+
+            </div>
+
+
+
+        <div class="pos_a" style="right:35px;bottom:10%;z-index: 3">
+            <div class="f_r" style="font-size:200%;color:#fff;background-color: rgba(154, 143, 134, 0.4);padding:10px;padding-left:20px;padding-right:20px">
+                <strong>{? seq !="6" && seq !="5"}{상품명2} - {/}{상품명}</strong>
+            </div>
+            {? 상품설명}
+            <div class="f_r" style="margin-top:30px;color:#fff;background-color: rgba(154, 143, 134, 0.4);padding:10px;padding-left:20px;padding-right:20px;width:70%">
+                {상품설명}
+            </div>
+            {/}
+        </div>
+
+
+        <div class="pos_a" style="width:100%;height:100%;z-index: 1;background-color: rgba(0, 0, 0, 0.14);top:0px;left:0px"></div>
+
+        </div>
+
+
+        <div class="blank_div m-t20 " id="">
+
+            <div class=" m-b20  ">
+
+                <div class="row no-gutter b-t b-l b-r b-b box-shadow">
+                    <div class="col-xs-4 b-r">
+                        <a class="p-a block text-center" href="/user/ctl_online/item_add/1410/1?cate=1410&db_title=s1"><i class="material-icons md-24  m-v-sm inline"></i>
+                            <span class="block">견적문의</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4 b-r">
+                        <a class="p-a block text-center" href="/user/ctl_online/item_add/1411/1?cate=1411&db_title=s2">
+                            <i class="material-icons md-24  m-v-sm inline"></i>
+
+                            <span class="block">A/S문의</span>
+                        </a>
+                    </div>
+                    <div class="col-xs-4">
+                        <a class="p-a block text-center" href="/user/ctl_online/item_add/1812/1?cate=1812&db_title=s8"><i class="material-icons md-24  m-v-sm inline"></i>
+                            <span class="block">자료요청</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            <div class="box-shadow" style="border-radius:3px;overflow:hidden;border: 1px solid rgba(120, 130, 140, 0.14);padding:0px;margin:0px;margin-bottom:20px;" id="">
+                <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="tables  " summary="^!" style="width:100%; border:0px;margin:0px;color:#000" >
+
+                    <tbody>
+                    <tr>
+                       {? seq!=15 && seq!=20 && seq!=21}
+                        <td rowspan="3" style="width: 250px;border-top:0px;padding:5px" class="b-r text-center">
+                            {? seq ==8}
+                            <img src="/images/product/{idx}/product.jpg" style="width: 27%;">
+                            {:}
+                            <img src="/images/product/{idx}/product.jpg" style="width: 80%;">
+                            {/}
+                        </td>
+                       {/}
+                        <td class="text-right _100" valign="top" style="width:100px;">상품명</td>
+                        <td style="" valign="top">{상품명2} - {상품명} </td>
+                    </tr>
+                    <tr>
+                        <td class="text-right _100 b-t" valign="top" style="">제조사</td>
+                        <td style="" valign="top" class="b-t">{제조사}</td>
+                    </tr>
+                    <tr>
+                        <td class="text-right b-t" valign="top" style="">적용분야</td>
+                        <td style="" valign="top" class="b-t">{=nl2br(적용분야)}</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+
+
+            <div class="box box-shadow b-l b-r ">
+                <div class="box-header dker pos_r">
+                    <h3 class="">제품특징</h3><small class="text-right pos_a" style="right:20px;top:10px"></small>
+
+                </div>
+                <div class="box-body b-t">
+                    {=nl2br(제품특징)}
+
+                </div>
+            </div>
+
+            {? 이미지타이틀}
+            <div class="box box-shadow  clearfix  b-l b-r">
+                <div class="box-header dker">
+                    <h3>{이미지타이틀}</h3>
+                </div>
+
+                <?
+                    $seq = {idx};
+                    $text1 = {이미지설명};
+                    $text1s = explode(",",$text1);
+
+                    for($ii=1; $ii<10; $ii++) {
+                    $ia=$ii-1;
+
+
+                   if(is_file($_SERVER['DOCUMENT_ROOT']."/images/product/".$seq."/p1/".$ii.$ii.".jpg")){
+
+                ?>
+
+                    <div class="box-body text-center b-t f_l" style="width:50%">
+
+                        <img src="/images/product/{idx}/p1/<?=$ii?><?=$ii?>.jpg" {? seq !="8"}style="width:100%"{:}style="width:60%"{/}>
+                        <div class=" m-t10" style="font-weight: bold">
+                            <?=$text1s[$ia]?>
+                        </div>
+                    </div>
+
+                <?}?>
+
+
+                <? if(is_file($_SERVER['DOCUMENT_ROOT'].'/images/product/'.$seq.'/p1/'.$ii.'.jpg')){
+                ?>
+                    <div class="box-body text-center b-t f_l" style="width:100%">
+                        <img src="/images/product/{idx}/p1/<?=$ii?>.jpg" style="width:100%">
+                        <div class=" m-t10" style="font-weight: bold">
+                            <?=$text1s[$ia]?>
+                        </div>
+                    </div>
+                <?}?>
+                <?}?>
+            </div>
+            {/}
+
+            {? 이미지타이틀2}
+            <div class="box box-shadow  clearfix  b-l b-r">
+                <div class="box-header dker">
+                    <h3>{이미지타이틀2}</h3>
+                </div>
+
+                <?
+                    $seq = {idx};
+                    $text1 = {이미지설명2};
+                    $text1s = explode(",",$text1);
+
+                    for($ii=1; $ii<10; $ii++) {
+                    $ia=$ii-1;
+
+
+                   if(is_file($_SERVER['DOCUMENT_ROOT']."/images/product/".$seq."/p2/".$ii.$ii.".jpg")){
+
+                ?>
+
+                <div class="box-body text-center b-t f_l" style="width:50%">
+
+                    <img src="/images/product/{idx}/p2/<?=$ii?><?=$ii?>.jpg" style="width:100%">
+                    <div class=" m-t10" style="font-weight: bold">
+                        <?=$text1s[$ia]?>
+                    </div>
+                </div>
+
+                <?}?>
+
+
+                <? if(is_file($_SERVER['DOCUMENT_ROOT'].'/images/product/'.$seq.'/p2/'.$ii.'.jpg')){
+                ?>
+                <div class="box-body text-center b-t f_l" style="width:100%">
+                    <img src="/images/product/{idx}/p2/<?=$ii?>.jpg" style="width:100%">
+                    <div class=" m-t10" style="font-weight: bold">
+                        <?=$text1s[$ia]?>
+                    </div>
+                </div>
+                <?}?>
+                <?}?>
+            </div>
+            {/}
+
+
+            <div class="box box-shadow  clearfix  b-l b-r">
+
+                <?
+                    $seq = {idx};
+                    $text1 = {이미지설명3};
+                    $text1s = explode(",",$text1);
+
+                    for($ii=1; $ii<10; $ii++) {
+                    $ia=$ii-1;
+
+
+                   if(is_file($_SERVER['DOCUMENT_ROOT']."/images/product/".$seq."/p1/".$ii.$ii.$ii.".jpg")){
+
+                ?>
+
+                <div class="box-body text-center b-t f_l" style="width:33%">
+
+                    <img src="/images/product/{idx}/p1/<?=$ii?><?=$ii?><?=$ii?>.jpg" style="width:100%">
+                    <div class=" m-t10" style="font-weight: bold">
+                        <?=$text1s[$ia]?>
+                    </div>
+                </div>
+
+                <?}?>
+
+                <?}?>
+            </div>
+
+
+        </div>

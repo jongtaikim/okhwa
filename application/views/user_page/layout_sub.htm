@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko" class="white">
+<head>
+  <meta charset="utf-8" />
+ 
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="/uiset/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="/uiset/assets/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/uiset/assets/material-design-icons/material-design-icons.css" type="text/css" />
+  <link rel="stylesheet" href="/uiset/assets/bootstrap/dist/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/uiset/assets/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="./css/main.css" type="text/css" />
+  <!-- endbuild -->
+	<style type="text/css" title="">
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+	/* reset */
+	body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,from{margin:0; padding:0;font-family: "Nanum Gothic", sans-serif;}
+	</style>
+
+
+   
+    <!-- jQuery -->
+    <script src="/uiset/libs/jquery/jquery/dist/jquery.js"></script>
+	
+ <!--[if lt IE 9]> <script src="/trunk/scripts//ie/html5shiv.js"></script> <script src="/trunk/scripts/ie/respond.min.js"></script> <script src="/trunk/scripts/ie/excanvas.js"></script> <![endif]-->
+
+<title><?=_TITLE?></title>
+</head>
+
+
+
+<body class=" white   ">
+{#TOP_TOOL}
+<div style="clear:left"></div>
+<div class="b-t" id="" >
+	
+		{#TOP}
+
+		<?
+		$s_view = substr(uri_string(),0,12);
+		?>
+		<div class="b-b b-t col-md-12 opa00" id=""  ani_s="fadeIn" delay="100" style="height:352px;padding:0px;margin:0px;
+        <? if($s_view == 'user/product'){ ?>
+            background:url(/application/views/user_page/images/sub_visual/10.jpg) no-repeat center top;
+        <?}else{?>
+	    	background:url(/application/views/user_page/images/sub_visual/{=substr(_GET.cate,0,2)}.jpg) no-repeat center top;
+		<?}?>
+
+		background-color:#cdcdcd">
+			
+			
+		</div>
+
+		<div style="clear:left"></div>
+		
+		<div class="cont2" id="" style="margin:10px auto;padding-top:30px">
+
+
+
+            <? if($s_view == 'user/product'){ ?>
+				<!--LEFT-->
+				<div class="col-sm-12  col-md-3 col-lg-2  hidden-sm opa00" id="user_box" style="margin-top:0px;width:30%" ani_s="fadeInLeft" delay="300" >
+					{#LNB}
+				</div>
+				<!--LEFT-->
+				<div class="col-sm-12  col-md-9 col-lg-10 opa00 " style="width:70%" ani_s="fadeInUp" delay="700" >
+
+                <?}else{?>
+
+				<!--LEFT-->
+				<div class="col-sm-12  col-md-3 col-lg-2  hidden-sm opa00" id="user_box" style="margin-top:0px;width:22%" ani_s="fadeInLeft" delay="300" >
+					{#LNB}
+				</div>
+				<!--LEFT-->
+				<div class="col-sm-12  col-md-9 col-lg-10 opa00 " style="width:77%" ani_s="fadeInUp" delay="700" >
+
+                <?}?>
+					<div class="col-md-12" id="">
+						<div class="b-b m-b20 p-b10 col-md-12" style="padding-left:0px;padding-right:0px">
+							<div class="col-md-6" style="margin-left:0px;padding-left:0px">
+								<strong style="font-size:18px">{menu_title}</strong>
+							</div>
+							<div class="col-md-6 text-right text-mute m-t5" style="padding-right:0px;margin-right:0px;font-size:12px;color:#cdcdcd">
+								HOME {menu_location}
+							</div>
+						</div>
+						
+					</div>
+					
+					
+					
+					
+					<div  class="col-md-12 "  id="" style="margin-bottom:30px;min-height:500px">
+					    {str_menu_top}
+					    {doc_text}
+					    {#CONTENT}
+					    {#CONTENT2}
+					    {#CONTENT3}
+					    {str_menu_bottom}
+
+					   
+					</div>
+					<br>
+					{edit_btn}
+				</div>
+				
+
+
+			</div>
+
+			
+</div>
+
+<div style="clear:left"></div>
+
+ <div class="opa00" id="quick_area" ani_s="fadeInUp" deley='1000'>
+
+
+	<a type="button" class="btn white"  style="font-size:12px;margin-top:10px;width:97px" href="#">
+		<i class="fa fa-angle-double-up m-r5"></i>Top
+	</a>
+</div>
+
+	{#FOOT}
+
+
+
+
+<!-- Bootstrap -->
+  <script src="/uiset/libs/jquery/tether/dist/js/tether.min.js"></script>
+  <script src="/uiset/libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+  <script src="/uiset/libs/jquery/underscore/underscore-min.js"></script>
+  <script src="/uiset/libs/jquery/routie/dist/routie.js"></script>
+  <script src="/uiset/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+  <script src="/uiset/libs/jquery/PACE/pace.min.js"></script>
+
+  <script src="scripts/ui-include.js"></script>
+
+  <script src="scripts/app.js"></script>
+  <script src="scripts/config.js"></script>
+  <script src="scripts/config.lazyload.js"></script>
+
+
+  <script src="scripts/palette.js"></script>
+  <script src="scripts/ui-form.js"></script>
+  <script src="scripts/ui-jp.js"></script>
+  <script src="scripts/ui-load.js"></script>
+  <script src="scripts/ui-nav.js"></script>
+  <script src="scripts/ui-screenfull.js"></script>
+  <script src="scripts/ui-scroll-to.js"></script>
+  <script src="scripts/ui-toggle-class.js"></script>
+  <script src="./js/common.js"></script>
+  <script type="text/javascript" src="/trunk/scripts/jquery.cookie.js"></script>
+
+  <script type="text/javascript">
+  // <![CDATA[
+  
+
+	
+	(function($) {
+	    jQuery.fn.centerQuick = function(m_width, m_left, m_top, s_top) {
+		  this.each(function() {
+			var self = $(this);
+			var left = ($(document).width() - m_width) / 2 + m_width + m_left;
+			self.css({
+			    'position' : 'absolute',
+			    'top' : m_top + 'px',
+			    'left' : left + 'px'
+			});
+			$(window).scroll(function() {
+			    var c_top = $(document).scrollTop();
+			    var top = 0;
+			    if (c_top + s_top > m_top) {
+				  top = c_top + s_top;
+			    } else {
+				  top = m_top;
+			    }
+			    
+			    self.stop().animate({"top": top+"px"}, 500);
+			});
+			$(window).resize(function() {
+			    var w_width = $(window).width();
+			    var left = (w_width - m_width) / 2 + m_width + m_left;
+			    if (w_width < m_width) {
+				  left = m_width + m_left;
+			    }
+			    
+			    self.css('left', left + 'px');
+			});
+		  });
+	    }
+	})(jQuery);
+
+
+	$(document).ready(function(){
+		$('#quick_area').centerQuick(1150, 20, 540, 50); // (가운데 메인영역 넓이, 메인과 퀵메뉴의 좌측 간격, 초기 기본 높이, 스크롤 내렸을 경우 상단 간격)
+	});
+  // ]]>
+  </script>
+
+  
+<script type="text/javascript">
+// <![CDATA[
+function ifr_view(url){
+	$('#ifrModal').modal('show');
+	$('#ifr_data').attr('src',url);
+}
+
+function popup_view(url,w,h){
+	if(!w) w = 800;
+	if(!h) h = 600;
+
+	 cw=screen.availWidth;     //화면 넓이
+	 ch=screen.availHeight;    //화면 높이
+
+
+	 ml=(cw-w)/2;        //가운데 띄우기위한 창의 x위치
+	 mt=(ch-h)/2;         //가운데 띄우기위한 창의 y위치
+
+	var myWindow = window.open(url, "tomew", "toolbar=no, scrollbars=yes, resizable=yes, top="+mt+", left="+ml+", width="+w+", height="+h);
+}
+
+// ]]>
+</script>
+<!-- endbuild -->
+</body>
+</html>

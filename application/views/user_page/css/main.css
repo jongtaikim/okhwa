@@ -1,0 +1,57 @@
+/* vim: set expandtab tabstop=4 shiftwidth=4 foldmethod=marker: */
+/**
+* 작성일: 2015-12-11
+* 작성자: 김종태
+* 설   명: 
+*****************************************************************
+* 
+*/
+@charset "utf-8";
+/* CSS Document */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/* reset */
+body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,from{margin:0; padding:0;}
+body{margin:0; padding:0; font-size:87%; font-style:normal; color:#333;overflow-y:scroll;}
+ul,ol,dl{list-style:none;}
+
+/* 기본값 설정 */
+a {text-decoration: none;}
+
+ul,li,dl,dt,dd,p,table,tr,th,td,hr{list-style:none;margin:0;padding:0; border:0;}
+img {border:0;}
+
+
+.cont1{width:1000px;margin:0 auto}
+.cont2{width:1200px;margin:0 auto}
+
+.gnb_body{width:1200px;margin:15px auto;height:77px}
+.gnb_menu{right:-185px;width:209px;height:26px;top:-20px ;background:url(../images/top_gnb_bg.png) repeat-x center top;color:#fff;padding-top:4px;font-size:11px}
+
+.top-nav{background:url(../images/top_nav_bg.png) repeat-x center top;height:42px}
+
+.main_notice tbody tr td{padding:8px;background:url(../images/notice_line.gif) repeat-x center bottom;padding-left:0px}
+
+.notice_area{height:285px; background-color:#fff;padding-top:3%}
+.main_middle_area{height:460px; background-color:#a5bd42;padding-top:74px}
+.main_middle_area2{height:730px; background-color:#fff;padding-top:74px}
+.main_middle_area2 .text1{font-size:14px;font-weight: bold;padding:5px}
+.main_middle_area2 .text2{font-size:24px;color:#ee7700;;padding:5px;padding-top:2px;padding-bottom:2px}
+.main_middle_area2 .text3{font-size:14px;color:#666666;;padding:5px;line-height:140%}
+.main_middle_area2 h4{height:156px}
+
+
+.btn_ly_close {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background: url("/images/button.gif") no-repeat -716px -711px;
+    text-indent: -9999px;
+    float: right;
+    position: absolute;
+    top: 0px;
+    right: -55px;
+}

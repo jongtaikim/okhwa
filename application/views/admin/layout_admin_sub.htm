@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <title> [<?=_OID?>] <?=_ONAME?> - 관리자</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="/trunk/libs/assets/animate.css/animate.css" type="text/css" />
+  <link rel="stylesheet" href="/trunk/libs/assets/font-awesome/css/font-awesome.css" type="text/css" />
+  <link rel="stylesheet" href="/trunk/libs/jquery/waves/dist/waves.css" type="text/css" />
+  <link rel="stylesheet" href="/trunk/styles/material-design-icons.css" type="text/css" />
+
+  <link rel="stylesheet" href="/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/trunk/styles/font.css" type="text/css" />
+  <link rel="stylesheet" href="/trunk/styles/app.css" type="text/css" />
+  <link rel="stylesheet" href="./css/board.css" type="text/css" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?1" />
+  <script src="/trunk/libs/jquery/jquery/dist/jquery.js"></script>
+
+
+</head>
+<body>
+
+<!--공통로드-->
+<style type="text/css" title="">
+.pop_loading{display:block; text-align:center;padding:25px;;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.26);}
+</style>
+<div id='pop_loading' class="pop_loading pos_f text-center" style='display:none;top:0;z-index:99999999999999999999'>
+	&nbsp;
+	<div class="progress" style="margin:-200px auto; width:300px">
+	  <div class="progress-bar progress-bar-striped active progress-bar-danger" id="progress" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+	    
+	  </div>
+	</div>
+</div>
+<script type="text/javascript">
+var ajaxt_y = '';
+
+//로딩
+function loading_start(){
+	
+	$('#pop_loading')	.width($(window).width()).css('padding-top',$(window).height() / 2).show();
+	
+}
+
+//로딩x
+function loading_end(){
+	
+	$('#pop_loading')	.hide();
+
+}
+
+$( document ).ajaxStart(function() {
+ //loading_start();
+ ajaxt_y = 'y';
+});
+
+
+$( document ).ajaxComplete(function( event, request, settings ) {
+  //loading_end();
+  ajaxt_y = '';
+});
+
+
+</script>
+
+<?
+$colors = "blue-grey-900";
+?>
+<div class="app" style="min-width:1725px">
+  
+  <!-- aside -->
+  <aside id="aside" class="app-aside modal fade " role="menu">
+    <div class="left">
+      <div class="box bg-white">
+        <div class="navbar md-whiteframe-z1 no-radius <?=$colors?>">
+            <!-- brand -->
+            <a class="navbar-brand" href="/admin/site_adm/main">
+             
+      
+               <span class="hidden-folded m-l inline">
+			<img src="./images/logo_hera.png" alt="" style="width:110px;margin-top:10px;margin-left:-6px" />
+		   </span>
+            </a>
+            <!-- / brand -->
+        </div>
+        <div class="box-row">
+          <div class="box-cell scrollable hover">
+            <div class="box-inner" >
+
+  
+
+		{#LEFT}              
+
+             
+		 </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </aside>
+  <!-- / aside -->          
+  
+
+
+  <!-- content -->
+  <div id="content" class="app-content" role="main">
+    <div class="box">
+          <!-- Content Navbar -->
+    <div class="navbar md-whiteframe-z1 no-radius <?=$colors?>">
+      <!-- Open side - Naviation on mobile -->
+      <a md-ink-ripple  data-toggle="modal" data-target="#aside" class="navbar-item pull-left visible-xs visible-sm"><i class="mdi-navigation-menu i-24"></i></a>
+      <!-- / -->
+      <!-- Page title - Bind to $state's title -->
+      <div class="navbar-item pull-left h4">
+		
+		
+		<?=_ONAME?> 관리자페이지
+	
+	</div>
+      <!-- / -->
+      <!-- Common tools -->
+      <ul class="nav nav-sm navbar-tool pull-right">
+        <li class="hide">
+          <a md-ink-ripple ui-toggle-class="show" target="#search">
+            <i class="mdi-action-search i-24"></i>
+          </a>
+        </li>
+	   <li>
+          <a md-ink-ripple href="/">
+            <i class="glyphicon glyphicon-home "></i> 
+		홈페이지 바로가기
+          </a>
+        </li>
+        <li>
+          <a md-ink-ripple href="/admin/site_adm/logout">
+            <i class="mdi-social-person-outline "></i> 
+		로그아웃
+          </a>
+        </li>
+      
+      </ul>
+      <div class="pull-right" ui-view="navbar@"></div>
+      <!-- / -->
+      <!-- Search form -->
+      <div id="search" class="pos-abt w-full h-full <?=$colors?> hide">
+        <div class="box">
+          <div class="box-col w-56 text-center">
+            <!-- hide search form -->
+            <a md-ink-ripple class="navbar-item inline"  ui-toggle-class="show" target="#search"><i class="mdi-navigation-arrow-back i-24"></i></a>
+          </div>
+          <div class="box-col v-m">
+            <!-- bind to app.search.content -->
+            <input class="form-control input-lg no-bg no-border" placeholder="회원명을 입력해주세요." ng-model="app.search.content">
+          </div>
+          
+        </div>
+      </div>
+      <!-- / -->
+    </div>
+    <!-- Content -->
+
+      <div class="box-row">
+        <div class="box-cell">
+          <div class="box-inner p-t30 p-l20 p-r30">
+            
+		<div class="" style="min-width:1240px" >
+			{#CONTENT}
+		</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- / content -->
+
+ 
+
+    </div>
+  </div>
+
+  
+
+    </div>
+  </div>
+
+
+</div>
+
+
+
+{#COMMON}
+
+<link rel="stylesheet" type="text/css" href="/trunk/scripts/themes/default/style.css">
+
+
+<script src="/trunk/libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/trunk/libs/jquery/waves/dist/waves.js"></script>
+
+<script src="/trunk/scripts/ui-load.js"></script>
+<script src="/trunk/scripts/ui-jp.config.js"></script>
+<script src="/trunk/scripts/ui-jp.js"></script>
+<script src="/trunk/scripts/ui-nav.js"></script>
+<script src="/trunk/scripts/ui-toggle.js"></script>
+<script src="/trunk/scripts/ui-form.js"></script>
+<script src="/trunk/scripts/ui-waves.js"></script>
+<script src="/trunk/scripts/ui-client.js"></script>
+<script src="/trunk/scripts/php.js"></script>
+<script src="/trunk/scripts/jquery.validate.min.js"></script>
+<script src="/trunk/scripts/additional-methods.min.js"></script>
+<script src="/trunk/scripts/messages_ko.js"></script>
+
+<script src="/trunk/scripts/parsley.min.ko.js"></script>
+<script src="/trunk/scripts/parsley.extend.js"></script> 
+<script type="text/javascript" src="/trunk/scripts/jstree.js"></script>	
+
+<script type="text/javascript" src="/trunk/scripts/jquery.url.js"></script>
+<script type="text/javascript" src="/trunk/scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="/trunk/scripts/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript" src="/trunk/scripts/jquery.nicescroll.js"></script>
+
+</body>
+</html>

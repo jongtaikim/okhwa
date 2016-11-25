@@ -1,0 +1,399 @@
+@charset "utf-8";
+/* CSS Document */
+/*img{display:block;}*/
+
+body{
+-ms-overflow-style:scrollbar;
+}
+
+/* LNB */
+#wrap .container_top{ width:1200px;margin:0 auto; padding:20px 0 0 0;}
+#wrap .container{ width:1200px;margin:0 auto; padding:60px 0 60px 0; position:relative;}
+#wrap .container_s{ width:1200px;margin:0 auto; padding:40px 0 0 0;}
+#wrap .container_bom{ width:1200px;margin:0 auto; padding:80px 0 0 0;}
+#wrap .container_main{ width:1200px; margin:0 auto;}
+
+#wrap .container .before_top{padding-bottom:40px; }
+#wrap .container .content{overflow:hidden; margin-left:228px;}
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_01{ height:600px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_01 ul{ width:200px;}
+#wrap .container #lnb .lnb_01 ul li{float:left; width:200px; }
+#wrap .container #lnb img {border:0; display:block;}
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_02{ height:550px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_02 ul{ width:200px;}
+#wrap .container #lnb .lnb_02 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_03{ height:800px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_03 ul{ width:200px;}
+#wrap .container #lnb .lnb_03 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_04{ height:900px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_04 ul{ width:200px;}
+#wrap .container #lnb .lnb_04 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_05{ height:550px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_05 ul{ width:200px;}
+#wrap .container #lnb .lnb_05 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_06{ height:550px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_06 ul{ width:200px;}
+#wrap .container #lnb .lnb_06 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_07{ height:550px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_07 ul{ width:200px;}
+#wrap .container #lnb .lnb_07 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_08{ width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_08 ul{ width:200px;}
+#wrap .container #lnb .lnb_08 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_09{ height:550px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_09 ul{ width:200px;}
+#wrap .container #lnb .lnb_09 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_10{ height:550px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_10 ul{ width:200px;}
+#wrap .container #lnb .lnb_10 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_11{ height:500px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_11 ul{ width:200px;}
+#wrap .container #lnb .lnb_11 ul li{float:left; width:200px; }
+
+#wrap .container #lnb{ width:180px; clear:both; position:absolute; top:60px; left:0; 00; overflow:hidden;cursor:pointer}
+#wrap .container #lnb .lnb_12{ height:550px;width:228px; margin:0 auto; position:relative;}
+#wrap .container #lnb .lnb_12 ul{ width:200px;}
+#wrap .container #lnb .lnb_12 ul li{float:left; width:200px; }
+
+/* Visual */
+
+/* 안면윤곽성형 */
+.visual_01_00{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/facev_top.jpg); margin:0 auto; background-position: top center;}/* 페이스v라인 시스템 */
+.visual_01_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_01.jpg); margin:0 auto; background-position: top center;}/* 안면윤곽시스템 */
+.visual_01_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_02.jpg); margin:0 auto; background-position: top center;}/* 대표 안면윤곽수술 */
+.visual_01_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_03.jpg); margin:0 auto; background-position: top center;}/* 광대축소술 */
+.visual_01_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_04.jpg); margin:0 auto; background-position: top center;}/* 사각턱수술 */
+.visual_01_05{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_05.jpg); margin:0 auto; background-position: top center;}/* 턱끝수술 */
+.visual_01_06{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_06.jpg); margin:0 auto; background-position: top center;}/* 안면비대칭 */
+.visual_01_07{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_07.jpg); margin:0 auto; background-position: top center;}/* 양악수술 */
+.visual_01_08{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_08.jpg); margin:0 auto; background-position: top center;}/* 안면보형물  */
+.visual_01_09{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lowerface_top_09.jpg); margin:0 auto; background-position: top center;}/* 안면윤곽재수술 */
+
+/* 가슴성형 */
+.visual_02_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_01.jpg); margin:0 auto; background-position: top center;}/* 가슴성형 시스템 */
+.visual_02_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_02.jpg); margin:0 auto; background-position: top center;}/* 줄기세포가슴성형 */
+.visual_02_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_03.jpg); margin:0 auto; background-position: top center;}/* 물방울 가슴성형 */
+.visual_02_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_04.jpg); margin:0 auto; background-position: top center;}/* 가슴축소술 */
+.visual_02_05{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_05.jpg); margin:0 auto; background-position: top center;}/* 처진가슴교정술 */
+.visual_02_06{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_06.jpg); margin:0 auto; background-position: top center;}/* 유두성형 */
+.visual_02_07{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_07.jpg); margin:0 auto; background-position: top center;}/* 여성형유방 */
+.visual_02_08{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_08.jpg); margin:0 auto; background-position: top center;}/* 가슴재수술 */
+.visual_02_09{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/breast_top_09.jpg); margin:0 auto; background-position: top center;}/* 컨템프러리 */
+
+/* 리프팅동안성형 */
+.visual_03_00{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_00.jpg); margin:0 auto; background-position: top center;}/* 동안 시스템 */
+.visual_03_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_01.jpg); margin:0 auto; background-position: top center;}/* 리프팅 시스템 */
+.visual_03_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02.jpg); margin:0 auto; background-position: top center;}/* 슈퍼v리프팅 */
+.visual_03_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_03.jpg); margin:0 auto; background-position: top center;}/* 타임리프팅 */
+
+/* .visual_03_02_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_1.jpg); margin:0 auto; background-position: top center;} 벡터리프팅 */
+.visual_03_02_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_1.jpg); margin:0 auto; background-position: top center;}/* 이지리프팅 */
+.visual_03_02_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_2.jpg); margin:0 auto; background-position: top center;}/* 장미리프팅 */
+.visual_03_02_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_3.jpg); margin:0 auto; background-position: top center;}/* 울트라V리프팅 */
+.visual_03_02_4{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_4.jpg); margin:0 auto; background-position: top center;}/* 더마셀리프팅 */
+.visual_03_02_5{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_5.jpg); margin:0 auto; background-position: top center;}/* 회오리리프팅 */
+.visual_03_02_6{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_6.jpg); margin:0 auto; background-position: top center;}/* 골드리프팅 */
+.visual_03_02_7{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_02_7.jpg); margin:0 auto; background-position: top center;}/* 타임리프팅 */
+.visual_03_03_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_03_1.jpg); margin:0 auto; background-position: top center;}/* 레이저리프팅 */
+.visual_03_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_04.jpg); margin:0 auto; background-position: top center;}/* 안면거상술 */
+.visual_03_05{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_05.jpg); margin:0 auto; background-position: top center;}/* 목주름 제거술 */
+.visual_03_06{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_06.jpg); margin:0 auto; background-position: top center;}/* 리프팅 재수술 */
+.visual_03_07{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/lifting_top_07.jpg); margin:0 auto; background-position: top center;}/* 안면지방이식 */
+
+/* 이지함성형 */
+.visual_04_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_01.jpg); margin:0 auto; background-position: top center;}/* 이지함성형 시스템 */
+.visual_04_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_02.jpg); margin:0 auto; background-position: top center;}/* 입술성형  */
+.visual_04_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_03.jpg); margin:0 auto; background-position: top center;}/* 인중성형 */
+.visual_04_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_04.jpg); margin:0 auto; background-position: top center;}/* 입꼬리성형 */
+.visual_04_05_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_05_1.jpg); margin:0 auto; background-position: top center;}/* 쌍꺼풀 */
+.visual_04_05_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_05_2.jpg); margin:0 auto; background-position: top center;}/* 트임성형 */
+.visual_04_05_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_05_3.jpg); margin:0 auto; background-position: top center;}/* 눈꼬리리프팅 */
+.visual_04_05_4{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_05_4.jpg); margin:0 auto; background-position: top center;}/* 눈매교정 */
+.visual_04_05_5{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_05_5.jpg); margin:0 auto; background-position: top center;}/* 눈밑지방/눈밑애교 */
+.visual_04_05_6{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_05_6.jpg); margin:0 auto; background-position: top center;}/* 상안검/하안검 */
+.visual_04_05_7{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_05_7.jpg); margin:0 auto; background-position: top center;}/* 눈 재수술 */
+.visual_04_06_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_06_1.jpg); margin:0 auto; background-position: top center;}/* 콧대성형 */
+.visual_04_06_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_06_2.jpg); margin:0 auto; background-position: top center;}/* 코끝성형 */
+.visual_04_06_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_06_3.jpg); margin:0 auto; background-position: top center;}/* 유형별코성형 */
+.visual_04_06_4{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_06_4.jpg); margin:0 auto; background-position: top center;}/* 코 재수술 */
+.visual_04_07{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_07.jpg); margin:0 auto; background-position: top center;}/* 남자성형 */
+.visual_04_08{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_08.jpg); margin:0 auto; background-position: top center;}/* 쁘띠성형 */
+.visual_04_09{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/ezh_top_09.jpg); margin:0 auto; background-position: top center;}/* 귀성형 */
+
+/* 바디성형 */
+.visual_05_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/body_top_01.jpg); margin:0 auto; background-position: top center;}/* 바디성형 시스템 */
+.visual_05_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/body_top_02.jpg); margin:0 auto; background-position: top center;}/* 힙업성형 */
+.visual_05_03_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/body_top_03_1.jpg); margin:0 auto; background-position: top center;}/* 허벅지 지방흡입 */
+.visual_05_03_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/body_top_03_2.jpg); margin:0 auto; background-position: top center;}/* 복부/옆구리 지방흡입 */
+.visual_05_03_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/body_top_03_3.jpg); margin:0 auto; background-position: top center;}/* 등 지방흡입 */
+.visual_05_03_4{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/body_top_03_4.jpg); margin:0 auto; background-position: top center;}/* 팔 지방흡입 */
+.visual_05_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/body_top_04.jpg); margin:0 auto; background-position: top center;}/* 종아리성형 */
+
+/* 재건성형 */
+.visual_06_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/reconstruction_top_01.jpg); margin:0 auto; background-position: top center;}/* 재건 시스템 */
+.visual_06_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/reconstruction_top_02.jpg); margin:0 auto; background-position: top center;}/* 눈재건술 */
+.visual_06_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/reconstruction_top_03.jpg); margin:0 auto; background-position: top center;}/* 코재건술 */
+.visual_06_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/reconstruction_top_04.jpg); margin:0 auto; background-position: top center;}/* 구순구개열재건술 */
+.visual_06_05{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/reconstruction_top_05.jpg); margin:0 auto; background-position: top center;}/* 유방재건술 */
+.visual_06_06{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/reconstruction_top_06.jpg); margin:0 auto; background-position: top center;}/* 흉터/화상재건술 */
+
+/* 피부클리닉 */
+.visual_07_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_01.jpg); margin:0 auto; background-position: top center;}/* 피부과 시스템 */
+.visual_07_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_02.jpg); margin:0 auto; background-position: top center;}/*  */
+.visual_07_02_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_02_1.jpg); margin:0 auto; background-position: top center;}/* IPL */
+.visual_07_02_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_02_2.jpg); margin:0 auto; background-position: top center;}/* 레이저토닝 */
+.visual_07_02_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_02_3.jpg); margin:0 auto; background-position: top center;}/* 아쿠아필링 */
+.visual_07_02_4{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_02_4.jpg); margin:0 auto; background-position: top center;}/* 소프트필 */
+.visual_07_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_03.jpg); margin:0 auto; background-position: top center;}/*   */
+.visual_07_03_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_03_1.jpg); margin:0 auto; background-position: top center;}/* PDT  */
+.visual_07_03_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_03_2.jpg); margin:0 auto; background-position: top center;}/* ACNE IPL  */
+.visual_07_03_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_03_3.jpg); margin:0 auto; background-position: top center;}/* TCA필링  */
+.visual_07_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_04.jpg); margin:0 auto; background-position: top center;}/*  */
+.visual_07_04_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_04_1.jpg); margin:0 auto; background-position: top center;}/* 프락셀 */
+.visual_07_04_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_04_2.jpg); margin:0 auto; background-position: top center;}/* MTS */
+.visual_07_04_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_04_3.jpg); margin:0 auto; background-position: top center;}/* DOT필링 */
+.visual_07_05{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_05.jpg); margin:0 auto; background-position: top center;}/*  */
+.visual_07_05_1{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_05_1.jpg); margin:0 auto; background-position: top center;}/* 울쎄라 */
+.visual_07_05_2{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_05_2.jpg); margin:0 auto; background-position: top center;}/* 써마지 */
+.visual_07_05_3{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/skin_top_05_3.jpg); margin:0 auto; background-position: top center;}/* 인트라셀 */
+
+/* 청담헤라소개 */
+.visual_10_01{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_01.jpg); margin:0 auto; background-position: top center;}/* 청담이지함소개 */
+.visual_10_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_02.jpg); margin:0 auto; background-position: top center;}/* 이지함둘러보기 */
+.visual_10_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_03.jpg); margin:0 auto; background-position: top center;}/* 의료진소개 */
+.visual_10_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/company_top_04.jpg); margin:0 auto; background-position: top center;}/* 청담헤라미디어 */
+.visual_10_05{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_09.jpg); margin:0 auto; background-position: top center;}/* 언론보도 */
+.visual_10_06{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_08.jpg); margin:0 auto; background-position: top center;}/* 공지사항 */
+.visual_10_07{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_06.jpg); margin:0 auto; background-position: top center;}/* 진료안내 */
+.visual_10_08{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_07.jpg); margin:0 auto; background-position: top center;}/* 오시는길 */
+.visual_10_09{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_04.jpg); margin:0 auto; background-position: top center;}/* 개인정보취급방침 */
+.visual_10_10{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_05.jpg); margin:0 auto; background-position: top center;}/* 이용약관 */
+.visual_10_11{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_08.jpg); margin:0 auto; background-position: top center;}/* 대표원장인사말 */
+.visual_10_12{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_09.jpg); margin:0 auto; background-position: top center;}/* 청담헤라CM송 */
+.visual_10_13{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_10.jpg); margin:0 auto; background-position: top center;}/* 첨단장비소개 */
+.visual_10_14{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_11.jpg); margin:0 auto; background-position: top center;}/* 사이트맵 */
+.visual_10_15{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_12.jpg); margin:0 auto; background-position: top center;}/* 첨단장비소개 */
+.visual_10_16{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_13.jpg); margin:0 auto; background-position: top center;}/* 여신스타 */
+.visual_10_17{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/cdezh_top_10.jpg); margin:0 auto; background-position: top center;}/* 성형검진시스템 */
+
+/* 상담센터 */
+.visual_11_01{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/call_top_01.jpg); margin:0 auto; background-position: top center;}/* 온라인상담 */
+
+/* 커뮤니티 */
+.visual_12_01{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/community_top_01.jpg); margin:0 auto; background-position: top center;}/* 리얼스토리 */
+/*
+.visual_12_01{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/real_top_01.jpg); margin:0 auto; background-position: top center;}/* 리얼스토리1
+.visual_12_01{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/real_top_02.jpg); margin:0 auto; background-position: top center;}/* 리얼스토리2
+.visual_12_01{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/real_top_03.jpg); margin:0 auto; background-position: top center;}/* 리얼스토리3 
+*/
+.visual_12_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/community_top_02.jpg); margin:0 auto; background-position: top center;}/* 전후시진 */
+.visual_12_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/community_top_03.jpg); margin:0 auto; background-position: top center;}/* 셀카후기 */
+.visual_12_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/community_top_04.jpg); margin:0 auto; background-position: top center;}/* 수술후기 */
+
+/* 회원 */
+.visual_13_01{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_01.jpg); margin:0 auto; background-position: top center;}/* 회원가입 */
+.visual_13_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_02.jpg); margin:0 auto; background-position: top center;}/* 아이디찾기 */
+.visual_13_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_03.jpg); margin:0 auto; background-position: top center;}/* 비밀번호찾기 */
+.visual_13_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_04.jpg); margin:0 auto; background-position: top center;}/* 회원정보수정 */
+.visual_13_05{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_05.jpg); margin:0 auto; background-position: top center;}/* 개인정보처리방침 */
+.visual_13_06{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_06.jpg); margin:0 auto; background-position: top center;}/* 회원탈퇴 */
+.visual_13_07{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_07.jpg); margin:0 auto; background-position: top center;}/* 로그인 */
+.visual_13_08{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub/contents/join_top_08.jpg); margin:0 auto; background-position: top center;}/* 이용약관 */
+
+/* 남자성형 */
+.visual_14_01{ width:100%; height:600px; clear:both; background:url(/application/views/contents/images/sub_new/contents/man_top_01.jpg); margin:0 auto; background-position: top center;}/* 남자성형 */
+.visual_14_02{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/man_top_02.jpg); margin:0 auto; background-position: top center;}/* 시크윤곽 */
+.visual_14_03{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/man_top_03.jpg); margin:0 auto; background-position: top center;}/* 샤이닝눈 */
+.visual_14_04{ width:100%; height:380px; clear:both; background:url(/application/views/contents/images/sub_new/contents/man_top_04.jpg); margin:0 auto; background-position: top center;}/* 올킬코 */
+
+/* contents */
+.mainnavwrap{margin:0 auto; width:1200px; height:600px; position:relative;  ; overflow:hidden;}
+.mainnavwrap .mainnav{width:1200px; height:80px; position:absolute; bottom:0; 00; overflow:hidden;}
+.main_ban{ height:200px; padding-bottom:200px;}
+.main_ban ul{}
+.main_ban ul li{ float:left;}
+.main_img{padding:0 0 140px; 0}
+.main_text{padding:0 0 60px; 0}
+
+/* tab_style */
+.tab_style{background:#fafafc; padding:44px 0 44px 0; border:1px solid #eee;}
+.tab_style2{width:950px;}
+.tab_style2 .photo_nav{ width:992px; padding:10px 0 10px 0; margin:auto;}
+.tab_style2 .photo_nav .prev{padding-right:6px;padding-left:none;}
+.tab_style2 .photo_nav .next{ padding-left:2px; padding-right:none;}
+.tab_style2 .photo_nav ul{margin:auto;}
+.tab_style2 .photo_nav ul li{ float:left; padding-right:3px;}
+.cont_text2{ padding:0 0 40px; 0}
+
+
+
+/* 전후사진 */
+
+
+dl.selectField dt {
+	width:41px;
+	height:12px;
+	float:left;
+	font-size: 1.2em;
+	text-indent:-5000px;
+	border-right:2px solid #96cbd7;
+}
+
+dd.selectHow {
+	padding-top:5px;
+}
+
+dt.type01 {
+	margin-top:7px;
+	margin-left:20px;
+	background:url(/application/views/contents/images/community/type01.png) no-repeat;
+}
+
+dt.type02 {
+	margin-top:13px;
+	margin-left:15px;
+	background:url(/application/views/contents/images/community/type02.png) no-repeat;
+}
+
+dl.selectField dd {
+	margin-left:90px;
+	/*
+	margin-top:5px;
+	margin-bottom:15px;
+	*/
+}
+
+dl.selectField label {
+	vertical-align:top;
+	display:inline-block;
+	margin:0.2em;
+	width:11.2em;
+	font-size:0.8em;
+	color:#676767;
+	font-family:Gulim;
+	zoom:1;
+	*display:inline;
+}
+
+dl.selectField label.hot {
+	font-weight:bold;
+	letter-spacing:0px;
+}
+
+
+#pointermenu2 {
+	width:100%;
+	height:28px;
+	margin-bottom:20px;
+	color:#333;
+}
+
+#pointermenu2 li a {
+	width:106px;
+	height:24px;
+	float:left;
+	letter-spacing:0px;
+	border:1px solid #ddd;
+	margin-right:-1px;
+	font-size:0.95em;
+	text-align:center;
+	padding-top:10px;
+	background:#fefefe;
+}
+
+#pointermenu2 li a:hover {
+	width:106px;
+	height:24px;
+	display:block;
+	background:#666;
+	color:#fff;
+}
+
+
+#pointermenu2 li a.selected {
+	width:106px;
+	height:24px;
+	display:block;
+	color:#fff;
+	background:#666;
+	border-top:2px solid #abb9ff;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+}
+
+
+
+div.mms {
+	display: none;
+	position: fixed;
+	top:175px;
+	left:50%;
+	margin-left:-108px;
+	width:216px;
+	height:410px;
+	background-image:url(/application/views/contents/images/quick/mms_bg.png);
+	z-index:99101;
+}
+
+div.mms div.input {
+	margin-top:255px;
+	text-align:center;
+	margin-bottom:60px;
+}
+
+div.mms div.input select,
+div.mms div.input input {
+	border:2px solid #bbb;
+	height:2em;
+	font-size:1.1em;
+	font-family:돋움, Dotum, Arial;
+}
+
+div.mms div.input input {
+	width:3em;
+	height:1.7em;
+}
+
+div.mms img.close {
+	position:absolute;
+	margin-top:-415px;
+	margin-left:216px;
+}
+
+.black_overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:3100;
+	-moz-opacity: 0.7;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+}
+
+
+

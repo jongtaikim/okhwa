@@ -1,0 +1,125 @@
+<?
+$s_view = substr(uri_string(),0,12);
+?>
+<? if($s_view != 'user/product'){ ?>
+	<nav class="navside white r box-shadow-z0 m-b " style="border:1px solid rgba(120, 130, 140, 0.13);">
+		
+		<div class="nav-border b-primary" flex="">
+			<ul class="nav ng-scope" ui-nav="">
+				
+				
+				{@ site_menu_list}
+					{? .num_cate == substr(_GET.cate,0,2)}
+						<li class="nav-header hidden-folded">
+						
+						<span class="text-xl ">
+							<strong style="font-size:16px;"><i class="fa  fa-align-right"></i> {.str_title}</strong></span>	
+						</li>
+						<li><div class="b-b b m-v-sm"></div></li>
+						{@ .sub}
+							{? ..sub}
+							{? ..num_view ==1}
+								<li {? ..num_cate == substr(_GET.cate,0,4)}class="active dker  "{/}>
+									<a><span class="nav-caret text-muted"><i class="fa fa-caret-down"></i></span> 
+										 <span class="nav-text " ><strong style="color:;font-size:14px">{..str_title}</strong></span>
+									</a>
+									<ul class="nav-sub">
+										{@ ..sub}
+										<li><div class="b-b b m-v-sm"></div></li>
+										{? ...sub}
+											
+											<li {? ...num_cate == substr(_GET.cate,0,6)}class="active over_plus  "{:} class="over_plus"{/}>
+												<a><span class="nav-caret text-muted">
+													<i class="fa fa-caret-down"></i></span> 
+													<span class="nav-text " style="{? ...num_cate == substr(_GET.cate,0,6)}color:#EE7701{/}">{...str_title}</span>
+												</a>
+												<ul class="nav-sub " style="margin-left:-48px;font-size:13px">
+													{@ ...sub}
+													<li><a  href="{....menu_url}"><span class="nav-text " style="{? ....num_cate == substr(_GET.cate,0,8)}color:#EE7701{/}">· {....str_title}</span></a></li>
+													{/}
+												</ul>
+											</li>
+
+										{:}
+											<li {? ...num_cate == substr(_GET.cate,0,6)}class="active dker   "{/}><a href="{...menu_url}"><span class="nav-text " style="{? ...num_cate == substr(_GET.cate,0,6)}color:#EE7701{/}">{...str_title}</span></a></li>
+										
+										{/}
+										
+										
+
+										{/}
+									</ul>
+								</li>
+
+							{/}
+							{:}
+								{? ..num_view ==1}
+								<li {? ..num_cate == substr(_GET.cate,0,4)} class="active   "{/}>
+									<a href="{..menu_url}"><span class="nav-text">{..str_title}</span></a>
+								</li>
+								{/}
+							{/}
+							{? ..num_view ==1}
+							<li><div class="b-b b m-v-sm"></div></li>
+							{/}
+
+
+						
+						{/}
+					{/}
+				{/}
+
+
+			</ul>
+		</div>
+		
+	</nav>
+
+    <div class="btn-group-vertical m-b hide" style="width: 100%">
+        <button type="button" class="btn white"  style="font-size:12px" onclick="location.href='/user/ctl_online/item_add/1410/1?cate=1410&db_title=s1'">
+            <i class="fa fa-file-text-o m-r5"></i>견적문의
+        </button>
+        <button type="button" class="btn white"  style="font-size:12px" onclick="location.href='/user/ctl_online/item_add/1411/1?cate=1411&db_title=s2'">
+            <i class="fa fa-check-circle-o"></i> A/S문의
+        </button>
+        <button type="button" class="btn white"  style="font-size:12px" onclick="location.href='/user/ctl_online/list_view/1412?cate=1412&db_title=s3'">
+            <i class="fa fa-question-circle m-r5"></i>Q&A
+        </button>
+    </div>
+
+   <?}else{?>
+
+
+
+        <nav class="navside white r box-shadow-z0 m-b " style="border:1px solid rgba(120, 130, 140, 0.13);">
+            <div class="nav-border b-primary" flex="">
+                <ul class="nav ng-scope" ui-nav="">
+                    <li class="nav-header hidden-folded">
+                    <span class="text-xl ">
+                        <strong style="font-size:16px;"><i class="fa  fa-align-right"></i> 제품 소개</strong></span>
+                    </li>
+                    <li><div class="b-b b m-v-sm"></div></li>
+
+                    {@ menu_LIST}
+                    <li class="{? category == .카테고리} active dker{/}   ">
+                        <a><span class="nav-caret text-muted"><i class="fa fa-caret-down"></i></span>
+                            <span class="nav-text "><strong style="color:;font-size:14px"> {.카테고리}</strong></span>
+                        </a>
+                        <ul class="nav-sub">
+                            {@ .sub}
+                            <li><div class="b-b b m-v-sm"></div></li>
+                            <li class="{? seq == ..idx }active dker{/}    "><a href="/user/product/view/{..idx}"><span class="nav-text " {? seq == ..idx }style="color:#EE7701"{/}>{..상품명2}<br>({..상품명})</span></a></li>
+                            <li><div class="b-b b m-v-sm"></div></li>
+                            {/}
+                        </ul>
+                    </li>
+                    <li><div class="b-b b m-v-sm"></div></li>
+                    {/}
+
+
+                </ul>
+            </div>
+        </nav>
+
+	
+<?}?>

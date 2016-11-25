@@ -1,0 +1,58 @@
+<?
+$sub_view = trim(uri_string());
+if($sub_view == "main") $sub_view='';
+?>
+
+<div class="col-md-12 p-b20 p-t20 white " id="">
+
+	<div class="col-md-6 col-md-offset-3 pos_r text-center" id="">
+
+		<a href="/">
+			<img src="./images/logo.png" alt="" />
+		</a>
+
+		<div class="gnb_menu pos_a" id="">
+			<a href="/" class=" " style="margin-left:4px" >HOME</a>
+			{? !_SESSION.USERID}
+			<a href="/user/member/member_login" class=" " style="margin-left:10px">LOGIN</a>
+			{:}
+			<a href="/user/member/member_logout" class="m-r5 " style="margin-left:10px">LOGOUT</a>
+			{/}
+			<a href="/user/ctl_online/list_view/1412?cate=1412&db_title=s3" class="" style="margin-left:10px">CONTACT US</a>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+<div class="col-md-12  box-shadow  box-shadow-z0 top-nav" style=""  id="header">
+		<div class="cont1" id="">
+
+				<ul class="nav navbar-nav pull-left " style="width:100%;">
+					{@ site_menu_list}
+
+						{? .num_view ==1}
+							<li class="nav-item dropdown dropdown-submenu text-center " style="width:23.3%">
+							<!--<li class="nav-item dropdown dropdown-submenu text-center " style="width:16%">-->
+								<a class="nav-link {? .sub}dropdown-toggle{/}" href="{.menu_url}" {? .sub}data-toggle="dropdown"{/}><strong style="font-size:14px">{.str_title}</strong></a>
+								{? .sub}
+								<ul	class="dropdown-menu pull-down text-color ng-scope animated fadeInUp" 	role="menu" style="margin-left: 35px;">
+									<li class="arrow top b-white" ></li>
+									{@ .sub}
+										{? ..num_view ==1}
+										<li class="dropdown-item"><a href="{..menu_url}">{..str_title}</a></li>
+										{/}
+									{/}
+								</ul>
+								{/}
+							</li>
+						{/}
+					{/}
+
+
+				</ul>
+
+		</div>
+</div>

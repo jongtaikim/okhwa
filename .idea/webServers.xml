@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="bfa9ab48-bc91-439b-9363-c4652a65357f" name="okhwa" url="http://okhwa.it-company.kr">
+        <fileTransfer host="okhwa.it-company.kr" port="22" rootFolder="/disk1/home/okhwa" accessType="SFTP" password="dfcedfc6dfdedfd0dfc0dfcbdfdcdfc0dfd9dfc6" username="okhwa">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
