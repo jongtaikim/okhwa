@@ -1,9 +1,4 @@
-<script type="text/javascript">
-loading_start();
-$(document).ready(function(){ 
-	loading_end();
-});
-</script>
+
 <div style="width:1124px">
 <div class="card">
   <div class="card-heading bg-light lt">
@@ -13,38 +8,33 @@ $(document).ready(function(){
   <div class="card-body b-t">
     <div>
 
-
- 
 		<!--content-->
-		<form name="editorForm" id="editorForm" method="POST" enctype="multipart/form-data">
+		<form name="editorForm" id="editorForm" method="POST" action=" <?=$_SERVER['PHP_SELF']?>" enctype="multipart/form-data">
 
 
 			<ul class="nav nav-tabs m-b20">
-				<li {? mode=="member"}class="active"{/}>
-					<a href="/admin/site_adm/pra/member/?PageNum={PageNum}">회원약관</a>
+				<li {? _GET.mode=="member"}class="active"{/}>
+					<a href="#admin/site_adm/pra?mode=member&PageNum={PageNum}">회원약관</a>
 				</li>
-				<li {? mode!="member"}class="active"{/}>
-					<a href="/admin/site_adm/pra/prict/?PageNum={PageNum}">개인정보 취급방침</a>
+				<li {? _GET.mode!="member"}class="active"{/}>
+					<a href="#admin/site_adm/pra?mode=prict&PageNum={PageNum}">개인정보 취급방침</a>
 				</li>
 				
 			</ul>
 
 		{? mode == "member"}
+            <textarea name="str_text" id="str_text" rows="" cols="" style="width:100%;height: 500px">{str_text}</textarea>
 
-				
-				
-				<plug:daum_editor name="str_text" height="250" form="editorForm" width="780" sect="par/member">{str_text}</plug:daum_editor>
-				
-		{:} 
+		{:}
 
-				 
 
-				<plug:daum_editor name="str_text2" height="250" form="editorForm" width="780" sect="par/prict">{str_text2}</plug:daum_editor>
+
+            <textarea name="str_text2" id="str_text2" rows="" cols="" style="width:100%;height: 500px">{str_text2}</textarea>
 
 		{/}
 		 
 		<div style="text-align:center">	
-			<a href="javascript:saveContent();" class="btn btn-dark btn-xl">저장</a>
+			<a href="javascript:form_submit('editorForm')" class="btn btn-dark btn-xl">저장</a>
 			
 		</div>
 

@@ -25,7 +25,7 @@ class menu_adm extends CI_Controller {
 
 	
 	 var $main_layout =  "admin_main";
-	 var $sub_layout =  "admin_sub";
+	 var $sub_layout =  "none";
 
 
 	function __construct()

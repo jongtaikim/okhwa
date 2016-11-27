@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko"  id="ng-app" ng-app class="" >
 <head>
   <meta charset="utf-8" />
   <title> [<?=_OID?>] <?=_ONAME?> - 관리자</title>
@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="./css/board.css" type="text/css" />
   <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?1" />
   <script src="/trunk/libs/jquery/jquery/dist/jquery.js"></script>
+    <script src="/trunk/scripts/underscore-min.js" type="text/javascript"></script>
+    <script src="/trunk/scripts/backbone-min.js" type="text/javascript"></script>
 
 
 </head>
@@ -75,7 +77,7 @@ $colors = "grey-900";
       <div class="box bg-white">
         <div class="navbar md-whiteframe-z1 no-radius <?=$colors?>">
             <!-- brand -->
-            <a class="navbar-brand" href="/admin/site_adm/main">
+            <a class="navbar-brand" href="#adm/admin_main">
              
       
                <span class="hidden-folded m-l inline">
@@ -165,8 +167,8 @@ $colors = "grey-900";
         <div class="box-cell">
           <div class="box-inner p-t30 p-l20 p-r30">
             
-		<div class="" >
-			{#CONTENT}
+		<div class="content-box" >
+
 		</div>
 
           </div>
@@ -220,6 +222,140 @@ $colors = "grey-900";
 <script type="text/javascript" src="/trunk/scripts/jquery.cookie.js"></script>
 <script type="text/javascript" src="/trunk/scripts/jquery-ui-1.10.4.custom.min.js"></script>
 <script type="text/javascript" src="/trunk/scripts/jquery.nicescroll.js"></script>
+<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
+<script type="text/javascript">
+    var multiviewRefreshSeconds = 10;
+    var multiviewTimerId;
+
+    var monitorTimerId;
+    var lastMonitoringNo = 0;
+    var appRouter;
+    $(function() {
+
+        var AppRouter = Backbone.Router.extend({
+            routes: {
+                ":route": "display",
+                ":route/": "display",
+                ":route/:page": "display",
+                ":route/:page/": "display",
+                ":route/:page/:seg": "display",
+                ":route/:page/:seg/": "display",
+                ":route/:page/:seg/:mp": "display",
+                ":route/:page/:seg/:mp/": "display",
+                ":route/:page/:seg/:mp/:ap": "display",
+                ":route/:page/:seg/:mp/:ap/": "display"
+            },
+
+            display: function(route, page, seg,mp,ap) {
+                var url = route;
+                if(page) {
+                    url = route + '/' + page;
+
+                    if(seg){
+                        url += ('/' + seg);
+                    }
+                    if(mp){
+                        url += ('/' + mp);
+                    }
+                    if(ap){
+                        url += ('/' + ap);
+                    }
+                }
+
+                loading_start();
+
+                $.ajax({
+                    type: 'get',
+                    url: url,
+                    data: {},
+                    dataType: 'html',
+                    error: function(xhr, e){
+                        console.log(e);
+                        console.log(xhr);
+                    },
+                    success: function(html, textStatus, xhr) {
+                         $('.content-box').html(html);
+                         $('form').each(function () {
+                             $(this).unbind('submit').submit(function () {
+                                 var action;
+                                 var tfrom = $(this);
+
+
+                                 if($(this).attr('action')) action = $(this).attr('action'); else action = url;
+
+
+                                 $.ajax({
+                                     type: 'post',
+                                     url: action,
+                                     data: $(this).serialize(),
+                                     dataType:"json",
+                                     error: function(xhr, e){
+                                         alert(' 페이지에 접속할 수 없습니다.', 'error', 3000);
+                                         console.log(xhr.responseText);
+                                     },
+                                     success: function(result) {
+                                         alert(result.message);
+                                         if(result.code =="200"){
+                                             $('form').each(function(){
+
+                                                     location.href=location.hash+'&v='+date("YmdHis");
+
+                                             });
+                                         }
+
+                                     }
+                                 });
+
+                             return false;
+                             });
+                         });
+                     },
+                    complete: function(xhr, textStatus) {
+                        loading_end();
+                    }
+                });
+                //endLoading(); // 한번 더 호출
+            }
+        });
+
+        appRouter = new AppRouter();
+        Backbone.history.start();
+
+        // route가 변경될 때마다
+        appRouter.bind("all",function(route, router) {
+            clearInterval(monitorTimerId);
+            clearInterval(multiviewTimerId);
+        });
+    });
+
+    function form_submit(name,action) {
+
+        if(!action) {
+            action = $('form[name='+name+']').attr('action');
+        }
+        $.ajax({
+            type: 'post',
+            url: action,
+            data: $('form[name='+name+']').serialize(),
+            dataType:"json",
+            error: function(xhr, e){
+                showAlert(word+' 페이지에 접속할 수 없습니다.', 'error', 3000);
+                console.log(xhr.responseText);
+            },
+            success: function(result) {
+                alert(result.message);
+
+            }
+        });
+    }
+
+    $(document).ready(function(){
+       if(!location.hash){
+           location.href='#adm/admin_main';
+       }
+    });
+</script>
 
 </body>
 </html>

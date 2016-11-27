@@ -2,130 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23b33b02-bebd-4a45-a9bf-a789fe85acfb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/images/middle_title02.png" afterPath="$PROJECT_DIR$/application/views/user_page/images/middle_title02.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/images/notice_title.gif" afterPath="$PROJECT_DIR$/application/views/user_page/images/notice_title.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/images/vis_text1.png" afterPath="$PROJECT_DIR$/application/views/user_page/images/vis_text1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/admin/blank.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/__get/adm_menu.php" afterPath="$PROJECT_DIR$/application/config/__get/adm_menu.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="$PROJECT_DIR$/application/config/database.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/user_page/site_config.php" afterPath="$PROJECT_DIR$/application/config/user_page/site_config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/menu_adm.php" afterPath="$PROJECT_DIR$/application/controllers/admin/menu_adm.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/site_adm.php" afterPath="$PROJECT_DIR$/application/controllers/admin/site_adm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/models/admin/pra.php" afterPath="$PROJECT_DIR$/application/models/admin/pra.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/common.htm" afterPath="$PROJECT_DIR$/application/views/admin/common.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/css/board.css" afterPath="$PROJECT_DIR$/application/views/admin/css/board.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/layout_admin_main.htm" afterPath="$PROJECT_DIR$/application/views/admin/layout_admin_main.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" afterPath="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/layout_card.htm" afterPath="$PROJECT_DIR$/application/views/admin/layout_card.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/layout_none_src.htm" afterPath="$PROJECT_DIR$/application/views/admin/layout_none_src.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/left.htm" afterPath="$PROJECT_DIR$/application/views/admin/left.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/login.htm" afterPath="$PROJECT_DIR$/application/views/admin/login.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/main.htm" afterPath="$PROJECT_DIR$/application/views/admin/main.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/member/list_excel.htm" afterPath="$PROJECT_DIR$/application/views/admin/member/list_excel.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/member/list_g.htm" afterPath="$PROJECT_DIR$/application/views/admin/member/list_g.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/member/state.htm" afterPath="$PROJECT_DIR$/application/views/admin/member/state.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/member/view_g.htm" afterPath="$PROJECT_DIR$/application/views/admin/member/view_g.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/board_category.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/board_category.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_add.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_add.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_board.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_board.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_docs.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_docs.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_frame.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_frame.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_frame_bak.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_frame_bak.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_listorder.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_listorder.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_option.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_option.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/menu/menu_rights.htm" afterPath="$PROJECT_DIR$/application/views/admin/menu/menu_rights.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/online/add.htm" afterPath="$PROJECT_DIR$/application/views/admin/online/add.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/online/list.htm" afterPath="$PROJECT_DIR$/application/views/admin/online/list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/online/state.htm" afterPath="$PROJECT_DIR$/application/views/admin/online/state.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/passwd.htm" afterPath="$PROJECT_DIR$/application/views/admin/passwd.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/popup.htm" afterPath="$PROJECT_DIR$/application/views/admin/popup.htm" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/pra.htm" afterPath="$PROJECT_DIR$/application/views/admin/pra.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/sms/input.htm" afterPath="$PROJECT_DIR$/application/views/admin/sms/input.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/info.php" afterPath="$PROJECT_DIR$/application/views/board/skin/board/info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list_board.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list_board.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list_gallery.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list_gallery.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list_media.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list_media.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list_review.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list_review.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list_web_board.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list_web_board.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/read.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/read.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/style.css" afterPath="$PROJECT_DIR$/application/views/board/skin/board/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/write.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/write.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/info.php" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_board.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_board.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_gallery.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_gallery.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_media.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_media.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_review.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_review.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_web_board.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/list_web_board.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/read.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/read.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/realstory_roll.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/realstory_roll.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/style.css" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/mobile_board/write.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/mobile_board/write.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/common/layout_admin_common.htm" afterPath="$PROJECT_DIR$/application/views/common/layout_admin_common.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/common/layout_user_common.htm" afterPath="$PROJECT_DIR$/application/views/common/layout_user_common.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/common/pass_input.htm" afterPath="$PROJECT_DIR$/application/views/common/pass_input.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/common/passwd.htm" afterPath="$PROJECT_DIR$/application/views/common/passwd.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/join_end.htm" afterPath="$PROJECT_DIR$/application/views/member/join_end.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/join_form.htm" afterPath="$PROJECT_DIR$/application/views/member/join_form.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/join_g.htm" afterPath="$PROJECT_DIR$/application/views/member/join_g.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/js/member.js" afterPath="$PROJECT_DIR$/application/views/member/js/member.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/member_del.htm" afterPath="$PROJECT_DIR$/application/views/member/member_del.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/member_findid.htm" afterPath="$PROJECT_DIR$/application/views/member/member_findid.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/member_login.htm" afterPath="$PROJECT_DIR$/application/views/member/member_login.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/member_modify.htm" afterPath="$PROJECT_DIR$/application/views/member/member_modify.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/member_modify_w.htm" afterPath="$PROJECT_DIR$/application/views/member/member_modify_w.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/member_text.htm" afterPath="$PROJECT_DIR$/application/views/member/member_text.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/join_end.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/join_end.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/join_form.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/join_form.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/join_g.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/join_g.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/member_del.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/member_del.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/member_findid.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/member_findid.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/member_findpw.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/member_findpw.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/member_login.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/member_login.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/member_modify.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/member_modify.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/mobile/member_modify_w.htm" afterPath="$PROJECT_DIR$/application/views/member/mobile/member_modify_w.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/modify_e.htm" afterPath="$PROJECT_DIR$/application/views/member/modify_e.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/member/modify_g.htm" afterPath="$PROJECT_DIR$/application/views/member/modify_g.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/online/list.htm" afterPath="$PROJECT_DIR$/application/views/online/list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/online/read.htm" afterPath="$PROJECT_DIR$/application/views/online/read.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/online/style.css" afterPath="$PROJECT_DIR$/application/views/online/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/online/write.htm" afterPath="$PROJECT_DIR$/application/views/online/write.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/online/write_mobile.htm" afterPath="$PROJECT_DIR$/application/views/online/write_mobile.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/product/view.html" afterPath="$PROJECT_DIR$/application/views/product/view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/api/groups" afterPath="$PROJECT_DIR$/application/views/user_page/api/groups" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/css/default.css" afterPath="$PROJECT_DIR$/application/views/user_page/css/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/css/main.css" afterPath="$PROJECT_DIR$/application/views/user_page/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/css/main_new.css" afterPath="$PROJECT_DIR$/application/views/user_page/css/main_new.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/css/sub.css" afterPath="$PROJECT_DIR$/application/views/user_page/css/sub.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/introduce.htm" afterPath="$PROJECT_DIR$/application/views/user_page/introduce.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/item/cpa.htm" afterPath="$PROJECT_DIR$/application/views/user_page/item/cpa.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/js/common.js" afterPath="$PROJECT_DIR$/application/views/user_page/js/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/js/main.js" afterPath="$PROJECT_DIR$/application/views/user_page/js/main.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_foot.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_foot.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_lnb.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_lnb.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_main.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_main.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_right.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_right.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_sub.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_sub.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_sub_menu.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_sub_menu.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_top.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_top.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_top_new.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_top_new.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_top_tool.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_top_tool.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/main.htm" afterPath="$PROJECT_DIR$/application/views/user_page/main.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/p_view.htm" afterPath="$PROJECT_DIR$/application/views/user_page/p_view.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/app.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/config.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/config.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/config.lazyload.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/config.lazyload.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/config.router.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/config.router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/palette.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/palette.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-form.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-form.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-include.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-include.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-jp.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-jp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-load.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-load.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-nav.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-nav.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-screenfull.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-screenfull.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-scroll-to.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-scroll-to.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/scripts/ui-toggle-class.js" afterPath="$PROJECT_DIR$/application/views/user_page/scripts/ui-toggle-class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/sitemap.htm" afterPath="$PROJECT_DIR$/application/views/user_page/sitemap.htm" />
     </list>
     <ignored path="okhwa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,30 +35,6 @@
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - okhwa@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="MySQL - okhwa@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="rooms" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -183,9 +47,80 @@
           <file leaf-file-name="adm_menu.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/config/__get/adm_menu.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="518">
-                  <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
+                <state relative-caret-position="1802">
+                  <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="menu_adm.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/controllers/admin/menu_adm.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="901">
+                  <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+                  <folding>
+                    <marker date="1480162835195" expanded="true" signature="2227:2327" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="2531:2631" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="2840:2929" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="3129:3204" ph="select * fro... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="3352:3443" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="4366:4623" ph="INSERT INTO ${$this-&gt;MENU_TABLE}... " />
+                    <marker date="1480162835195" expanded="true" signature="5767:5960" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+                    <marker date="1480162835195" expanded="true" signature="6102:6165" ph="select * fro... ${$this-&gt;GROUP_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="6260:6455" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+                    <marker date="1480162835195" expanded="true" signature="6698:6792" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="6837:6936" ph="SELECT count... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="7414:7508" ph="select * fro... ${$this-&gt;FILES_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="7735:7888" ph="delete from " />
+                    <marker date="1480162835195" expanded="true" signature="8217:8288" ph="DELETE FROM " />
+                    <marker date="1480162835195" expanded="true" signature="8313:8412" ph="DELETE FROM " />
+                    <marker date="1480162835195" expanded="true" signature="8831:8925" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="8970:9069" ph="SELECT count... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="9547:9641" ph="select * fro... ${$this-&gt;FILES_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="9868:10021" ph="delete from " />
+                    <marker date="1480162835195" expanded="true" signature="10452:10551" ph="DELETE FROM " />
+                    <marker date="1480162835195" expanded="true" signature="11142:11217" ph="select * fro... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="11398:11489" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="11614:11711" ph="select count... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="11820:11905" ph="select * fro... ${$this-&gt;BOARD_TABLE_CONFIG}" />
+                    <marker date="1480162835195" expanded="true" signature="12007:12123" ph="select str_n... ${$this-&gt;MEMBER_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="12552:12640" ph="select sum(n... tab_files" />
+                    <marker date="1480162835195" expanded="true" signature="13927:14000" ph="select * fro... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="15320:15409" ph="select count... ${$this-&gt;BOARD_TABLE_CONFIG}" />
+                    <marker date="1480162835195" expanded="true" signature="16161:16658" ph="UPDATE tab_b... " />
+                    <marker date="1480162835195" expanded="true" signature="17036:17121" ph="select count... ${$this-&gt;URL_LINK_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="17721:17806" ph="select count... ${$this-&gt;URL_LINK_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="18449:18558" ph="delete from " />
+                    <marker date="1480162835195" expanded="true" signature="18662:18855" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+                    <marker date="1480162835195" expanded="true" signature="18991:19054" ph="select * fro... ${$this-&gt;GROUP_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="19152:19348" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+                    <marker date="1480162835195" expanded="true" signature="19951:20022" ph="SELECT str_t... ${tab_menu}" />
+                    <marker date="1480162835195" expanded="true" signature="20231:20319" ph="SELECT str_t... ${tab_menu}" />
+                    <marker date="1480162835195" expanded="true" signature="20786:20864" ph="select * fro... tab_menu" />
+                    <marker date="1480162835195" expanded="true" signature="22605:22678" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="22914:23013" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="23255:23315" ph="SELECT * FRO... ${$this-&gt;GROUP_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="23490:23591" ph="SELECT * FRO... ${$this-&gt;RIGHT_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="24037:24117" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="24690:24789" ph="DELETE FROM " />
+                    <marker date="1480162835195" expanded="true" signature="24992:25139" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+                    <marker date="1480162835195" expanded="true" signature="25417:25531" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="25627:25728" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="26032:26112" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="26263:26344" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="27221:27337" ph="select num_s... ${$this-&gt;BOARD_TABLE_CATE}" />
+                    <marker date="1480162835195" expanded="true" signature="27733:27882" ph="select count... ${$this-&gt;BOARD_TABLE_CATE}" />
+                    <marker date="1480162835195" expanded="true" signature="28533:28679" ph="INSERT INTO ${$this-&gt;BOARD_TABLE_CATE}... " />
+                    <marker date="1480162835195" expanded="true" signature="28968:29091" ph="delete from " />
+                    <marker date="1480162835195" expanded="true" signature="29639:29756" ph="select num_s... ${$this-&gt;BOARD_TABLE_CATE2}" />
+                    <marker date="1480162835195" expanded="true" signature="30152:30302" ph="select count... ${$this-&gt;BOARD_TABLE_CATE2}" />
+                    <marker date="1480162835195" expanded="true" signature="30955:31102" ph="INSERT INTO ${$this-&gt;BOARD_TABLE_CATE2}... " />
+                    <marker date="1480162835195" expanded="true" signature="31392:31516" ph="delete from " />
+                    <marker date="1480162835195" expanded="true" signature="32000:32102" ph="SELECT MAX(n... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="32422:32522" ph="SELECT MAX(n... ${$this-&gt;MENU_TABLE}" />
+                    <marker date="1480162835195" expanded="true" signature="32841:32942" ph="SELECT MAX(n... ${$this-&gt;MENU_TABLE}" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -193,28 +128,18 @@
           <file leaf-file-name="layout_admin_main.htm" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_main.htm">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="136">
-                  <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="109" />
+                <state relative-caret-position="391">
+                  <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="layout_admin_sub.htm" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="442">
-                  <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="main.htm" pinned="false" current-in-tab="true">
+          <file leaf-file-name="main.htm" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/application/views/admin/main.htm">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+                <state relative-caret-position="408">
+                  <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
                   <folding>
                     <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                     <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -223,16 +148,70 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="site_adm.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="site_adm.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/application/controllers/admin/site_adm.php">
               <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="428">
+                  <caret line="149" column="38" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="blank.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/blank.html">
+              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Display.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/libraries/Display.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="578">
+                  <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pra.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/models/admin/pra.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="629">
+                  <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="99" selection-end-column="13" />
                   <folding>
-                    <marker date="1480097436338" expanded="true" signature="307:9178" ph="..." />
-                    <marker date="1480097436338" expanded="true" signature="2376:4954" ph="..." />
-                    <marker date="1480097436338" expanded="true" signature="4591:4698" ph="..." />
-                    <marker date="1480097436338" expanded="true" signature="4597:4697" ph="..." />
+                    <marker date="1480164624143" expanded="true" signature="799:879" ph="select str_t... ${$this-&gt;ORGAN_TABLE}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="pra.htm" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/pra.htm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="323">
+                  <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#textarea#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="passwd.htm" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/passwd.htm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="289">
+                  <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -242,21 +221,83 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="site_adm.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/application/controllers/admin/site_adm.php">
+          <file leaf-file-name="layout_admin_sub.htm" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+                <state relative-caret-position="-14">
+                  <caret line="301" column="99" selection-start-line="301" selection-start-column="99" selection-end-line="301" selection-end-column="99" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="aria.rnc" pinned="false" current-in-tab="false">
-            <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/aria.rnc">
+          <file leaf-file-name="common.htm" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/common.htm">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="298">
-                  <caret line="266" column="18" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
+                <state relative-caret-position="-1255">
+                  <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="menu_board.htm" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/menu/menu_board.htm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="952">
+                  <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="abstractor.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../gamer_admin/application/controllers/abstractor.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="595">
+                  <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_scaffolder_add.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/_scaffolder_add.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="menu_frame.htm" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/menu/menu_frame.htm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="578">
+                  <caret line="165" column="50" selection-start-line="165" selection-start-column="50" selection-end-line="165" selection-end-column="50" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_header.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/_header.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="48" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="web.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/../gamer_admin/assets/js/web.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -265,6 +306,13 @@
         </leaf>
       </split-second>
     </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -278,11 +326,19 @@
         <option value="$PROJECT_DIR$/application/config/user_page/site_config.php" />
         <option value="$PROJECT_DIR$/application/views/admin/member/list_g.htm" />
         <option value="$PROJECT_DIR$/application/config/database.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/layout_admin_main.htm" />
-        <option value="$PROJECT_DIR$/application/config/__get/adm_menu.php" />
-        <option value="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" />
         <option value="$PROJECT_DIR$/application/views/admin/main.htm" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/46bb81d3-5f95-42e7-a02e-87eceacd0eca/console.sql" />
+        <option value="$PROJECT_DIR$/application/views/admin/layout_admin_main.htm" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/menu_adm.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/menu/menu_frame.htm" />
+        <option value="$PROJECT_DIR$/application/config/__get/adm_menu.php" />
+        <option value="$PROJECT_DIR$/application/models/admin/pra.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/pra.htm" />
+        <option value="$PROJECT_DIR$/application/views/admin/blank.htm.html" />
+        <option value="$PROJECT_DIR$/application/views/admin/blank.html" />
+        <option value="$PROJECT_DIR$/application/views/admin/menu/menu_board.htm" />
+        <option value="$PROJECT_DIR$/application/views/admin/common.htm" />
+        <option value="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" />
         <option value="$PROJECT_DIR$/application/controllers/admin/site_adm.php" />
       </list>
     </option>
@@ -292,6 +348,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpServers">
+    <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
@@ -342,6 +401,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,6 +540,46 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__get" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -479,6 +592,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -509,6 +623,9 @@
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="23b33b02-bebd-4a45-a9bf-a789fe85acfb" name="Default" comment="" />
@@ -516,12 +633,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480079598502</updated>
-      <workItem from="1480079599712" duration="11831000" />
+      <workItem from="1480079599712" duration="22111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11831000" />
+    <option name="totallyTimeSpent" value="22111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
@@ -536,7 +653,7 @@
       <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14864865" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.145469" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.145469" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -548,6 +665,14 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -602,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/common.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/left.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -632,34 +747,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="67" column="11" selection-start-line="67" selection-start-column="11" selection-end-line="67" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/aria.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="298">
           <caret line="266" column="18" selection-start-line="266" selection-start-column="18" selection-end-line="266" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_main.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/__get/adm_menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="103" column="13" selection-start-line="103" selection-start-column="13" selection-end-line="103" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -719,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/main.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state relative-caret-position="408">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
@@ -728,10 +819,250 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/site_adm.php">
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/scripts/backbone-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/scripts/underscore-min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="4" column="3721" selection-start-line="4" selection-start-column="3721" selection-end-line="4" selection-end-column="3721" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/scripts/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/assets/js/admin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="234" column="0" selection-start-line="234" selection-start-column="0" selection-end-line="234" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_main.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
-          <caret line="56" column="8" selection-start-line="56" selection-start-column="8" selection-end-line="56" selection-end-column="8" />
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/assets/js/web.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/menu/menu_frame.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="165" column="50" selection-start-line="165" selection-start-column="50" selection-end-line="165" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/_scaffolder_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/application/controllers/abstractor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/pra.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#textarea#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/passwd.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/libraries/Display.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/blank.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/menu/menu_board.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="952">
+          <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/menu_adm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="62" column="42" selection-start-line="62" selection-start-column="42" selection-end-line="62" selection-end-column="42" />
+          <folding>
+            <marker date="1480162835195" expanded="true" signature="2227:2327" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="2531:2631" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="2840:2929" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="3129:3204" ph="select * fro... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="3352:3443" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="4366:4623" ph="INSERT INTO ${$this-&gt;MENU_TABLE}... " />
+            <marker date="1480162835195" expanded="true" signature="5767:5960" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+            <marker date="1480162835195" expanded="true" signature="6102:6165" ph="select * fro... ${$this-&gt;GROUP_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="6260:6455" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+            <marker date="1480162835195" expanded="true" signature="6698:6792" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="6837:6936" ph="SELECT count... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="7414:7508" ph="select * fro... ${$this-&gt;FILES_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="7735:7888" ph="delete from " />
+            <marker date="1480162835195" expanded="true" signature="8217:8288" ph="DELETE FROM " />
+            <marker date="1480162835195" expanded="true" signature="8313:8412" ph="DELETE FROM " />
+            <marker date="1480162835195" expanded="true" signature="8831:8925" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="8970:9069" ph="SELECT count... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="9547:9641" ph="select * fro... ${$this-&gt;FILES_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="9868:10021" ph="delete from " />
+            <marker date="1480162835195" expanded="true" signature="10452:10551" ph="DELETE FROM " />
+            <marker date="1480162835195" expanded="true" signature="11142:11217" ph="select * fro... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="11398:11489" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="11614:11711" ph="select count... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="11820:11905" ph="select * fro... ${$this-&gt;BOARD_TABLE_CONFIG}" />
+            <marker date="1480162835195" expanded="true" signature="12007:12123" ph="select str_n... ${$this-&gt;MEMBER_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="12552:12640" ph="select sum(n... tab_files" />
+            <marker date="1480162835195" expanded="true" signature="13927:14000" ph="select * fro... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="15320:15409" ph="select count... ${$this-&gt;BOARD_TABLE_CONFIG}" />
+            <marker date="1480162835195" expanded="true" signature="16161:16658" ph="UPDATE tab_b... " />
+            <marker date="1480162835195" expanded="true" signature="17036:17121" ph="select count... ${$this-&gt;URL_LINK_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="17721:17806" ph="select count... ${$this-&gt;URL_LINK_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="18449:18558" ph="delete from " />
+            <marker date="1480162835195" expanded="true" signature="18662:18855" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+            <marker date="1480162835195" expanded="true" signature="18991:19054" ph="select * fro... ${$this-&gt;GROUP_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="19152:19348" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+            <marker date="1480162835195" expanded="true" signature="19951:20022" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1480162835195" expanded="true" signature="20231:20319" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1480162835195" expanded="true" signature="20786:20864" ph="select * fro... tab_menu" />
+            <marker date="1480162835195" expanded="true" signature="22605:22678" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="22914:23013" ph="SELECT COUNT... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="23255:23315" ph="SELECT * FRO... ${$this-&gt;GROUP_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="23490:23591" ph="SELECT * FRO... ${$this-&gt;RIGHT_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="24037:24117" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="24690:24789" ph="DELETE FROM " />
+            <marker date="1480162835195" expanded="true" signature="24992:25139" ph="INSERT INTO ${$this-&gt;RIGHT_TABLE}... " />
+            <marker date="1480162835195" expanded="true" signature="25417:25531" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="25627:25728" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="26032:26112" ph="SELECT str_t... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="26263:26344" ph="SELECT * FRO... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="27221:27337" ph="select num_s... ${$this-&gt;BOARD_TABLE_CATE}" />
+            <marker date="1480162835195" expanded="true" signature="27733:27882" ph="select count... ${$this-&gt;BOARD_TABLE_CATE}" />
+            <marker date="1480162835195" expanded="true" signature="28533:28679" ph="INSERT INTO ${$this-&gt;BOARD_TABLE_CATE}... " />
+            <marker date="1480162835195" expanded="true" signature="28968:29091" ph="delete from " />
+            <marker date="1480162835195" expanded="true" signature="29639:29756" ph="select num_s... ${$this-&gt;BOARD_TABLE_CATE2}" />
+            <marker date="1480162835195" expanded="true" signature="30152:30302" ph="select count... ${$this-&gt;BOARD_TABLE_CATE2}" />
+            <marker date="1480162835195" expanded="true" signature="30955:31102" ph="INSERT INTO ${$this-&gt;BOARD_TABLE_CATE2}... " />
+            <marker date="1480162835195" expanded="true" signature="31392:31516" ph="delete from " />
+            <marker date="1480162835195" expanded="true" signature="32000:32102" ph="SELECT MAX(n... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="32422:32522" ph="SELECT MAX(n... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480162835195" expanded="true" signature="32841:32942" ph="SELECT MAX(n... ${$this-&gt;MENU_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/__get/adm_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1802">
+          <caret line="106" column="0" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/common.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1255">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/pra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="99" selection-end-column="13" />
+          <folding>
+            <marker date="1480164624143" expanded="true" signature="799:879" ph="select str_t... ${$this-&gt;ORGAN_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-14">
+          <caret line="301" column="99" selection-start-line="301" selection-start-column="99" selection-end-line="301" selection-end-column="99" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/site_adm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="149" column="38" selection-start-line="149" selection-start-column="38" selection-end-line="149" selection-end-column="38" />
           <folding />
         </state>
       </provider>

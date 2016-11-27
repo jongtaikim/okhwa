@@ -18,10 +18,6 @@ class pra extends CI_Model {
 
 		
     }
-	
-	
-
-
 
 	/**
 	 * 
@@ -76,11 +72,7 @@ class pra extends CI_Model {
 		if($_POST_DATA[str_text2]) $datas[str_text2] = addslashes($datas[str_text2]);
 		
 		$this->db->updateQuery($this->ORGAN_TABLE,$datas," num_oid = '"._OID."'");
-		
-		
-	
 
-		
 		$this->load->model('/admin/pra');
 		$data = $this->pra->load_text();
 		$data['no_tag_str_text1'] = str_replace('	','',$data['str_text']);
@@ -104,7 +96,8 @@ class pra extends CI_Model {
 		$this->make_json($data,'pra.json');
 	
 
-		return 0;
+		echo json_encode(array('code' => '200', 'message' => '저장되었습니다.', 'result'=>$result));
+        exit;
 
     }
 

@@ -108,13 +108,18 @@ class Site_adm extends CI_Controller {
 	function Main(){
 		$tpl = $this->display;
 		$tpl->setLayout($this->sub_layout);
-		
-		//관리자용 회원 모델
-		$this->load->model('admin/member');
-		$this->load->model('user/mdl_bf');
-		$this->load->model('user/mdl_online');
+        $tpl->define("CONTENT", $this->display->getTemplate("admin/blank.html"));
+        $tpl->printAll();
+	}
 
+    function admin_main(){
 
+        //관리자용 회원 모델
+        $this->load->model('admin/member');
+        $this->load->model('user/mdl_online');
+
+        $tpl = $this->display;
+        $tpl->setLayout('none');
 
         $main_menu = array(
             array(
@@ -124,7 +129,7 @@ class Site_adm extends CI_Controller {
                 'img'=>'/application/views/admin/images/adm_menu1.jpg',
                 'icon'=>'<i class="fa fa-cogs"></i>',
                 'text'=>'사이트에 각종 약관 및 관리자 정보, 상단 타이틀, 팝업등 홈페이지를 관리하기 위한 기능입니다.',
-                'link'=>'/admin/site_adm/common/?PageNum=010101',
+                'link'=>'#admin/site_adm/common/?PageNum=010101',
                 'btn_color'=>'brown',
             ),
             array(
@@ -134,7 +139,7 @@ class Site_adm extends CI_Controller {
                 'img'=>'/application/views/admin/images/adm_menu2.jpg',
                 'icon'=>'<i class="fa fa-credit-card" aria-hidden="true"></i>',
                 'text'=>'펜션 신청을 받기위한  월별, 일별 가격정책을 설정,관리합니다.',
-                'link'=>'/admin/month_price/index/?PageNum=030101',
+                'link'=>'#admin/month_price/index/?PageNum=030101',
                 'btn_color'=>'bg-white',
                 'btn_text_color'=>'#000',
             ),
@@ -146,7 +151,7 @@ class Site_adm extends CI_Controller {
                 'img'=>'/application/views/admin/images/adm_menu3.jpg',
                 'icon'=>'<i class="fa fa-shopping-basket" aria-hidden="true"></i>',
                 'text'=>'펜션 부대시설 정보를 등록/관리합니다.',
-                'link'=>'/admin/room_option/index/?PageNum=030301',
+                'link'=>'#admin/room_option/index/?PageNum=030301',
                 'btn_color'=>'indigo',
                 'btn_text_color'=>'',
             ),
@@ -158,30 +163,17 @@ class Site_adm extends CI_Controller {
                 'img'=>'/application/views/admin/images/adm_menu6.jpg',
                 'icon'=>'<i class="fa fa-shopping-basket" aria-hidden="true"></i>',
                 'text'=>'예약현황을 확인하거나 입금확인 처리를 관리합니다.',
-                'link'=>'/admin/reserve/index/?PageNum=040101',
+                'link'=>'#admin/reserve/index/?PageNum=040101',
                 'btn_color'=>'pink',
                 'btn_text_color'=>'',
             ),
         );
 
-
-/*		//전체 회원수
-		$tpl->assign(array(
-				'member_count'=>$this->member->total_member(),
-				'bf_count'=>$this->mdl_bf->load_total(),
-			));
-
-        $online_cu = $this->mdl_online->load_total();
-        $tpl->assign($online_cu);
-        */
-
         $this->display->assign('LIST',$main_menu);
-		
-		$tpl->define("CONTENT", $this->display->getTemplate("admin/main.htm"));
-		
-		$tpl->printAll();
-	}
 
+        $tpl->define("CONTENT", $this->display->getTemplate("admin/main.htm"));
+        $tpl->printAll();
+    }
 
 	/**
 	 * 사이트 기본 정보 관리
@@ -200,7 +192,7 @@ class Site_adm extends CI_Controller {
 		$data = $this->common->load_data();
 		$tpl->assign($data);
 	
-		$tpl->setLayout($this->sub_layout);
+		$tpl->setLayout('none');
 		$tpl->define("CONTENT", $this->display->getTemplate("admin/common.htm"));
 		
 		$tpl->printAll();
@@ -209,7 +201,9 @@ class Site_adm extends CI_Controller {
 		case "POST":
 
 		$this->common->save_data($_POST);
-		$this->webapp->moveBack('저장되었습니다.');
+        echo json_encode(array('code' => '200', 'message' => '저장되었습니다.', 'result'=>$result));
+        exit;
+
 	
 		
 		 break;
@@ -230,7 +224,7 @@ class Site_adm extends CI_Controller {
 		switch ($_SERVER[REQUEST_METHOD]) {
 		case "GET":
 
-		$tpl->setLayout($this->sub_layout);
+        $tpl->setLayout('none');
 		$tpl->define("CONTENT", $this->display->getTemplate("admin/passwd.htm"));
 		
 		$tpl->printAll();
@@ -239,11 +233,12 @@ class Site_adm extends CI_Controller {
 		case "POST":
 
 		if($this->common->change_admin_passwd($_POST) == "Y"){
-			$this->webapp->moveBack('저장되었습니다.');
+            $msg ='암호가 변경되었습니다.';
 		}else{
-			$this->webapp->moveBack('기존 암호가 일치하지 않습니다.');
+			$msg ='기존 암호가 일치하지 않습니다.';
 		}
-
+            echo json_encode(array('code' => '200', 'message' =>$msg, 'result'=>$result));
+            exit;
 		 break;
 		} 
 	}
@@ -256,16 +251,13 @@ class Site_adm extends CI_Controller {
 	 * @return	void
 	 */	
 	
-	function pra($mode=""){
+	function pra(){
 		$tpl = $this->display;
 		$DB = $this->db;
 
 		$this->load->model('/admin/pra');
 
-		if(!$mode) { //파일 업로드로 인하여 기본값처리 반드시 해줘야함
-			$this->webapp->redirect(_BASEURL.'/member/'._QS);
-			exit;
-		}
+       if(!$_GET['mode']) $mode="member"; else $mode=$_GET['mode'];
 
 		switch ($_SERVER[REQUEST_METHOD]) {
 		case "GET":
@@ -273,8 +265,8 @@ class Site_adm extends CI_Controller {
 		//약관내용 불러오기
 		$tpl->assign($this->pra->load_text());
 		$tpl->assign(array('mode'=>$mode));
-		
-		$tpl->setLayout($this->sub_layout);
+
+        $tpl->setLayout('none');
 		$tpl->define("CONTENT", $this->display->getTemplate("admin/pra.htm"));
 		
 		$tpl->printAll();
@@ -284,7 +276,8 @@ class Site_adm extends CI_Controller {
 		
 
 		$this->pra->save_text($_POST);
-		$this->webapp->redirect(_BASEURL.'/'._QS,'저장되었습니다.');
+        echo json_encode(array('code' => '200', 'message' => '저장되었습니다.', 'result'=>$result));
+        exit;
 
 		 break;
 		} 
@@ -326,9 +319,9 @@ class Site_adm extends CI_Controller {
 			'contents'=>$contents,
 			'sect'=>$sect,
 		 ));
-		 
 
-		$tpl->setLayout($this->sub_layout);
+
+            $tpl->setLayout('none');
 		 $tpl->define("CONTENT", $this->display->getTemplate("admin/popup.htm"));
 		 $tpl->printAll();
 		
