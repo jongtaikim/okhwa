@@ -36,6 +36,12 @@ class board extends CI_Controller {
 		$this->load->library('permission');
 		$this->PERM =$this->permission;
 
+         if($_GET['cate'] =="undefined"){
+             unset($_GET[cate]);
+             echo "게시판을 선택하여 주세요.";
+             exit;
+         }
+
 		if($_GET[cate]) {
 			$_cate = $_GET[cate];
 			while(strlen($_cate = substr($_cate,0,-2)) > 1) {

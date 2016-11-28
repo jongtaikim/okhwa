@@ -80,7 +80,7 @@ class Site_adm extends CI_Controller {
 			$this->session->set_userdata('AUTH', TRUE);
 			$this->session->set_userdata('REMOTE_ADDR', getenv('REMOTE_ADDR'));
 
-			$this->webapp->redirect('/adm/main');
+			$this->webapp->redirect('/adm');
 
 		}else{
 			$this->webapp->moveBack('관리자계정이 일치하지 않습니다.');
