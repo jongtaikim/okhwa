@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="23b33b02-bebd-4a45-a9bf-a789fe85acfb" name="Default" comment="">
+<<<<<<< HEAD
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user/page.php" afterPath="$PROJECT_DIR$/application/controllers/user/page.php" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/admin/month_price.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/admin/room_options.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/admin/rooms.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/__get/adm_menu.php" afterPath="$PROJECT_DIR$/application/config/__get/adm_menu.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/site_adm.php" afterPath="$PROJECT_DIR$/application/controllers/admin/site_adm.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user/board.php" afterPath="$PROJECT_DIR$/application/controllers/user/board.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" afterPath="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/system/libraries/Pagination.php" afterPath="$PROJECT_DIR$/system/libraries/Pagination.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trunk/styles/app.css" afterPath="$PROJECT_DIR$/trunk/styles/app.css" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
     </list>
     <ignored path="okhwa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -31,6 +46,7 @@
     <favorites_list name="okhwa" />
   </component>
   <component name="FileEditorManager">
+<<<<<<< HEAD
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="adm_menu.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/config/__get/adm_menu.php">
@@ -149,6 +165,186 @@
         </entry>
       </file>
     </leaf>
+=======
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="rooms.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/controllers/admin/rooms.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="548">
+                  <caret line="76" column="57" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="room_options.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/controllers/admin/room_options.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="306">
+                  <caret line="66" column="83" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="83" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="month_price.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/application/controllers/admin/month_price.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="adm_menu.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/config/__get/adm_menu.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="520">
+                  <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="scaffolder.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/controllers/admin/scaffolder.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="2414">
+                  <caret line="156" column="119" selection-start-line="156" selection-start-column="119" selection-end-line="156" selection-end-column="119" />
+                  <folding>
+                    <marker date="1480352874645" expanded="true" signature="13348:13397" ph="select count... ${$table}" />
+                    <marker date="1480352874645" expanded="true" signature="18377:18385" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="18386:20841" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="18418:20812" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="18451:19608" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="18514:19402" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="18566:19174" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="18819:19135" ph="..." />
+                    <marker date="1480352874645" expanded="false" signature="19025:19041" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="19042:19098" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="19243:19364" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="19516:19574" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="19641:19825" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="19746:19791" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="19876:20073" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="19976:20039" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="20106:20779" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="20207:20745" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="22138:22193" ph="..." />
+                    <marker date="1480352874645" expanded="true" signature="22447:22502" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="app.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/trunk/styles/app.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="432">
+                  <caret line="1319" column="11" selection-start-line="1319" selection-start-column="1" selection-end-line="1319" selection-end-column="11" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Pagination.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/libraries/Pagination.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="279">
+                  <caret line="267" column="22" selection-start-line="267" selection-start-column="22" selection-end-line="267" selection-end-column="22" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="layout_admin_sub.htm" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1870">
+                  <caret line="22" column="98" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="bootstrap.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="722">
+                  <caret line="6932" column="0" selection-start-line="6932" selection-start-column="0" selection-end-line="6932" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="layout_admin_sub.htm" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="30" column="120" selection-start-line="30" selection-start-column="120" selection-end-line="30" selection-end-column="120" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_scaffolder_list.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/_scaffolder_list.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="476">
+                  <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="_scaffolder_add.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/views/admin/_scaffolder_add.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1105">
+                  <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+                  <folding>
+                    <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MY_form_helper.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/application/helpers/MY_form_helper.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="833">
+                  <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="form_helper.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="510">
+                  <caret line="338" column="43" selection-start-line="338" selection-start-column="43" selection-end-line="338" selection-end-column="43" />
+                  <folding>
+                    <marker date="1480079131000" expanded="true" signature="2101:2113" ph="..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -163,7 +359,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/application/views/online/read.htm" />
         <option value="$PROJECT_DIR$/application/views/admin/online/add.htm" />
         <option value="$PROJECT_DIR$/application/config/user_page/site_config.php" />
@@ -174,16 +369,32 @@
         <option value="$PROJECT_DIR$/application/views/admin/layout_admin_main.htm" />
         <option value="$PROJECT_DIR$/application/controllers/admin/menu_adm.php" />
         <option value="$PROJECT_DIR$/application/views/admin/menu/menu_frame.htm" />
-        <option value="$PROJECT_DIR$/application/config/__get/adm_menu.php" />
         <option value="$PROJECT_DIR$/application/models/admin/pra.php" />
         <option value="$PROJECT_DIR$/application/views/admin/pra.htm" />
         <option value="$PROJECT_DIR$/application/views/admin/blank.htm.html" />
         <option value="$PROJECT_DIR$/application/views/admin/blank.html" />
         <option value="$PROJECT_DIR$/application/views/admin/menu/menu_board.htm" />
         <option value="$PROJECT_DIR$/application/views/admin/common.htm" />
-        <option value="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" />
         <option value="$PROJECT_DIR$/application/controllers/admin/site_adm.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/application/controllers/user/page.php" />
+=======
+        <option value="$PROJECT_DIR$/application/controllers/user/board.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/user_items_new.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/boodes.php" />
+        <option value="$PROJECT_DIR$/system/libraries/Pagination.php" />
+        <option value="$PROJECT_DIR$/trunk/styles/app.css" />
+        <option value="$PROJECT_DIR$/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/room_options.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm" />
+        <option value="$PROJECT_DIR$/application/views/admin/_scaffolder_add.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/scaffolder.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/rooms.php" />
+        <option value="$PROJECT_DIR$/application/config/__get/adm_menu.php" />
+        <option value="$PROJECT_DIR$/application/views/admin/_scaffolder_list.php" />
+        <option value="$PROJECT_DIR$/application/controllers/admin/month_price.php" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
       </list>
     </option>
   </component>
@@ -270,6 +481,46 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jquery" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="trunk" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="libs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="images" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -327,6 +578,32 @@
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="online" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -365,6 +642,27 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="user" />
+<<<<<<< HEAD
+=======
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -392,8 +690,13 @@
           </PATH>
         </subPane>
       </pane>
+<<<<<<< HEAD
       <pane id="Scratches" />
       <pane id="Scope" />
+=======
+      <pane id="Scope" />
+      <pane id="Scratches" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -405,7 +708,16 @@
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../hava_home" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ssheon" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\web\okhwa\application\controllers\admin" />
+    </key>
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -452,20 +764,33 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1480079598502</updated>
+<<<<<<< HEAD
       <workItem from="1480079599712" duration="22111000" />
       <workItem from="1480300639791" duration="785000" />
+=======
+      <workItem from="1480079599712" duration="33436000" />
+      <workItem from="1480341868090" duration="11581000" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="22896000" />
+=======
+    <option name="totallyTimeSpent" value="45017000" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32949153" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18336888" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14984101" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32932165" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.145469" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -502,6 +827,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_main.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -646,6 +972,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
+=======
+    <entry file="file://$PROJECT_DIR$/../ssheon/admin/views/_scaffolder_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
@@ -681,6 +1014,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+<<<<<<< HEAD
         </state>
       </provider>
     </entry>
@@ -688,6 +1022,8 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="145" selection-start-line="14" selection-start-column="145" selection-end-line="14" selection-end-column="145" />
+=======
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
@@ -744,15 +1080,28 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/46bb81d3-5f95-42e7-a02e-87eceacd0eca/console.sql" />
+=======
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/46bb81d3-5f95-42e7-a02e-87eceacd0eca/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
     <entry file="file://$PROJECT_DIR$/application/views/admin/main.htm">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
+<<<<<<< HEAD
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#span#0;n#a#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
           </folding>
+=======
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
@@ -774,6 +1123,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="4" column="3721" selection-start-line="4" selection-start-column="3721" selection-end-line="4" selection-end-column="3721" />
+<<<<<<< HEAD
+=======
+          <folding />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
@@ -789,6 +1142,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+<<<<<<< HEAD
           <folding />
         </state>
       </provider>
@@ -853,35 +1207,59 @@
         <state relative-caret-position="1666">
           <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="99" selection-end-column="13" />
           <folding />
+=======
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="34">
           <caret line="301" column="99" selection-start-line="301" selection-start-column="99" selection-end-line="301" selection-end-column="99" />
           <folding />
+=======
+        <state relative-caret-position="323">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#textarea#1;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/common.htm">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="17">
           <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
           <folding />
+=======
+        <state relative-caret-position="289">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/admin/menu/menu_board.htm">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="834">
           <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
           <folding />
+=======
+        <state relative-caret-position="578">
+          <caret line="121" column="13" selection-start-line="121" selection-start-column="13" selection-end-line="121" selection-end-column="13" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../gamer_admin/application/controllers/abstractor.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="595">
           <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
           <folding />
@@ -893,6 +1271,10 @@
         <state relative-caret-position="374">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
           <folding />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>
@@ -906,16 +1288,31 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/_header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="48" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="48" />
+=======
+    <entry file="file://$PROJECT_DIR$/application/models/admin/pra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="98" column="8" selection-start-line="98" selection-start-column="8" selection-end-line="99" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/admin/admin_init.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../gamer_admin/assets/js/web.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
           <folding />
@@ -952,6 +1349,269 @@
             <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="-1241">
+          <caret line="38" column="53" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/menu/menu_board.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="935">
+          <caret line="121" column="25" selection-start-line="121" selection-start-column="25" selection-end-line="121" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/application/controllers/abstractor.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="131" column="0" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/_scaffolder_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/menu/menu_frame.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="165" column="50" selection-start-line="165" selection-start-column="50" selection-end-line="165" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/application/views/_header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="48" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gamer_admin/assets/js/web.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user/board.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="94" column="29" selection-start-line="94" selection-start-column="29" selection-end-line="94" selection-end-column="29" />
+          <folding>
+            <marker date="1480331606188" expanded="true" signature="1340:1411" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1480331606188" expanded="true" signature="1622:1710" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1480331606188" expanded="true" signature="2259:2350" ph="select * fro... ${$this-&gt;MENU_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="2731:2862" ph="select * fro... ${$this-&gt;BOARD_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="3161:3283" ph="select str_p... ${$this-&gt;MEMBER_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="3865:3964" ph="select * fro... ${$this-&gt;BOARD_TABLE_CONFIG}" />
+            <marker date="1480331606188" expanded="true" signature="4927:5028" ph="select * fro... ${$this-&gt;BOARD_TABLE_CATEGORY}" />
+            <marker date="1480331606188" expanded="true" signature="5138:5240" ph="select * fro... ${$this-&gt;BOARD_TABLE_CATEGORY2}" />
+            <marker date="1480331606188" expanded="true" signature="5695:5860" ph="select * fro... tab_files" />
+            <marker date="1480331606188" expanded="true" signature="6124:6263" ph="select * fro... ${$this-&gt;BOARD_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="7678:7798" ph="select * fro... ${$this-&gt;BOARD_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="9511:9631" ph="select * fro... ${$this-&gt;BOARD_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="10269:10393" ph="select * fro... ${$this-&gt;BOARD_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="10887:10977" ph="select * fro... ${$this-&gt;FILES_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="11209:11362" ph="delete from " />
+            <marker date="1480331606188" expanded="true" signature="11410:11501" ph="select * fro... ${$this-&gt;FILES_TABLE}" />
+            <marker date="1480331606188" expanded="true" signature="11733:11886" ph="delete from " />
+            <marker date="1480331606188" expanded="true" signature="12570:12690" ph="select num_s... ${$this-&gt;BOARD_TABLE_CATEGORY}" />
+            <marker date="1480331606188" expanded="true" signature="12827:12948" ph="select num_s... ${$this-&gt;BOARD_TABLE_CATEGORY2}" />
+            <marker date="1480331606188" expanded="true" signature="13203:13323" ph="select * fro... ${$this-&gt;BOARD_TABLE}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/site_adm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="344" column="0" selection-start-line="344" selection-start-column="0" selection-end-line="344" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="47" column="14" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/libraries/Pagination.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="267" column="22" selection-start-line="267" selection-start-column="22" selection-end-line="267" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/styles/app.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="4" column="79714" selection-start-line="4" selection-start-column="79714" selection-end-line="4" selection-end-column="79714" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/styles/app.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="1319" column="11" selection-start-line="1319" selection-start-column="1" selection-end-line="1319" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_d.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="297" column="9" selection-start-line="297" selection-start-column="9" selection-end-line="297" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="722">
+          <caret line="6932" column="0" selection-start-line="6932" selection-start-column="0" selection-end-line="6932" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/online/add.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="27" column="0" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssheon/admin/views/_scaffolder_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../ssheon/admin/views/_scaffolder_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="192" column="50" selection-start-line="192" selection-start-column="50" selection-end-line="192" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/layout_admin_sub.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1870">
+          <caret line="22" column="98" selection-start-line="22" selection-start-column="98" selection-end-line="22" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/room_options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="66" column="83" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/system/helpers/form_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="338" column="43" selection-start-line="338" selection-start-column="43" selection-end-line="338" selection-end-column="43" />
+          <folding>
+            <marker date="1480079131000" expanded="true" signature="2101:2113" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/helpers/MY_form_helper.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="83" column="62" selection-start-line="83" selection-start-column="62" selection-end-line="83" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/scaffolder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2414">
+          <caret line="156" column="119" selection-start-line="156" selection-start-column="119" selection-end-line="156" selection-end-column="119" />
+          <folding>
+            <marker date="1480352874645" expanded="true" signature="13348:13397" ph="select count... ${$table}" />
+            <marker date="1480352874645" expanded="true" signature="18377:18385" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="18386:20841" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="18418:20812" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="18451:19608" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="18514:19402" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="18566:19174" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="18819:19135" ph="..." />
+            <marker date="1480352874645" expanded="false" signature="19025:19041" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="19042:19098" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="19243:19364" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="19516:19574" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="19641:19825" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="19746:19791" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="19876:20073" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="19976:20039" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="20106:20779" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="20207:20745" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="22138:22193" ph="..." />
+            <marker date="1480352874645" expanded="true" signature="22447:22502" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/rooms.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="548">
+          <caret line="76" column="57" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/_scaffolder_add.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/admin/_scaffolder_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="42" column="57" selection-start-line="42" selection-start-column="57" selection-end-line="42" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#2;n#div#1;n#div#4;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/__get/adm_menu.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="85" column="8" selection-start-line="85" selection-start-column="8" selection-end-line="85" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/month_price.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
+          <folding />
+>>>>>>> f033a13807b317e2f73071eb55273fd32bbb8361
         </state>
       </provider>
     </entry>

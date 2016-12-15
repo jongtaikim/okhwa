@@ -265,7 +265,7 @@ class CI_Pagination {
 					$i = $loop;
 				
 				}else{
-					echo $this->per_page."<br>";
+					//echo $this->per_page."<br>";
 					$i = ($loop * $this->per_page) - $this->per_page;
 				}
 

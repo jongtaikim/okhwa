@@ -26,7 +26,7 @@
 
 
        header('Content-Type: text/html; charset=UTF-8');
-	define('ENVIRONMENT', 'production');
+	define('ENVIRONMENT', 'development');
 	
 	
 	
@@ -44,7 +44,7 @@ if (defined('ENVIRONMENT'))
 	switch (ENVIRONMENT)
 	{
 		case 'development':
-			error_reporting(E_ALL & ~E_NOTICE);
+			error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
 		break;
 	
 		case 'testing':

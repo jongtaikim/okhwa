@@ -1309,13 +1309,17 @@ a.list-group-item.hover {
 }
 
 .pagination > li > a {
-  border-color: #dddee0;
+  border-color: #cdcdcd;
 }
 
 .pagination > li > a:hover,
 .pagination > li > a:focus {
   background-color: #eaebec;
   border-color: #dddee0;
+}
+.pagination > li > a.active {
+    background-color: #eaebec;
+    border-color: #dddee0;
 }
 
 .panel {

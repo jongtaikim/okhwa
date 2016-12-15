@@ -77,15 +77,12 @@ $menu[$cate1]['icon'] = "glyphicon  glyphicon-inbox";
 
 
 	$cate2 = 0;
-    $menu[$cate1]['submenu'][$cate2]['title'] = "게시판 관리";
-    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/menu_adm/menu/board";
-
-
-
+    $menu[$cate1]['submenu'][$cate2]['title'] = "메뉴관리";
+    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/menu_adm/menu/frame";
 
 	$cate2++;
-	$menu[$cate1]['submenu'][$cate2]['title'] = "메뉴관리";
-    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/menu_adm/menu/frame";
+    $menu[$cate1]['submenu'][$cate2]['title'] = "게시판 관리";
+    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/menu_adm/menu/board";
 		
 
 
@@ -97,17 +94,17 @@ $menu[$cate1]['icon'] = "fa fa-archive";
 
 	
 	$cate2 = 0;
-	$menu[$cate1]['submenu'][$cate2]['title'] = "월별가격정책";
+	$menu[$cate1]['submenu'][$cate2]['title'] = "성수기관리";
 	$menu[$cate1]['submenu'][$cate2]['link'] = "#admin/month_price/index";
 
 
     $cate2++;
-    $menu[$cate1]['submenu'][$cate2]['title'] = "일별가격정책";
-    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/day_price/index";
+    $menu[$cate1]['submenu'][$cate2]['title'] = "객실관리";
+    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/rooms/index";
 
     $cate2++;
     $menu[$cate1]['submenu'][$cate2]['title'] = "부대시설";
-    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/room_option/index";
+    $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/room_options/index";
 
 
 $cate1++;
