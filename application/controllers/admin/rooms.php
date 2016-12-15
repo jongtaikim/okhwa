@@ -69,6 +69,7 @@ class Rooms extends Scaffolder
 
         $this->data['one_page'] = true;
         $this->data['enable_add'] = true;
+        
 
         //-----------define fields-------------------------------------------
         // 속성값은 scaffoler.php의 상단 주석 참고.
@@ -79,8 +80,12 @@ class Rooms extends Scaffolder
             $options[$option_array[$ii]['no']] = $option_array[$ii]['name'];
         }
 
+        $cps['제이드나인'] = '제이드나인';
+        $cps['옥화용소절경'] = '옥화용소절경';
+
         $this->data['fields'] = array(
 
+            'room_cp' => array('title' => '객실소속', 'type' => 'select', 'rule'=>'required','options'=>$cps , 'list_style' => 'text-align:center;width:120px;font-weight: bold','html'=>true),
             'room_name' => array('title' => '객실명', 'type' => 'input', 'rule'=>'required', 'list_style' => 'text-align:center;width:280px;font-weight: bold','html'=>true),
             'room_number' => array('title' => '객실번호', 'type' => 'input', 'rule'=>'required', 'list_style' => 'text-align:center;width:100px','html'=>true),
             'bi_price' => array('title' => '비수기<br><small class="text-muted ft12">(주중)</small>', 'type' => 'number', 'list_style' => 'text-align:center;width:','col-md'=>6,'label'=>'원'),
@@ -109,18 +114,26 @@ class Rooms extends Scaffolder
     public function index()
     {
         //합계 데이터
-        $t_data = $this->db->select(' room_name,  count(*) as cu ')->group_by("room_name")->from($this->table_tn)->order_by('cu','desc')->get()->result_array();
+        $t_data = $this->db->select(' room_cp, room_name,  count(*) as cu ')->group_by("room_name")->from($this->table_tn)->order_by('room_cp','desc')->get()->result_array();
         for($ii=0; $ii<count($t_data); $ii++) {
-
+            $totals = $totals+ $t_data[$ii]['cu'];
             if($_GET['sch_room_name'] == $t_data[$ii]['room_name']) {
-                $this->data['total_box'][$ii]['title'] = "<a href='#" . $this->db_id . "?sch_room_name=" . $t_data[$ii]['room_name'] . "' style='font-weight: bold;color:blue'>" . $t_data[$ii]['room_name'] . "</a>";
+                $this->data['total_box'][$ii]['title'] = "<a href='#" . $this->db_id . "?sch_room_name=" . $t_data[$ii]['room_name'] . "' style='font-weight: bold;color:blue'><strong>" . $t_data[$ii]['room_cp']."</strong><br>".$t_data[$ii]['room_name'] . "</a>";
             }else{
-                $this->data['total_box'][$ii]['title'] = "<a href='#" . $this->db_id . "?sch_room_name=" . $t_data[$ii]['room_name'] . "' style='font-weight: '>" . $t_data[$ii]['room_name'] . "</a>";
+                $this->data['total_box'][$ii]['title'] = "<a href='#" . $this->db_id . "?sch_room_name=" . $t_data[$ii]['room_name'] . "' style='font-weight: '><strong>" . $t_data[$ii]['room_cp']."</strong><br>".$t_data[$ii]['room_name'] . "</a>";
             }
 
 
             $this->data['total_box'][$ii]['cu'] =  number_format($t_data[$ii]['cu'])."개";
         }
+
+        $this->data['totals'] = $totals;
+        if(!$_GET['sch_room_name']) {
+            $this->data['total_title'] = "<a href='#" . $this->db_id . "' style='font-weight: bold;color:blue'><strong>전체보기</strong></a>";
+        }else{
+            $this->data['total_title'] = "<a href='#" . $this->db_id . "'><strong>전체보기</strong></a>";
+        }
+        $this->data['total_label'] = '개';
 
         parent::index();
     }

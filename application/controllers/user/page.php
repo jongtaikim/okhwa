@@ -58,10 +58,6 @@ class page extends CI_Controller {
 		$this->load->library('iniconf');
 		$this->load->helper('file');
 
-		$sql = "select * from tab_board where num_mcode = '1315' order by dt_date desc limit 5  ";
-		$row = $this->db -> sqlFetchAll($sql);
-		$tpl->assign(array('gong_LIST'=>$row));
-
 
 		$site_data = @parse_ini_file(_DOC_ROOT.'/application/config/'.THEME.'/site_config.php',true);
 
@@ -89,11 +85,22 @@ class page extends CI_Controller {
 
 
 		$tpl->setLayout('@main');
-		$tpl->define('CONTENT', $this->display->getTemplate(THEME.'/main.htm'));
+		$tpl->define('CONTENT', $this->display->getTemplate('/user_page/blank.htm'));
 		$tpl->printAll();
 
 	  }
 
+    function main(){
+       /* $sql = "select * from tab_board where num_mcode = '1315' order by dt_date desc limit 5  ";
+        $row = $this->db -> sqlFetchAll($sql);
+        $tpl->assign(array('gong_LIST'=>$row));*/
+
+        $this->display->define('CONTENT', $this->display->getTemplate('/user_page/main.htm'));
+        $content = $this->display->fetch('CONTENT');
+
+        echo $content;
+
+    }
 
 	/**
 	 *
@@ -124,7 +131,7 @@ class page extends CI_Controller {
 		$this->db =  $this->db;
 
 		if($mcode){
-			
+
 			if($_SERVER[HTTP_HOST] == "hospi.it-company.kr" || $_SERVER[HTTP_HOST] == "hospi.co,kr"){
 				if($mcode=="1410"){
 					echo "<meta http-equiv='Refresh' Content=\"0; URL='/user/ctl_online/list_view/1410?cate=1410&db_title=s1'\">";

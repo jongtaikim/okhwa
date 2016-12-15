@@ -1,0 +1,28 @@
+
+<div class="box b-l b-b b-r b-t m-t55">
+    <div class="box-header b-b text-center">
+        <i class="fa fa-bed" aria-hidden="true"></i> {room_info.room_name}
+    </div>
+    <div class="box-body padding">
+
+        <div class="text-center b-b">
+            <div class="">선택일 {this_day}</div>
+            <div class="">{price_type} {day_type} 요금이 적용됩니다. </div>
+        </div>
+
+        <div class="m-t30 clearfix">
+            {@ rooms}
+            <div class="radio col-md-3 {? .realpans}disabled{/}" >
+
+
+                <label class="ui-check">
+                    <input type="radio" name="room_no" value="{.room_no}" {? .index_ == 0}checked{/}>
+                    <i class="dark-white"></i>
+                    {.room_number} {? .realpans}(예약불가){:}(예약가능){/}
+                </label>
+            </div>
+            {/}
+        </div>
+
+    </div>
+</div>

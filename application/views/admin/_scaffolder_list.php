@@ -84,13 +84,19 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 
 
 <?if($total_box && count($total_box) <10){?>
-<div class="clearfix m-t10 p-l10">
+<div class="clearfix m-t10 ">
     <div class="row-col box-shadow2 text-center gray m-b20 b-b b-l b-r b-t " >
 
+        <? if($totals) {?>
+        <div class="row-cell p-a b-r">
+            <div class="m-b10 m-t10"><?=$total_title?></div>
+            <h4 class=" text-md _600 total_vu"><?=$totals?><?=$total_label?></h4>
+        </div>
+        <?}?>
         <? for($ii=0; $ii<count($total_box); $ii++) {?>
         <div class="row-cell p-a b-r">
-            <div class="m-b10"><?=$total_box[$ii]['title']?></div>
-            <h4 class="m-a-0 text-md _600"><?=$total_box[$ii]['cu']?></h4>
+            <div class="m-b10 m-t10"><?=$total_box[$ii]['title']?></div>
+            <h4 class=" text-md _600"><?=$total_box[$ii]['cu']?></h4>
         </div>
         <? } ?>
 
@@ -265,6 +271,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
         if(data.total >0) {
             $('#pagehtml').html(data.pagehtml);
             $('#page_sub_title').html("총 " + number_format(data.total) + '건의 데이터가 검색되었습니다.');
+
 
 
             $('.pagination > li > a').each(function () {
