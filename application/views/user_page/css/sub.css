@@ -11,84 +11,84 @@
 #container #contents .title{ overflow:hidden; clear:both; width:1200px; height:80px; margin-top:120px; border-bottom:1px solid #333;}
 
 #container #contents .section{ width:100%}
-#container #contents .section .start{ height:30px; padding:10px 0 0 0; overflow:hidden;}
-#container #contents .section .start .icon{ float:left}
-#container #contents .section .start .icon ul{}
-#container #contents .section .start .icon ul li{ float:left; padding-right:10px;}
-#container #contents .section .start .button{ float:right;}
-#container #contents .section .start .button button{height:32px; width:100px; color:#fff; background-color:#333; border:0; cursor:pointer; padding-bottom:5px;}
-#container #contents .section .calendar{}
-#container #contents .section .calendar .month{ text-align:center; font-size:1.3em; height:20px; padding-bottom:10px;}
-#container #contents .section .calendar .month img{ padding:0 6px 0 6px;}
-#container #contents .section .calendar .caltable{}
-#container #contents .section .calendar .caltable .finish{ color:#a16e6e; font-weight:bold;}
-#container #contents .section .calendar .caltable .wait{color:#6e8aa1; font-weight:bold;}
+.start{ height:30px; padding:10px 0 0 0; overflow:hidden;}
+.start .icon{ float:left}
+.start .icon ul{}
+.start .icon ul li{ float:left; padding-right:10px;}
+.start .button{ float:right;}
+.start .button button{height:32px; width:100px; color:#fff; background-color:#333; border:0; cursor:pointer; padding-bottom:5px;}
+.calendar{}
+.calendar .month{ text-align:center; font-size:1.3em; height:20px; padding-bottom:10px;}
+.calendar .month img{ padding:0 6px 0 6px;}
+.calendar .caltable{}
+.calendar .caltable .finish{ color:#a16e6e; font-weight:bold;}
+.calendar .caltable .wait{color:#6e8aa1; font-weight:bold;}
 
 
-#container #contents .section .calendar .caltable table{}
-#container #contents .section .calendar .caltable table .sun{background-color:#a16e6e}
-#container #contents .section .calendar .caltable table .sat{background-color:#6e8aa1}
-#container #contents .section .calendar .caltable table th{ background-color:#888; color:#fff; border-right:1px solid #fff; border-bottom:1px solid #fff;height:40px; font-size:1.1em; }
-#container #contents .section .calendar .caltable table td{  border-right:1px solid #eee; border-bottom:1px solid #eee; height:60px; text-align:center; position:relative;}
-/*#container #contents .section .calendar .caltable table td .day{ position:absolute; top:6px; left:6px; color:#999;}*/
-#container #contents .section .calendar .caltable button{ background-color:#fff; border:1px solid #ccc; color:#999; padding:4px; width:80px; margin-top:5px; cursor:pointer}
+.calendar .caltable table{}
+.calendar .caltable table .sun{background-color:#a16e6e}
+.calendar .caltable table .sat{background-color:#6e8aa1}
+.calendar .caltable table th{ background-color:#888; color:#fff; border-right:1px solid #fff; border-bottom:1px solid #fff;height:40px; font-size:1.1em; }
+.calendar .caltable table td{  border-right:1px solid #eee; border-bottom:1px solid #eee; height:60px; text-align:center; position:relative;}
+/*.calendar .caltable table td .day{ position:absolute; top:6px; left:6px; color:#999;}*/
+.calendar .caltable button{ background-color:#fff; border:1px solid #ccc; color:#999; padding:4px; width:80px; margin-top:5px; cursor:pointer}
 
-#container #contents .section .sum{ border:1px solid #ccc; padding:32px;}
-#container #contents .section .sum .info{}
-#container #contents .section .sum .info table{ width:100%;}
-#container #contents .section .sum .info table td{ border:1px solid #ccc; height:2px; padding:0 10px 0 10px; }
-#container #contents .section .sum .info table .info_tit{ height:38px; text-align:center; background-color:#888; color:#fff; border:none;}
-#container #contents .section .sum .info table .border_none{ border:none;}
-#container #contents .section .sum .info table .border_left{ border-left:none;}
-#container #contents .section .sum .guest{ padding-top:25px;}
-#container #contents .section .sum .guest table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none; margin-top:10px;}
-#container #contents .section .sum .guest{}
-#container #contents .section .sum .guest table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; }
-#container #contents .section .sum .guest table td select{ margin:0 3px 0 3px; width:60px; border:1px solid #ccc;}
-#container #contents .section .sum .guest table .border_left{ }
-#container #contents .section .sum .choice{ width:100%; padding-top:25px; height:200px;}
-#container #contents .section .sum .choice .option{ width:556px; float:left; }
-#container #contents .section .sum .choice .option .tit{}
-#container #contents .section .sum .choice .option .optionsel{border:1px solid #ccc; margin-top:10px;}
-#container #contents .section .sum .choice .option .optionsel ul{ margin:20px;}
-#container #contents .section .sum .choice .option .optionsel ul li{ height:26px; vertical-align:top;}
-#container #contents .section .sum .choice .option .optionsel ul li input{ vertical-align:-2px; margin:3px;}
-#container #contents .section .sum .choice .option .optionsel ul li .sel_right{ float:right;}
-#container #contents .section .sum .choice .option .optionsel ul li .sel_right select{ width:80px; border:1px solid #ccc;}
-#container #contents .section .sum .choice .amount{ width:556px; float:right;}
-#container #contents .section .sum .choice .amount table{margin-top:10px;border:1px solid #ccc; height:170px;}
-#container #contents .section .sum .choice .amount table td{ padding:20px;}
-#container #contents .section .sum .choice .amount table .amount_tit{ background-color:#eee;}
-#container #contents .section .sum .choice .amount table .amount_txt{ border-left:1px solid #ccc;}
-#container #contents .section .sum .choice .amount table .amount_txt p{ display:inline-block; border-bottom:2px solid #333; padding-bottom:10px;}
-#container #contents .section .sum .choice .amount table .amount_txt .sum_f{font-size:30px; color:#a16e6e}
-#container #contents .section .sum .choice .amount table .amount_txt .sum_f span{ font-size:46px; color:#a16e6e}
-#container #contents .section .nextbtn{ height:32px; margin-top:14px;}
-#container #contents .section .nextbtn button{ height:32px; width:100px; color:#fff; background-color:#333; border:0; margin-left:1100px; cursor:pointer}
-#container #contents .section .nextbtn button span{}
+.sum{ }
+.sum .info{}
+.sum .info table{ width:100%;}
+.sum .info table td{ border:1px solid #ccc; height:2px; padding:0 10px 0 10px; }
+.sum .info table .info_tit{ text-align:center; background-color:#888; color:#fff; border:none;}
+.sum .info table .border_none{ border:none;}
+.sum .info table .border_left{ border-left:none;}
+.sum .guest{ }
+.sum .guest table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none; margin-top:10px;}
+.sum .guest{}
+.sum .guest table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; }
+.sum .guest table td select{ margin:0 3px 0 3px; width:60px; border:1px solid #ccc;}
+.sum .guest table .border_left{ }
+.sum .choice{ width:100%; padding-top:25px; height:200px;}
+.sum .choice .option{ width:556px; float:left; }
+.sum .choice .option .tit{}
+.sum .choice .option .optionsel{border:1px solid #ccc; margin-top:10px;}
+.sum .choice .option .optionsel ul{ margin:20px;}
+.sum .choice .option .optionsel ul li{ height:26px; vertical-align:top;}
+.sum .choice .option .optionsel ul li input{ vertical-align:-2px; margin:3px;}
+.sum .choice .option .optionsel ul li .sel_right{ float:right;}
+.sum .choice .option .optionsel ul li .sel_right select{ width:80px; border:1px solid #ccc;}
+.sum .choice .amount{ width:556px; float:right;}
+.sum .choice .amount table{margin-top:10px;border:1px solid #ccc; height:170px;}
+.sum .choice .amount table td{ padding:20px;}
+.sum .choice .amount table .amount_tit{ background-color:#eee;}
+.sum .choice .amount table .amount_txt{ border-left:1px solid #ccc;}
+.sum .choice .amount table .amount_txt p{ display:inline-block; border-bottom:2px solid #333; padding-bottom:10px;}
+.sum .choice .amount table .amount_txt .sum_f{font-size:30px; color:#a16e6e}
+.sum .choice .amount table .amount_txt .sum_f span{ font-size:46px; color:#a16e6e}
+.nextbtn{ height:32px; margin-top:14px;}
+.nextbtn button{ height:32px; width:100px; color:#fff; background-color:#333; border:0; margin-left:1100px; cursor:pointer}
+.nextbtn button span{}
 
-#container #contents .section .garo{height:38px; text-align:center; background-color:#eee; color:#333;}
-#container #contents .section .sero{height:38px; text-align:center; background-color:#eee; color:#333;}
+.garo{height:38px; text-align:center; background-color:#eee; color:#333;}
+.sero{height:38px; text-align:center; background-color:#eee; color:#333;}
 
-#container #contents .section .last{ border:1px solid #ccc; padding:32px;}
-#container #contents .section .last .tit{ font-size:1.2em; margin-bottom:10px;}
-#container #contents .section .last .tit img{ margin-right:10px;}
-#container #contents .section .last .check{}
-#container #contents .section .last .check table{ width:100%; border:1px solid #ccc; margin-bottom:30px; border-left:none; border-bottom:none}
-#container #contents .section .last .check table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; padding:0 10px 0 10px; }
-#container #contents .section .last .data{}
-#container #contents .section .last .data table{ width:100%; border:1px solid #ccc; margin-bottom:30px; border-left:none; border-bottom:none}
-#container #contents .section .last .data table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; padding:0 10px 0 10px; }
-#container #contents .section .last .data table td select{ width:80px; border:1px solid #ccc; height:24px;}
-#container #contents .section .last .data table td input{ width:200px; height:20px; border:1px solid #ccc;}
-#container #contents .section .last .refund{ margin-bottom:30px;}
-#container #contents .section .last .refund p{ line-height:1.4em; padding-bottom:14px;}
-#container #contents .section .last .refund table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none}
-#container #contents .section .last .refund table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; }
-#container #contents .section .last .policy{ line-height:1.5em;}
-#container #contents .section .last .policy b{font-size:1.1em; padding-bottom:3px;}
-#container #contents .section .last .policy .policy_check{ height:30px; padding-top:10px; margin-top:10px; border-top:1px dotted #666;}
-#container #contents .section .last .policy .policy_check input{ vertical-align:-1px;}
+.last{ border:1px solid #ccc; padding:32px;}
+.last .tit{ font-size:1.2em; margin-bottom:10px;}
+.last .tit img{ margin-right:10px;}
+.last .check{}
+.last .check table{ width:100%; border:1px solid #ccc; margin-bottom:30px; border-left:none; border-bottom:none}
+.last .check table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; padding:0 10px 0 10px; }
+.last .data{}
+.last .data table{ width:100%; border:1px solid #ccc; margin-bottom:30px; border-left:none; border-bottom:none}
+.last .data table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; padding:0 10px 0 10px; }
+.last .data table td select{ width:80px; border:1px solid #ccc; height:24px;}
+.last .data table td input{ width:200px; height:20px; border:1px solid #ccc;}
+.last .refund{ margin-bottom:30px;}
+.last .refund p{ line-height:1.4em; padding-bottom:14px;}
+.last .refund table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none}
+.last .refund table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; }
+.last .policy{ line-height:1.5em;}
+.last .policy b{font-size:1.1em; padding-bottom:3px;}
+.last .policy .policy_check{ height:30px; padding-top:10px; margin-top:10px; border-top:1px dotted #666;}
+.last .policy .policy_check input{ vertical-align:-1px;}
 
 #container #contents .confirm{ position:absolute; right:0; top:121px; width:566px; height:470px; background-color:#fff; border:1px solid #ccc;}
 #container #contents .confirm .form{ background-color:#fff; padding:16px 46px 0 46px;}
@@ -104,16 +104,16 @@
 #container #contents .confirm .button{height:32px; margin-top:14px; text-align:center;}
 #container #contents .confirm .button button{height:32px; width:100px; color:#fff; background-color:#333; border:0; cursor:pointer}
 
-#container #contents .section .last .guide{}
-#container #contents .section .last .guide p{ line-height:1.4em; padding-bottom:14px;}
-#container #contents .section .last .guide table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none}
-#container #contents .section .last .guide table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; }
-#container #contents .section .last .info{}
-#container #contents .section .last .info table{ width:100%; border-top:none; margin-bottom:10px;}
-#container #contents .section .last .info table td{ border:1px solid #ccc; height:2px; padding:0 10px 0 10px; text-align:left; }
-#container #contents .section .last .info table .info_tit{ height:38px; text-align:center; background-color:#eee; color:#333; border-bottom:1px solid #ccc;border-top:1px solid #ccc;border-right:none; }
-#container #contents .section .last .info table .border_none{ border:none;}
-#container #contents .section .last .info table .border_left{ border-right:none;}
+.last .guide{}
+.last .guide p{ line-height:1.4em; padding-bottom:14px;}
+.last .guide table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none}
+.last .guide table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; }
+.last .info{}
+.last .info table{ width:100%; border-top:none; margin-bottom:10px;}
+.last .info table td{ border:1px solid #ccc; height:2px; padding:0 10px 0 10px; text-align:left; }
+.last .info table .info_tit{ height:38px; text-align:center; background-color:#eee; color:#333; border-bottom:1px solid #ccc;border-top:1px solid #ccc;border-right:none; }
+.last .info table .border_none{ border:none;}
+.last .info table .border_left{ border-right:none;}
 
 
 

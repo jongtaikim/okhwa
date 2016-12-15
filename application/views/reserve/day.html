@@ -1,26 +1,38 @@
 
-<div class="box b-l b-b b-r b-t m-t55">
-    <div class="box-header b-b text-center">
-        <i class="fa fa-bed" aria-hidden="true"></i> {room_info.room_name}
+<div class="box b-l b-b b-r b-t m-t55 box-shadow-z1">
+
+    <div class="box-header b-b text-center pos_r" style="background-image: url({room_info.img_url});background-size:cover;background-position: center;height: 183px">
+
+        <div class="box-header b-b text-center pos_a" style="bottom:-2px;left:0px;width:100%;background-color: rgba(255, 255, 255, 0.55)">
+            <i class="fa fa-bed" aria-hidden="true"></i> <strong>{room_info.room_cp} {room_info.room_name}</strong>
+        </div>
     </div>
+
     <div class="box-body padding">
 
-        <div class="text-center b-b">
-            <div class="">선택일 {this_day}</div>
-            <div class="">{price_type} {day_type} 요금이 적용됩니다. </div>
+        <div class="text-center b-b ft16 p-b20">
+            <div class=""><span style="color: #c73900;font-size: 18px">선택일 </span> <strong class="ft30 " style="font-size: 20px">{this_day}</strong></div>
+            <div class="m-t5" style="color:#3c56ce">{this_price_name} {day_type} 요금이 적용됩니다. </div>
         </div>
 
-        <div class="m-t30 clearfix">
+        <div class="m-t10 clearfix" style="height:80px">
             {@ rooms}
-            <div class="radio col-md-3 {? .realpans}disabled{/}" >
+            <div class="col-md-3">
+                <div class="radio  {? .realpans}disabled{/}" >
 
 
-                <label class="ui-check">
-                    <input type="radio" name="room_no" value="{.room_no}" {? .index_ == 0}checked{/}>
-                    <i class="dark-white"></i>
-                    {.room_number} {? .realpans}(예약불가){:}(예약가능){/}
-                </label>
+                    <label class="ui-check ">
+                        <input type="radio" name="room_no1" value="{.room_no}" {? .checked}checked{/} onclick="$('#room_no').val('{.no}'); InoutInList.viewnext();">
+                        <i class="dark-white "></i>
+                        {.room_number} {? .realpans}(예약불가){:}(예약가능){/}
+                    </label>
+                </div>
             </div>
+                {? .checked}
+                    <script type="text/javascript">
+                        $('#room_no').val('{.no}');
+                    </script>
+                {/}
             {/}
         </div>
 

@@ -1,0 +1,140 @@
+
+<div class="box b-l b-b b-r b-t box-shadow-z1 ">
+
+
+
+    <div class="box-header b-b">
+        <span class="label dark">01</span> <strong>객실정보 및 예약자정보</strong>
+    </div>
+    <div class="box-body padding sum animated fadeIn">
+
+        <div class="guest">
+            <form name="next_form" id="next_form">
+            <table width="100%" border="0" cellpadding="0" cellspacing="0" class="m-b10">
+                <colgroup>
+                    <col width="15%">
+                    <col width="15%">
+                    <col width="10%">
+                    <col width="30%">
+                    <col width="20%">
+                    <col width="10%">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <td class="garo">객실명</td>
+                    <td class="garo">이용요금</td>
+                    <td class="garo">기준/최대</td>
+                    <td class="garo">추가인원</td>
+                    <td class="garo">숙박일</td>
+                    <td class="garo">숙박기간</td>
+                </tr>
+                <tr>
+                    <td>{room_info.room_cp} {room_info.room_name} {room_info.room_number}</td>
+                    <td>{=number_format(this_price)} 원</td>
+                    <td>{room_info.human_min}/{room_info.human_max}</td>
+                    <td>
+
+                        성인 <select name="seongin_val" id="seongin_val" onchange="cnrkchanges();">
+                        <option value="0" selected="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12 </option>
+                    </select>
+                        아동 <select name="adong_val" id="adong_val" onchange="cnrkchanges();">
+                        <option value="0" selected="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12 </option>
+                    </select>
+                        유아 <select name="yua_val" id="yua_val" onchange="cnrkchanges();">
+                        <option value="0" selected="">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12 </option>
+                    </select>
+
+                    </td>
+                    <td>
+                        <div id="totaldate">{s_date}~{e_date}</div>
+                    </td>
+                    <td style=" border-right:none">
+
+                        <select name="pperiodofuse" id="pperiodofuse" onchange="InoutInList.viewnext(this.value);">
+                            <option value="1" {? _GET.toda == 1 ||  _GET.toda == ''}selected=""{/}>1박</option>
+                            <option value="2" {? _GET.toda == 2}selected=""{/}>2박</option>
+                            <option value="3" {? _GET.toda == 3}selected=""{/}>3박</option>
+                            <option value="4" {? _GET.toda == 4}selected=""{/}>4박</option>
+                        </select>
+
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+
+            </form>
+
+
+            <div class="clearfix m-t30">
+                <div class="col-md-5 clearfix " style="padding-left:0px">
+                    <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
+                        <div class="f_l padding p-l30 p-r30" style="width:30%;;text-align: center;background-color: #eee;color: ;border: none;">문의전화</div>
+                        <div class="f_l padding text-left p-l20" style="width:60%;border: none;">{phone}</div>
+                    </div>
+                    <div class="b-t b-b b-r b-l clearfix m-t1" style="border-color:#ccc">
+                        <div class="f_l padding p-l30 p-r30" style="width:30%;text-align: center;background-color: #eee;color: ;border: none;">결제안내</div>
+                        <div class="f_l padding text-left p-l20" style="width:60%;;border: none;">{bank}</div>
+                    </div>
+
+                </div>
+                <div class="col-md-7">
+                    <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
+                        <div class="f_l padding p-l30 p-r30 p-t41 p-b41" style="width:30%;;text-align: center;background-color: #eee;;border: none;">요금타입</div>
+                        <div class="f_l padding " style="width:70%;;border: none;">
+                            <p>- {this_price_name} {day_type} 요금</p>
+                            <p>- 기준인원 초과시 1인당 {=number_format(room_info.add_human_price)}원이 추가됩니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+    <div class="box-header b-b b-t">
+        <span class="label dark">02</span> <strong>예약하기</strong>
+    </div>
+    <div class="box-body padding sum ">sdfsd</div>
+</div>

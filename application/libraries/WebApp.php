@@ -68,7 +68,8 @@ class WebApp  {
 		define('_ADMIN_ID', $site_data[admin_id]);
 		define('_ADMIN_PW', $site_data[admin_pw]);
 		define('_END_DATE', $site_data[end_date]);
-	
+		define('_BANK', $site_data['bank']);
+
 		if($_GET[cate]) define('_CATE', $_GET[cate]);
 		if($_GET[mcode]) define('_MCODE', $_GET[mcode]);
 		

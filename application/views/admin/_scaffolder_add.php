@@ -31,11 +31,17 @@ $(document).ready(function (){
                         bootbox.hideAll();
                         bootbox.alert(word+"하였습니다.",function () {
                             bootbox.hideAll();
+                            if(strstr(location.hash,"?")){
+                                document.location.href=location.hash+"&v="+date("YmdHis");
+                            }else{
+                                document.location.href=location.hash+"?v="+date("YmdHis");
+                            }
+
                         });
 
 
 
-                        document.location.href="#<?=$schema['id']?>/index?v="+date("YmdHis");
+
 
 					}
 				}
@@ -70,11 +76,16 @@ $(document).ready(function (){
                         bootbox.hideAll();
                         bootbox.alert("삭제 하였습니다.",function () {
                             bootbox.hideAll();
+                            if(strstr(location.hash,"?")){
+                                document.location.href=location.hash+"&v="+date("YmdHis");
+                            }else{
+                                document.location.href=location.hash+"?v="+date("YmdHis");
+                            }
                         });
 
 
 
-                        document.location.href="#<?=$schema['id']?>/index?v="+date("YmdHis");
+
 
 					}
 				}

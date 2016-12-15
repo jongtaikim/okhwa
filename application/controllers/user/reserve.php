@@ -71,16 +71,16 @@ class reserve extends CI_Controller {
 
 
         $caltemp = '
-		<table  border="0" cellpadding="0" cellspacing="0" class="table table-bordered"  >
+		<table  border="0" cellpadding="0" cellspacing="0" class="table table-bordered"  id="date_table">
 			<thead>
 				<tr>
-					<th class="sun w100 text-center">SUN</th>
-					<th class="w100 text-center">MON</th>
-					<th class="w100 text-center">TUE</th>
-					<th class="w100 text-center">WED</th>
-					<th class="w100 text-center">THU</th>
-					<th class="w100 text-center">FRI</th>
-					<th class="sat w100 text-center">SAT</th>
+					<th class="sun  text-center">SUN</th>
+					<th class=" text-center">MON</th>
+					<th class=" text-center">TUE</th>
+					<th class=" text-center">WED</th>
+					<th class=" text-center">THU</th>
+					<th class=" text-center">FRI</th>
+					<th class="sat  text-center">SAT</th>
 				</tr>
 			</thead>
             <tbody>
@@ -108,14 +108,17 @@ class reserve extends CI_Controller {
                 $radate = $year."-".$month."-".$int ;
 
 //			echo $int ."<br>";
-                $caltemp .=  '<td>' ;
+                $caltemp .=  '<td class="hand">' ;
                 if (($i == 0 && $k < $sweek) || ($i == $tweek-1 && $k > $lweek)) {
                     $caltemp .=    "</td>";
                     continue;
                 }
 
+
+
                 $tt = sprintf("%02d", $n++) ;
                 $udate = $year."-".$month."-".$tt ;
+                $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
                 $sda = array_pop(explode("-",$varprice_row['start_date']));
                 $eda = array_pop(explode("-",$varprice_row['end_date']));
 
@@ -151,9 +154,17 @@ class reserve extends CI_Controller {
                 }
 
 
+                if(date('Y-m-d') == $udate){
+                    $caltemp .= '<div class="ft11 m-b3" style="color:#c2c2c2">' .$varprincname.'</div><div class="day day'.$tt.'  circle danger p-t5 hand" style="width:30px;height:30px;margin: auto;" onclick="InoutInList.viewday(\''.$udate.'\');">'.$tt.'</div>';
+                }else{
+                    if(date('Y-m-d') <= $udate) {
+                        $caltemp .= '<div class="ft11 m-b3" style="color:#c2c2c2">'.$varprincname.'</div><div class="day day'.$tt.' hand circle p-t5" style="width:30px;height:30px;margin: auto" onclick="javascript:InoutInList.viewday(\''.$udate.'\');">' . $tt . '</div>';
+                    }else{
+                        $caltemp .= '<div class="day " style="color:#eee">' . $tt . '</div>';
+                    }
+                }
 
-                $caltemp .= '<div class="day">'.$tt.'</div>';
-                $caltemp .= '<div>' . $varprincname .'<br>';
+
                 $caltemp .= '</div>';
 
 
@@ -184,25 +195,64 @@ class reserve extends CI_Controller {
         
         if($_GET['day'] && $_GET['room_no']){
 
+            $site_info = $this->db->where('num_oid',_OID)->get('tab_organ')->row_array();
+
             $room_info = $this->db->where('no',$_GET['room_no'])->get('rooms')->row_array();
 
-            $room_list = $this->db->where('room_name',$room_info['room_name'])->get('rooms')->result_array();
+            $room_list = $this->db->where('room_name',$room_info['room_name'])->order_by('room_number','asc')->get('rooms')->result_array();
 
             for($ii=0; $ii<count($room_list); $ii++) {
                 $room_list[$ii]['realpans'] =  $this->db->where('todate',$_GET['day'])->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
+                if(!$room_list[$ii]['realpans'] && !$nos){
+                    $room_list[$ii]['checked'] = 'checked';
+                    $nos ='y';
+                }
             }
 
-            $varprice_row = $this->db->where('start_date >= ',$_GET['day'])->where('end_date <= ',$_GET['day'])->get('month_prices')->row_array();
+            $varprice_row = $this->db->where('start_date <= ',$_GET['day'])->where('end_date >= ',$_GET['day'])->get('month_prices')->row_array();
+
             $a = explode("-",$_GET['day']);
 
+            $price_key='bi_price';
+            $price_name='비수기';
+            if($varprice_row){
+
+                if($varprice_row['price_name'] =="성수기" || $varprice_row['price_name'] =="성수기2"){
+                    $price_key='sung_price';
+                    $price_name=$varprice_row['price_name'];
+                }
+                if($varprice_row['price_name'] =="준성수기" || $varprice_row['price_name'] =="준성수기2") {
+                    $price_key='jun_price';
+                    $price_name=$varprice_row['price_name'];
+                }
+
+            }
+
             $week = date("w",strtotime($_GET['day']));
-            if($week =="0" || $week == "6"){
+            if($week =="5" ){
+                $data['day_type'] ='주말(금)';
+                $price_key = $price_key."2";
+            }else if($week == "6"){
                 $data['day_type'] ='주말';
+                $price_key = $price_key."2";
             }else{
                 $data['day_type'] ='주중';
             }
 
+
             $data['this_day'] = $a[0]."년 ".$a[1]."월 ".$a[2]."일";
+            $data['this_price'] = $room_info[$price_key];
+
+            $data['this_price_name'] = $price_name;
+            $data['bank'] = $site_info['STR_BANK'];
+            $data['phone'] = $site_info['STR_PHONE'];
+
+            if($_GET['toda']){
+                $data['s_date'] = $_GET['day'];
+                $data['e_date'] = date("Y-m-d",strtotime($_GET['day'].' +'.$_GET['toda'].' day'));
+                $data['this_price'] = $data['this_price'] * $_GET['toda'];
+            }
+
 
             $this->display->assign($data);
             $this->display->assign('rooms',$room_list);
@@ -213,8 +263,11 @@ class reserve extends CI_Controller {
         }
         
         $this->display->assign($data);
-
-        $this->display->define('CONTENT', $this->display->getTemplate('/reserve/day.html'));
+        if($_GET['mode']) {
+            $this->display->define('CONTENT', $this->display->getTemplate('/reserve/day_'.$_GET['mode'].'.html'));
+        }else {
+            $this->display->define('CONTENT', $this->display->getTemplate('/reserve/day.html'));
+        }
         $content = $this->display->fetch('CONTENT');
 
         echo $content;

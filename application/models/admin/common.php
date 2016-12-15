@@ -64,7 +64,8 @@ class common extends CI_Model {
 		$this->iniconf->setVar("ophone",$datas[str_phone]);
 		$this->iniconf->setVar("zipcode",$datas[chr_zip]);
 		$this->iniconf->setVar("title",addslashes($datas['str_title']));
-		
+		$this->iniconf->setVar("bank",addslashes($datas['str_bank']));
+
 		write_file('application/config/'.THEME."/site_config.php", $this->iniconf->_combine());
 		return 0;
 		

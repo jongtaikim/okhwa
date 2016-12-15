@@ -8,8 +8,9 @@
 
             <div class="caltable text-left ">
                 <form id="FrmAttendanceSearchs"  onsubmit='return false;'>
-                    <input type="hidden" name="room_no" value="{_GET.no}"/>
-                    <input type="hidden" name="leavedate" id="leavedate" value="<?=date('Y-m-d')?>" class=" datepicker"  />
+                    <input type="hidden" name="mode" value="next"/>
+                    <input type="hidden" name="room_no" id="room_no" value="{_GET.no}" onchange=""/>
+                    <input type="hidden" name="day" id="leavedate" value="<?=date('Y-m-d')?>"   />
 
                     <input type="hidden" name="str_year" id="str_year" value="<?=date('Y')?>" />
                     <input type="hidden" name="str_month" id="str_month" value="<?=date('m')?>" />
@@ -24,10 +25,12 @@
                 <br>
 
             </div>
-            <div id="search_result" class="m-t10"></div>
+            <div id="search_result" class="m-t10 "></div>
 
         </div>
-        <div class="col-md-7" id="day_info"></div>
+        <div class="col-md-7 " id="day_info"></div>
+
+        <div class="col-md-12" id="day_info2"></div>
     </div>
 
 
@@ -93,6 +96,7 @@
 
             var _data = $('#FrmAttendanceSearchs').serialize()  ;
 
+
             $.ajax({
                 type: 'POST',
                 url: '/user/reserve/lists',
@@ -105,9 +109,36 @@
                 }
             });
         },
-        viewday : function () {
-            var day = '{_GET.day}';
-            if(!day) day = '{=date("Y-m-d")}';;
+        viewnext: function(toda) {
+
+            var _data = $('#FrmAttendanceSearchs').serialize()  ;
+            if(!toda) toda = 1;
+
+            var _data2 = $('#next_form').serialize()  ;
+
+            $.ajax({
+                type: 'GET',
+                url: '/user/reserve/day',
+                data : _data+"&toda="+toda+'&'+_data2,
+                dataType : "html", //전송받을 데이터의 타입
+                success : function(jsondata) {
+                    $('#day_info2').html(jsondata) ;
+
+
+                }
+            });
+        },
+        viewday : function (day) {
+
+            if(!day){
+                day = '{=date("Y-m-d")}';
+            }else{
+                $('.day').removeClass('danger');
+                var aday = explode("-",day);
+                $('.day'+aday[2]).addClass('danger');
+            }
+
+            $('#leavedate').val(day);
 
             $.ajax({
                 type: 'GET',
@@ -116,6 +147,8 @@
                 dataType : "html", //전송받을 데이터의 타입
                 success : function(html) {
                     $('#day_info').html(html) ;
+                    $('#date_table').height($('#day_info').height()-70);
+                    InoutInList.viewnext();
                 }
             });
         }
