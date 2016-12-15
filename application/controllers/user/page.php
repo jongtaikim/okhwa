@@ -87,11 +87,6 @@ class page extends CI_Controller {
 		}
 
 
-		   $sql = "SELECT *  FROM `product_data`  where idx in (13,14,17,1,2,5,18,19) ";
-           $row = $this->db-> sqlFetchAll($sql);
-
-           $tpl->assign('main_LIST',$row);
-
 
 		$tpl->setLayout('@main');
 		$tpl->define('CONTENT', $this->display->getTemplate(THEME.'/main.htm'));
