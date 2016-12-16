@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
 
-  <meta name="viewport" content="width=1800px,user-scalable=yes, target-densitydpi=medium-dpi" />
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=2, user-scalable=no">
     <meta name="description" content="">
 
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
     <style type="text/css" title="">
         @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
         /* reset */
@@ -35,13 +35,23 @@
 <title><?=_TITLE?></title>
 </head>
 
-<body class="white">
+<body class="white ">
+
+<div class="autoheight autowidth_full opa50 hide pos_a" id="backdrops" style=" background-color: #000;opacity:.5;filter:alpha(opacity=50);z-index:1000"></div>
+
+<div id="loading" class=" pos_a autoheight_full hide " style="z-index:999;top:0px;left:0px;width:100%;    background-color: rgba(0, 0, 0, 0.12);">
+    <div class="" style="text-align: left; width: 100px;margin: 20% auto;">
+        <i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size:90px"></i>
+    </div>
+</div>
+
+
 {#TOP_TOOL}
 <div style="clear:left"></div>
 <div  id="container" >
 		{#TOP}
 		<div style="clear:left"></div>
-        <div class="app" id="contents">
+        <div class="app container" id="contents">
             <div class="section" id="content-box">
                 {#CONTENT}
             </div>
@@ -143,7 +153,7 @@ function popup_view(url,w,h){
 <!-- endbuild -->
 
 <script type="text/javascript">
-
+    var noloading;
     var appRouter;
     $(function() {
 
@@ -167,7 +177,7 @@ function popup_view(url,w,h){
                     }
                 }
 
-                //startLoading();
+                 loading_start();
                 $.ajax({
                     type: 'get',
                     url: url,
@@ -181,7 +191,7 @@ function popup_view(url,w,h){
                         $('#content-box').html(html);
                     },
                     complete: function(xhr, textStatus) {
-                        //endLoading();
+                        loading_end();
                     }
                 });
                 //endLoading(); // 한번 더 호출
@@ -193,17 +203,48 @@ function popup_view(url,w,h){
 
         // route가 변경될 때마다
         appRouter.bind("all",function(route, router) {
-            clearInterval(monitorTimerId);
-            clearInterval(multiviewTimerId);
+           /* clearInterval(monitorTimerId);
+            clearInterval(multiviewTimerId);*/
         });
     });
 
+    function loading_start() {
+        $('.autoheight').height($(document).height());
+        if(!noloading) $('#loading').show();
+    }
 
+    function loading_end() {
+
+         $('#loading').hide();
+    }
+    $( document ).ajaxStart(function() {
+        loading_start();
+    });
+
+
+    $( document ).ajaxComplete(function() {
+        winset();
+        loading_end();
+    });
 
     $(document).ready(function () {
         if (!window.location.hash) {
            window.location = "#/user/page/main";
         }
+    });
+
+    function winset(){
+
+        $('.autoheight').height($(document).height());
+
+    }
+
+    $(document).ready(function (){
+        winset();
+        //  winset_init();
+    });
+    $(window).resize(function(){
+        winset();
     });
 
 </script>

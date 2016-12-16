@@ -99,9 +99,12 @@ class Rooms extends Scaffolder
             'options_select[]' => array('title' => '부대시설', 'type' => 'multiselect','options'=>$options ,'rule'=>'','list_style' => 'text-align:center;','no_keyword'=>true,'list_hide'=>true,'custom_field'=>true),
 
             'options' => array('title' => '부대시설', 'type' => 'hidden', 'rule'=>'','list_style' => 'text-align:center;','list_hide'=>true),
+            'to_da' => array('title' => '최대숙박가능일', 'type' => 'number', 'rule'=>'','list_style' => 'text-align:center;','list_hide'=>true),
             'human_min' => array('title' => '최소인원', 'type' => 'number', 'rule'=>'required','list_style' => 'text-align:center;','list_hide'=>true,'col-md'=>'6'),
             'human_max' => array('title' => '최대인원', 'type' => 'number', 'rule'=>'required','list_style' => 'text-align:center;','col-md'=>'6','list_hide'=>true),
-            'add_human_price' => array('title' => '1명당<br>추가 비용', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true),
+            'add_human_price' => array('title' => '성인<br>추가 비용', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4'),
+            'add_human_price2' => array('title' => '아동<br>추가 비용', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4'),
+            'add_human_price3' => array('title' => '유아<br>추가 비용', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4'),
             'human' => array('title' => '인원정보', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'not_field'=>true,'custom_field'=>true),
 
             'created'=>array('title'=>'생성일','type'=>'now','list_style'=>'text-align:center;width:100px'),

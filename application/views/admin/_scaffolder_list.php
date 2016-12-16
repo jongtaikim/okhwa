@@ -171,7 +171,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 
                 <? if($i==0){?>
                     <? if(!$no_hidden){ ?>
-                    <!--<th class="text-center w60">번호</th>-->
+                    <th class="text-center w60">번호</th>
                     <?}?>
                 <?}?>
 
@@ -201,7 +201,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 
                     <? if($i==0){?>
                         <? if(!$no_hidden){ ?>
-                           <!-- <td class="text-center">{{item.no}}</td>-->
+                           <td class="text-center">{{item.no}}</td>
                         <?}?>
                     <?}?>
 

@@ -198,6 +198,22 @@ class reserve extends CI_Controller {
             $site_info = $this->db->where('num_oid',_OID)->get('tab_organ')->row_array();
 
             $room_info = $this->db->where('no',$_GET['room_no'])->get('rooms')->row_array();
+            if($room_info){
+                $data['op_info'] = $this->db->where_in('no',explode(",",$room_info['options']))->get('room_options')->result_array();
+
+                if($_GET['options']){
+                    $options = $_GET['options'];
+
+                    for($ii=0; $ii<count($data['op_info']); $ii++) {
+                    	if(in_array($data['op_info'][$ii]['no'],$options)){
+
+                            $data['op_info'][$ii]['checked']='checked';
+                            $data['this_price3'] = $data['this_price3']+$data['op_info'][$ii]['price'];
+                        }
+                    }
+                }
+
+            }
 
             $room_list = $this->db->where('room_name',$room_info['room_name'])->order_by('room_number','asc')->get('rooms')->result_array();
 
@@ -252,6 +268,45 @@ class reserve extends CI_Controller {
                 $data['e_date'] = date("Y-m-d",strtotime($_GET['day'].' +'.$_GET['toda'].' day'));
                 $data['this_price'] = $data['this_price'] * $_GET['toda'];
             }
+
+            $data['this_price1'] = $data['this_price'];
+
+            $add_human = $_GET['seongin_val']+$_GET['adong_val']+$_GET['yua_val'];
+
+
+            if ($add_human > $room_info['human_max']){
+                $data['max_hum_to'] = 'y';
+
+                unset($_GET['seongin_val']);
+                unset($_GET['adong_val']);
+                unset($_GET['yua_val']);
+
+                echo '<script>alert("최대 추가인원을 초과했습니다.\n(최대 '.$room_info['human_max'].'명 / '.$add_human.'명 선택)");</script>';
+
+            }else {
+
+                if($add_human > $room_info['human_min'] ) {
+
+                    if ($_GET['seongin_val']) {
+                        $data['this_price2'] =  ($room_info['add_human_price'] * ($_GET['seongin_val']-$room_info['human_min']));
+                    }else{
+                        unset($_GET['seongin_val']);
+                        unset($_GET['adong_val']);
+                        unset($_GET['yua_val']);
+                        echo '<script>alert("성인 인원 없이 예약 불가합니다.");</script>';
+                    }
+                    if ($_GET['adong_val']) {
+                        $data['this_price2'] = ($room_info['add_human_price2'] * $_GET['adong_val']);
+                    }
+                    if ($_GET['yua_val']) {
+                        $data['this_price2'] = ($room_info['add_human_price3'] * $_GET['yua_val']);
+                    }
+                }
+            }
+
+
+
+            $data['this_price'] = $data['this_price']+$data['this_price2']+$data['this_price3'];
 
 
             $this->display->assign($data);

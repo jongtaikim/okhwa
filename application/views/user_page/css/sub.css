@@ -7,8 +7,7 @@
 
 
 /* contents */
-#container #contents{margin:auto;width:1200px; position:relative; padding-bottom:150px}
-#container #contents .title{ overflow:hidden; clear:both; width:1200px; height:80px; margin-top:120px; border-bottom:1px solid #333;}
+
 
 #container #contents .section{ width:100%}
 .start{ height:30px; padding:10px 0 0 0; overflow:hidden;}
@@ -41,7 +40,7 @@
 .sum .info table .border_none{ border:none;}
 .sum .info table .border_left{ border-left:none;}
 .sum .guest{ }
-.sum .guest table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none; margin-top:10px;}
+.sum .guest table{ text-align:center; width:100%; border:1px solid #ccc; border-left:none; border-bottom:none; }
 .sum .guest{}
 .sum .guest table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; }
 .sum .guest table td select{ margin:0 3px 0 3px; width:60px; border:1px solid #ccc;}

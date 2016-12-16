@@ -3,8 +3,8 @@
 <div class="calendar" style="padding-bottom:30px;">
 
 
-    <div class="clearfix">
-        <div class="col-md-5">
+    <div class="clearfix ">
+        <div class="col-md-5 ">
 
             <div class="caltable text-left ">
                 <form id="FrmAttendanceSearchs"  onsubmit='return false;'>
@@ -109,12 +109,15 @@
                 }
             });
         },
-        viewnext: function(toda) {
+        viewnext: function(no) {
 
             var _data = $('#FrmAttendanceSearchs').serialize()  ;
+            var toda = $('#pperiodofuse').val();
             if(!toda) toda = 1;
 
             var _data2 = $('#next_form').serialize()  ;
+
+
 
             $.ajax({
                 type: 'GET',
@@ -122,9 +125,8 @@
                 data : _data+"&toda="+toda+'&'+_data2,
                 dataType : "html", //전송받을 데이터의 타입
                 success : function(jsondata) {
-                    $('#day_info2').html(jsondata) ;
 
-
+                    $('#day_info2').html(jsondata).hide().show() ;
                 }
             });
         },
@@ -148,6 +150,8 @@
                 success : function(html) {
                     $('#day_info').html(html) ;
                     $('#date_table').height($('#day_info').height()-70);
+
+                    $('#day_info2').html('<div class="text-center padding"><i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size:20px"></i> 불러오는중...</div>');
                     InoutInList.viewnext();
                 }
             });
