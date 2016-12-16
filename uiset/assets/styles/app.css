@@ -3072,10 +3072,10 @@ body {
   display: inline-block; }
 
 .hide {
-  display: none !important; }
+  display: none ; }
 
 .show {
-  display: block !important; }
+  display: block ; }
 
 .pointer {
   cursor: pointer; }
