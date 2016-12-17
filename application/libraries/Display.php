@@ -22,7 +22,7 @@ class Display extends Template_ {
 
 
 
-	function Display() {
+	function __construct() {
 		if (func_num_args()) $this->setLayout(func_get_arg());
 	}
 

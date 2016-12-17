@@ -19,7 +19,7 @@ class Paging{
 
 	
 
-    function Paging($total=1,$qs='')
+    function __construct($total=1,$qs='')
     {
         $this->config = array(
             'total'   => null,

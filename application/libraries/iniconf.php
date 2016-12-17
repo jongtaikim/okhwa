@@ -22,7 +22,7 @@ class IniConf {
 	var $_error;
 	var $_warning;
 	
-	function IniConf($file="") {
+	function __construct($file="") {
 		$this->iniArray = array();
 		$this->sections = array();
 		$this->_error = array();
