@@ -6903,9 +6903,9 @@ button.close {
 .box-shadow2,
 .box-shadow2 ,
 .box-shadow2  {
-    -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.07);
-    border:1px solid #ececec
+    -webkit-box-shadow:  2px 1px 20px 0px rgba(0, 0, 0, 0.1), 0 -1px 0px rgba(0, 0, 0, 0.02);;
+    box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.1), 0 -1px 0px rgba(0, 0, 0, 0.02);
+
 }
 
 
