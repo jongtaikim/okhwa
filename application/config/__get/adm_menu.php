@@ -23,7 +23,7 @@ $menu[$cate1]['icon'] = "glyphicon glyphicon-home";
 	
 	$cate2++;
 	$menu[$cate1]['submenu'][$cate2]['title'] = "약관 관리";
-	$menu[$cate1]['submenu'][$cate2]['link'] = "#adm/pra";
+	$menu[$cate1]['submenu'][$cate2]['link'] = "#admin/site_adm/pra?mode=str_text";
 	$menu[$cate1]['submenu'][$cate2]['tip'] = "홈페이지 회원을 위한 약관을 작성합니다.";
 
 	
@@ -120,10 +120,13 @@ $menu[$cate1]['submenu'][$cate2]['link'] = $menu[$cate1]['link'];
 
 
 
+$cate2++;
+$menu[$cate1]['submenu'][$cate2]['title'] = "온라인상담";
+$menu[$cate1]['submenu'][$cate2]['link'] = '#/admin/online_adm/list_view/?PageNum=040101';
 
 	
 
-	 for($ii=0; $ii<count($menu); $ii++) { 
+/*	 for($ii=0; $ii<count($menu); $ii++) {
 		$iia = $ii +1;
 
 		if(strstr($menu[$ii]['link'],"?")) {
@@ -155,7 +158,7 @@ $menu[$cate1]['submenu'][$cate2]['link'] = $menu[$cate1]['link'];
 
 		}
 
-	 }
+	 }*/
 
 
 	return $menu;

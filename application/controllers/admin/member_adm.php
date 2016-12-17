@@ -14,7 +14,7 @@ class member_adm extends CI_Controller {
 	 var $MEMBER_TABLE =  "tamember";
 	 var $GROUP_MEMBER_TABLE = "tab_group_member";
 	 var $main_layout =  "admin_main";
-	 var $sub_layout =  "admin_sub";
+	 var $sub_layout =  "none";
 
 
 	function __construct()

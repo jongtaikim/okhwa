@@ -161,7 +161,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
     <div class="m-b10">
         <small class="text-muted" id="page_sub_title"></small>
     </div>
-    <table class="table table_e box  table-bordered b-b b-l b-t b-r ft12 " style="<?if(count($fields)>6 || ($total_box && count($total_box) >10) ){?>width:100%;margin-left:  0px;margin-right: 0px<?}else{?>margin:10px auto;min-width:700px;<?}?>;table-layout: auto;">
+    <table class="table table_e box  table-bordered b-b b-l b-t b-r ft12 table-hover table-striped" style="<?if(count($fields)>6 || ($total_box && count($total_box) >10) ){?>width:100%;margin-left:  0px;margin-right: 0px<?}else{?>margin:10px auto;min-width:700px;<?}?>;table-layout: auto;">
 
         <!-- Table Header -->
         <thead id="data_table_thead">

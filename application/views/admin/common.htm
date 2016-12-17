@@ -1,4 +1,5 @@
 <div style="width:1124px">
+    <form id="item-form">
 <div class="col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading bg-white">
@@ -89,16 +90,16 @@
               <label for="str_fax">팩스번호</label>
               <input type="text" name="str_fax" hname="팩스번호" value="{str_fax}"  trim="trim" class="form-control">
             </div>
-
               <div class="form-group">
-                  <label for="str_fax">결제안내(계좌번호)</label>
-                  <input type="text" name="str_bank" hname="계좌번호" value="{str_bank}"  trim="trim" class="form-control">
+                  <label for="str_organ">관리자 이름</label>
+                  <input type="text" size="20" name="str_master_name" hname="관리자 명" value="{str_master_name}" maxbyte="20" trim="trim" class="form-control">
               </div>
 
-		
-           
 
-            <button type="submit" class="btn btn-dark m-b waves-effect">저장하기</button>
+
+
+
+              <button type="button"  class="btn btn-dark m-b waves-effect">저장하기</button>
         
         </div>
       </div>
@@ -112,33 +113,31 @@
         <div class="panel-heading bg-white">
           <i class=" glyphicon   glyphicon-user"></i>
 	    
-	    관리자 정보<br>
-          <small class="text-muted">관리자 정보를 설정하고 관리합니다.</small>
+	    환경설정<br>
+          <small class="text-muted">사이트에서 사용되는 주요 중요 정보를 설정합니다.</small>
         </div>
         <div class="panel-body">
-         
+
             <div class="form-group">
-              <label for="str_organ">관리자 이름</label>
-              <input type="text" size="20" name="str_master_name" hname="관리자 명" value="{str_master_name}" maxbyte="20" trim="trim" class="form-control">
+                <label for="str_fax">결제안내(계좌번호)</label>
+                <input type="text" name="str_bank" hname="계좌번호" value="{str_bank}"  trim="trim" class="form-control">
             </div>
 
 		 <div class="form-group">
-              <label for="str_organ">관리자 이메일</label>
-            <input type="email" size="10" name="str_master_email" hname="관리자 Email" value="{str_master_email}" maxbyte="300" trim="trim" class="form-control">
+              <label for="str_pickup">픽업 이용 여부</label>
+             <select name="str_pickup" id="str_pickup" class="form-control">
+             	<option value="Y">가능</option>
+             	<option value="N">픽업 불가능</option>
+             </select>
+            <script type="text/javascript">
+                {? str_pickup}$('#str_pickup').val('{str_pickup}');{/}
+            </script>
             </div>
 
-		 <div class="form-group">
-              <label for="str_organ">관리자 전화번호</label>
-			<input type="text" size="20" name="str_master_phone" hname="연락처" value="{str_master_phone}" maxbyte="20" trim="trim" class="form-control">
-            </div>
 
-		 <div class="form-group">
-              <label for="str_organ">관리자 휴대전화</label>
-			<input type="text" size="20" name="str_master_mobile" hname="관리자 휴대폰번호" value="{str_master_mobile}" maxbyte="20" trim="trim" class="form-control">
-            </div>
             
 
-            <button type="submit" class="btn btn-dark m-b waves-effect">저장하기</button>
+            <button type="buutton" class="btn btn-dark m-b waves-effect">저장하기</button>
           </form>
         </div>
       </div>
@@ -156,3 +155,33 @@
 </div>
 	
 </div>
+
+</form>
+<script type="text/javascript">
+/*    var url = '/adm/common';
+   function submit_t() {
+       $.ajax({
+           type: 'post',
+           url: url,
+           data: $('#item-form').serialize(),
+           dataType:"json",
+           error: function(xhr, e){
+               alert('페이지에 접속할 수 없습니다.');
+               console.log(xhr.responseText);
+           },
+           success: function(result) {
+               //showAlert(word+"하였습니다.", 'info', 3000);
+               bootbox.hideAll();
+               bootbox.alert("수정하였습니다.",function () {
+                   bootbox.hideAll();
+                   if(strstr(location.hash,"?")){
+                       document.location.href=location.hash+"&v="+date("YmdHis");
+                   }else{
+                       document.location.href=location.hash+"?v="+date("YmdHis");
+                   }
+
+               });
+           }
+       });
+   }*/
+</script>

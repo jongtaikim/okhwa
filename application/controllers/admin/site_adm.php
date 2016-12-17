@@ -209,6 +209,8 @@ class Site_adm extends CI_Controller {
 		 break;
 		} 
 	}
+    
+    
 
 	/**
 	 * 관리자 암호 변경
@@ -257,7 +259,7 @@ class Site_adm extends CI_Controller {
 
 		$this->load->model('/admin/pra');
 
-       if(!$_GET['mode']) $mode="member"; else $mode=$_GET['mode'];
+       if(!$_GET['mode']) $mode="str_text"; else $mode=$_GET['mode'];
 
 		switch ($_SERVER[REQUEST_METHOD]) {
 		case "GET":

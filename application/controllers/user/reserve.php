@@ -262,6 +262,10 @@ class reserve extends CI_Controller {
             $data['this_price_name'] = $price_name;
             $data['bank'] = $site_info['STR_BANK'];
             $data['phone'] = $site_info['STR_PHONE'];
+            $data['pickup'] = $site_info['STR_PICKUP'];
+            $data['str_text'] = $site_info['STR_TEXT'];
+            $data['str_text2'] = $site_info['STR_TEXT2'];
+            $data['str_text3'] = $site_info['STR_TEXT3'];
 
             if($_GET['toda']){
                 $data['s_date'] = $_GET['day'];

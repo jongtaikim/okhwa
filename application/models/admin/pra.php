@@ -46,11 +46,12 @@ class pra extends CI_Model {
      */	
     
     function load_text(){
-		$sql = "select str_text,str_text2 from ".$this->ORGAN_TABLE." where num_oid = '"._OID."' ";
+		$sql = "select str_text,str_text2,str_text3 from ".$this->ORGAN_TABLE." where num_oid = '"._OID."' ";
 		$data = $this->db -> sqlFetch($sql);
 
 		$datas[str_text] = stripslashes($data[str_text]);
 		$datas[str_text2] = stripslashes($data[str_text2]);
+		$datas[str_text3] = stripslashes($data[str_text3]);
 		return $datas;
     }
 
@@ -67,13 +68,15 @@ class pra extends CI_Model {
 	
 		if($_POST_DATA[str_text]) $datas[str_text] = $_POST_DATA[str_text];
 		if($_POST_DATA[str_text2])$datas[str_text2] = $_POST_DATA[str_text2];
+		if($_POST_DATA[str_text3])$datas[str_text3] = $_POST_DATA[str_text3];
 
 		if($_POST_DATA[str_text]) $datas[str_text] = addslashes($datas[str_text]);
 		if($_POST_DATA[str_text2]) $datas[str_text2] = addslashes($datas[str_text2]);
-		
+		if($_POST_DATA[str_text3]) $datas[str_text3] = addslashes($datas[str_text3]);
+
 		$this->db->updateQuery($this->ORGAN_TABLE,$datas," num_oid = '"._OID."'");
 
-		$this->load->model('/admin/pra');
+	/*	$this->load->model('/admin/pra');
 		$data = $this->pra->load_text();
 		$data['no_tag_str_text1'] = str_replace('	','',$data['str_text']);
 		$data['no_tag_str_text1'] = str_replace('<p>','',$data['str_text']);
@@ -93,7 +96,7 @@ class pra extends CI_Model {
 		$data['no_tag_str_text2'] = strip_tags($data['no_tag_str_text2']);
 		$data['no_tag_str_text1'] = str_replace("&nbsp;"," ",$data['no_tag_str_text1']);
 		$data['no_tag_str_text2'] = str_replace("&nbsp;"," ",$data['no_tag_str_text2']);
-		$this->make_json($data,'pra.json');
+		$this->make_json($data,'pra.json');*/
 	
 
 		echo json_encode(array('code' => '200', 'message' => '저장되었습니다.', 'result'=>$result));

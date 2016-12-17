@@ -46,7 +46,7 @@ class online_adm extends CI_Controller {
 			$row = $this->mdl_online->load_list($page,'15',$_GET);
 			$tpl->assign(array('LIST'=>$row));
 
-			$tpl->setLayout('admin_sub');
+			$tpl->setLayout('none');
 			$tpl->define('CONTENT', $this->display->getTemplate('admin/online/list.htm'));
 			
 			$tpl->printAll();
@@ -159,7 +159,7 @@ class online_adm extends CI_Controller {
 		
 		
 
-		$tpl->setLayout('admin_sub');
+		$tpl->setLayout('none');
 		$tpl->define('CONTENT', $this->display->getTemplate('admin/online/state.htm'));
 		
 		$tpl->printAll();

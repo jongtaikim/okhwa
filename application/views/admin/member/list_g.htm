@@ -70,7 +70,9 @@ function deleteItem() {
 
 	form.elements['mode'].value = 'delete';
 	form.method="post";
-	form.submit();
+    self_submit();
+
+
 }
 
 function selectItem() {
@@ -85,7 +87,47 @@ function selectItem() {
 
 	//form.elements['mode'].value = 'delete';
 	form.method="post";
-	form.submit();
+    self_submit();
+}
+
+
+function self_submit() {
+    $.ajax({
+        type: 'post',
+        url: url,
+        data: $('#itemForm').serialize(),
+        dataType:"json",
+        error: function(xhr, e){
+            alert('페이지에 접속할 수 없습니다.');
+            console.log(xhr.responseText);
+        },
+        success: function(result) {
+            if(result.error) {
+                //showAlert(result.messages, 'error', 3000);
+
+                alert(result.messages[0]);
+
+
+            } else {
+                //showAlert(word+"하였습니다.", 'info', 3000);
+                bootbox.hideAll();
+                bootbox.alert("적용 하였습니다.",function () {
+                    bootbox.hideAll();
+                    if(strstr(location.hash,"?")){
+                        document.location.href=location.hash+"&v="+date("YmdHis");
+                    }else{
+                        document.location.href=location.hash+"?v="+date("YmdHis");
+                    }
+
+                });
+
+
+
+
+
+            }
+        }
+    });
 }
 // ]]>
 </script>
@@ -282,7 +324,7 @@ function selectItem() {
 							    <input type="text" class="form-control" name="search_value" value="{search_value}" >
 								
 								<span class="input-group-btn">
-									<button class="btn btn-dark waves-effect" type="button" onclick="$('#search_form').submit();">검색</button>
+									<button class="btn btn-dark waves-effect" id="act-button" type="button" >검색</button>
 								    </span>
 
 							  </div>
@@ -306,6 +348,17 @@ function selectItem() {
 
 </div>
 
+    <script type="text/javascript">
+        var word = '';
+        $('#act-button').click(function() {
+
+
+            var data = $('#search_form').serialize();
+            document.location.href=location.hash+"&v="+date("YmdHis")+'&'+data;
+
+
+        });
+    </script>
 
 
 

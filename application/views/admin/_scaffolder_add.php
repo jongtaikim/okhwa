@@ -169,7 +169,7 @@ $(document).ready(function (){
                 <?php if(!$is_focused) : ?>
                     <script>
                         setTimeout(function () {
-                            $('#<?=$key?>').focus();
+                          //  $('#<?=$key?>').focus();
                         },1000);
                     </script>
                     <?php $is_focused = true; ?>

@@ -39,21 +39,11 @@
                         <td>
 
                             성인 <select name="seongin_val" id="seongin_val" onchange="InoutInList.viewnext(1);">
+                            <? for($ii=2; $ii<51; $ii++) {?>
+                             <option value="<?=$ii?>"><?=$ii?></option>
+                            <?}?>
 
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                            <option value="11">11</option>
-                            <option value="12">12 </option>
-                            <option value="13">13 </option>
-                            <option value="14">14 </option>
-                            <option value="15">15 </option>
+
 
                         </select>
 
@@ -189,7 +179,7 @@
 
             <div class="clearfix m-b65 m-t0 col-md-12 text-center" >
 
-                <a href="javascript:$('.step2').toggle();$('.step1').toggle();" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 예약하기</a>
+                <a href="javascript:$('.step2').toggle();$('.step1').toggle();$('#name').focus()" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 다음단계</a>
 
             </div>
         </div>
@@ -201,7 +191,181 @@
     <div class="box-header b-b b-t">
         <span class="label dark">02</span> <strong>예약하기</strong>
     </div>
-    <div class="box-body padding sum ">
+    <div class="box-body padding sum " style="overflow: auto">
+
+
+        <div class="clearfix m-b25 m-t10">
+            <div class="col-md-6 ">
+                <style>
+
+                    .table_t > thead >tr >th{ padding:15px;border-bottom:1px solid #222222}
+                    .table_t > tbody >tr >td{ padding:15px}
+                </style>
+                <table class="table table_t b-b">
+                    <thead style="">
+                    <tr>
+                        <th colspan="2"><strong class="ft16">예약자 정보 입력</strong></th>
+                        <th class="text-right"><i class="fa fa-check" aria-hidden="true" style="color: #ff0000"></i> 표시 필수입력</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="w180 "><strong>예약자 이름</strong> <i class="fa fa-check" aria-hidden="true" style="color: #ff0000"></i></td>
+                        <td colspan="2">
+                            <input type="text" name="name" id="name" placeholder="예약자 성함을 입력하세요." class="form-control">
+                        </td>
+
+                     </tr>
+                    <tr>
+                        <td><strong>휴대폰번호</strong> <i class="fa fa-check" aria-hidden="true" style="color: #ff0000"></i></td>
+                        <td colspan="2">
+                            <input type="number" name="phone" id="phone" placeholder="- 없이 번호만 입력하세요." class="form-control">
+                        </td>
+                    </tr>
+  <!--                  <tr>
+                        <td><strong>생년월일</strong> <i class="fa fa-check" aria-hidden="true" style="color: #ff0000"></i></td>
+                        <td colspan="2">
+                            <input type="text" name="" id="" class="form-control">
+                        </td>
+                    </tr>-->
+                    <tr>
+                        <td><span>픽업 이용 여부</span></td>
+                        <td colspan="2">
+                            {? pickup == 'Y'}
+                            <select name="pickup" id="pickup" class="form-control">
+                            	<option value="N">픽업 안함</option>
+                            	<option value="Y">픽업 요청</option>
+                            </select>
+                            {:}
+                                <div class="form-control text-danger" style="color:red">
+                                    - 픽업 불가능
+                                </div>
+                            {/}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>도착 예정 시간</span></td>
+                        <td colspan="2">
+                            <select name="ptime" id="ptime" class="form-control w200">
+                                <option value="14:00">14:00</option>
+                                <option value="15:00">15:00</option>
+                                <option value="16:00">16:00</option>
+                                <option value="17:00">17:00</option>
+                                <option value="18:00">18:00</option>
+                                <option value="19:00">19:00</option>
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                                <option value="23:00">23:00</option>
+                            </select>
+                            <small>입실:14:00 이후 | 최실 11:00 이전</small>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><span>출발지역</span></td>
+                        <td colspan="2">
+
+                            <select name="area" id="area" class="form-control w200">
+                                <option value="서울특별시">서울특별시</option>
+                                <option value="경기도">경기도</option>
+                                <option value="인천광역시">인천광역시</option>
+                                <option value="부산광역시">부산광역시</option>
+                                <option value="경상남도">경상남도</option>
+                                <option value="경상북도">경상북도</option>
+                                <option value="대구광역시">대구광역시</option>
+                                <option value="대전광역시">대전광역시</option>
+                                <option value="울산광역시">울산광역시</option>
+                                <option value="충청남도">충청남도</option>
+                                <option value="충청북도">충청북도</option>
+                                <option value="강원도">강원도</option>
+                                <option value="전라남도">전라남도</option>
+                                <option value="전라북도">전라북도</option>
+                                <option value="광주광역시">광주광역시</option>
+                                <option value="세종시">세종시</option>
+                                <option value="제주도">제주도</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>요청사항</td>
+                        <td colspan="2">
+                            <textarea name="" id="" cols="30" rows="6" class="form-control"></textarea>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="col-md-6">
+                <div class="box" style="border:1px solid #3f3f3f">
+
+
+                    <div class="box-header clearfix b-b b-t light dker ">
+
+                        <div class="f_l"> 유의사항/환불규정</div>
+                        <div class="f_r text-right">
+                            <a href="javascript:view_text(1)">보기</a>
+                        </div>
+                    </div>
+
+                    <div class="box-body padding texts texts1" style="overflow: auto;height:424px">
+                        {str_text}
+                    </div>
+
+                    <div class="box-header clearfix b-b b-t light dker ">
+
+                        <div class="f_l"> 개인정보 수집 및 이용 동의 </div>
+                        <div class="f_r text-right">
+                            <a href="javascript:view_text(2)">보기</a>
+                        </div>
+                    </div>
+
+                    <div class="box-body hide texts texts2" style="overflow: auto;height:424px">
+                        {str_text2}
+                    </div>
+
+                    <div class="box-header clearfix light dker b-b b-t ">
+                        <div class="f_l"><strong>유의사항/환불규정, 개인정보 동의에 모두 동의하십니까?</strong></div>
+                        <div class="f_r text-right">
+
+                            <input type="checkbox" id="pra" value="Y" style="width:15px;height:15px"> 모두동의
+
+                        </div>
+                    </div>
+                </div>
+
+                <script type="text/javascript">
+                    function view_text(idx) {
+                        if(idx){
+                            $('.texts').hide();
+                            $('.texts'+idx).show();
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <div class="clearfix m-b25 m-b40 b-t p-t30 ">
+            <div class="col-md-5 clearfix " >
+                <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
+                    <div class="f_l padding p-l30 p-r30" style="width:30%;;text-align: center;background-color: #eee;color: ;border: none;">문의전화</div>
+                    <div class="f_l padding text-left p-l20" style="width:60%;border: none;">{phone}</div>
+                </div>
+                <div class="b-t b-b b-r b-l clearfix m-t1" style="border-color:#ccc">
+                    <div class="f_l padding p-l30 p-r30" style="width:30%;text-align: center;background-color: #eee;color: ;border: none;">결제안내</div>
+                    <div class="f_l padding text-left p-l20" style="width:60%;;border: none;">{bank}</div>
+                </div>
+
+            </div>
+            <div class="col-md-7" >
+                <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
+                    <div class="f_l padding p-l30 p-r30 p-t41 p-b41" style="width:30%;;text-align: center;background-color: #eee;;border: none;">요금타입</div>
+                    <div class="f_l padding " style="width:70%;;border: none;">
+                        <p>* {this_price_name} {day_type} 요금</p>
+                        <p>* 기준인원 초과시 1인당 성인 {=number_format(room_info.add_human_price)}원,취학아동 {=number_format(room_info.add_human_price2)}원,
+                            미취학아동{=number_format(room_info.add_human_price3)}원이 추가됩니다.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <div class="col-md-12 m-b30">
             <div style="border:1px solid #ccc;">
@@ -233,31 +397,14 @@
             </div>
 
         </div>
-        <div class="clearfix m-b25 m-t10">
-            <div class="col-md-5 clearfix " >
-                <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
-                    <div class="f_l padding p-l30 p-r30" style="width:30%;;text-align: center;background-color: #eee;color: ;border: none;">문의전화</div>
-                    <div class="f_l padding text-left p-l20" style="width:60%;border: none;">{phone}</div>
-                </div>
-                <div class="b-t b-b b-r b-l clearfix m-t1" style="border-color:#ccc">
-                    <div class="f_l padding p-l30 p-r30" style="width:30%;text-align: center;background-color: #eee;color: ;border: none;">결제안내</div>
-                    <div class="f_l padding text-left p-l20" style="width:60%;;border: none;">{bank}</div>
-                </div>
 
-            </div>
-            <div class="col-md-7" >
-                <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
-                    <div class="f_l padding p-l30 p-r30 p-t41 p-b41" style="width:30%;;text-align: center;background-color: #eee;;border: none;">요금타입</div>
-                    <div class="f_l padding " style="width:70%;;border: none;">
-                        <p>* {this_price_name} {day_type} 요금</p>
-                        <p>* 기준인원 초과시 1인당 성인 {=number_format(room_info.add_human_price)}원,취학아동 {=number_format(room_info.add_human_price2)}원,
-                            미취학아동{=number_format(room_info.add_human_price3)}원이 추가됩니다.</p>
-                    </div>
-                </div>
-            </div>
+
+        <div class="clearfix m-b65 m-t0 col-md-12 text-center" >
+
+            <a href="javascript:$('.step2').toggle();$('.step1').toggle();" class="btn-lg btn btn-white white"> 예약수정</a>
+            <a href="javascript:$('.step2').toggle();$('.step1').toggle();" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 예약확정</a>
+
         </div>
-
-
 
     </div>
 </div>
