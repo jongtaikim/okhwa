@@ -60,13 +60,13 @@
             <div class="row-col box-shadow2 text-center gray m-b20 b-b b-l b-r b-t ">
 
                 <div class="row-cell p-a b-r">
-                    <div class="m-b10 m-t10"><a href="#admin/realpans/view_cl?year={year}&month={month}" {? !_GET.room_name}style="font-weight: bold;color:blue"{/}><strong>{year}년{month}월</strong><br>전체예약보기</a></div>
-                    <h4 class=" text-md _600 total_vu">{to_total+0}건</h4>
+                    <div class="m-b10 m-t10"><a href="#admin/realpans/view_cl?year={year}&month={month}" {? !_GET.room_name}style="font-weight: ;color:blue"{/}><strong>{year}년{month}월</strong><br>전체예약보기</a></div>
+                    <h4 class=" text-md _600 total_vu "><strong class="{? to_total}text-danger{/}">{to_total+0}건</strong></h4>
                 </div>
                 {@ t_data}
                 <div class="row-cell p-a b-r">
                     <div class="m-b10 m-t10"><a href="#admin/realpans/view_cl?room_name={=urlencode(.room_name)}&year={year}&month={month}" {? _GET.room_name== .room_name}style="font-weight: bold;color:blue"{/}><strong>{.room_cp}</strong><br>{.room_name}</a></div>
-                    <h4 class=" text-md _600">{=count(.to_realpan)+0}건</h4>
+                    <h4 class=" text-md _600 "><strong class="{? .to_realpan}text-danger{/}">{=count(.to_realpan)+0}</strong>건</h4>
                 </div>
                 {/}
 
@@ -90,61 +90,6 @@
 .cumr tbody tr td{padding:15px}
 </style>
 <script type="text/javascript">
-var jsondata ='';
-function view_reserve(no,pay_state) {
-//encodeURIComponent()
-$.ajax({
-type: 'GET',
-url: '/admin/realpans/data_json?no='+no,
-data:'',
-dataType: 'json',
-	success: function(data, status) {
-        console.log(data);
-        json = data.result;
-        var html = '<div>';
-
-        html +='<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered cumr" style="font-size:12px">';
-        html +='<tbody>';
-        html +='<tr><th class="w130 light dker text-center " >예약자</th><td class="padding">'+json.name+'</td></tr>';
-        html +='<tr><th class="w130 light dker text-center " >전화번호</th><td class="padding">'+json.phone+'</td></tr>';
-        html +='<tr><th class="w130 light dker text-center">예약일시</th><td>'+json.created+'</td></tr>';
-        html +='<tr><th class="w130 light dker text-center">날짜</th><td>'+json.to_dates.sdate+' ~ '+json.lastdate+'</td></tr>';
-
-        html +='<tr><th class="w130 light dker text-center">룸</th><td>'+json.room_cp+' '+json.room_name+' '+json.room_number+'</td></tr>';
-        html += '<tr><th class="w130 light dker text-center">옵션</th><td>' + json.options + '</td></tr>';
-        html +='<tr><th class="w130 light dker text-center">결제금액</th><td>'+number_format(json.totalprice)+'원</td></tr>';
-        html +='<tr><th class="w130 light dker text-center">입금예정자</th><td>'+json.bankname+'</td></tr>';
-        if(json.pay_state == 'Y'){
-            html +='<tr><th class="w130 light dker text-center">입금확인</th><td style="color:blue">입금확인됨</td></tr>';
-        }else{
-            html +='<tr><th class="w130 light dker text-center">입금확인</th><td style="color:red">입금대기</td></tr>';
-        }
-
-        html +='</tbody>';
-        html +='</table>';
-
-        if(json.pay_state == 'N'){
-            html +='<div class="text-center"><a href="javascript:page_view(\'/admin/realpans/edit?no='+no+'\')" class="btn btn-info btn-sm">예약 상세 보기</a> <a href="javascript:pay_change(\''+json.code+'\',\'Y\',\''+json.name+'\',\''+json.phone+'\')" class="btn btn-dark btn-sm"><i class="fa fa-krw" aria-hidden="true"></i> 입금확인으로 바꾸기</a></div>';
-        }else{
-            html +='<div class="text-center"><a href="javascript:page_view(\'/admin/realpans/edit?no='+no+'\')" class="btn btn-info btn-sm">예약 상세 보기</a> <a href="javascript:pay_change(\''+json.code+'\',\'N\',\''+json.name+'\',\''+json.phone+'\')" class="btn  btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> 입금확인전 으로 바꾸기</a></div>';
-        }
-
-        html += '</div>';
-
-        bootbox.alert({
-            title:'예약정보 확인',
-            message:html
-        });
-        $('.bootbox_modal').css('margin-top','6%');
-
-	},
-	error: function(request,status,error) {
-		alert(request.responseText);
-	}
-});
-
-
-}
 
 function page_view(url){
     //encodeURIComponent()
@@ -164,41 +109,6 @@ function page_view(url){
         error: function(request,status,error) {
             alert(request.responseText);
         }
-    });
-}
-
-function pay_change(no,yn,name,phone) {
-    //encodeURIComponent()
-    $.ajax({
-    type: 'POST',
-    url: '/admin/realpans/edit_action_pay_state?',
-    data:'code='+no+'&pay_state='+yn+'&name='+name+'&phone='+phone,
-    dataType: 'json',
-    	success: function(result, status) {
-            if(result.error) {
-                bootbox.alert(result.messages);
-                setTimeout(function() {
-
-                    box.modal('hide');
-                }, 3000);
-//                        showAlert(result.messages, 'error', 3000);
-            } else {
-                //showAlert("삭제하였습니다.", 'info', 3000);
-
-                bootbox.hideAll();
-                bootbox.alert("변경하였습니다.",function () {
-                    bootbox.hideAll();
-                    if(strstr(location.hash,"?")){
-                        document.location.href=location.hash+"&v="+date("YmdHis");
-                    }else{
-                        document.location.href=location.hash+"?v="+date("YmdHis");
-                    }
-                });
-            }
-    	},
-    	error: function(request,status,error) {
-    		alert(request.responseText);
-    	}
     });
 }
 

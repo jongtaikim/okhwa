@@ -391,6 +391,136 @@ $colors = "grey-900";
             }
         });
     };
+
+
+
+    var jsondata ='';
+    function view_reserve(no,pay_state) {
+//encodeURIComponent()
+        $.ajax({
+            type: 'GET',
+            url: '/admin/realpans/data_json?no='+no,
+            data:'',
+            dataType: 'json',
+            success: function(data, status) {
+                console.log(data);
+                json = data.result;
+                var html = '<div>';
+
+                html +='<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered cumr" style="font-size:14px">';
+                html +='<tbody>';
+                html +='<tr><th class="w130 light dker text-center " >예약자</th><td class="padding">'+json.name+'</td></tr>';
+                html +='<tr><th class="w130 light dker text-center " >전화번호</th><td class="padding">'+substr(json.phone,0,3)+'-'+substr(json.phone,3,4)+'-'+substr(json.phone,7,4)+'</td></tr>';
+                html +='<tr><th class="w130 light dker text-center">예약일시</th><td>'+json.created+'</td></tr>';
+                html +='<tr><th class="w130 light dker text-center">날짜</th><td>'+json.to_dates.sdate+' ~ '+json.lastdate+'</td></tr>';
+
+                html +='<tr><th class="w130 light dker text-center">룸</th><td>'+json.room_cp+' '+json.room_name+' '+json.room_number+'</td></tr>';
+                if(json.options) {
+                    html += '<tr><th class="w130 light dker text-center">옵션</th><td>' + json.options + '</td></tr>';
+                }
+                html +='<tr><th class="w130 light dker text-center">결제금액</th><td>'+number_format(json.totalprice)+'원</td></tr>';
+                html +='<tr><th class="w130 light dker text-center">입금예정자</th><td>'+json.bankname+'</td></tr>';
+                if(json.pay_state == 'Y'){
+                    html +='<tr><th class="w130 light dker text-center">입금확인</th><td style="color:blue">입금확인됨</td></tr>';
+                }else{
+                    html +='<tr><th class="w130 light dker text-center">입금확인</th><td style="color:red">입금대기</td></tr>';
+                }
+
+                html +='</tbody>';
+                html +='</table>';
+
+                if(json.pay_state == 'N'){
+                    html +='<div class="text-center"><a href="javascript:page_view(\'/admin/realpans/edit?no='+no+'\')" class="btn btn-info btn-sm">예약 상세 보기</a> <a href="javascript:pay_change(\''+json.code+'\',\'Y\',\''+json.name+'\',\''+json.phone+'\')" class="btn btn-dark btn-sm"><i class="fa fa-krw" aria-hidden="true"></i> 입금확인으로 바꾸기</a> <a href="javascript:pay_del(\''+json.code+'\')" class="btn red btn-sm"><i class="fa fa-times" aria-hidden="true"></i> 취소하기</a></div>';
+                }else{
+                    html +='<div class="text-center"><a href="javascript:page_view(\'/admin/realpans/edit?no='+no+'\')" class="btn btn-info btn-sm">예약 상세 보기</a> <a href="javascript:pay_change(\''+json.code+'\',\'N\',\''+json.name+'\',\''+json.phone+'\')" class="btn  btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> 입금확인전 으로 바꾸기</a></div>';
+                }
+
+                html += '</div>';
+
+                bootbox.alert({
+                    title:'예약정보 확인',
+                    message:html
+                });
+                $('.bootbox_modal').css('margin-top','6%');
+
+            },
+            error: function(request,status,error) {
+                alert(request.responseText);
+            }
+        });
+
+
+    }
+    function pay_change(no,yn,name,phone) {
+        if (confirm("상태를 변경하시겠습니까?") == true) {
+        $.ajax({
+            type: 'POST',
+            url: '/admin/realpans/edit_action_pay_state?',
+            data:'code='+no+'&pay_state='+yn+'&name='+name+'&phone='+phone,
+            dataType: 'json',
+            success: function(result, status) {
+                if(result.error) {
+                    bootbox.alert(result.messages);
+                    setTimeout(function() {
+
+                        box.modal('hide');
+                    }, 3000);
+//                        showAlert(result.messages, 'error', 3000);
+                } else {
+                    //showAlert("삭제하였습니다.", 'info', 3000);
+
+                    bootbox.hideAll();
+                    bootbox.alert("변경하였습니다.",function () {
+                        bootbox.hideAll();
+                        if(strstr(location.hash,"?")){
+                            document.location.href=location.hash+"&v="+date("YmdHis");
+                        }else{
+                            document.location.href=location.hash+"?v="+date("YmdHis");
+                        }
+                    });
+                }
+            },
+            error: function(request,status,error) {
+                alert(request.responseText);
+            }
+        });
+        }
+    }
+    function pay_del(no) {
+        if (confirm("정말 취소하시겠습니까??(복구불능)") == true) {
+            $.ajax({
+                type: 'POST',
+                url: '/admin/realpans/delete_pe',
+                data: 'code=' + no,
+                dataType: 'json',
+                success: function (result, status) {
+                    if (result.error) {
+                        bootbox.alert(result.messages);
+                        setTimeout(function () {
+
+                            box.modal('hide');
+                        }, 3000);
+//                        showAlert(result.messages, 'error', 3000);
+                    } else {
+                        //showAlert("삭제하였습니다.", 'info', 3000);
+
+                        bootbox.hideAll();
+                        bootbox.alert("취소하였습니다.", function () {
+                            bootbox.hideAll();
+                            if (strstr(location.hash, "?")) {
+                                document.location.href = location.hash + "&v=" + date("YmdHis");
+                            } else {
+                                document.location.href = location.hash + "?v=" + date("YmdHis");
+                            }
+                        });
+                    }
+                },
+                error: function (request, status, error) {
+                    alert(request.responseText);
+                }
+            });
+        }
+    }
 </script>
 
 </body>

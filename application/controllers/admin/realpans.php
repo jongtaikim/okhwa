@@ -284,13 +284,13 @@ class Realpans extends Scaffolder
                       
 
                         if($room_list[$ii]['to_realpan']['pay_state'] == 'N'){
-                            $room_txt .='<div class="m-t15 ft10 p-l10"><span class="label blue">대</span> 
-                                                    <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)">'
-                                                    . $room_list[$ii]['to_realpan']['name'].' :  '.$room_list[$ii]['room_number'].'</a> </div>';
+                            $room_txt .='<div class="m-t15 ft10 p-l10">
+                                                    <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)"><span class="label blue">입금대기 :  '
+                                                    . $room_list[$ii]['to_realpan']['name'].' :  <span style="color:#">'.$room_list[$ii]['room_number'].'</span></a> </span></div>';
                         }else{
-                            $room_txt .='<div class="m-t15 ft10 p-l10"><span class="label red">완</span> 
-                                <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)">'. $room_list[$ii]['to_realpan']['name'].' : 
-                                 '.$room_list[$ii]['room_number'].'</a> </div>';
+                            $room_txt .='<div class="m-t15 ft10 p-l10">
+                                <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)"><span class="label red">입금완료 : '. $room_list[$ii]['to_realpan']['name'].' : 
+                                 <span style="color:#">'.$room_list[$ii]['room_number'].'</span></a> </span></div>';
                         }
 
 
@@ -458,6 +458,15 @@ class Realpans extends Scaffolder
     {
         $this->db->where('no', $this->input->post('no'));
         return $this->db->delete($this->table_tn);
+    }
+    public function delete_pe()
+    {
+        $this->db->where('code', $this->input->post('code'));
+        if($this->db->delete($this->table_tn)){
+            $this->output
+                ->set_content_type('application/json')
+                ->set_output(json_encode(array('code' => '200', 'result' => $data)));
+        }
     }
 
 }

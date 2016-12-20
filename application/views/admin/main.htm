@@ -1,64 +1,60 @@
+<style type="text/css" title="">
+    .cumr tbody tr td{padding:15px}
+</style>
 
-<div class="col-md-12 m-b20">
-    <div class="panel panel-default box-shadow2 ">
+<div class="col-md-12 p-b10 b-b m-b20 ">
+    <strong class="h4">이번주 예약현황</strong><br>
+        <small class="text-muted">{a_week_ago}~{e_week_ago}</small>
+</div>
 
-        <div class="panel-heading  bg-white lt  pos_r">
+<div class="p-b20  col-md-12">
+    <span class="label blue">대</span> 입금대기 , <span class="label red">완</span> 입금완료
+</div>
 
-            <strong class="h4">이번주 예약현황</strong><br>
-            <small class="text-muted">{a_week_ago}~{e_week_ago}</small>
-        </div>
-        <style type="text/css" title="">
-            .totable tbody tr td{padding:20px;border-left:0px;}
-            .totable thead tr th{padding:20px;border-left:0px;}
-            .cumr tbody tr td{padding:15px}
-        </style>
-        <div class="panel-body  " style="padding:0px;padding-top:25px;height:300px">
-            <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="  totable" summary="^!" style=";border:0px;margin:0px">
+<div class="col-md-10 col-lg-10  m-b20">
+<div class="row">
+            {@ t_data}
 
-            	<thead class="bg-light lt ">
+            <div class="col-sm-6 col-xs-6 col-md-3 col-lg-3">
+                <div class="panel panel-card box-shadow2">
+                    <div class="item" style="height:150px;background: url({.img_url});background-size:cover ">
 
-            	<tbody>
-                    <tr>
-                    {@ t_data}
 
-                        <td class="text-center " style="padding:0px;width:{100/count(t_data)}%">
-                            <div class="r m-b10"><img src="{.img_url}" alt="" style="height:90px"/></div>
-                            <div class="m-t10">{.room_cp}<br><strong>{.room_name}</strong></div>
-                        </td>
-                    {/}
-                    </tr>
+                    </div>
 
-                    <tr>
-                    {@ t_data}
-
-                        <td class="text-center " valign="top" style="padding:0px;min-height: 100px">
+                    <div class="text-center">
+                        <div class="text-center p-t10">
+                            <strong>{.room_cp} {.room_name}</strong>
+                        </div>
+                        <div style="height:130px;oveflow:auto">
                             {@ .to_realpan}
                             <div class="m-t10 ft10 ">
                                 {? ..pay_state == 'N'}
-                                <span class="label blue">입금대기 :
+                                <span class="label blue">
                                 {:}
-                                <span class="label red"> 입금완료 :
+                                <span class="label red">
                                 {/}
-                                <a href="javascript:view_reserve('{..no}','{..pay_state}')">{=substr(..todate,5,2)}월 {=substr(..todate,8,10)}일- <span style="color:#000">{..room_number}</span> {..name}</a>
+                                <a href="javascript:view_reserve('{..no}','{..pay_state}')">{=substr(..todate,5,2)}월 {=substr(..todate,8,10)}일 | <span style="color:">{..room_number}</span> | {..name} | {..ptime} | {..seongin_val+..adong_val+..yua_val}명 -   {? ..pay_state == 'N'}입금대기 {:}입금완료{/}</a>
                                     </span>
                             </div>
-                           {/}
-                        </td>
+                            {:}
+                            <div class="m-t10 ft10 "><small>예약없음</small></div>
+                            {/}
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    {/}
-                    </tr>
-            	</tbody>
-            </table>
-         </div>
-      </div>
+            {/}
 
 
+</div>
 </div>
 
 
 
-<div class="col-md-12">
-    <div class="row " style="max-width:1400px" >
+<div class="col-md-12 hide">
+    <div class="row " >
 
         {@ LIST}
         <div class="{.col}">
@@ -114,60 +110,6 @@
     }
 
 
-    var jsondata ='';
-    function view_reserve(no,pay_state) {
-//encodeURIComponent()
-        $.ajax({
-            type: 'GET',
-            url: '/admin/realpans/data_json?no='+no,
-            data:'',
-            dataType: 'json',
-            success: function(data, status) {
-                console.log(data);
-                json = data.result;
-                var html = '<div>';
 
-                html +='<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="table table-bordered cumr" style="font-size:12px">';
-                html +='<tbody>';
-                html +='<tr><th class="w130 light dker text-center " >예약자</th><td class="padding">'+json.name+'</td></tr>';
-                html +='<tr><th class="w130 light dker text-center " >전화번호</th><td class="padding">'+json.phone+'</td></tr>';
-                html +='<tr><th class="w130 light dker text-center">예약일시</th><td>'+json.created+'</td></tr>';
-                html +='<tr><th class="w130 light dker text-center">날짜</th><td>'+json.to_dates.sdate+' ~ '+json.lastdate+'</td></tr>';
-
-                html +='<tr><th class="w130 light dker text-center">룸</th><td>'+json.room_cp+' '+json.room_name+' '+json.room_number+'</td></tr>';
-                html += '<tr><th class="w130 light dker text-center">옵션</th><td>' + json.options + '</td></tr>';
-                html +='<tr><th class="w130 light dker text-center">결제금액</th><td>'+number_format(json.totalprice)+'원</td></tr>';
-                html +='<tr><th class="w130 light dker text-center">입금예정자</th><td>'+json.bankname+'</td></tr>';
-                if(json.pay_state == 'Y'){
-                    html +='<tr><th class="w130 light dker text-center">입금확인</th><td style="color:blue">입금확인됨</td></tr>';
-                }else{
-                    html +='<tr><th class="w130 light dker text-center">입금확인</th><td style="color:red">입금대기</td></tr>';
-                }
-
-                html +='</tbody>';
-                html +='</table>';
-
-                if(json.pay_state == 'N'){
-                    html +='<div class="text-center"><a href="javascript:page_view(\'/admin/realpans/edit?no='+no+'\')" class="btn btn-info btn-sm">예약 상세 보기</a> <a href="javascript:pay_change(\''+json.code+'\',\'Y\',\''+json.name+'\',\''+json.phone+'\')" class="btn btn-dark btn-sm"><i class="fa fa-krw" aria-hidden="true"></i> 입금확인으로 바꾸기</a></div>';
-                }else{
-                    html +='<div class="text-center"><a href="javascript:page_view(\'/admin/realpans/edit?no='+no+'\')" class="btn btn-info btn-sm">예약 상세 보기</a> <a href="javascript:pay_change(\''+json.code+'\',\'N\',\''+json.name+'\',\''+json.phone+'\')" class="btn  btn-sm"><i class="fa fa-minus-circle" aria-hidden="true"></i> 입금확인전 으로 바꾸기</a></div>';
-                }
-
-                html += '</div>';
-
-                bootbox.alert({
-                    title:'예약정보 확인',
-                    message:html
-                });
-                $('.bootbox_modal').css('margin-top','6%');
-
-            },
-            error: function(request,status,error) {
-                alert(request.responseText);
-            }
-        });
-
-
-    }
 
 </script>
