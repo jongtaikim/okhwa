@@ -161,7 +161,7 @@ class Site_adm extends CI_Controller {
                 'title'=>'예약관리',
                 'title_color'=>'#fff',
                 'img'=>'/application/views/admin/images/adm_menu6.jpg',
-                'icon'=>'<i class="fa fa-shopping-basket" aria-hidden="true"></i>',
+                'icon'=>'<i class="fa fa-calendar-check-o" aria-hidden="true"></i>',
                 'text'=>'예약현황을 확인하거나 입금확인 처리를 관리합니다.',
                 'link'=>'#admin/realpans/view_cl/',
                 'btn_color'=>'pink',
