@@ -1,4 +1,6 @@
 <?
+if(!$to_col) $to_col = '6';
+
 foreach( $_GET as $val => $value )
 {
 
@@ -43,7 +45,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 <div class="col-lg-<?if(count($fields)>6){?>12<?}else{?>9<?}?> col-md-12 " style="max-width:1600px">
 <div class="card table-responsive">
 
-    <div class="card-heading bg-light lt"  pos_r">
+    <div class="card-heading bg-light lt pos_r">
 
       <strong class="h4">  <?=$schema['name']?> 목록</strong>
         <small class="">
@@ -422,7 +424,10 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 
             dataType: 'html',
             success: function(html, status) {
-                bootbox.alert(html);
+                bootbox.alert({
+                    message:html,
+                    <? if(count($fields)>$to_col){?>size:'large',<?}?>
+                });
                 $('.modal-footer ').remove();
             },
             error: function(request,status,error) {

@@ -195,8 +195,26 @@ class reserve extends CI_Controller {
         
         if($_GET['day'] && $_GET['room_no']){
 
+            if($_GET['day'] == date("Y-m-d")){
+                $data['to_in_day'] = 'y';
+            }
+
+
+            //당일이 아닌경우! 12시간
+            $this->db->where('todate',$_GET['day'])->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-1440 minutes',time())))->delete('realpans');
+
+            //당일! 3시간 지난 입금 예약 안되거 취소시켜
+            $this->db->where('todate',$_GET['day'])->where('created >=',$_GET['day']." 00:00:00")->where('created <=',$_GET['day']." 23:59:59")->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-180 minutes',time())))->delete('realpans');
+
+
+
+
             $site_info = $this->db->where('num_oid',_OID)->get('tab_organ')->row_array();
 
+            $room_info = $this->db->where('no',$_GET['room_no'])->get('rooms')->row_array();
+
+            $data['to_realpan'] =  $this->db->where('todate',$_GET['day'])->where('room_no',$_GET['room_no'])->get('realpans')->row_array();
+           
             $room_info = $this->db->where('no',$_GET['room_no'])->get('rooms')->row_array();
             if($room_info){
                 $data['op_info'] = $this->db->where_in('no',explode(",",$room_info['options']))->get('room_options')->result_array();
@@ -331,6 +349,65 @@ class reserve extends CI_Controller {
 
         echo $content;
     }
+
+    function reserve_cp(){
+
+
+        $tcode = 'PEN'.date('His').str_pad(mt_rand(0,99),2,'0').str_pad(mt_rand(0,9999999),7,'0');
+
+        if($_POST['options']){
+
+            $op_info = $this->db->where_in('no',$_POST['options'])->get('room_options')->result_array();
+
+            for($ii=0; $ii<count($op_info); $ii++) {
+            	$opname .= $op_info[$ii]['name']." + ".$op_info[$ii]['price']."원 ,";
+            }
+            $opname = substr($opname,0,strlen($opname)-1);
+        }
+
+        // 날짜리스트가 들어 있는 배열을 출력한다.
+        $dayLists = $this->dateweeks ( $_POST['s_date'] , $_POST['e_date'] ) ;
+
+        $chk_re = $this->db->where_in('todate',$dayLists)->where('room_no',$_POST['room_no'])->get('realpans')->result_array();
+        if($chk_re){
+            $this->_send_json('', 501, '이미 예약이 되어있는 날짜가 포함되어있습니다.');
+        }else{
+
+            if(!$_POST['pickup']) $_POST['pickup'] = 'N';
+
+            for($ii=0; $ii<count($dayLists); $ii++) {
+            	$in_data['code'] = $tcode;
+            	$in_data['room_no'] = $_POST['room_no'];
+            	$in_data['room_cp'] = $_POST['room_cp'];
+            	$in_data['room_name'] = $_POST['room_name'];
+            	$in_data['room_number'] = $_POST['room_number'];
+            	$in_data['todate'] = $dayLists[$ii];
+            	$in_data['lastdate'] = $_POST['e_date'];
+            	$in_data['name'] = $_POST['name'];
+            	$in_data['phone'] = $_POST['phone'];
+            	$in_data['ptime'] = $_POST['ptime'];
+            	$in_data['pickup'] = $_POST['pickup'];
+            	$in_data['area'] = $_POST['area'];
+            	$in_data['memo'] = $_POST['memo'];
+                $in_data['price_name'] = $_POST['price_name'];
+                $in_data['totalprice'] = $_POST['totalprice']+0;
+            	$in_data['price1'] = $_POST['price1']+0;
+            	$in_data['price2'] = $_POST['price2']+0;
+            	$in_data['price3'] = $_POST['price3']+0;
+            	$in_data['seongin_val'] = $_POST['seongin_val'];
+            	$in_data['adong_val'] = $_POST['adong_val'];
+            	$in_data['yua_val'] = $_POST['yua_val'];
+            	$in_data['pay_type'] = $_POST['pay_type'];
+            	$in_data['bankname'] = $_POST['bankname'];
+            	$in_data['options'] = $opname;
+            	$in_data['created'] = date("y-m-d H:i:s");
+
+                $this->db->insert('realpans',$in_data);
+            }
+
+            $this->_send_json('', 200, '예약이 완료되었습니다.');
+        }
+    }
     
 
     function dateweeks( $srt_date , $end_date ) {
@@ -351,7 +428,11 @@ class reserve extends CI_Controller {
         return $dayList ;
     }
 
-
+    public function _send_json($result = null, $code = 200, $message = null) {
+        @header( "Content-type: application/json" );
+        echo json_encode(array('code' => $code, 'message' => $message, 'result'=>$result));
+        exit;
+    }
 
 
 

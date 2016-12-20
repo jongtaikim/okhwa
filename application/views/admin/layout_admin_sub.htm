@@ -25,7 +25,16 @@
 
 </head>
 <body>
-
+<div class="pos_f" style="width:100%;z-index:9999999999">
+    <div id="alert" class="alert  bg-success  " style="display:none;z-index:9999999999;width:70%;margin:5px auto;border-radius: 0px">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <span class="alert-message"><strong>Warning!</strong> Best check yo self, you're not looking too good.</span>
+    </div>
+    <div id="alert-error" class="alert alert-error bg-danger " style="display:none;;z-index:9999999999;width:70%;margin:5px auto;;border-radius: 0px">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <span class="alert-message"><strong>Warning!</strong> Best check yo self, you're not looking too good.</span>
+    </div>
+</div>
 <!--공통로드-->
 <style type="text/css" title="">
 .pop_loading{display:block; text-align:center;padding:25px;;width:100%;height:100%;background-color:rgba(0, 0, 0, 0.26);}
@@ -359,6 +368,29 @@ $colors = "grey-900";
            location.href='#adm/admin_main';
        }
     });
+
+    var showAlert = function(message, level, duration) {
+        message = message || '';
+        level = level || 'info';
+        duration = duration || 0;
+
+        var doc = '#alert';
+        if(level=='error') {
+            doc = '#alert-error';
+        }
+        var obj = $(doc);
+        $(doc + ' .alert-message').html(message);
+
+        $("html, body").animate({ scrollTop: 0 }, "fast", function() {
+            obj.slideDown();
+
+            if(duration > 0) {
+                $notifyTimer = setTimeout(function () {
+                    obj.slideUp();
+                }, duration);
+            }
+        });
+    };
 </script>
 
 </body>

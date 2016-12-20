@@ -21,8 +21,8 @@
                 <div class="radio  {? .realpans}disabled{/}" >
 
 
-                    <label class="ui-check ">
-                        <input type="radio" name="room_no1" value="{.room_no}" {? .checked}checked{/} onclick="$('#room_no').val('{.no}'); InoutInList.viewnext();">
+                    <label class="ui-check " {? .realpans}style="color:red"{/}>
+                        <input type="radio" name="room_no1" value="{.room_no}" {? .realpans}disabled="disabled"{/}" {? .checked}checked{/} onclick="$('#room_no').val('{.no}');$('#room_no2').val('{.no}'); InoutInList.viewnext({.no});">
                         <i class="dark-white "></i>
                         {.room_number} {? .realpans}(예약불가){:}(예약가능){/}
                     </label>
@@ -31,6 +31,8 @@
                 {? .checked}
                     <script type="text/javascript">
                         $('#room_no').val('{.no}');
+                        $('#room_no2').val('{.no}');
+                        InoutInList.viewnext({.no});
                     </script>
                 {/}
             {/}

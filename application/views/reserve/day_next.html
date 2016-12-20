@@ -1,6 +1,14 @@
-<form name="next_form" id="next_form">
+{? to_realpan}
 <div class="box b-l b-b b-r b-t box-shadow2 step1">
 
+    <div class="text-center padding" style="padding-top:40px;padding-bottom:40px">
+        이미 예약이 되어있습니다.
+    </div>
+</div>
+{:}
+<form name="next_form" id="next_form">
+    <input type="hidden" name="room_no" id="room_no2" class="room_no" value="{room_no}"/>
+<div class="box b-l b-b b-r b-t box-shadow2 step1">
 
 
     <div class="box-header b-b">
@@ -33,7 +41,12 @@
                         <td class="garo">숙박기간</td>
                     </tr>
                     <tr>
-                        <td>{room_info.room_cp} {room_info.room_name} {room_info.room_number}</td>
+                        <td>
+                            {room_info.room_cp} {room_info.room_name} {room_info.room_number}
+                            <input type="hidden" name="room_cp" value="{room_info.room_cp}"/>
+                            <input type="hidden" name="room_name" value="{room_info.room_name}"/>
+                            <input type="hidden" name="room_number" value="{room_info.room_number}"/>
+                        </td>
                         <td>{=number_format(this_price1)} 원</td>
                         <td>{room_info.human_min}/{room_info.human_max}</td>
                         <td>
@@ -101,7 +114,11 @@
                             <input type="hidden" id="max_hum_to" value="{max_hum_to}"/>
                         </td>
                         <td>
-                            <div id="totaldate">{s_date}~{e_date}</div>
+                            <div id="totaldate">
+                                {s_date}~{e_date}
+                            </div>
+                            <input type="hidden" name="s_date" value="{s_date}"/>
+                            <input type="hidden" name="e_date" value="{e_date}"/>
                         </td>
                         <td style=" border-right:none">
 
@@ -212,14 +229,14 @@
                     <tr>
                         <td class="w180 "><strong>예약자 이름</strong> <i class="fa fa-check" aria-hidden="true" style="color: #ff0000"></i></td>
                         <td colspan="2">
-                            <input type="text" name="name" id="name" placeholder="예약자 성함을 입력하세요." class="form-control">
+                            <input type="text" name="name" id="name" placeholder="예약자 성함을 입력하세요."  required_text="예약자 성함을 입력하세요." required="required" class="form-control">
                         </td>
 
                      </tr>
                     <tr>
                         <td><strong>휴대폰번호</strong> <i class="fa fa-check" aria-hidden="true" style="color: #ff0000"></i></td>
                         <td colspan="2">
-                            <input type="number" name="phone" id="phone" placeholder="- 없이 번호만 입력하세요." class="form-control">
+                            <input type="number" name="phone" id="phone" placeholder="- 없이 번호만 입력하세요." required_text="휴대폰 번호를 입력하세요." required="required" class="form-control">
                         </td>
                     </tr>
   <!--                  <tr>
@@ -258,7 +275,7 @@
                                 <option value="22:00">22:00</option>
                                 <option value="23:00">23:00</option>
                             </select>
-                            <small>입실:14:00 이후 | 최실 11:00 이전</small>
+                            <small>입실:14:00 이후 | 퇴실 11:00 이전</small>
                         </td>
                     </tr>
                     <tr>
@@ -289,7 +306,7 @@
                     <tr>
                         <td>요청사항</td>
                         <td colspan="2">
-                            <textarea name="" id="" cols="30" rows="6" class="form-control"></textarea>
+                            <textarea name="memo" id="memo" cols="30" rows="6" class="form-control"></textarea>
                         </td>
                     </tr>
                     </tbody>
@@ -327,7 +344,7 @@
                         <div class="f_l"><strong>유의사항/환불규정, 개인정보 동의에 모두 동의하십니까?</strong></div>
                         <div class="f_r text-right">
 
-                            <input type="checkbox" id="pra" value="Y" style="width:15px;height:15px"> 모두동의
+                            <input type="checkbox" id="pra" value="Y" style="width:15px;height:15px" required_text="유의사항/환불규정, 개인정보 동의에 모두 동의해주시기 바랍니다." required="required"> 모두동의
 
                         </div>
                     </div>
@@ -359,7 +376,9 @@
                 <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
                     <div class="f_l padding p-l30 p-r30 p-t41 p-b41" style="width:30%;;text-align: center;background-color: #eee;;border: none;">요금타입</div>
                     <div class="f_l padding " style="width:70%;;border: none;">
-                        <p>* {this_price_name} {day_type} 요금</p>
+                        <p>* {this_price_name} {day_type} 요금
+                        <input type="hidden" name="price_name" value="{this_price_name} {day_type} 요금"/>
+                        </p>
                         <p>* 기준인원 초과시 1인당 성인 {=number_format(room_info.add_human_price)}원,취학아동 {=number_format(room_info.add_human_price2)}원,
                             미취학아동{=number_format(room_info.add_human_price3)}원이 추가됩니다.</p>
                     </div>
@@ -390,7 +409,14 @@
                         <td style="border: 0px"><i class="fa fa-plus" aria-hidden="true" style="font-size:20px;color:#757575"></i></td>
                         <td style="border: 0px" class="text-center">{=number_format(this_price3)}원 </td>
                         <td style="border: 0px"><strong  aria-hidden="true" style="font-size:25px;color:#757575">=</strong></td>
-                        <td style="border: 0px;font-size:20px" class="text-center">{=number_format(this_price)} 원</td>
+                        <td style="border: 0px;font-size:20px" class="text-center">{=number_format(this_price)} 원
+
+                            <input type="hidden" name="totalprice" value="{this_price}"/>
+                            <input type="hidden" name="price1" value="{this_price1}"/>
+                            <input type="hidden" name="price2" value="{this_price2}"/>
+                            <input type="hidden" name="price3" value="{this_price3}"/>
+
+                        </td>
                     </tr>
                     </tbody>
                 </table>
@@ -398,14 +424,146 @@
 
         </div>
 
+        <div class="clearfix m-b25 m-b40  p-t30 ">
+
+            <div class="col-md-12" >
+                <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
+                    <div class="f_l padding p-l30 p-r30 p-t41 p-b41" style="width:20%;;text-align: center;background-color: #eee;;border: none;">결제방법</div>
+                    <div class="f_l padding p-t21" style="width:80%;;border: none;">
+
+                        <div class="clearfix">
+                            <div class="col-md-2">
+
+                                <div class="radio  " >
+
+                                    <label class="ui-check inline" >
+                                        <input type="radio" name="pay_type" value="bank" checked>
+                                        <i class="dark-white "></i>
+                                        <strong>무통장 입금</strong>
+                                    </label>
+
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" name="bankname" id="bankname" required_text="입금예정자 성함을 입력하세요." required="required" class="form-control w200 inline " placeholder="입금예정자">
+                            </div>
+                            <div class="col-md-12">
+                                <small>※ {? !to_in_day}예약 신청 후 12시간 내로 전액을 입금하셔야 예약이 완료 되며, 12시간이 경과되면 예약신청이 취소 됩니다.{:}당일 예약과 하루 전 예약은 예약 후 3시간 내에 결재를 완료해 주셔야 합니다.{/}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="clearfix m-b65 m-t0 col-md-12 text-center" >
 
             <a href="javascript:$('.step2').toggle();$('.step1').toggle();" class="btn-lg btn btn-white white"> 예약수정</a>
-            <a href="javascript:$('.step2').toggle();$('.step1').toggle();" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 예약확정</a>
+            <a href="javascript:reserve_cp()" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 예약확정</a>
 
         </div>
 
     </div>
 </div>
 </form>
+<script type="text/javascript">
+function reserve_cp() {
+    var tsd = '';
+
+    $('input[required=required]').each(function () {
+        if($(this).val() ==''){
+            var tinput = $(this);
+            tsd = 'y';
+            bootbox.alert($(this).attr('required_text'),function () {
+
+                setTimeout(function () {
+                    tinput.focus();
+                },300);
+            });
+            return false;
+        }
+    });
+
+    if(!tsd) {
+        if (!$('#pra').is(':checked')) {
+            bootbox.alert($('#pra').attr('required_text'), function () {
+                setTimeout(function () {
+                    $('#pra').focus();
+                }, 300);
+            });
+            return false;
+        }
+
+        if ($('#phone').val() != "") {
+            var rgEx = /(01[016789])(\d{4}|\d{3})\d{4}$/g;
+            var strValue = $('#phone').val();
+            var chkFlg = rgEx.test(strValue);
+            if (!chkFlg) {
+                bootbox.alert("올바른 휴대폰번호가 아닙니다.", function () {
+                    setTimeout(function () {
+                        $('#phone').focus();
+                    }, 300);
+                });
+
+                return false;
+            }
+        }
+
+        bootbox.confirm({
+            title:'예약 확정하기',
+            message: "<div class='padding'><strong>예약을 확정하시겠습니까?</strong><br>{? !to_in_day}(예약 신청 후 12시간 내로 전액을 입금하셔야 예약이 완료 되며, 12시간이 경과되면 예약신청이 취소 됩니다.){:}(당일 예약과 하루 전 예약은 예약 후 3시간 내에 결재를 완료해 주셔야 합니다.){/}</div>",
+            buttons: {
+                confirm: {
+                    label: '예약 확정',
+                    className: 'dark'
+                },
+                cancel: {
+                    label: '취소',
+                    className: 'white'
+                }
+            },
+            callback: function (result) {
+                if (result) {
+
+                    var _data = $('#next_form').serialize();
+
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/user/reserve/reserve_cp',
+                        data: _data,
+                        dataType: "json", //전송받을 데이터의 타입
+                        success: function (jsondata) {
+                            console.log(jsondata);
+                            if (jsondata.code == '200') {
+                                bootbox.alert(jsondata.message, function () {
+                                    InoutInList.viewday('{s_date}');
+                                });
+                                return false;
+                            } else {
+                                bootbox.alert(jsondata.message, function () {
+                                    InoutInList.viewday('{s_date}');
+                                });
+                                return false;
+                            }
+                            //
+
+
+                        }
+                    });
+
+                }
+            }
+        });
+
+    }
+
+
+}
+
+</script>
+{/}

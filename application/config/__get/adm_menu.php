@@ -109,16 +109,18 @@ $menu[$cate1]['icon'] = "fa fa-archive";
 
 $cate1++;
 $menu[$cate1]['title'] = "예약관리";
-$menu[$cate1]['link'] = "#admin/reserve/index";
+$menu[$cate1]['link'] = "#admin/realpans/view_cl";
 $menu[$cate1]['icon'] = "fa fa-calendar-check-o";
 
 
 
 $cate2 = 0;
-$menu[$cate1]['submenu'][$cate2]['title'] = "예약현황";
+$menu[$cate1]['submenu'][$cate2]['title'] = "예약현황 달력";
 $menu[$cate1]['submenu'][$cate2]['link'] = $menu[$cate1]['link'];
 
-
+$cate2++;
+$menu[$cate1]['submenu'][$cate2]['title'] = "예약현황 리스트";
+$menu[$cate1]['submenu'][$cate2]['link'] = "#admin/realpans/index";
 
 $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "온라인상담";

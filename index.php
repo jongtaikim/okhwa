@@ -23,7 +23,7 @@
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-
+date_default_timezone_set('Asia/Seoul');
 
        header('Content-Type: text/html; charset=UTF-8');
 	define('ENVIRONMENT', 'development');

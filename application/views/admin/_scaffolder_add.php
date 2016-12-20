@@ -21,9 +21,9 @@ $(document).ready(function (){
 				},
 				success: function(result) {
 					if(result.error) {
-						//showAlert(result.messages, 'error', 3000);
+						showAlert(result.messages, 'error', 3000);
 
-                        alert(result.messages[0]);
+                        //alert(result.messages);
                   
 
 					} else {
@@ -82,11 +82,6 @@ $(document).ready(function (){
                                 document.location.href=location.hash+"?v="+date("YmdHis");
                             }
                         });
-
-
-
-
-
 					}
 				}
 			});
@@ -98,18 +93,27 @@ $(document).ready(function (){
 	});
 });
 </script>
+<?
+if(!$to_col) $to_col = '6';
+if(!$to_col_mo) $to_col_mo = '6';
+?>
 
 <div class=" panel-body  pos_r" id="in_add_form" >
 
 
 
             <form id="item-form" class="form-horizontal">
-                
 
 
+
+                <? if(count($fields)>$to_col){?>
+                <div class="col-md-<?=$to_col_mo?>">
+                <?}?>
                 <?php $is_focused = false; ?>
                 <? $ii=0;?>
                 <?php foreach($fields as $key => $val) : ?>
+
+
                     <? if(!$val['not_field'] ) {?>
                     <div class="
 
@@ -118,18 +122,9 @@ $(document).ready(function (){
 
                         <?php if($val['is_key'] || $val['type']=='now' || $val['edit_hide']==true) echo "style='display:none'"; ?>>
 
-
-
-                        <?  if($val['type'] == 'select' || $val['type'] == 'multiselect'){?>
-                            <label class="control-label m-b5" for="<?=$key?>"><?=strip_tags($val['title'])?></label>
-                            <div class="input-group" style="width:100%">
-                        <?}else{?>
-                            <div class="md-form-group">
-                        <?}?>
-
-
-
-
+                            <? if($val['type']!='hidden'  ){?>
+                            <div class="md-form-group p-t30">
+                            <?}?>
                             <? if($val['type'] == 'date'){?>
 
                                 <input type="date" name="<?=$key?>" value="<?=$val['value']?$val['value']:$rows[$key]?>" id="<?=$key?>" maxlength="<?=$val['max_length']?>" style="<?=$val['style']?>;height:34px" onfocus="this.select()" class="form-control has-value" <? if($is_edit && $val['uneditable']){echo 'readonly';}?> />
@@ -160,11 +155,12 @@ $(document).ready(function (){
                                     <img src="<?=$val['value']?$val['value']:$rows[$key]?>" <?if($val['img_w']){?>width="<?=$val['img_w']?>"<?}?> <?if($val['img_h']){?>height="<?=$val['img_h']?>"<?}?> style="<?=$val['sub_style']?>" />
                                 </div>
                             <?}?>
-                            <?  if($val['type'] != 'select' && $val['type'] != 'multiselect' && $val['type'] != 'hidden' ){?>
+                            <?  if( $val['type'] != 'hidden' ){?>
                             <label class="control-label m-b5" for="<?=$key?>"><?=strip_tags($val['title'])?></label>
                             <?}?>
-
+                                <? if($val['type']!='hidden'  ){?>
                         </div>
+                                <?}?>
                     </div>
                 <?php if(!$is_focused) : ?>
                     <script>
@@ -176,38 +172,50 @@ $(document).ready(function (){
                 <?php endif; ?>
 
 
+
+                    <? if(($ii+1) %$to_col==0) {?>
+                        <? if(count($fields)>$to_col){?>
+                            </div>
+                            <div class="col-md-<?=$to_col_mo?>">
+                        <?}?>
+
+                    <?}?>
+
                     <? $ii++; ?>
 
                   <?}?>
 
                 <?php endforeach; ?>
 
+                        </div>
+
                 <div class="clearfix">
-                <div class="control-group clearfix ">
+
+
+                    <div class="control-group clearfix ">
 
                     <div class="controls text-right col-md-12  p-t15 m-t5">
-                        <button type="button" id="act-button" class="btn btn-primary"><?=$is_edit?"수정":"생성"?></button>
-                        <a href="javascript:" class="btn btn-default bootbox-close-button">취소</a>
-                    </div>
-                </div>
-                <hr/>
+                        <hr/>
 
-                <div class="control-group col-md-12" <?=$is_edit?"":"style='display:none'"?>>
-                    <div class="controls text-right">
-                        <button type="button" id="del-button" class="btn btn-danger"><i class="icon-warning-sign"></i> 삭제하기</button>
+                        <button type="button" id="del-button" class="btn btn-danger f_l" <?=$is_edit?"":"style='display:none'"?>><i class="icon-warning-sign"></i> 삭제하기</button>
 
 
-
+                        <a href="javascript:" class="btn btn-default bootbox-close-button f_r">취소</a>
+                        <button type="button" id="act-button" class="btn btn-primary f_r m-r5"><?=$is_edit?"수정하기":"생성"?></button>
                     </div>
                 </div>
 
+
+
                 </div>
+
+
+
 
 
 
 
         </div>
-
     </form>
 
 
@@ -217,8 +225,9 @@ $(document).ready(function (){
     
     $(document).ready(function(){
 
-       $('input[type="text"],input[type="password"],input[type="number"],input[type="date"]').addClass('md-input');
-       $('select').addClass('form-control');
+       $('input[type="text"],input[type="password"],input[type="number"],input[type="date"]').removeClass('form-control').addClass('md-input');
+       $('select').addClass('md-input');
+       $('textarea').addClass('md-input');
        $('input[type="checkbox"]').each(function(){
            var def_chk = $(this).parent().html();
            $(this).parent().html('<label class="ui-switch ui-switch-md info m-t-xs">'+def_chk+' <i></i></label>')
@@ -226,6 +235,9 @@ $(document).ready(function (){
 
 
 
+        $("#item-form").find("textarea").each(function(){
+            $(this).width('100%');
+        });
         $("#item-form").find("select[multiple=multiple]").each(function(){
              $(this).select2({tags: true,
                  tokenSeparators: [',', ' ']});
