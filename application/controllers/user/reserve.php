@@ -381,6 +381,7 @@ class reserve extends CI_Controller {
             	$in_data['room_cp'] = $_POST['room_cp'];
             	$in_data['room_name'] = $_POST['room_name'];
             	$in_data['room_number'] = $_POST['room_number'];
+            	$in_data['startdate'] = $_POST['s_date'];
             	$in_data['todate'] = $dayLists[$ii];
             	$in_data['lastdate'] = $_POST['e_date'];
             	$in_data['name'] = $_POST['name'];

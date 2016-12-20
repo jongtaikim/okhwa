@@ -85,6 +85,35 @@ class Realpans extends Scaffolder
         $pickup['Y'] = "픽업";
         $pickup['N'] = "픽업안함";
 
+        $ptime['14:00'] = "14:00";
+        $ptime['15:00'] = "15:00";
+        $ptime['16:00'] = "16:00";
+        $ptime['17:00'] = "17:00";
+        $ptime['18:00'] = "18:00";
+        $ptime['19:00'] = "19:00";
+        $ptime['20:00'] = "20:00";
+        $ptime['21:00'] = "21:00";
+        $ptime['22:00'] = "22:00";
+        $ptime['23:00'] = "23:00";
+
+        $area['서울특별시'] = "서울특별시";
+        $area['경기도'] = "경기도";
+        $area['인천광역시'] = "인천광역시";
+        $area['부산광역시'] = "부산광역시";
+        $area['경상남도'] = "경상남도";
+        $area['경상북도'] = "경상북도";
+        $area['대구광역시'] = "대구광역시";
+        $area['대전광역시'] = "대전광역시";
+        $area['울산광역시'] = "울산광역시";
+        $area['충청남도'] = "충청남도";
+        $area['충청북도'] = "충청북도";
+        $area['강원도'] = "강원도";
+        $area['전라남도'] = "전라남도";
+        $area['전라북도'] = "전라북도";
+        $area['광주광역시'] = "광주광역시";
+        $area['세종시'] = "세종시";
+        $area['제주도'] = "제주도";
+
         $this->data['fields'] = array(
             'room_cp' => array('title' => '객실소속', 'type' => 'select', 'options'=>$cps , 'list_style' => 'text-align:center;width:120px;font-weight: bold','html'=>true,'col-md'=>12,'uneditable'=>true),
             'code' => array('title' => '예약코드', 'type' => 'input', 'list_style' => 'text-align:center;width:100px','html'=>false,'col-md'=>8,'uneditable'=>true,'list_hide'=>true),
@@ -103,10 +132,10 @@ class Realpans extends Scaffolder
 
             '' => array('title' => '', 'type' => 'hidden', 'list_style' => 'text-align:center;width:','col-md'=>6, 'custom_field'=>true,'list_hide'=>true),
 
-            'name' => array('title' => '예약자', 'type' => 'input', 'list_style' => 'text-align:center;width:','col-md'=>6, 'rule'=>'required',),
-            'phone' => array('title' => '전화번호', 'type' => 'input', 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>'required',),
-            'ptime' => array('title' => '입실<br>시간', 'type' => 'input', 'list_style' => 'text-align:center;width:','col-md'=>6, 'rule'=>'required',),
-            'area' => array('title' => '출발<br>지역', 'type' => 'input', 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>'required',),
+            'name' => array('title' => '예약자', 'type' => 'input', 'list_style' => 'text-align:center;width:','col-md'=>6, 'rule'=>'required'),
+            'phone' => array('title' => '전화번호', 'type' => 'input', 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>'required'),
+            'ptime' => array('title' => '입실<br>시간', 'type' => 'select', 'options'=>$ptime ,'list_style' => 'text-align:center;width:','col-md'=>6, 'rule'=>''),
+            'area' => array('title' => '출발<br>지역', 'type' => 'select','options'=>$area, 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>''),
 
 
             'memo' => array('title' => '메모', 'type' => 'textarea', 'list_style' => 'text-align:center;width:','col-md'=>12,'list_hide'=>true,'style'=>'height:120px'),
@@ -123,7 +152,7 @@ class Realpans extends Scaffolder
             'seongin_val' => array('title' => '성인', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4','uneditable'=>true),
             'adong_val' => array('title' => '아동', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4','uneditable'=>true),
             'yua_val' => array('title' => '유아', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4','uneditable'=>true),
-            'pay_state' => array('title' => '유아', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4','uneditable'=>true),
+            'pay_state' => array('title' => '입금상태', 'type' => 'select', 'options'=>array('Y'=>'입금확인됨','N'=>'입금대기'),'list_style' => 'text-align:center;width:50px','html'=>true,'list_hide'=>false,'col-md'=>'12'),
 
 
             'created'=>array('title'=>'예약날짜','type'=>'now','list_style'=>'text-align:center;width:100px'),
@@ -159,8 +188,9 @@ class Realpans extends Scaffolder
     }
 
     public function view_cl(){
-        if ( $_GET['str_year'] )  $year = $_GET['str_year'] ;
-        if ( $_GET['str_month'] )  $month = $_GET['str_month'] ;
+
+        if ( $_GET['year'] )  $year = $_GET['year'] ;
+        if ( $_GET['month'] )  $month = $_GET['month'] ;
 
         if(!$year) $year = date("Y");
         if(!$month) $month = date("m");
@@ -171,7 +201,27 @@ class Realpans extends Scaffolder
         $tweek = ceil(($tday + $sweek) / 7);  // 총 주차from
         $lweek = date('w', strtotime($year.'-'.$month.'-'.$tday));  // 마지막요일
 
-        $room_list = $this->db->order_by('room_number','asc')->get('rooms')->result_array();
+        //합계 데이터
+        $t_data = $this->db->select(' room_cp, room_name,  count(*) as cu ')->group_by("room_name")->from('rooms')->order_by('room_cp, room_name','asc')->get()->result_array();
+        for($ii=0; $ii<count($t_data); $ii++) {
+            $t_data[$ii]['to_realpan']  = $this->db->set('name')->where('todate >=',date('Y-m-d',$time))->where('todate <=',date('Y-m-d',$time2))->where('room_name',$t_data[$ii]['room_name'])->group_by('name')->get('realpans')->result_array();
+            
+            $to_total = $to_total + count($t_data[$ii]['to_realpan']);
+            
+        }
+        $this->display->assign('t_data',$t_data);
+        $this->display->assign('to_total',$to_total);
+        $this->display->assign('year',$year);
+        $this->display->assign('month',$month);
+
+
+
+
+        if($_GET['room_name']){
+            $this->db->where('room_name',$_GET['room_name']);
+        }
+        $this->db->order_by('room_number','asc');
+        $room_list = $this->db->get('rooms')->result_array();
 
         $caltemp = '
 		<table  border="0" cellpadding="0" cellspacing="0" class="table table-bordered"  id="date_table">
@@ -236,10 +286,10 @@ class Realpans extends Scaffolder
                         if($room_list[$ii]['to_realpan']['pay_state'] == 'N'){
                             $room_txt .='<div class="m-t15 ft10 p-l10"><span class="label blue">대</span> 
                                                     <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)">'
-                                                    .$room_list[$ii]['room_name'].' '.$room_list[$ii]['room_number'].'</a> </div>';
+                                                    . $room_list[$ii]['to_realpan']['name'].' :  '.$room_list[$ii]['room_number'].'</a> </div>';
                         }else{
                             $room_txt .='<div class="m-t15 ft10 p-l10"><span class="label red">완</span> 
-                                <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)">'.$room_list[$ii]['room_name'].'
+                                <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)">'. $room_list[$ii]['to_realpan']['name'].' : 
                                  '.$room_list[$ii]['room_number'].'</a> </div>';
                         }
 
@@ -368,14 +418,29 @@ class Realpans extends Scaffolder
 
     public function edit_action()
     {
+
         $this->form_validation->set_rules('no', '번호', 'required');
         parent::edit_action();
     }
 
+    public function edit_action_pay_state()
+    {
+
+       if($_POST['code']){
+           if($this->db->set('pay_state',$_POST['pay_state'])->where('code',$_POST['code'])->update($this->table_tn)){
+               $this->output
+                   ->set_content_type('application/json')
+                   ->set_output(json_encode(array('code' => '200', 'result' => $data)));
+           }
+       }
+    }
+
+
+
     public function _edit_from_db()
     {
 
-        $_POST['options'] = implode(',',$_POST['options_select']);
+
         if(parent::_edit_from_db($this->table_tn)) {
 
             return true;

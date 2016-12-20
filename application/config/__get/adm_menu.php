@@ -122,9 +122,9 @@ $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "예약현황 리스트";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/realpans/index";
 
-$cate2++;
+/*$cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "온라인상담";
-$menu[$cate1]['submenu'][$cate2]['link'] = '#/admin/online_adm/list_view/?PageNum=040101';
+$menu[$cate1]['submenu'][$cate2]['link'] = '#/admin/online_adm/list_view/?PageNum=040101';*/
 
 	
 

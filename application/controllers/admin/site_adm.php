@@ -123,7 +123,7 @@ class Site_adm extends CI_Controller {
 
         $main_menu = array(
             array(
-                'col'=>'col-sm-4',
+                'col'=>'col-sm-3',
                 'title'=>'홈페이지관리',
                 'title_color'=>'',
                 'img'=>'/application/views/admin/images/adm_menu1.jpg',
@@ -133,7 +133,7 @@ class Site_adm extends CI_Controller {
                 'btn_color'=>'brown',
             ),
             array(
-                'col'=>'col-sm-4',
+                'col'=>'col-sm-3',
                 'title'=>'가격정책설정',
                 'title_color'=>'#fff',
                 'img'=>'/application/views/admin/images/adm_menu2.jpg',
@@ -145,7 +145,7 @@ class Site_adm extends CI_Controller {
             ),
 
             array(
-                'col'=>'col-sm-4',
+                'col'=>'col-sm-3',
                 'title'=>'부대시설관리',
                 'title_color'=>'#fff',
                 'img'=>'/application/views/admin/images/adm_menu3.jpg',
@@ -157,19 +157,52 @@ class Site_adm extends CI_Controller {
             ),
 
             array(
-                'col'=>'col-sm-4',
+                'col'=>'col-sm-3',
                 'title'=>'예약관리',
                 'title_color'=>'#fff',
                 'img'=>'/application/views/admin/images/adm_menu6.jpg',
                 'icon'=>'<i class="fa fa-shopping-basket" aria-hidden="true"></i>',
                 'text'=>'예약현황을 확인하거나 입금확인 처리를 관리합니다.',
-                'link'=>'#admin/reserve/index/?PageNum=040101',
+                'link'=>'#admin/realpans/view_cl/',
                 'btn_color'=>'pink',
                 'btn_text_color'=>'',
             ),
+          /*  array(
+                'col'=>'col-sm-3',
+                'title'=>'1:1문의',
+                'title_color'=>'#fff',
+                'img'=>'/application/views/admin/images/adm_menu5.jpg',
+                'icon'=>'<i class="fa fa-shopping-basket" aria-hidden="true"></i>',
+                'text'=>'사이트를 통해 들어온 문의를 관리합니다.',
+                'link'=>'#/admin/online_adm/list_view',
+                'btn_color'=>'pink',
+                'btn_text_color'=>'',
+            ),*/
         );
 
         $this->display->assign('LIST',$main_menu);
+
+        //오늘 날짜 출력 ex) 2013-04-10
+        $today_date = date('Y-m-d');
+        //오늘의 요일 출력 ex) 수요일 = 3
+        $day_of_the_week = date('w');
+        //오늘의 첫째주인 날짜 출력 ex) 2013-04-07 (일요일임)
+        $a_week_ago = date('Y-m-d', strtotime($date." -".$day_of_the_week."days"));
+        $e_week_ago = date('Y-m-d', strtotime($a_week_ago." +6days"));
+
+        $this->display->assign('a_week_ago',$a_week_ago);
+        $this->display->assign('e_week_ago',$e_week_ago);
+
+
+        $t_data = $this->db->select('img_url, room_cp, room_name,  count(*) as cu ')->group_by("room_name")->from('rooms')->order_by('room_cp, room_name','asc')->get()->result_array();
+        for($ii=0; $ii<count($t_data); $ii++) {
+            $t_data[$ii]['to_realpan']  = $this->db->set('name')->where('todate >=',$a_week_ago)->where('todate <=',$e_week_ago)->where('room_name',$t_data[$ii]['room_name'])->group_by('name')->get('realpans')->result_array();
+
+            $to_total = $to_total + count($t_data[$ii]['to_realpan']);
+
+        }
+        $this->display->assign('t_data',$t_data);
+        $this->display->assign('to_total',$to_total);
 
         $tpl->define("CONTENT", $this->display->getTemplate("admin/main.htm"));
         $tpl->printAll();
