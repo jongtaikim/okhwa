@@ -190,6 +190,191 @@ class reserve extends CI_Controller {
         echo $content;
     }
 
+    function lists2() {
+
+        //http://okhwa.it-company.kr/#/user/reserve/lists2?room_cp=제이드나인
+        //http://okhwa.it-company.kr/#/user/reserve/lists2?room_cp=옥화용소절경
+
+        if ( $_GET['year'] )  $year = $_GET['year'] ;
+        if ( $_GET['month'] )  $month = $_GET['month'] ;
+
+        if(!$year) $year = date("Y");
+        if(!$month) $month = date("m");
+
+        $time = strtotime($year.'-'.$month.'-01');
+        $time2 = strtotime($year.'-'.$month.'-31');
+        list($tday, $sweek) = explode('-', date('t-w', $time));  // 총 일수, 시작요일
+        $tweek = ceil(($tday + $sweek) / 7);  // 총 주차from
+        $lweek = date('w', strtotime($year.'-'.$month.'-'.$tday));  // 마지막요일
+
+        $this->display->assign('year',$year);
+        $this->display->assign('month',$month);
+
+        if($_GET['room_name']){
+            $this->db->where('room_name',$_GET['room_name']);
+        }
+        if($_GET['room_cp']){
+            $this->db->where('room_cp',$_GET['room_cp']);
+        }
+        $this->db->order_by('room_cp, room_name , room_number','asc');
+        $room_list = $this->db->get('rooms')->result_array();
+
+        $caltemp = '
+		<table  border="0" cellpadding="0" cellspacing="0" class="table table-bordered"  id="date_table">
+			<thead>
+				<tr>
+					<th class="sun  text-center" style="width:14.3%">일</th>
+					<th class=" text-center" style="width:14.3%">월</th>
+					<th class=" text-center" style="width:14.3%">화</th>
+					<th class=" text-center" style="width:14.3%">수</th>
+					<th class=" text-center" style="width:14.3%">목</th>
+					<th class=" text-center" style="width:14.3%">금</th>
+					<th class="sat  text-center" style="width:14.3%">토</th>
+				</tr>
+			</thead>
+            <tbody>
+		' ;
+        for ($n=1,$i=0; $i<$tweek; $i++):
+
+            $caltemp .= "<tr>" ;
+            for ($k=0; $k<7; $k++):
+                $to_day_type = '';
+                switch (  $k ) {
+                    case 6 :
+                        $ncolor = "color:blue";
+                         $to_day_type = " - 주말";
+                        break ;
+                    case 0 :
+                        $ncolor = "color:red";
+                        $to_day_type = " - 주말";
+                        break ;
+                    default :
+                        $ncolor = "";
+                        break;
+                }
+
+                $int = sprintf("%02d", $n);
+                $radate = $year."-".$month."-".$int ;
+
+//			echo $int ."<br>";
+                $caltemp .=  '<td class="hand" valign="top" style="height:100px">' ;
+                if (($i == 0 && $k < $sweek) || ($i == $tweek-1 && $k > $lweek)) {
+                    $caltemp .=    "</td>";
+                    continue;
+                }
+
+
+
+                $tt = sprintf("%02d", $n++) ;
+                $udate = $year."-".$month."-".$tt ;
+
+                $room_txt='<div class="hide date_'.$udate.' text-center clearfix" style="overflow:auto">';
+
+
+
+
+                for($ii=0; $ii<count($room_list); $ii++) {
+
+                    $room_list[$ii]['to_realpan'] = $this->db->where('todate <=',$udate)->where('lastdate >=',$udate)->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
+
+                    if($room_list[$ii]['to_realpan']){
+                        $btns = '  <a href="javascript:" style="text-decoration: none" class="btn danger btn-xs">
+                                        예약불가
+                                      </a>';
+                    }else{
+                        $btns = '  <a href="#/user/reserve/index?no='.$room_list[$ii]['no'].'" style="text-decoration: none" class="btn btn-default btn-xs">
+                                        예약가능
+                                      </a>';
+                    }
+
+                    $room_txt .='
+                        
+                        <div class="col-sm-6 col-xs-6 col-md-3 col-lg-3">
+                            <div class="panel panel-card box-shadow2">
+                                <div class="item" style="height:90px;background: url('.$room_list[$ii]['img_url'].');background-size:cover ">
+            
+            
+                                </div>
+            
+                                <div class="text-center">
+                                    <div class="text-center p-t10">
+                                        <strong class="ft12">'.$room_list[$ii]['room_name'].' '.$room_list[$ii]['room_number'].'</strong>
+                                    </div>
+                                    <div style="p-b20">
+                                        
+                                        <div class="m-t10 ft10 p-b15 ">
+                                            '.$btns.'
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        ';
+
+                }
+
+                $room_txt .="</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('".$udate."');>예약하기</a></div>";
+
+                $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
+                $sda = array_pop(explode("-",$varprice_row['start_date']));
+                $eda = array_pop(explode("-",$varprice_row['end_date']));
+
+                //echo $sda." / ".$tt." / ".$eda;
+
+                if($sda <= $tt && $eda >= $tt ){
+
+                    // echo "<-1-"."<br>";
+
+                    if($varprice_row['price_name'] == '성수기') $kname = "sung_price";
+                    if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') $kname = "jun_price";
+
+                    if($to_day_type) {
+                        $kname_ = $kname."2";
+                        $varprinc = $room_info[$kname_];
+                    }else{
+                        $varprinc = $room_info[$kname];
+                    }
+
+                    $varprincname =  $varprice_row['price_name'].$to_day_type ;
+
+
+                }else{
+
+
+                    $varprincname =  $to_day_type ;
+                }
+
+
+                $caltemp .= '<div class="day " >' . $tt .'일 <span style="color:#a1a1a1" class="ft11">' .$varprincname.'</span></div><div class="text-left m-t40" style="font-size:11px">'.$room_txt.'</div> ';
+
+
+
+
+
+//			$caltemp .= $row['minetime'] ."<br>". $row['maxetime']."<br>". $n++ ;
+
+                $caltemp .=   '</td>' ;
+
+            endfor;
+            $caltemp .=   '</tr>' ;
+        endfor;
+
+        $caltemp .=   '</tbody>' ;
+        $caltemp .=   '</table>' ;
+
+
+        $data = array( "caltemp"=>$caltemp , "where"=>$where );
+
+        $this->display->assign($data);
+
+        $this->display->define('CONTENT', $this->display->getTemplate('/reserve/list2.html'));
+        $content = $this->display->fetch('CONTENT');
+
+        echo $content;
+    }
+
    
     function day(){
         
@@ -237,7 +422,11 @@ class reserve extends CI_Controller {
 
             for($ii=0; $ii<count($room_list); $ii++) {
                 $room_list[$ii]['realpans'] =  $this->db->where('todate',$_GET['day'])->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
-                if(!$room_list[$ii]['realpans'] && !$nos){
+                /*if(!$room_list[$ii]['realpans'] && !$nos){
+                    $room_list[$ii]['checked'] = 'checked';
+                    $nos ='y';
+                }*/
+                if($_GET['room_no'] == $room_list[$ii]['no']){
                     $room_list[$ii]['checked'] = 'checked';
                     $nos ='y';
                 }

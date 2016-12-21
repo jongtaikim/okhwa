@@ -22,7 +22,7 @@
 
 
                     <label class="ui-check " {? .realpans}style="color:red"{/}>
-                        <input type="radio" name="room_no1" value="{.room_no}" {? .realpans}disabled="disabled"{/}" {? .checked}checked{/} onclick="$('#room_no').val('{.no}');$('#room_no2').val('{.no}'); InoutInList.viewnext({.no});">
+                        <input type="radio" name="room_no1" class="room_{.room_no}" value="{.room_no}" {? .realpans}disabled="disabled"{/}" {? .checked}checked{/} onclick="$('#room_no').val('{.no}');$('#room_no2').val('{.no}'); InoutInList.viewnext({.no});">
                         <i class="dark-white "></i>
                         {.room_number} {? .realpans}(예약불가){:}(예약가능){/}
                     </label>
@@ -30,9 +30,9 @@
             </div>
                 {? .checked}
                     <script type="text/javascript">
-                        $('#room_no').val('{.no}');
-                        $('#room_no2').val('{.no}');
-                        InoutInList.viewnext({.no});
+                      //  $('#room_no').val('{.no}');
+                      //  $('#room_no2').val('{.no}');
+                      //  InoutInList.viewnext({.no});
                     </script>
                 {/}
             {/}
@@ -40,3 +40,13 @@
 
     </div>
 </div>
+<script type="text/javascript">
+    {? _GET.room_no}
+
+        $('#room_no').val('{_GET.room_no}');
+        $('#room_no2').val('{_GET.room_no}');
+        $('.room_{_GET.room_no}').attr('checked',true);
+
+        InoutInList.viewnext({_GET.room_no});
+    {/}
+</script>

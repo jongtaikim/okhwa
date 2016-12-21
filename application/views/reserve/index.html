@@ -152,7 +152,7 @@
                     $('#date_table').height($('#day_info').height()-70);
 
                     $('#day_info2').html('<div class="text-center padding"><i class="fa fa-cog fa-spin fa-3x fa-fw" style="font-size:20px"></i> 불러오는중...</div>');
-                    InoutInList.viewnext();
+                    InoutInList.viewnext({_GET.no});
                 }
             });
         }
@@ -160,6 +160,7 @@
 
     $(function() {
         InoutInList.init();
+        bootbox.hideAll();
     })
 </script>
 

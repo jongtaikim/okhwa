@@ -32,7 +32,7 @@
         "<div class='bootbox modal bootbox_modal' tabindex='-1' role='dialog' style='font-size:16px;'>" +
         "<div class='modal-dialog'>" +
         "<div class='modal-content'>" +
-        "<div class='modal-body'><div class='bootbox-body'></div></div>" +
+        "<div class='modal-body'><div class='bootbox-body' style='overflow:auto'></div></div>" +
         "</div>" +
         "</div>" +
         "</div>",
