@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* sitemap */
+#container .sitemapwrap{ background:url(../images/bottom_bg_01.png);height:269px;width:100%;margin:0 auto; overflow:hidden;} 
+#container .sitemapwrap .sitemap{ width:1200px; margin:auto; text-align:left;}
+#container .sitemapwrap .sitemap ul{ height:200px; border-left:1px solid #ddd; float:left; margin-top:30px; padding:0 95px 0 30px}
+#container .sitemapwrap .sitemap ul li{ height:28px}
+#container .sitemapwrap .sitemap ul .sitemap_tt{ margin-bottom:18px;}
+
+/* footer */
+#footerwrap{ background:url(../images/bottom_bg_02.png);height:100px; font-size:1em; width:100%; clear:both; overflow:hidden; overflow:hidden; }
+#footerwrap #footer{margin:0 auto;width:1200px; position:relative;clear:both;}
+#footerwrap #footer .logo{ position:absolute; top:20px; left:0; cursor:pointer;}
+#footerwrap #footer .address{ position:absolute; top:30px; right:413px;}
+#footerwrap #footer .icon{position:absolute; top:30px; right:0;}
+#footerwrap #footer .icon ul{}
+#footerwrap #footer .icon ul li{ float:left; margin-right:8px; cursor:pointer;}
+
+
+
+#container{width:100%; }
+
+
+/* contents */
+#container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
+#container #contents .about_top{ background:url(../images/sub/about_top.jpg) top center; width:100%; height:868px;}
+#container #contents .notice_top{ background:url(../images/sub/notice_top.jpg) top center; width:100%; height:868px;}
+#container #contents .camp_top{ background:url(../images/sub/camp_top.jpg) top center; width:100%; height:868px;}
+#container #contents .reserve_top{ background:url(../images/sub/reserve_top.jpg) top center; width:100%; height:868px;}
+#container #contents .loca_top{ background:url(../images/sub/loca_top.jpg) top center; width:100%; height:868px;}
+#container #contents .faq_top{ background:url(../images/sub/faq_top.jpg) top center; width:100%; height:868px;}
+#container #contents .travel_top{ background:url(../images/sub/travel_top.jpg) top center; width:100%; height:868px;}
+#container #contents .guide_top{ background:url(../images/sub/guide_top.jpg) top center; width:100%; height:868px;}
+#container #contents .setting_top{ background:url(../images/sub/setting_top.jpg) top center; width:100%; height:868px;}
+
+
+#container #contents #cont{ width:1200px; margin:0 auto; padding:180px 0;}
+#container #contents #cont .icon{ text-align:center; padding-bottom:40px}
+#container #contents #cont .tit{ text-align:center; padding-bottom:38px;}
+#container #contents #cont .cont{}
+#container #contents #cont .cont_pdt{padding-top:60px;}
+#container #contents .map{ background-color:#ede9d4;}
+#container #contents .pool{ background:url(../images/sub/pool_bg.jpg) top center; width:100%; height:868px; position:relative;}
+#container #contents .pool .text{ position:absolute; top:0; right:0; height:868px; width:668px; text-align:right;}
+#container #contents .cafe{ background:url(../images/sub/cafe_bg.jpg) top center; width:100%; height:868px; position:relative;}
+#container #contents .cafe .text{ position:absolute; top:0; right:0; height:868px; width:668px; text-align:right;}
+#container #contents .bbq{ background:url(../images/sub/bbq_bg.jpg) top center; width:100%; height:868px; position:relative;}
+#container #contents .bbq .text{ position:absolute; top:0; right:0; height:868px; width:668px; text-align:right;}
+#container #contents .seminar{ background:url(../images/sub/seminar_bg.jpg) top center; width:100%; height:868px; position:relative;}
+#container #contents .seminar .text{ position:absolute; top:0; right:0; height:868px; width:668px; text-align:right;}
+#container #contents .play{ background:url(../images/sub/play_bg.jpg) top center; width:100%; height:868px; position:relative;}
+#container #contents .play .text{ position:absolute; top:0; right:0; height:868px; width:668px; text-align:right;}
+#container #contents .camp{ background:url(../images/sub/camp_bg.jpg) top center; width:100%; height:868px; position:relative;}
+#container #contents .camp .text{ position:absolute; top:0; right:0; height:868px; width:668px; text-align:right;}
+#container #contents .store{ background:url(../images/sub/store_bg.jpg) top center; width:100%; height:868px; position:relative;}
+#container #contents .store .text{ position:absolute; top:0; right:0; height:868px; width:668px; text-align:right;}
+#container #contents #cont .reserve{ width:1200px; height:600px;}
+#container #contents #cont .reserve li{ float:left;}
+
+
+/* guide */
+#container #contents #cont .table{ line-height:1.6em}
+#container #contents #cont .table .title{ padding:50px 0 10px 0}
+#container #contents #cont .table .title span{ display:inline-block;font-size:1.5em; padding:3px 12px; font-weight:bold; letter-spacing:-1px; color:#444;}
+#container #contents #cont .table table{width:100%; border:1px solid #ccc; margin-bottom:10px; border-left:none; border-bottom:none} 
+#container #contents #cont .table table .tdbg{ background-color:#f4f4f4;}
+#container #contents #cont .table table .tdleft{ text-align:left; padding:30px; vertical-align:text-top;}
+#container #contents #cont .table table .rnone{ border-right:none}
+#container #contents #cont .table table .lnone{ border-left:none}
+#container #contents #cont .table table .img{ vertical-align:top;}
+#container #contents #cont .table table img{ text-align:left; padding:30px;}
+#container #contents #cont .table table td{ border-left:1px solid #ccc; border-bottom:1px solid #ccc;height:38px; padding:0 10px 0 10px; text-align:center;}
+#container #contents #cont .table .textg{ color:#888;}
+#container #contents #cont .table table td span{ display:inline-block;font-size:1.2em; padding:0 0 5px 0; font-weight:bold; letter-spacing:-1px; color:#444;}
+
+
+/* room */
+
+#container #contents #cont .cont .room_tit{ padding-bottom:40px;}
+#container #contents #cont .cont .room_tit ul{ width:1200px; height:215px;}
+#container #contents #cont .cont .room_tit ul li{ float:left;}
+#container #contents #cont .cont .room_icon{ padding-bottom:80px;}
+#container #contents .room_a101_top{background:url(../images/sub/room/a_img_01.jpg) top center; width:100%; height:868px;}
+#container #contents .room_a101_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_a101_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_a102_top{background:url(../images/sub/room/a_img_02.jpg) top center; width:100%; height:868px;}
+#container #contents .room_a102_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_a102_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_a201_top{background:url(../images/sub/room/a_img_03.jpg) top center; width:100%; height:868px;}
+#container #contents .room_a201_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_a201_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_a202_top{background:url(../images/sub/room/a_img_04.jpg) top center; width:100%; height:868px;}
+#container #contents .room_a202_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_a202_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_b101_top{background:url(../images/sub/room/b_img_01.jpg) top center; width:100%; height:868px;}
+#container #contents .room_b101_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_b101_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_b102_top{background:url(../images/sub/room/b_img_02.jpg) top center; width:100%; height:868px;}
+#container #contents .room_b102_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_b102_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_b201_top{background:url(../images/sub/room/b_img_03.jpg) top center; width:100%; height:868px;}
+#container #contents .room_b201_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_b201_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_b202_top{background:url(../images/sub/room/b_img_04.jpg) top center; width:100%; height:868px;}
+#container #contents .room_b202_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_b202_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_c101_top{background:url(../images/sub/room/c_img_01.jpg) top center; width:100%; height:868px;}
+#container #contents .room_c101_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_c101_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_c102_top{background:url(../images/sub/room/c_img_02.jpg) top center; width:100%; height:868px;}
+#container #contents .room_c102_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_c102_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_c201_top{background:url(../images/sub/room/c_img_03.jpg) top center; width:100%; height:868px;}
+#container #contents .room_c201_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_c201_top .tab ul li{ float:left; cursor:pointer}
+#container #contents .room_c202_top{background:url(../images/sub/room/c_img_04.jpg) top center; width:100%; height:868px;}
+#container #contents .room_c202_top .tab{ margin:0 auto; width:1200px; padding-top:808px;}
+#container #contents .room_c202_top .tab ul li{ float:left; cursor:pointer}
+
+
+#container .visual_01{ background:url(../images/sub/ex_img01.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container .visual_02{ background:url(../images/sub/ex_img02.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container .visual_03{ background:url(../images/sub/ex_img03.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container #contents .navi{ width:1200px; text-align:center; margin:auto;}
+#container #contents .navi ul{ text-align:center; margin:auto; width:60px; padding-top:490px;}
+#container #contents .navi ul li{ float:left; background-color:#f3f3f3; width:12px; height:12px; border-radius:6px; font-size:0; margin:4px;}
+#container #contents .navi ul .on{ background-color:#333;}
+
+
+
+
+
+
+
+
+
+
+
+
