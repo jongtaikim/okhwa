@@ -45,10 +45,16 @@ class page extends CI_Controller {
 		$tpl->assign(array('menu_title'=>$menu_title));
 		}
 
+        $this->display->assign('HOST',HOST);
+
+        $menu = $this->webapp->get('user_menu');
+        $this->display->assign('site_menu',$menu);
+
+
 	}
 
 
-
+ 
 	  //2012-02-21 메인페이지
 	   function index(){
 		$WA = $this->webapp;
@@ -86,7 +92,13 @@ class page extends CI_Controller {
 
 		$tpl->setLayout('@main');
 		$tpl->define('CONTENT', $this->display->getTemplate('/user_page/blank.htm'));
-		$tpl->printAll();
+           if(HOST=='jade9'){
+               $content = $this->display->fetch('LAYOUT');
+           }else{
+               $content = $this->display->fetch('LAYOUT2');
+           }
+
+           echo$content;
 
 	  }
 

@@ -36,10 +36,11 @@ class WebApp  {
 		}else{
 			$theme_set = 'user_page';
 		}
-		
-	
-		
-		define('THEME', $theme_set);
+
+
+        $hosts_t = explode(".",$_SERVER['HTTP_HOST']);
+        define('HOST', $hosts_t[0]);
+        define('THEME', $theme_set);
 		define('_SITEID', $CI->config->item('siteid'));
 		define('_DOC_ROOT', $CI->config->item('document_root'));
 		define('_PLUG_ROOT', $CI->config->item('plugin_root'));
