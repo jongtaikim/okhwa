@@ -1,0 +1,22 @@
+<div class="tab">
+    <ul>
+        <? for($ii=1; $ii<5; $ii++) {
+
+        if($ii ==1) $number = '101';
+        if($ii ==2) $number = '102';
+        if($ii ==3) $number = '201';
+        if($ii ==4) $number = '202';
+
+        ?>
+        <li>
+            <a href="#/user/page/p?designs=jade9&p=room_a&number=<?=$number?>">
+                <? if($_GET['number']==$number){?>
+                    <img src="images/sub/room/tab_A0<?=$ii?>_on.png"  >
+                <?}else{?>
+                    <img src="images/sub/room/tab_A0<?=$ii?>.png" onmouseover="this.src='images/sub/room/tab_A0<?=$ii?>_on.png'" onmouseout="this.src='images/sub/room/tab_A0<?=$ii?>.png'" >
+                <?}?>
+            </a>
+        </li>
+        <?}?>
+    </ul>
+</div>

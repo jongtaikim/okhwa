@@ -59,6 +59,7 @@ class reserve extends CI_Controller {
 
         if ( $_POST['str_year'] )  $year = $_POST['str_year'] ;
         if ( $_POST['str_month'] )  $month = $_POST['str_month'] ;
+        if ( $_POST['str_day'] )  $str_day = $_POST['str_day'] ;
 
         $time = strtotime($year.'-'.$month.'-01');
         $time2 = strtotime($year.'-'.$month.'-31');
@@ -67,7 +68,9 @@ class reserve extends CI_Controller {
         $lweek = date('w', strtotime($year.'-'.$month.'-'.$tday));  // 마지막요일
 
 
-      
+      $this->display->assign('str_year',$_POST['str_year']);
+      $this->display->assign('str_month',$_POST['str_month']);
+      $this->display->assign('str_day',$_POST['str_day']);
 
 
         $caltemp = '
@@ -213,8 +216,10 @@ class reserve extends CI_Controller {
         if($_GET['room_name']){
             $this->db->where('room_name',$_GET['room_name']);
         }
-        if($_GET['room_cp']){
-            $this->db->where('room_cp',$_GET['room_cp']);
+        if(HOST=='jade9'){
+            $this->db->where('room_cp','제이드나인');
+        }else{
+            $this->db->where('room_cp','옥화용소절경');
         }
         $this->db->order_by('room_cp, room_name , room_number','asc');
         $room_list = $this->db->get('rooms')->result_array();
@@ -282,9 +287,11 @@ class reserve extends CI_Controller {
                                         예약불가
                                       </a>';
                     }else{
-                        $btns = '  <a href="#/user/reserve/index?no='.$room_list[$ii]['no'].'" style="text-decoration: none" class="btn btn-default btn-xs">
+
+                            $btns = '  <a href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '" style="text-decoration: none" class="btn btn-default btn-xs">
                                         예약가능
                                       </a>';
+
                     }
 
                     $room_txt .='
@@ -315,7 +322,11 @@ class reserve extends CI_Controller {
 
                 }
 
-                $room_txt .="</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('".$udate."');>예약하기</a></div>";
+                if(date("Y-m-d")<=$udate) {
+                    $room_txt .= "</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('" . $udate . "');>예약하기</a></div>";
+                }else{
+                    $room_txt .= "</div>";
+                }
 
                 $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
                 $sda = array_pop(explode("-",$varprice_row['start_date']));

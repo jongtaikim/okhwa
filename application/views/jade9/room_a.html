@@ -1,0 +1,27 @@
+<style type="text/css" title="">
+    #container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
+</style>
+<div class="room_a{? _GET.number}{ _GET.number}{:}101{/}_top animated fadeInUp">
+
+    {room_tab}
+
+</div>
+<div id="cont">
+    <div class="cont">
+        <div class="room_tit">
+        <ul>
+            <li><img src="images/sub/room/a{? _GET.number}{ _GET.number}{:}101{/}_tt.jpg"></li>
+            <li><img src="images/sub/room/room_txt.jpg" usemap="#Map">
+                <map name="Map">
+                    {? _GET.number ==101}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=1&tod=t">{/}
+                    {? _GET.number ==102}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=2&tod=t">{/}
+                    {? _GET.number ==201}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=3&tod=t">{/}
+                    {? _GET.number ==202}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=4&tod=t">{/}
+                </map>
+            </li>
+        </ul>
+        </div>
+        <div class="room_icon"><img src="images/sub/room/room_icon.jpg"></div>
+        <div class="room_photo"><img src="images/sub/room/a{? _GET.number}{ _GET.number}{:}101{/}.jpg"></div>
+    </div>
+</div>

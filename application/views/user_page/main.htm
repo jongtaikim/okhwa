@@ -48,50 +48,22 @@
     });
 
 
+
 </script>
 
 <div class="sitemapwrap">
     <div class="sitemap">
+        {@ site_menu}
         <ul>
-            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_01.png"></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_01_01.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_01_02.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_01_03.png"></a></li>
+            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_{=sprintf('%02d', (.index_+1))}.png"></li>
+            {@ .submenu}
+                 {? ..title2 !='PLAY GROUND'}
+                    <li><a href="{..link}" title="{..title}"><img src="/designs/{HOST}/images/sitemap_{=sprintf('%02d', (.index_+1))}_{=sprintf('%02d', (..index_+1))}.png"></a></li>
+                 {/}
+            {/}
         </ul>
-        <ul>
-            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_02.png"></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_02_01.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_02_02.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_02_03.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_02_04.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_02_05.png"></a></li>
-        </ul>
-        <ul>
-            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_03.png"></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_03_01.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_03_02.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_03_03.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_03_04.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_03_05.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_03_06.png"></a></li>
-        </ul>
-        <ul>
-            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_04.png"></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_04_01.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_04_02.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_04_03.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_04_04.png"></a></li>
-        </ul>
-        <ul>
-            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_05.png"></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_05_01.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_05_02.png"></a></li>
-        </ul>
-        <ul>
-            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_06.png"></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_06_01.png"></a></li>
-            <li><a href=""><img src="/designs/{HOST}/images/sitemap_06_02.png"></a></li>
-        </ul>
+        {/}
+
     </div>
 </div>
 

@@ -48,7 +48,7 @@ class Paging2{
 	 //if($baseurls[3]) $this->baseurl = "/".$baseurls[0]."/".$baseurls[1]."/".$baseurls[2]."/".$baseurls[3];
 	
 	  if($this->config['prevIcon'] || $this->config['nextIcon'] || $this->config['firstIcon'] || $this->config['lastIcon'] ){
-		  $this->config['class'] = "btn-group";
+		  $this->config['class'] = "btn-group pagings_backbone";
 	  }else{
 	  	  $this->config['class'] = "";
 	  }
@@ -173,13 +173,13 @@ class Paging2{
 	      
 		$nextBtn = $this->_link($nextBtn ,$this->baseurl."/".($this->currentPage +1).$this->qs,'direction next');
 	  }
-        return '<div class="text-center padder-v m-b10"><div class="btn-group text-center">'.$firstBtn.''.$prevBtn.$navBtn.$nextBtn.''.$lastBtn.'</div></div>';
+        return '<div class="text-center padder-v m-b10"><div class="btn-group text-center pagings_backbone">'.$firstBtn.''.$prevBtn.$navBtn.$nextBtn.''.$lastBtn.'</div></div>';
     }
 
     function _link($text,$href,$cssa)
     {
 	
-        return '<a href="'.$href.'" class="'.$cssa.' btn btn-default waves-effect"">'.$text.'</a>';
+        return '<a href="#'.$href.'" class="'.$cssa.' btn btn-default waves-effect"">'.$text.'</a>';
     }
 }
 

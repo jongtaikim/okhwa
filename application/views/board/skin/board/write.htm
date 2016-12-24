@@ -117,6 +117,8 @@
 			
 					<input type="radio" name="num_notice" value="1"{? num_notice == 1} checked{/} style = "border:0px" required="false"> 
 					공지
+                         |
+
 					날짜
 					<input type="date" name="dt_date" value="{?dt_date}{=substr(dt_date,0,10)}{/}" style = "width:150px" class = "button" required="false">
 					
@@ -200,3 +202,8 @@
  
 </form>      
 </div>
+<script type="text/javascript">
+  $(document).ready(function(){
+      location.href='#top';
+  });
+</script>

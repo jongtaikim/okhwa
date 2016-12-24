@@ -32,9 +32,20 @@
   <!--[if lt IE 9]> <script src="/trunk/scripts//ie/html5shiv.js"></script> <script src="/trunk/scripts/ie/respond.min.js"></script> <script src="/trunk/scripts/ie/excanvas.js"></script> <![endif]-->
 
     <link rel="stylesheet" href="/designs/<?=HOST?>/css/main.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/designs/<?=HOST?>/css/sub.css" type="text/css" media="screen" />
     <link rel="stylesheet" href="/designs/<?=HOST?>/css/default.css?v=1" type="text/css" media="screen" />
 
     <title>{? HOST == 'jade9'}제이드나인{:}sdfds{/}</title>
+    <script type="text/javascript">
+        var no_top ='';
+        function s_top() {
+            if(!no_top) {
+                $(window).scrollTop(0);
+            }else{
+                no_top='';
+            }
+        }
+    </script>
 </head>
 
 <body class="white ">
@@ -48,7 +59,7 @@
 </div>
 
 
-{#TOP_TOOL}
+
 
 {#TOP}
 <div id="wrap">
@@ -171,16 +182,42 @@ function popup_view(url,w,h){
                 ":route/:page": "display",
                 ":route/:page/": "display",
                 ":route/:page/:seg": "display",
-                ":route/:page/:seg/": "display"
+                ":route/:page/:seg/": "display",
+                ":route/:page/:seg/:tp": "display",
+                ":route/:page/:seg/:tp/": "display",
+                ":route/:page/:seg/:tp/:rp": "display",
+                ":route/:page/:seg/:tp/:rp/": "display",
+                ":route/:page/:seg/:tp/:rp/:ut": "display",
+                ":route/:page/:seg/:tp/:rp/:ut/": "display",
+                ":route/:page/:seg/:tp/:rp/:ut": "display",
+                ":route/:page/:seg/:tp/:rp/:ut/:at": "display",
+                ":route/:page/:seg/:tp/:rp/:ut/:at/": "display",
+                ":route/:page/:seg/:tp/:rp/:ut/:at/:bt": "display",
+                ":route/:page/:seg/:tp/:rp/:ut/:at/:bt/": "display",
             },
 
-            display: function(route, page, seg) {
+            display: function(route, page, seg,tp,rp,ut,at,bt) {
                 var url = route;
                 if(page) {
                     url = route + '/' + page;
 
                     if(seg){
                         url += ('/' + seg);
+                    }
+                    if(tp){
+                        url += ('/' + tp);
+                    }
+                    if(rp){
+                        url += ('/' + rp);
+                    }
+                    if(ut){
+                        url += ('/' + ut);
+                    }
+                    if(at){
+                        url += ('/' + at);
+                    }
+                    if(bt){
+                        url += ('/' + bt);
                     }
                 }
 
@@ -197,6 +234,7 @@ function popup_view(url,w,h){
                     success: function(html, textStatus, xhr) {
                         $('#content-box').html(html);
                         bootbox.hideAll();
+                        s_top();
                     },
                     complete: function(xhr, textStatus) {
                         loading_end();
@@ -271,7 +309,26 @@ function popup_view(url,w,h){
         return this;
     }
 
+    function pv_layer(url,title){
+        //encodeURIComponent()
+        $.ajax({
+            type: 'GET',
+            url: url,
 
+            dataType: 'html',
+            success: function(html, status) {
+                bootbox.alert({
+                    message:html,
+                    size:'large',
+                    'title':title,
+            });
+
+            },
+            error: function(request,status,error) {
+                alert(request.responseText);
+            }
+        });
+    }
 
 </script>
 </body>

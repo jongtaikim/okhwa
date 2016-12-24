@@ -1,0 +1,98 @@
+<style type="text/css" title="">
+    #container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
+</style>
+
+
+<div class="notice_top" style="height:320px;background-position: center"></div>
+<div id="cont" style="padding-top:40px">
+    <div class="icon"><img src="/designs/{HOST}/images/sub/tit_icon.jpg"></div>
+    <div class="tit"><img src="/designs/{HOST}/images/sub/notice_tt.jpg"></div>
+    <div class="cont" style="padding-top:30px">
+{str_top}
+
+
+<!-- board list -->
+        <div class="" style="clear: left"></div>
+        <div class="col-md-12 padding m-b5">
+            <table cellpadding="0" cellspacing="0" width="100%">
+
+                <thead>
+
+                </thead>
+                <tbody>
+                {@ gong_LIST}
+                <tr>
+
+
+                    <td>
+                        <a href="javascript:pv_layer('/user/board/read_view/{.num_mcode}/{.num_serial}?cate={cate}','{.str_title} | {=substr(.dt_date,0,10)} / Hit {=number_format(.num_hit)}')"><strong class="label dark m-r10">공지</strong> {.str_title}</strong></a>
+                        <span class="text-muted"> {=str_replace('-','.',substr(.dt_date,0,10))}</span>
+                    </td>
+
+                </tr>
+                {/}
+
+
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-12 clearfix">
+            <div class="row">
+
+                {@ TAB_BOARD}
+                {? .num_notice <1}
+                <div class="col-md-3 ">
+                    <a href="javascript:pv_layer('/user/board/read_view/{.num_mcode}/{.num_serial}?cate={cate}','{.str_title}','{.str_title} | {=substr(.dt_date,0,10)} / Hit {=number_format(.num_hit)}')">
+                    <div class="box box-shadow2 r">
+                        <div class="item" style="height:160px;overflow: hidden">
+                            <div class="item-overlay active p-a">
+
+                                {? .is_recent}<a href="" class="pull-left text-u-c label label-md danger">NEW</a>{/}
+                            </div>
+                            {? .str_file_url1 ||.str_file_url2}
+                                <img src="{?.str_file_url1}{.str_file_url1}{:}{.str_file_url2}{/}" class="w-full">
+                            {:}
+                                <img src="/designs/jade9/images/visual_01.png" class="w-full">
+                            {/}
+                        </div>
+                        <div class="p-a m-b10" style="height:120px;overflow: hidden">
+
+                            <div class="m-b h-2x"><a class="_800">{.str_title}</a></div>
+                            <!--<p class="h-3x">Titudin venenatis ipsum ac feugiat. Vestibulum ullamcorper quam.</p>
+                            <div><a href="" class="btn btn-xs white">Read More</a></div>-->
+
+                            <div class="text-muted m-b-xs">
+                                <span class="m-r">{=str_replace('-','.',substr(.dt_date,0,10))}</span>
+                                <!--<a href="" class="m-r"><i class="fa fa-heart-o"></i> 34</a>
+                                <a href=""><i class="fa fa-share"></i></a>-->
+                            </div>
+
+                            <div class="text-muted m-b-xs">
+                                {.str_text}
+                            </div>
+                        </div>
+                    </div>
+                        </a>
+                </div>
+                {/}
+                {/}
+
+            </div>
+
+
+        </div>
+        <div class="" style="clear: left"></div>
+        <div class="p-t80">
+
+            <plug:paging2 total="{total}" listnum="{listnum}" page="{page}" idx="4"/>
+            <script type="text/javascript">
+                $('.pagings_backbone > a').each(function () {
+                    $(this).attr('href','#'+$(this).attr('href'));
+                });
+            </script>
+        </div>
+
+
+        </div>
+    </div>
+

@@ -35,7 +35,7 @@
 		</div>
 		<plug:load src="filelist" sect="{sect}"/>
 
-				
+
 
 		<div class="btmWrap clearfix">
 			<div class="buttons">
@@ -44,11 +44,11 @@
 				<a data-toggle="modal" data-target="#boardModal"  href="#" onclick="delete_cp()" class="btn btn-default btn-xl">삭제</a>
 				<a href="/user/board/write/{num_mcode}/{num_serial}<?=_QS?>" class="btn btn-default btn-xl">수정</a>
 				<a href="/user/board/write/{num_mcode}/<?=_QS?>" class="btn btn-default btn-xl">글쓰기</a>
-				{/} 
+				{/}
 			</div>
 		</div>
 	</div>
-	<!-- //Gallery View --> 
+	<!-- //Gallery View -->
 </div>
 
 
@@ -86,9 +86,9 @@ function delete_cp(){
 				alert(request.responseText);
 			}
 		});
-		
+
 	});
-	// 
+	//
 }
 
 </script>
@@ -101,14 +101,14 @@ function delete_cp(){
         <h4 class="modal-title">비밀번호 확인</h4>
       </div>
       <div class="modal-body " >
-        
+
 	 <br>
         <div class="md-form-group">
-	    
+
           <input class="md-input"  type="password" value="{? _SESSION.ADMIN}000{/}{? _SESSION.USERID == str_user}000{/}" id="cp_passwd" placeholder="작성하실때 입력하신 비밀번호">
           <label>비밀번호 입력</label>
         </div>
-      
+
 
       </div>
       <div class="modal-footer">

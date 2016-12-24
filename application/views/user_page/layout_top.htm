@@ -1,6 +1,6 @@
 <div id="headerwrap">
     <div id="header">
-        <div id="logo"><img src="/designs/{HOST}/images/logo.png">
+        <div id="logo"><a href="/"><img src="/designs/{HOST}/images/logo.png"></a>
             <div id="ban" class="animated fadeInDown"><a href="#"><img src="/designs/{HOST}/images/top_banner.png"></a></div>
         </div>
 
@@ -9,7 +9,7 @@
                 <ul class="depth1 clearfix " style=";margin: 60px auto;width:47%;min-width:1000px">
                     {@ site_menu}
                     <li class="f_l text-center top_menu_item_it" style="width:16%">
-                        <a href="#" >
+                        <a href="{.link}" >
                             <strong han="{.title}" class="top_menu_item"  to_submenu="submenu{.index_+1}" >{.title2}</strong>
                         </a>
 
@@ -20,17 +20,17 @@
 
                 {@ site_menu}
                 <div class="pos_a to_submenu submenu{.index_+1} animated fadeInDown hide" style="background-color:rgba(231, 231, 231, 0.71);;width:100%;top:31px;left:0px;padding-top:12px;padding-bottom:12px">
-                    <div id="" class="text-center p-l40 clearfix " style=";margin: 0px auto;width:47%;min-width:1000px;padding-top:0px">
+                    <div id="" class="text-center p-l40 clearfix " style=";margin: 0px auto;width:1000px;min-width:1000px;padding-top:0px">
 
                             <ul>
                                 {@ .submenu}
-                                <li class="f_l text-center top_menu_item_it " >
-                                    <a href="#" >
+                                <li class="f_l text-center top_menu_item_it "  style="width: {..w}" >
+                                    <a href="{..link}" >
                                         <strong han="{..title}" class="top_menu_item">{..title2}</strong>
                                     </a>
                                  </li>
                                     {? (count(.submenu)-1) > ..index_}
-                                        <li class="bar f_l text-center w10 m-r20 m-l20 ">I</li>
+                                        <li class="bar f_l text-center w10 m-r10 m-l10 ">I</li>
                                     {/}
                                 {/}
 

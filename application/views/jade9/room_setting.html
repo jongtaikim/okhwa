@@ -1,0 +1,32 @@
+<style type="text/css" title="">
+    #container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
+</style>
+            <div class="animated fadeInUp pos_r" id="setting_tops">
+                <div class="setting_top pos_r" >
+                    <div class="pos_a setting_ovew hand" onclick="location.href='#/user/page/p?designs={HOST}&p=room_a&number=101'" val="setting_a" style="z-index:99;width:33.3%;background-color:#;height: 100%"></div>
+                    <div class="pos_a setting_ovew hand" onclick="location.href='#/user/page/p?designs={HOST}&p=room_b&number=101'"  val="setting_b"style="z-index:99;left:33%;width:33.3%;background-color:#;height: 100%"></div>
+                    <div class="pos_a setting_ovew hand" onclick="location.href='#/user/page/p?designs={HOST}&p=room_c&number=101'"  val="setting_c" style="z-index:99;left:66%;width:33.3%;background-color:#;height: 100%"></div>
+                </div>
+                <div class="setting_a hide sts pos_a" style="top:0px;left:0px"></div>
+                <div class="setting_b hide sts pos_a"  style="top:0px;left:0px"></div>
+                <div class="setting_c hide sts pos_a"  style="top:0px;left:0px"></div>
+            </div>
+            <div id="cont">
+            	<div class="icon"><img src="images/sub/tit_icon.jpg"></div>
+            	<div class="cont"><img src="images/sub/setting_cont.jpg" style="margin-top:60px;"></div>
+            </div>
+
+            <script type="text/javascript">
+                $('.setting_ovew').hover(
+                        function () {
+                            $('.sts').hide();
+                            $('.'+$(this).attr('val')).fadeIn();
+                        },
+                        function () {
+
+                        }
+                );
+                $('#setting_tops').mouseleave(function () {
+                    $('.sts').hide();
+                });
+            </script>

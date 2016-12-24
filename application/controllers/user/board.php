@@ -16,7 +16,7 @@ class board extends CI_Controller {
 	 var $BOARD_TABLE_CATEGORY2 =  "tab_board_category2";
 	 var $FILES_TABLE =  "tab_files";
 	 
-	 var $SUB_LAYOUT =  "@sub";
+	 var $SUB_LAYOUT =  "@none";
 	 var $site_menu="";
 	 var $PERM="";
 
@@ -58,6 +58,7 @@ class board extends CI_Controller {
 
 		}
 
+         $this->display->assign('HOST',HOST);
 
 	}
 	
@@ -157,7 +158,7 @@ class board extends CI_Controller {
 	
 	  //게시판 리스트
 	   function list_view($mcode=0,$page=1){
-			
+
 			$WA = $this->webapp;
 			$tpl = $this->display;
 			
@@ -203,7 +204,15 @@ class board extends CI_Controller {
 				$img_info = $this->db -> sqlFetch($sql);
 				$row[$ii]['thumb_url'] = $img_info[str_thum];
 
-				$row[$ii]['str_text'] = $this->webapp->text_cut($row[$ii]['str_text'], 300);
+
+                if(!$row[$ii]['str_file_url1'] && !$row[$ii]['str_file_url2']){
+                    $row[$ii]['str_file_url1'] = $this->get_timg($row[$ii]);
+
+                }
+
+                $row[$ii]['str_text'] = $this->webapp->text_cut(strip_tags($row[$ii]['str_text'],''), 300);
+
+                
 			}
 			
 			$tpl->assign(array('TAB_BOARD'=>$row));
@@ -212,6 +221,9 @@ class board extends CI_Controller {
 			//공지리스트 로드
 			$sql = "select * from ".$this->BOARD_TABLE." where num_oid = '"._OID."' and  num_mcode = '".$mcode."'   and num_notice = 1  and  num_input_pass = 0";
 			$gongji_row = $this->db-> sqlFetchAll($sql);
+               for($ii=0; $ii<count($gongji_row); $ii++) {
+                   $gongji_row[$ii]['str_text'] = $this->webapp->text_cut(strip_tags($gongji_row[$ii]['str_text'],''), 300);
+               }
 			$tpl->assign(array(
 				'gong_LIST'=>$gongji_row,
 				'LIST'=>$row,
@@ -224,16 +236,68 @@ class board extends CI_Controller {
 			if(THEME=="mobile"){
 				$tpl->setLayout('@sub');
 				$tpl->define('CONTENT', $this->display->getTemplate('board/skin/mobile_board/list_'.$_conf[str_skin].'.htm'));
+                $tpl->printAll();
 			}else{
-				$tpl->setLayout($menu_data[str_layout]);
-				$tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/list_'.$_conf[str_skin].'.htm'));
+
+                if($_GET['ch']){
+                    $tpl->setLayout('@sub');
+                    $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/list_' . $_conf[str_skin] . '.htm'));
+                    $tpl->printAll();
+                }else {
+                    $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/list_' . $_conf[str_skin] . '.htm'));
+                    $content = $this->display->fetch('CONTENT');
+                    $content = str_replace('/application/views/', '/designs/', $content);
+                    echo $content;
+                }
 			}
 			
-			$tpl->printAll();
+
 
         }
 	 
+    
+        function get_timg($arr){
+            if($arr){
 
+                $s = $arr['str_text'];
+                $s = preg_match_all("/<img\s+.*?src=[\"\']([^\"\']+)[\"\'\s][^>]*>/is", $s, $m);
+                $tmp_img_list = $m[1];
+
+                if($tmp_img_list){
+
+                    if(strstr($tmp_img_list[0],'http://')) {
+
+
+                        if (!is_file(_DOC_ROOT . "/data/files/" . $mcode . "." . $arr['num_serial'])) {
+
+                            if (strstr($tmp_img_list[0], 'http://')) {
+                                $ch = curl_init($tmp_img_list[0]);
+                                $fp = fopen(_DOC_ROOT . "/data/files/" . $mcode . "." . $arr['num_serial'], "w");
+
+                                curl_setopt($ch, CURLOPT_REFERER, $tmp_img_list[0]);
+                                curl_setopt($ch, CURLOPT_FILE, $fp);
+                                curl_setopt($ch, CURLOPT_HEADER, 0);
+
+                                curl_exec($ch);
+                                curl_close($ch);
+                                fclose($fp);
+                                flush();
+                                $filename = "/data/files/" . $mcode . "." . $arr['num_serial'];
+                            }
+                        } else {
+                            $filename = "/data/files/" . $mcode . "." . $arr['num_serial'];
+                        }
+
+                    }else{
+                        $filename = $tmp_img_list[0];
+                    }
+
+
+                }
+                return $filename;
+            }
+        }
+    
 	   //게시판 읽기
 	   function read_view($mcode=0,$id=0){
 			
@@ -306,11 +370,21 @@ class board extends CI_Controller {
 				$tpl->setLayout('@sub');
 				$tpl->define('CONTENT', $this->display->getTemplate('board/skin/mobile_board/read.htm'));
 			}else{
-				$tpl->setLayout($menu_data[str_layout]);
-				$tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/read.htm'));
-			}
-			$tpl->printAll();
 
+                if($_GET['ch']){
+                    $tpl->setLayout('@sub');
+                    $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/read.htm'));
+                    $tpl->printAll();
+                }else {
+                    $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/read.htm'));
+                    $content = $this->display->fetch('CONTENT');
+                    $content = str_replace('/application/views/', '/designs/', $content);
+                    echo $content;
+                }
+
+
+			}
+		
         }
 
 	   function delete_run($mcode=0,$id=0){

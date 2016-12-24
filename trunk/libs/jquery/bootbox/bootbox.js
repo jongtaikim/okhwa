@@ -899,7 +899,7 @@
                 callbacks.onRendered.call(dialog, e);
             }
 
-            dialog.find(".btn-primary:first").focus();
+            //dialog.find(".btn-primary:first").focus();
         });
 
         /**

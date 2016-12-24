@@ -69,21 +69,32 @@ class Display extends Template_ {
 
 
 	function getTemplate($filename, $THEME = THEME) {
-	
-		$tpl_order = array(
 
-			'application/config/'.$THEME.'/'.$filename,
-			'application/views/'.$filename,
-			'application/libraries/src/tpl/'.$filename,
-			'application/'.$filename,
-			''.$filename,
-		);
+        if(!$_GET['ch']) {
+            $tpl_order = array(
+                'application/views/' . HOST . '/' . $filename,
+                'application/config/' . $THEME . '/' . $filename,
+                'application/views/' . $filename,
+                'application/libraries/src/tpl/' . $filename,
+                'application/' . $filename,
+                '' . $filename,
+            );
+        }else{
+            $tpl_order = array(
+
+                'application/config/' . $THEME . '/' . $filename,
+                'application/views/' . $filename,
+                'application/libraries/src/tpl/' . $filename,
+                'application/' . $filename,
+                '' . $filename,
+            );
+        }
 		
 
 
 		for ($i=0,$cnt=count($tpl_order); $i<$cnt;$i++) {
 			$template = $tpl_order[$i];
-		//	echo $template."<br>";
+			//echo $template."<br>";
 			if (!is_file($template)) continue;
 			
 			return $template;

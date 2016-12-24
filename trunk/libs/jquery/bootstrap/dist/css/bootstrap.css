@@ -6444,21 +6444,21 @@ button.close {
 }
 .carousel-indicators li {
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 15px;
+  height: 15px;
   margin: 1px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #f3f3f3;
+
   border: 1px solid #fff;
   border-radius: 10px;
 }
 .carousel-indicators .active {
-  width: 12px;
-  height: 12px;
+  width: 16px;
+  height: 16px;
   margin: 0;
-  background-color: #fff;
+  background-color: #333;
 }
 .carousel-caption {
   position: absolute;

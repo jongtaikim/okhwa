@@ -23,7 +23,7 @@
 
 
 /* contents */
-#container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
+
 #container #contents .about_top{ background:url(../images/sub/about_top.jpg) top center; width:100%; height:868px;}
 #container #contents .notice_top{ background:url(../images/sub/notice_top.jpg) top center; width:100%; height:868px;}
 #container #contents .camp_top{ background:url(../images/sub/camp_top.jpg) top center; width:100%; height:868px;}
@@ -33,6 +33,9 @@
 #container #contents .travel_top{ background:url(../images/sub/travel_top.jpg) top center; width:100%; height:868px;}
 #container #contents .guide_top{ background:url(../images/sub/guide_top.jpg) top center; width:100%; height:868px;}
 #container #contents .setting_top{ background:url(../images/sub/setting_top.jpg) top center; width:100%; height:868px;}
+#container #contents .setting_a{ background:url(../images/sub/setting_a.jpg) top center; width:100%; height:868px;}
+#container #contents .setting_b{ background:url(../images/sub/setting_b.jpg) top center; width:100%; height:868px;}
+#container #contents .setting_c{ background:url(../images/sub/setting_c.jpg) top center; width:100%; height:868px;}
 
 
 #container #contents #cont{ width:1200px; margin:0 auto; padding:180px 0;}
@@ -119,13 +122,9 @@
 #container #contents .room_c202_top .tab ul li{ float:left; cursor:pointer}
 
 
-#container .visual_01{ background:url(../images/sub/ex_img01.jpg) top center;width:100%;margin:0 auto; height:868px; }
-#container .visual_02{ background:url(../images/sub/ex_img02.jpg) top center;width:100%;margin:0 auto; height:868px; }
-#container .visual_03{ background:url(../images/sub/ex_img03.jpg) top center;width:100%;margin:0 auto; height:868px; }
-#container #contents .navi{ width:1200px; text-align:center; margin:auto;}
-#container #contents .navi ul{ text-align:center; margin:auto; width:60px; padding-top:490px;}
-#container #contents .navi ul li{ float:left; background-color:#f3f3f3; width:12px; height:12px; border-radius:6px; font-size:0; margin:4px;}
-#container #contents .navi ul .on{ background-color:#333;}
+#container .visual_01_sub{ background:url(../images/sub/ex_img01.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container .visual_02_sub{ background:url(../images/sub/ex_img02.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container .visual_03_sub{ background:url(../images/sub/ex_img03.jpg) top center;width:100%;margin:0 auto; height:868px; }
 
 
 

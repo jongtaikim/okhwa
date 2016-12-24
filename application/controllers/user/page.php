@@ -44,10 +44,10 @@ class page extends CI_Controller {
 		$menu_title = $this->db->sqlFetchOne("SELECT str_title FROM ".tab_menu." WHERE num_oid="._OID." AND num_cate='".$_GET[cate]."'");
 		$tpl->assign(array('menu_title'=>$menu_title));
 		}
-
+        
+        //메뉴
         $this->display->assign('HOST',HOST);
-
-        $menu = $this->webapp->get('user_menu');
+        $menu = $this->webapp->get('user_menu_'.HOST);
         $this->display->assign('site_menu',$menu);
 
 
@@ -111,6 +111,40 @@ class page extends CI_Controller {
         $content = $this->display->fetch('CONTENT');
 
         echo $content;
+
+    }
+
+    function p(){
+
+        if($_GET['designs'] && $_GET['p']) {
+            $this->display->define('CONTENT', $this->display->getTemplate('/'.$_GET['designs'].'/'.$_GET['p'].".html"));
+
+            if(substr($_GET['p'],0,6) == 'room_a'){
+                $tab_file='a_room_tab.html';
+            }
+            if(substr($_GET['p'],0,6) == 'room_b'){
+                $tab_file='b_room_tab.html';
+            }
+            if(substr($_GET['p'],0,6) == 'room_c'){
+                $tab_file='c_room_tab.html';
+            }
+
+            if($tab_file) {
+                $this->display->define('room_tab', $this->display->getTemplate('/' . $_GET['designs'] . '/' . $tab_file));
+                $room_tab = $this->display->fetch('room_tab');
+                $room_tab = str_replace('/application/views/', '/designs/', $room_tab);
+                $this->display->assign('room_tab', $room_tab);
+            }
+
+
+            $content = $this->display->fetch('CONTENT');
+    
+
+            $content = str_replace('/application/views/','/designs/',$content);
+            echo $content;
+        }else{
+            show_404('page');
+        }
 
     }
 

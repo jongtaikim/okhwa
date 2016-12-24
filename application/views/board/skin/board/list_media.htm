@@ -129,7 +129,13 @@ function selectItem() {
 															?>
 															<img src="//i.ytimg.com/vi/<?=$utb_codes?>/mqdefault.jpg" alt="" style="height:110px;"/>
 														{:}
+                                                            {? .str_file_url1}
 															<img src="{.str_file_url1}" alt="" style="height:100px;"/>
+                                                            {: .str_file_url2}
+                                                            <img src="{.str_file_url2}" alt="" style="height:100px;"/>
+                                                            {:}
+
+                                                            {/}
 														{/}
 													</div>
 												</a>
@@ -206,12 +212,13 @@ function selectItem() {
 
 
 				<script type="text/javascript">
-				// <![CDATA[
+
 				$('#like_str_title').keyup(function(eventcode){
 					if(eventcode.keyCode=='13'){
 						$('#search_form').submit()
 					}
 				})
 
-				// ]]>
-				</script>
+
+                    $(window).scrollTop(0);
+                </script>
