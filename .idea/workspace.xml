@@ -2,40 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9453e050-e17b-41a4-9c37-eebce91478f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/aboutus.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/exview.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/fa.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/faq.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/guide.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/location.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/pool.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/room_100.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/room_20.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/room_40.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/room_50.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/room_setting.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/setting.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/okhwa/travel.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/reserve/admin_list.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user_page/intro.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/designs/okhwa/images/sitemap_03_05.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/okhwa/images/sitemap_03_06.png" afterPath="$PROJECT_DIR$/designs/okhwa/images/sitemap_03_06.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/designs/okhwa/images/sitemap_03_07.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/user_page/layout.php" afterPath="$PROJECT_DIR$/application/config/user_page/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user/page.php" afterPath="$PROJECT_DIR$/application/controllers/user/page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/__get/user_menu_jade9.php" afterPath="$PROJECT_DIR$/application/config/__get/user_menu_jade9.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php" afterPath="$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user/reserve.php" afterPath="$PROJECT_DIR$/application/controllers/user/reserve.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/faq.html" afterPath="$PROJECT_DIR$/application/views/jade9/faq.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/reserve/index.html" afterPath="$PROJECT_DIR$/application/views/jade9/reserve/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/reserve/list2.html" afterPath="$PROJECT_DIR$/application/views/jade9/reserve/list2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/room_a.html" afterPath="$PROJECT_DIR$/application/views/jade9/room_a.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/room_b.html" afterPath="$PROJECT_DIR$/application/views/jade9/room_b.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/room_c.html" afterPath="$PROJECT_DIR$/application/views/jade9/room_c.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_main.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_main.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/user_page/layout_top.htm" afterPath="$PROJECT_DIR$/application/views/user_page/layout_top.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/okhwa/css/default.css" afterPath="$PROJECT_DIR$/designs/okhwa/css/default.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/okhwa/css/main.css" afterPath="$PROJECT_DIR$/designs/okhwa/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/okhwa/css/sub.css" afterPath="$PROJECT_DIR$/designs/okhwa/css/sub.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/trunk/libs/jquery/bootbox/bootbox.js" afterPath="$PROJECT_DIR$/trunk/libs/jquery/bootbox/bootbox.js" />
     </list>
     <ignored path="okhwa.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,22 +31,147 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="layout_main.htm" pinned="false" current-in-tab="false">
+      <file leaf-file-name="layout_main.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/user_page/layout_main.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
+            <state relative-caret-position="416">
+              <caret line="353" column="49" selection-start-line="353" selection-start-column="49" selection-end-line="353" selection-end-column="49" />
+              <folding>
+                <marker date="1482656899224" expanded="true" signature="12936:13012" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="list2.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/jade9/reserve/list2.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="535">
+              <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+              <folding>
+                <marker date="1482655095347" expanded="true" signature="4192:4206" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="user_menu_jade9.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/__get/user_menu_jade9.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="158" column="58" selection-start-line="158" selection-start-column="58" selection-end-line="158" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="intro.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/designs/okhwa/intro.html">
+      <file leaf-file-name="user_menu_okhwa.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="23" column="6" selection-start-line="11" selection-start-column="0" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="599">
+              <caret line="170" column="46" selection-start-line="170" selection-start-column="46" selection-end-line="170" selection-end-column="46" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootbox.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/trunk/libs/jquery/bootbox/bootbox.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+              <folding>
+                <marker date="1482655141080" expanded="true" signature="976:991" ph="..." />
+                <marker date="1482655141080" expanded="true" signature="1116:1130" ph="..." />
+                <marker date="1482655141080" expanded="true" signature="1786:1804" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/jade9/reserve/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2472">
+              <caret line="3" column="95" selection-start-line="3" selection-start-column="95" selection-end-line="3" selection-end-column="95" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <marker date="1482605852236" expanded="true" signature="5875:5889" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reserve.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/user/reserve.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="637" column="48" selection-start-line="637" selection-start-column="48" selection-end-line="637" selection-end-column="48" />
+              <folding>
+                <marker date="1482656845809" expanded="true" signature="1048:1119" ph="SELECT str_t... ${tab_menu}" />
+                <marker date="1482656845809" expanded="true" signature="1394:1482" ph="SELECT str_t... ${tab_menu}" />
+                <marker date="1482656845809" expanded="true" signature="2620:2966" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="2631:2943" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="2640:2931" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="5469:5482" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="5568:5604" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="5809:5822" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="5899:5934" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="6103:6113" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="8047:8519" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="8058:8496" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="8067:8484" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="8110:8121" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="8167:8178" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="8224:8235" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="8281:8292" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="8338:8349" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="8395:8406" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="8456:8467" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="9326:9338" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="10531:11588" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="10602:11557" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="10661:10743" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="10744:10809" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="10880:11522" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="10948:11129" ph="..." />
+                <marker date="1482656845809" expanded="false" signature="11179:11184" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="11185:11483" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="11298:11399" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="13098:13111" ph="..." />
+                <marker date="1482656845809" expanded="true" signature="13193:13207" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="realpans.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/admin/realpans.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="453">
+              <caret line="413" column="81" selection-start-line="408" selection-start-column="7" selection-end-line="413" selection-end-column="81" />
+              <folding>
+                <marker date="1482243803698" expanded="true" signature="10133:10605" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="10144:10582" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="10153:10570" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="10196:10207" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="10253:10264" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="10310:10321" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="10367:10378" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="10424:10435" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="10481:10492" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="10542:10553" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="12201:12602" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="12535:12542" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="12707:13066" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="12875:13052" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="12899:13048" ph="..." />
+                <marker date="1482243803698" expanded="false" signature="12999:13006" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="14501:14514" ph="..." />
+                <marker date="1482243803698" expanded="true" signature="14583:14597" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,45 +186,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/user_page/layout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="page.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/user/page.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="95" column="38" selection-start-line="95" selection-start-column="38" selection-end-line="95" selection-end-column="38" />
-              <folding>
-                <marker date="1482639958423" expanded="true" signature="931:1002" ph="SELECT str_t... ${tab_menu}" />
-                <marker date="1482639958423" expanded="true" signature="1210:1298" ph="SELECT str_t... ${tab_menu}" />
-                <marker date="1482639958423" expanded="true" signature="5679:5707" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="guide.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/designs/okhwa/guide.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="125" column="28" selection-start-line="22" selection-start-column="20" selection-end-line="125" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout_top.htm" pinned="false" current-in-tab="true">
+      <file leaf-file-name="layout_top.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/user_page/layout_top.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+            <state relative-caret-position="442">
+              <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -163,9 +228,7 @@
         <option value="$PROJECT_DIR$/application/views/board/skin/board/read.htm" />
         <option value="$PROJECT_DIR$/application/views/jade9/board/skin/board/read.htm.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/board/skin/board/read.htm" />
-        <option value="$PROJECT_DIR$/trunk/libs/jquery/bootbox/bootbox.js" />
         <option value="$PROJECT_DIR$/application/views/jade9/board/skin/board/list_media.htm" />
-        <option value="$PROJECT_DIR$/application/config/__get/user_menu_jade9.php" />
         <option value="$PROJECT_DIR$/application/views/user_page/css/sub.css" />
         <option value="$PROJECT_DIR$/application/views/jade9/location.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/fa.html" />
@@ -174,15 +237,12 @@
         <option value="$PROJECT_DIR$/application/views/jade9/room_a.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/room_b.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/room_c.html" />
-        <option value="$PROJECT_DIR$/application/views/jade9/reserve/list2.html" />
-        <option value="$PROJECT_DIR$/application/controllers/user/reserve.php" />
         <option value="$PROJECT_DIR$/application/views/jade9/reserve/index.html" />
         <option value="$PROJECT_DIR$/designs/okhwa/css/default.css" />
         <option value="$PROJECT_DIR$/designs/okhwa/css/main.css" />
         <option value="$PROJECT_DIR$/designs/okhwa/css/sub.css" />
         <option value="$PROJECT_DIR$/application/views/okhwa/aboutus.html" />
         <option value="$PROJECT_DIR$/application/views/okhwa/setting.html" />
-        <option value="$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php" />
         <option value="$PROJECT_DIR$/application/views/okhwa/room_100.html" />
         <option value="$PROJECT_DIR$/application/views/okhwa/room_50.html" />
         <option value="$PROJECT_DIR$/application/views/okhwa/room_40.html" />
@@ -192,11 +252,16 @@
         <option value="$PROJECT_DIR$/application/views/okhwa/guide.html" />
         <option value="$PROJECT_DIR$/application/views/okhwa/faq.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/faq.html" />
-        <option value="$PROJECT_DIR$/application/views/user_page/layout_main.htm" />
         <option value="$PROJECT_DIR$/application/config/user_page/layout.php" />
         <option value="$PROJECT_DIR$/application/controllers/user/page.php" />
         <option value="$PROJECT_DIR$/application/views/user_page/intro.html" />
         <option value="$PROJECT_DIR$/application/views/user_page/layout_top.htm" />
+        <option value="$PROJECT_DIR$/application/config/__get/user_menu_jade9.php" />
+        <option value="$PROJECT_DIR$/application/views/jade9/reserve/list2.html" />
+        <option value="$PROJECT_DIR$/trunk/libs/jquery/bootbox/bootbox.js" />
+        <option value="$PROJECT_DIR$/application/controllers/user/reserve.php" />
+        <option value="$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php" />
+        <option value="$PROJECT_DIR$/application/views/user_page/layout_main.htm" />
       </list>
     </option>
   </component>
@@ -274,28 +339,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="okhwa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okhwa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okhwa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="designs" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="okhwa" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,6 +462,32 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="reserve" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jade9" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="board" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -485,6 +554,68 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="__get" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -492,7 +623,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/views/okhwa" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gamer_admin" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
@@ -553,7 +684,7 @@
       <option name="presentableId" value="Default" />
       <updated>1482460287908</updated>
       <workItem from="1482460289356" duration="14149000" />
-      <workItem from="1482551797309" duration="32710000" />
+      <workItem from="1482551797309" duration="36472000" />
     </task>
     <task id="LOCAL-00001" summary="dsfdsf">
       <created>1482604831243</created>
@@ -562,11 +693,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482604831243</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="dsfdsf">
+      <created>1482640406597</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1482640406597</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46859000" />
+    <option name="totallyTimeSpent" value="50621000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="793" y="0" width="1738" height="1047" extended-state="0" />
@@ -581,7 +719,7 @@
       <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32896176" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.202407" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.202407" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -613,92 +751,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/user/reserve.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="286" column="0" selection-start-line="286" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
-          <folding>
-            <marker date="1482605779616" expanded="true" signature="1048:1119" ph="SELECT str_t... ${tab_menu}" />
-            <marker date="1482605779616" expanded="true" signature="1394:1482" ph="SELECT str_t... ${tab_menu}" />
-            <marker date="1482605779616" expanded="true" signature="2620:2966" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="2631:2943" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="2640:2931" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="5469:5482" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="5568:5604" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="5809:5822" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="5899:5934" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="6103:6113" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="8047:8519" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="8058:8496" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="8067:8484" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="8110:8121" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="8167:8178" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="8224:8235" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="8281:8292" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="8338:8349" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="8395:8406" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="8456:8467" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="9326:9338" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="10531:11588" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="10602:11557" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="10661:10743" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="10744:10809" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="10880:11522" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="10948:11129" ph="..." />
-            <marker date="1482605779616" expanded="false" signature="11179:11184" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="11185:11483" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="11298:11399" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="13098:13111" ph="..." />
-            <marker date="1482605779616" expanded="true" signature="13193:13207" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/jade9/reserve/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="95" selection-start-line="3" selection-start-column="95" selection-end-line="3" selection-end-column="95" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
-            <marker date="1482605852236" expanded="true" signature="5875:5889" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/__get/user_menu_jade9.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="167" column="0" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designs/jade9/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="21" column="12" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designs/okhwa/css/default.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="61" column="85" selection-start-line="61" selection-start-column="85" selection-end-line="61" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/designs/jade9/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="20" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/designs/jade9/css/sub.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -885,14 +937,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="38" column="58" selection-start-line="38" selection-start-column="58" selection-end-line="38" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/okhwa/room_100.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1049,14 +1093,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/user_page/layout_main.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="55" column="73" selection-start-line="55" selection-start-column="73" selection-end-line="55" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user_page/intro.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -1067,9 +1103,138 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/user_page/layout_top.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="33" column="39" selection-start-line="33" selection-start-column="39" selection-end-line="33" selection-end-column="39" />
+        <state relative-caret-position="442">
+          <caret line="25" column="44" selection-start-line="25" selection-start-column="44" selection-end-line="25" selection-end-column="44" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/jade9/reserve/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2472">
+          <caret line="3" column="95" selection-start-line="3" selection-start-column="95" selection-end-line="3" selection-end-column="95" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <marker date="1482605852236" expanded="true" signature="5875:5889" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/jade9/reserve/list2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="204" selection-end-column="0" />
+          <folding>
+            <marker date="1482655095347" expanded="true" signature="4192:4206" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trunk/libs/jquery/bootbox/bootbox.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="60" column="41" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+          <folding>
+            <marker date="1482655141080" expanded="true" signature="976:991" ph="..." />
+            <marker date="1482655141080" expanded="true" signature="1116:1130" ph="..." />
+            <marker date="1482655141080" expanded="true" signature="1786:1804" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user/reserve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="637" column="48" selection-start-line="637" selection-start-column="48" selection-end-line="637" selection-end-column="48" />
+          <folding>
+            <marker date="1482656845809" expanded="true" signature="1048:1119" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1482656845809" expanded="true" signature="1394:1482" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1482656845809" expanded="true" signature="2620:2966" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="2631:2943" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="2640:2931" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="5469:5482" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="5568:5604" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="5809:5822" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="5899:5934" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="6103:6113" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="8047:8519" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="8058:8496" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="8067:8484" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="8110:8121" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="8167:8178" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="8224:8235" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="8281:8292" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="8338:8349" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="8395:8406" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="8456:8467" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="9326:9338" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="10531:11588" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="10602:11557" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="10661:10743" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="10744:10809" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="10880:11522" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="10948:11129" ph="..." />
+            <marker date="1482656845809" expanded="false" signature="11179:11184" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="11185:11483" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="11298:11399" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="13098:13111" ph="..." />
+            <marker date="1482656845809" expanded="true" signature="13193:13207" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/admin/realpans.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="413" column="81" selection-start-line="408" selection-start-column="7" selection-end-line="413" selection-end-column="81" />
+          <folding>
+            <marker date="1482243803698" expanded="true" signature="10133:10605" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="10144:10582" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="10153:10570" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="10196:10207" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="10253:10264" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="10310:10321" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="10367:10378" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="10424:10435" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="10481:10492" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="10542:10553" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="12201:12602" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="12535:12542" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="12707:13066" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="12875:13052" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="12899:13048" ph="..." />
+            <marker date="1482243803698" expanded="false" signature="12999:13006" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="14501:14514" ph="..." />
+            <marker date="1482243803698" expanded="true" signature="14583:14597" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/__get/user_menu_jade9.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="158" column="58" selection-start-line="158" selection-start-column="58" selection-end-line="158" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/__get/user_menu_okhwa.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="599">
+          <caret line="170" column="46" selection-start-line="170" selection-start-column="46" selection-end-line="170" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user_page/layout_main.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="353" column="49" selection-start-line="353" selection-start-column="49" selection-end-line="353" selection-end-column="49" />
+          <folding>
+            <marker date="1482656899224" expanded="true" signature="12936:13012" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

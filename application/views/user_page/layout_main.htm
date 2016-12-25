@@ -89,7 +89,7 @@
 			</div>
 			<div class="pop-ck-controller fbox pop-ck-closer" style="background-color:#000;padding:0px;padding-top:5px">
 				<p>
-					<input type="checkbox" name="killpop" id="chkagree" class="killpop m-l10 " >
+					<input type="checkbox" name="killpop" id="chkagree" class="killpop m-l10 " placeholder="">
 					<label for="chkagree" style="color:#fff">이 창을 <span id="num_kill_t">1</span>일동안 열지 않기</label>
 				</p>
 			</div>
@@ -326,6 +326,92 @@ function popup_view(url,w,h){
             },
             error: function(request,status,error) {
                 alert(request.responseText);
+            }
+        });
+    }
+
+    function reserve_chk() {
+        bootbox.form({
+            title: '예약확인',
+
+
+            fields: {
+
+                re_name: {
+                    label: '예약자',
+                    type:  'text',
+                    id:'re_name',
+                    //value:'김종태',
+                    placeholder:'예약자 성명 입력',
+
+                },
+
+                re_phone: {
+                    label: '전화번호',
+                    type:  'text',
+                    id:'re_phone',
+                    //value:'01020075280',
+                    placeholder:'- 을 제외한 번호만 입력',
+
+
+                }
+            },
+            callback: function (values) {
+
+
+                if(values) {
+                    if (!values.re_name) {
+                        alert('예약자명을 적어주세요.');
+                        $('#re_name').focus();
+                        return false;
+                    }
+
+                    if (!values.re_phone) {
+                        alert('예약자 전화번호을 적어주세요.');
+                        $('#re_phone').focus();
+                        return false;
+                    }
+
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '/user/reserve/chk',
+                        data: 'name=' + encodeURIComponent(values.re_name) + '&phone=' + values.re_phone,
+                        dataType: 'json',
+                        success: function (data, status) {
+                            if(data.code=='200') {
+                                console.log(data);
+                                var text='';
+                                text += '<div class="panel panel-card box-shadow2">';
+                                text += '  <div class="item" style="height:300px;background: url('+data.result.img_url+');background-size:cover "></div>';
+
+                                text += '<div class="text-center p-b20">';
+                                text += '<div class="text-center p-t10"><strong class="ft14">'+data.result.room_cp+'</strong></div>';
+                                text += '<div class="text-center p-t10"><strong class="ft14">'+data.result.room_name+' '+data.result.room_number+'</strong></div>';
+                                text += '<div class="text-center p-t10"><strong class="ft14">'+data.result.startdate+' ~ '+data.result.lastdate+'</strong></div>';
+                                text += '<div class="text-center p-t10"><strong class="ft14">예약자 : '+data.result.name+'</strong></div>';
+
+                                if(data.result.pay_state == 'Y') {
+                                    text += '<div class="text-center p-t10"><strong class="ft14">입금확인 완료</strong></div>';
+                                }else{
+                                    text += '<div class="text-center p-t10"><strong class="ft14">입금대기중</strong></div>';
+                                }
+
+
+                                text += '</div></div></div>';
+                                bootbox.alert({title:'예약확인','message':text});
+
+                            }else{
+                                bootbox.alert({title:'예약확인','message':data.message});
+                            }
+                        },
+                        error: function (request, status, error) {
+                            alert(request.responseText);
+                        }
+                    });
+
+
+                }
             }
         });
     }

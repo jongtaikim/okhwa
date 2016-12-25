@@ -632,6 +632,28 @@ class reserve extends CI_Controller {
     }
 
 
+    public function chk(){
+
+        if(HOST=='jade9'){
+            $this->db->where('room_cp','제이드나인');
+        }else{
+            $this->db->where('room_cp','옥화용소절경');
+        }
+        $data =  $this->db->where('name',$_POST['name'])->where('phone',$_POST['phone'])->get('realpans')->row_array();
+
+        if($data) {
+            $img_url =  $this->db->select(' img_url ')->where('no',$data['room_no'])->get('rooms')->row_array();
+            $data['img_url'] =  $img_url['img_url'];
+            $this->output
+                ->set_content_type('application/json')
+                ->set_output(json_encode(array('code' => '200', 'result' => $data)));
+        }else{
+            $this->output
+                ->set_content_type('application/json')
+                ->set_output(json_encode(array('code' => '201', 'result' => '','message' => '예약건이 없습니다.')));
+        }
+    }
+
 
 
 }

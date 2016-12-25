@@ -156,13 +156,19 @@ $menu[$cate1]['link'] = "#/user/reserve/lists2";;
 $cate2 = 0;
 $menu[$cate1]['submenu'][$cate2]['title'] = "실시간예약";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "RESERVE";
-$menu[$cate1]['submenu'][$cate2]['w'] = "12%;margin-left:60%";
+$menu[$cate1]['submenu'][$cate2]['w'] = "12%;margin-left:55%";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#/user/reserve/lists2";
+
+$cate2++;
+$menu[$cate1]['submenu'][$cate2]['title'] = "예약확인";
+$menu[$cate1]['submenu'][$cate2]['title2'] = "RESERVE CHECK";
+$menu[$cate1]['submenu'][$cate2]['w'] = "12%";
+$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:reserve_chk()";;
 
 $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "예약안내";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "GUIDE";
-$menu[$cate1]['submenu'][$cate2]['w'] = "12%";
+$menu[$cate1]['submenu'][$cate2]['w'] = "8%";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#/user/page/p?designs=".HOST."&p=guide";;
 
 

@@ -32,7 +32,7 @@
         "<div class='bootbox modal bootbox_modal' tabindex='-1' role='dialog' style='font-size:16px;'>" +
         "<div class='modal-dialog'>" +
         "<div class='modal-content'>" +
-        "<div class='modal-body'><div class='bootbox-body' style='overflow:auto'></div></div>" +
+        "<div class='modal-body' style='overflow: auto'><div class='bootbox-body'></div></div>" +
         "</div>" +
         "</div>" +
         "</div>",
@@ -41,11 +41,17 @@
         "<h5 class='modal-title'></h5>" +
         "</div>",
         footer:
-            "<div class='modal-footer '></div>",
+            "<div class='modal-footer'></div>",
         closeButton:
-            "<button type='button' class='bootbox-close-button close' aria-hidden='true'>&times;</button>",
+            "<button type='button' class='bootbox-close-button close'>&times;</button>",
         form:
             "<form class='bootbox-form'></form>",
+        group:
+            "<div class='form-group'></div>",
+        label:
+            "<label class='col-sm-3 control-label'></label>",
+        inputWrapper:
+            "<div class='col-sm-8'  style='margin-bottom:10px'></div>",
         inputs: {
             text:
                 "<input class='bootbox-input bootbox-input-text form-control' autocomplete=off type=text />",
@@ -57,12 +63,6 @@
                 "<select class='bootbox-input bootbox-input-select form-control'></select>",
             checkbox:
                 "<div class='checkbox'><label><input class='bootbox-input bootbox-input-checkbox' type='checkbox' /></label></div>",
-            date:
-                "<input class='bootbox-input bootbox-input-date form-control' autocomplete=off type='date' />",
-            time:
-                "<input class='bootbox-input bootbox-input-time form-control' autocomplete=off type='time' />",
-            number:
-                "<input class='bootbox-input bootbox-input-number form-control' autocomplete=off type='number' />",
             password:
                 "<input class='bootbox-input bootbox-input-password form-control' autocomplete='off' type='password' />"
         }
@@ -397,9 +397,6 @@
                 case "textarea":
                 case "email":
                 case "select":
-                case "date":
-                case "time":
-                case "number":
                 case "password":
                     value = input.val();
                     break;
@@ -442,9 +439,6 @@
             case "text":
             case "textarea":
             case "email":
-            case "date":
-            case "time":
-            case "number":
             case "password":
                 input.val(options.value);
                 break;
@@ -528,14 +522,6 @@
             input.attr("placeholder", options.placeholder);
         }
 
-        if (options.pattern) {
-            input.attr("pattern", options.pattern);
-        }
-
-        if (options.maxlength) {
-            input.attr("maxlength", options.maxlength);
-        }
-
         // now place it in our form
         form.append(input);
 
@@ -562,7 +548,6 @@
 
         return dialog;
     };
-
 
     exports.form = function() {
         var options;
@@ -617,9 +602,7 @@
                     case "text":
                     case "textarea":
                     case "email":
-                    case "date":
-                    case "time":
-                    case "number":
+                    case "select":
                     case "password":
                         values[field] = inputs[field].val();
                         break;
@@ -795,22 +778,12 @@
         options = sanitize(options);
 
         var dialog = $(templates.dialog);
-        var innerDialog = dialog.find(".modal-dialog");
         var body = dialog.find(".modal-body");
         var buttons = options.buttons;
         var buttonStr = "";
         var callbacks = {
-            onEscape: options.onEscape,
-            onRendered: options.onRendered
+            onEscape: options.onEscape
         };
-
-        if ($.fn.modal === undefined) {
-            throw new Error(
-                "$.fn.modal is not defined; please double check you have included " +
-                "the Bootstrap JavaScript library. See http://getbootstrap.com/javascript/ " +
-                "for more details."
-            );
-        }
 
         each(buttons, function(key, button) {
 
@@ -832,9 +805,10 @@
         }
 
         if (options.size === "large") {
-            innerDialog.addClass("modal-lg");
+
+            dialog.find(".modal-dialog").addClass('modal-lg');
         } else if (options.size === "small") {
-            innerDialog.addClass("modal-sm");
+            dialog.find(".modal-dialog").addClass('modal-sm');
         }
 
         if (options.title) {
@@ -847,7 +821,7 @@
             if (options.title) {
                 dialog.find(".modal-header").prepend(closeButton);
             } else {
-                closeButton.css("margin-top", "-2px").prependTo(body);
+                closeButton.css("margin-top", "-10px").prependTo(body);
             }
         }
 
@@ -887,18 +861,7 @@
          });
          */
 
-        dialog.on("shown.bs.modal", function(e) {
-            if (callbacks.onRendered) {
-                // We do not want to send this callback through processCallback
-                // because by default processCallback wants to hide the dialog.
-                // This is mentioned because the method name is ambigous and
-                // might be better named processOnEscapeCallback. Its core
-                // functionality seems to have only been intended for closing the
-                // dialog after button clicks or close events.
-                //   `processCallback(e, dialog, callbacks.onRendered);`
-                callbacks.onRendered.call(dialog, e);
-            }
-
+        dialog.on("shown.bs.modal", function() {
             //dialog.find(".btn-primary:first").focus();
         });
 
@@ -907,30 +870,6 @@
          * just an attempt to decouple some behaviours from their
          * respective triggers
          */
-
-        if (options.backdrop !== "static") {
-            // A boolean true/false according to the Bootstrap docs
-            // should show a dialog the user can dismiss by clicking on
-            // the background.
-            // We always only ever pass static/false to the actual
-            // $.modal function because with `true` we can't trap
-            // this event (the .modal-backdrop swallows it)
-            // However, we still want to sort of respect true
-            // and invoke the escape mechanism instead
-            dialog.on("click.dismiss.bs.modal", function(e) {
-                // @NOTE: the target varies in >= 3.3.x releases since the modal backdrop
-                // moved *inside* the outer dialog rather than *alongside* it
-                if (dialog.children(".modal-backdrop").length) {
-                    e.currentTarget = dialog.children(".modal-backdrop").get(0);
-                }
-
-                if (e.target !== e.currentTarget) {
-                    return;
-                }
-
-                dialog.trigger("escape.close.bb");
-            });
-        }
 
         dialog.on("escape.close.bb", function(e) {
             if (callbacks.onEscape) {
@@ -947,6 +886,7 @@
             var callbackKey = $(this).data("bb-handler");
 
             processCallback(e, dialog, callbacks[callbackKey]);
+
         });
 
         dialog.on("click", ".bootbox-close-button", function(e) {
@@ -970,7 +910,7 @@
         $(options.container).append(dialog);
 
         dialog.modal({
-            backdrop: options.backdrop ? "static": false,
+            backdrop: options.backdrop,
             keyboard: false,
             show: false
         });
@@ -1111,32 +1051,6 @@
             CANCEL  : "취소",
             CONFIRM : "확인"
         },
-    };
-
-    exports.addLocale = function(name, values) {
-        $.each(["OK", "CANCEL", "CONFIRM"], function(_, v) {
-            if (!values[v]) {
-                throw new Error("Please supply a translation for '" + v + "'");
-            }
-        });
-
-        locales[name] = {
-            OK: values.OK,
-            CANCEL: values.CANCEL,
-            CONFIRM: values.CONFIRM
-        };
-
-        return exports;
-    };
-
-    exports.removeLocale = function(name) {
-        delete locales[name];
-
-        return exports;
-    };
-
-    exports.setLocale = function(name) {
-        return exports.setDefaults("locale", name);
     };
 
     exports.init = function(_$) {
