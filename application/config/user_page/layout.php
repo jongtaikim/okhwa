@@ -18,7 +18,8 @@ RIGHT = @user_page/layout_right.htm
 COMMON = @common/layout_user_common.htm
 TOP_TOOL = @user_page/layout_top_tool.htm
 
-
+[intro]
+LAYOUT = @user_page/intro.html
 
 
 [sub_menu]

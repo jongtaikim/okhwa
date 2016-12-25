@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko" class="white" style="background-color: #fff">
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=2, user-scalable=no">
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <style type="text/css" title="">
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        /* reset */
+        body,div,ul,li,dl,dt,dd,ol,p,h1,h2,h3,h4,h5,h6,from{margin:0; padding:0;font-family: "Nanum Gothic", sans-serif;}
+    </style>
+    <link rel="stylesheet" href="/uiset/assets/styles/app.css" type="text/css" />
+    <link rel="stylesheet" href="/trunk/libs/assets/animate.css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="/trunk/libs/assets/font-awesome-4.6.3/css/font-awesome.css" type="text/css" />
+    <link rel="stylesheet" href="/trunk/libs/jquery/waves/dist/waves.css" type="text/css" />
+    <link rel="stylesheet" href="/trunk/styles/material-design-icons.css" type="text/css" />
+    <link rel="stylesheet" href="/uiset/assets/styles/now_to.css" type="text/css" />
+
+    <link rel="stylesheet" href="/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+
+
+    <link rel="stylesheet" href="./css/sub.css" type="text/css" />
+    <script src="/trunk/libs/jquery/jquery/dist/jquery.js"></script>
+    <script src="/trunk/scripts/underscore-min.js" type="text/javascript"></script>
+    <script src="/trunk/scripts/backbone-min.js" type="text/javascript"></script>
+    <!-- endbuild -->
+    <!-- jQuery -->
+
+    <!--[if lt IE 9]> <script src="/trunk/scripts//ie/html5shiv.js"></script> <script src="/trunk/scripts/ie/respond.min.js"></script> <script src="/trunk/scripts/ie/excanvas.js"></script> <![endif]-->
+
+    <link rel="stylesheet" href="/designs/okhwa/css/sub.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="/designs/okhwa/css/default.css?v=1" type="text/css" media="screen" />
+
+    <title>리조트스테이</title>
+    <script type="text/javascript">
+        var no_top ='';
+        function s_top() {
+            if(!no_top) {
+                $(window).scrollTop(0);
+            }else{
+                no_top='';
+            }
+        }
+    </script>
+</head>
+
+<body class="white ">
+<style>
+    .intro{ background:url(/designs/okhwa/images/intro.jpg) top center; width:100%; margin:0 auto;}
+    .intro .intro_text{ width:1200px; margin:0 auto;}
+</style>
+
+<div class="intro">
+    <div class="intro_text animated fadeIn"><img src="/designs/okhwa/images/intro_text.png" usemap="#Map">
+        <map name="Map">
+            <area shape="rect" coords="181,760,440,810" href="http://jade9.it-company.kr/#/user/page/main">
+            <area shape="rect" coords="759,760,1018,810" href="http://okhwa.it-company.kr/#/user/page/main">
+        </map>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    // <![CDATA[
+    function ifr_view(url){
+        $('#ifrModal').modal('show');
+        $('#ifr_data').attr('src',url);
+    }
+
+    function popup_view(url,w,h){
+        if(!w) w = 800;
+        if(!h) h = 600;
+
+        cw=screen.availWidth;     //화면 넓이
+        ch=screen.availHeight;    //화면 높이
+
+
+        ml=(cw-w)/2;        //가운데 띄우기위한 창의 x위치
+        mt=(ch-h)/2;         //가운데 띄우기위한 창의 y위치
+
+        var myWindow = window.open(url, "tomew", "toolbar=no, scrollbars=yes, resizable=yes, top="+mt+", left="+ml+", width="+w+", height="+h);
+    }
+
+    // ]]>
+</script>
+
+<!-- Bootstrap -->
+<script src="/uiset/libs/jquery/tether/dist/js/tether.min.js"></script>
+<script src="/uiset/libs/jquery/bootstrap/dist/js/bootstrap.js"></script>
+<!-- core -->
+<script src="/uiset/libs/jquery/underscore/underscore-min.js"></script>
+<script src="/uiset/libs/jquery/routie/dist/routie.js"></script>
+<script src="/uiset/libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js"></script>
+<script src="/uiset/libs/jquery/PACE/pace.min.js"></script>
+<script src="scripts/ui-include.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/config.js"></script>
+<script src="scripts/config.lazyload.js"></script>
+<script src="scripts/palette.js"></script>
+<script src="scripts/ui-form.js"></script>
+<script src="scripts/ui-jp.js"></script>
+<script src="scripts/ui-load.js"></script>
+<script src="scripts/ui-nav.js"></script>
+<script src="scripts/ui-screenfull.js"></script>
+<script src="scripts/ui-scroll-to.js"></script>
+<script src="scripts/ui-toggle-class.js"></script>
+<script src="/trunk/scripts/jquery.cookie.js"></script>
+<script src="./js/common.js"></script>
+
+<script type="text/javascript" src="/trunk/scripts/php.js"></script>
+<script type="text/javascript" src="/trunk/scripts/app.src.js"></script>
+<script type="text/javascript" src="/trunk/scripts/jquery.cookie.js"></script>
+<script type="text/javascript" src="/trunk/libs/jquery/bootbox/bootbox.js"></script>
+
+<!-- endbuild -->
+
+</body>
+</html>
+

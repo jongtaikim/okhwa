@@ -1,0 +1,56 @@
+<style type="text/css" title="">
+    #container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
+</style>
+
+<div class=" carousel slide auto pos_r " id="main_vis" >
+
+    <ul class="carousel-inner opa00 animated fadeIn" style="padding:0px;magin-bottom:0px" >
+        <li class="item active">
+            <div class="visual_01_sub">
+
+            </div>
+        </li>
+        <li class="item ">
+            <div class="visual_02_sub">
+
+            </div>
+        </li>
+        <li class="item ">
+            <div class="visual_03_sub">
+
+            </div>
+        </li>
+        <!-- <li class="item ">
+             <div class="visual_04">
+
+             </div>
+         </li>-->
+    </ul>
+
+    <div class=" pos_a pos_center_w"  style="bottom:33%">
+
+
+        <div class="navi m-t30" >
+            <ol class="carousel-indicators">
+                <li data-target="#main_vis" data-slide-to="0" class="active"  style="zoom:1.2"></li>
+                <li data-target="#main_vis" data-slide-to="1"  style="zoom:1.2"></li>
+                <li data-target="#main_vis" data-slide-to="2"  style="zoom:1.2"></li>
+                <!-- <li data-target="#main_vis" data-slide-to="3"></li>-->
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var inits = '';
+        $('#main_vis').carousel({  interval: 5000 }).on('slide.bs.carousel', function () {
+            inits = 'y';
+        });
+    });
+
+
+</script>
+

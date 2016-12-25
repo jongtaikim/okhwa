@@ -1,7 +1,7 @@
 <style type="text/css" title="">
     #container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
 </style>
-<div class="reserve_top" style="height:{? !_GET.tod}420{:}320{/}px;background-position: center"></div>
+<div class="reserve_top" style="height:{? !_GET.tod}420{:}320{/}px;background-position: center;"></div>
 <div id="cont" style="padding-top: 20px">
 
     <!-- <div class="tit"><img src="/designs/<?=HOST?>/images/sub/reserve_tt.jpg"></div>-->
@@ -18,7 +18,7 @@
                 <form id="FrmAttendanceSearchs"  onsubmit='return false;'>
                     <input type="hidden" name="mode" value="next"/>
                     <input type="hidden" name="room_no" id="room_no" value="{_GET.no}" onchange=""/>
-                    <input type="hidden" name="day" id="leavedate" value="{day}"   />
+                    <input type="hidden" name="day" id="leavedate" value="{?_GET.day}{_GET.day}{:}{=date("Y-m-d")}{/}"   />
 
                     <input type="hidden" name="str_year" id="str_year" value="{_GET.str_year}" />
                     <input type="hidden" name="str_month" id="str_month" value="{_GET.str_month}" />
@@ -116,7 +116,7 @@
                 success : function(jsondata) {
                     $('#search_result').html(jsondata) ;
 
-                    InoutInList.viewday('{_GET.day}');
+                    InoutInList.viewday('{? _GET.day}{_GET.day}{:}{=date("Y-m-d")}{/}');
                 }
             });
         },

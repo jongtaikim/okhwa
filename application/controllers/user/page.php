@@ -90,15 +90,25 @@ class page extends CI_Controller {
 
 
 
-		$tpl->setLayout('@main');
-		$tpl->define('CONTENT', $this->display->getTemplate('/user_page/blank.htm'));
-           if(HOST=='jade9'){
-               $content = $this->display->fetch('LAYOUT');
-           }else{
-               $content = $this->display->fetch('LAYOUT2');
-           }
+        if(HOST !='jade9' && HOST !='okhwa'){
 
-           echo$content;
+
+            $tpl->setLayout('@intro');
+            $tpl->define('CONTENT', $this->display->getTemplate('/user_page/blank.htm'));
+
+            $content = $this->display->fetch('LAYOUT');
+
+            echo$content;
+
+        }else{
+            $tpl->setLayout('@main');
+            $tpl->define('CONTENT', $this->display->getTemplate('/user_page/blank.htm'));
+
+            $content = $this->display->fetch('LAYOUT');
+
+            echo$content;
+        }
+
 
 	  }
 
@@ -118,6 +128,7 @@ class page extends CI_Controller {
 
         if($_GET['designs'] && $_GET['p']) {
             $this->display->define('CONTENT', $this->display->getTemplate('/'.$_GET['designs'].'/'.$_GET['p'].".html"));
+
 
             if(substr($_GET['p'],0,6) == 'room_a'){
                 $tab_file='a_room_tab.html';

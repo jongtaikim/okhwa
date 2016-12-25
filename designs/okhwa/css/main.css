@@ -2,11 +2,11 @@
 /* CSS Document */
 
 /* sitemap */
-#container .sitemapwrap{ background:url(../images/bottom_bg_01.png);height:269px;width:100%;margin:0 auto; position:absolute; bottom:100px; overflow:hidden;} 
-#container .sitemapwrap .sitemap{ width:1200px; margin:auto; text-align:left;}
-#container .sitemapwrap .sitemap ul{ height:200px; border-left:1px solid #ddd; float:left; margin-top:30px; padding:0 95px 0 30px}
-#container .sitemapwrap .sitemap ul li{ height:28px}
-#container .sitemapwrap .sitemap ul .sitemap_tt{ margin-bottom:18px;}
+.sitemapwrap{ background:url(../images/bottom_bg_01.png);height:269px;width:100%;margin:0 auto; position:absolute; bottom:100px; overflow:hidden;}
+.sitemapwrap .sitemap{ width:1200px; margin:auto; text-align:left;}
+.sitemapwrap .sitemap ul{ height:200px; border-left:1px solid #ddd; float:left; margin-top:30px; padding:0 95px 0 30px}
+.sitemapwrap .sitemap ul li{ height:28px}
+.sitemapwrap .sitemap ul .sitemap_tt{ margin-bottom:18px;}
 
 /* footer */
 #footerwrap{ background:url(../images/bottom_bg_02.png);height:100px; font-size:1em; width:100%; clear:both; overflow:hidden; position:absolute; bottom:0; overflow:hidden; }
@@ -24,7 +24,7 @@
 #container #contents .navi ul{ text-align:center; margin:auto; width:60px; padding-top:20px;}
 #container #contents .navi ul li{ float:left; background-color:#f3f3f3; width:12px; height:12px; border-radius:6px; font-size:0; margin:4px;}
 #container #contents .navi ul .on{ background-color:#333;}
-#container #contents .text{ width:1200px; padding-top:300px; text-align:center; margin:auto;}
+#container #contents .text{ width:1200px;  text-align:center; margin:auto;}
 
 #container{position:relative; overflow:hidden;}
 #container .visual_01{ background:url(../images/visual_01.png) top center;width:100%;margin:0 auto; height:1270px; }

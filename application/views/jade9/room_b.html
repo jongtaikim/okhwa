@@ -13,10 +13,10 @@
             <li><img src="images/sub/room/b{? _GET.number}{ _GET.number}{:}101{/}_tt.jpg"></li>
             <li><img src="images/sub/room/room_txt.jpg" usemap="#Map">
                 <map name="Map">
-                    {? _GET.number ==101}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=5&tod=t">{/}
-                    {? _GET.number ==102}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=6&tod=t">{/}
-                    {? _GET.number ==201}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=7&tod=t">{/}
-                    {? _GET.number ==202}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=8&tod=t">{/}
+                    {? _GET.number ==101}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=5&tod=t&day=<?=date('Y-m-d')?>&str_year=<?=date('Y')?>&str_month=<?=date('m')?>&str_day=<?=date('d')?>">{/}
+                    {? _GET.number ==102}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=6&tod=t&day=<?=date('Y-m-d')?>&str_year=<?=date('Y')?>&str_month=<?=date('m')?>&str_day=<?=date('d')?>">{/}
+                    {? _GET.number ==201}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=7&tod=t&day=<?=date('Y-m-d')?>&str_year=<?=date('Y')?>&str_month=<?=date('m')?>&str_day=<?=date('d')?>">{/}
+                    {? _GET.number ==202}<area shape="rect" coords="385,143,556,180" href="#/user/reserve/index?no=8&tod=t&day=<?=date('Y-m-d')?>&str_year=<?=date('Y')?>&str_month=<?=date('m')?>&str_day=<?=date('d')?>">{/}
                 </map>
             </li>
         </ul>

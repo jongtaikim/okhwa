@@ -1,21 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* sitemap */
-#container .sitemapwrap{ background:url(../images/bottom_bg_01.png);height:269px;width:100%;margin:0 auto; overflow:hidden;} 
-#container .sitemapwrap .sitemap{ width:1200px; margin:auto; text-align:left;}
-#container .sitemapwrap .sitemap ul{ height:200px; border-left:1px solid #ddd; float:left; margin-top:30px; padding:0 95px 0 30px}
-#container .sitemapwrap .sitemap ul li{ height:28px}
-#container .sitemapwrap .sitemap ul .sitemap_tt{ margin-bottom:18px;}
-
-/* footer */
-#footerwrap{ background:url(../images/bottom_bg_02.png);height:100px; font-size:1em; width:100%; clear:both; overflow:hidden; overflow:hidden; }
-#footerwrap #footer{margin:0 auto;width:1200px; position:relative;clear:both;}
-#footerwrap #footer .logo{ position:absolute; top:20px; left:0; cursor:pointer;}
-#footerwrap #footer .address{ position:absolute; top:30px; right:413px;}
-#footerwrap #footer .icon{position:absolute; top:30px; right:0;}
-#footerwrap #footer .icon ul{}
-#footerwrap #footer .icon ul li{ float:left; margin-right:8px; cursor:pointer;}
 
 
 
@@ -23,7 +8,7 @@
 
 
 /* contents */
-#container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
+
 #container #contents .about_top{ background:url(../images/sub/about_top.jpg) top center; width:100%; height:868px;}
 #container #contents .notice_top{ background:url(../images/sub/notice_top.jpg) top center; width:100%; height:868px;}
 #container #contents .camp_top{ background:url(../images/sub/camp_top.jpg) top center; width:100%; height:868px;}
@@ -123,9 +108,9 @@
 #container #contents .room_ok50_top{background:url(../images/sub/room/ok50_top.jpg) top center; width:100%; height:868px;}
 #container #contents .room_ok100_top{background:url(../images/sub/room/ok100_top.jpg) top center; width:100%; height:868px;}
 
-#container .visual_01{ background:url(../images/sub/ex_img01.jpg) top center;width:100%;margin:0 auto; height:868px; }
-#container .visual_02{ background:url(../images/sub/ex_img02.jpg) top center;width:100%;margin:0 auto; height:868px; }
-#container .visual_03{ background:url(../images/sub/ex_img03.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container .visual_01_sub{ background:url(../images/sub/ex_img01.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container .visual_02_sub{ background:url(../images/sub/ex_img02.jpg) top center;width:100%;margin:0 auto; height:868px; }
+#container .visual_03_sub{ background:url(../images/sub/ex_img03.jpg) top center;width:100%;margin:0 auto; height:868px; }
 #container #contents .navi{ width:1200px; text-align:center; margin:auto;}
 #container #contents .navi ul{ text-align:center; margin:auto; width:60px; padding-top:490px;}
 #container #contents .navi ul li{ float:left; background-color:#f3f3f3; width:12px; height:12px; border-radius:6px; font-size:0; margin:4px;}

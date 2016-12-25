@@ -71,7 +71,7 @@ class reserve extends CI_Controller {
       $this->display->assign('str_year',$_POST['str_year']);
       $this->display->assign('str_month',$_POST['str_month']);
       $this->display->assign('str_day',$_POST['str_day']);
-
+        
 
         $caltemp = '
 		<table  border="0" cellpadding="0" cellspacing="0" class="table table-bordered"  id="date_table">
@@ -262,7 +262,7 @@ class reserve extends CI_Controller {
                 $radate = $year."-".$month."-".$int ;
 
 //			echo $int ."<br>";
-                $caltemp .=  '<td class="hand" valign="top" style="height:100px">' ;
+                $caltemp .=  '<td class="hand" valign="top" style="height:120px">' ;
                 if (($i == 0 && $k < $sweek) || ($i == $tweek-1 && $k > $lweek)) {
                     $caltemp .=    "</td>";
                     continue;
@@ -282,13 +282,9 @@ class reserve extends CI_Controller {
 
                     $room_list[$ii]['to_realpan'] = $this->db->where('todate <=',$udate)->where('lastdate >=',$udate)->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
 
-                    if($room_list[$ii]['to_realpan']){
-                        $btns = '  <a href="javascript:" style="text-decoration: none" class="btn danger btn-xs">
-                                        예약불가
-                                      </a>';
-                    }else{
+                    if(!$room_list[$ii]['to_realpan']){
 
-                            $btns = '  <a href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '" style="text-decoration: none" class="btn btn-default btn-xs">
+                       $btns = '  <a href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '" style="text-decoration: none" class="btn btn-default btn-xs">
                                         예약가능
                                       </a>';
 
