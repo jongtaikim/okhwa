@@ -130,25 +130,26 @@ $cate2 = 0;
 $menu[$cate1]['submenu'][$cate2]['title'] = "패키지1";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "PACKAGE1";
 $menu[$cate1]['submenu'][$cate2]['w'] = "16%;margin-left:10%";
-$menu[$cate1]['submenu'][$cate2]['link'] = "#";
+$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:alert('페이지를 준비중입니다.')";
 
 $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "패키지2";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "PACKAGE2";
 $menu[$cate1]['submenu'][$cate2]['w'] = "16%";
-$menu[$cate1]['submenu'][$cate2]['link'] = "#";
+$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:alert('페이지를 준비중입니다.')";
 
 $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "패키지3";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "PACKAGE3";
 $menu[$cate1]['submenu'][$cate2]['w'] = "16%";
-$menu[$cate1]['submenu'][$cate2]['link'] = "#";
+$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:alert('페이지를 준비중입니다.')";
 
 $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "패키지4";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "PACKAGE4";
 $menu[$cate1]['submenu'][$cate2]['w'] = "16%";
-$menu[$cate1]['submenu'][$cate2]['link'] = "#";
+$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:alert('페이지를 준비중입니다.')";
+
 
 
 
@@ -165,17 +166,19 @@ $menu[$cate1]['submenu'][$cate2]['title2'] = "RESERVE";
 $menu[$cate1]['submenu'][$cate2]['w'] = "12%;margin-left:55%";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#/user/reserve/lists2";
 
-$cate2++;
-$menu[$cate1]['submenu'][$cate2]['title'] = "예약확인";
-$menu[$cate1]['submenu'][$cate2]['title2'] = "RESERVE CHECK";
-$menu[$cate1]['submenu'][$cate2]['w'] = "12%";
-$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:reserve_chk()";;
 
 $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "예약안내";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "GUIDE";
 $menu[$cate1]['submenu'][$cate2]['w'] = "8%";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#/user/page/p?designs=".HOST."&p=guide";;
+
+$cate2++;
+$menu[$cate1]['submenu'][$cate2]['title'] = "예약확인";
+$menu[$cate1]['submenu'][$cate2]['title2'] = "RESERVE CHECK";
+$menu[$cate1]['submenu'][$cate2]['w'] = "12%";
+$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:reserve_chk()";;
+
 
 
 $cate1++;
