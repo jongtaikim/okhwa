@@ -2,14 +2,14 @@
 /* CSS Document */
 
 /* sitemap */
-.sitemapwrap{ background:url(../images/bottom_bg_01.png);height:269px;width:100%;margin:0 auto; position:absolute; bottom:100px; overflow:hidden;}
+.sitemapwrap{ background:url(../images/bottom_bg_01.png);height:269px;width:100%;margin:0 auto;  overflow:hidden;}
 .sitemapwrap .sitemap{ width:1200px; margin:auto; text-align:left;}
 .sitemapwrap .sitemap ul{ height:200px; border-left:1px solid #ddd; float:left; margin-top:30px; padding:0 95px 0 30px}
 .sitemapwrap .sitemap ul li{ height:28px}
 .sitemapwrap .sitemap ul .sitemap_tt{ margin-bottom:18px;}
 
 /* footer */
-#footerwrap{ background:url(../images/bottom_bg_02.png);height:100px; font-size:1em; width:100%; clear:both; overflow:hidden; position:absolute; bottom:0; overflow:hidden; }
+#footerwrap{ background:url(../images/bottom_bg_02.png);height:100px; font-size:1em; width:100%; clear:both; overflow:hidden; overflow:hidden; }
 #footerwrap #footer{margin:0 auto;width:1200px; position:relative;clear:both;}
 #footerwrap #footer .logo{ position:absolute; top:20px; left:0; cursor:pointer;}
 #footerwrap #footer .address{ position:absolute; top:30px; right:413px;}
@@ -27,8 +27,8 @@
 #container #contents .text{ width:1200px;  text-align:center; margin:auto;}
 
 #container{position:relative; overflow:hidden;}
-#container .visual_01{ background:url(../images/visual_01.png) top center;width:100%;margin:0 auto; height:1270px; }
-#container .visual_02{ background:url(../images/visual_02.png) top center;width:100%;margin:0 auto; height:1270px; }
-#container .visual_03{ background:url(../images/visual_03.png) top center;width:100%;margin:0 auto; height:1270px; }
+#container .visual_01{ background:url(../images/visual_01.jpg) top center;width:100%;margin:0 auto; height:1270px; }
+#container .visual_02{ background:url(../images/visual_02.jpg) top center;width:100%;margin:0 auto; height:1270px; }
+#container .visual_03{ background:url(../images/visual_03.jpg) top center;width:100%;margin:0 auto; height:1270px; }
 
 

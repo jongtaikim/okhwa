@@ -245,11 +245,11 @@ class reserve extends CI_Controller {
             for ($k=0; $k<7; $k++):
                 $to_day_type = '';
                 switch (  $k ) {
-                    case 6 :
+                    case 5 :
                         $ncolor = "color:blue";
-                         $to_day_type = " - 주말";
+                         $to_day_type = " - 주말(금)";
                         break ;
-                    case 0 :
+                    case 6 :
                         $ncolor = "color:red";
                         $to_day_type = " - 주말";
                         break ;
@@ -350,7 +350,7 @@ class reserve extends CI_Controller {
                 }else{
 
 
-                    $varprincname =  $to_day_type ;
+                  //  $varprincname =  $to_day_type ;
                 }
 
 

@@ -27,20 +27,20 @@
     .calendar .caltable button{ background-color:#fff; border:1px solid #ccc; color:#999; padding:4px; width:80px; margin-top:5px; cursor:pointer}
 </style>
 
-<div class="reserve_top" style="height:320px;background-position: center"></div>
+<div class="reserve_top" ></div>
 <div id="cont" style="padding-top: 60px">
 
    <div class="tit"><img src="/designs/<?=HOST?>/images/sub/reserve_tt.jpg"></div>
     <div class="cont" style="padding-top: 20px">
 
-
+<!--
         <ul class="reserve">
             <li><a href="#/user/reserve/index?no=1&tod=t&day=<?=date('Y-m-d')?>&str_year=<?=date('Y')?>&str_month=<?=date('m')?>&str_day=<?=date('d')?>"><img src="/designs/<?=HOST?>/images/sub/reserve_ban01.jpg"></a></li>
             <li><a href="#/user/reserve/index?no=5&tod=t&day=<?=date('Y-m-d')?>&str_year=<?=date('Y')?>&str_month=<?=date('m')?>&str_day=<?=date('d')?>"><img src="/designs/<?=HOST?>/images/sub/reserve_ban02.jpg"></a></li>
             <li><a href="#/user/reserve/index?no=9&tod=t&day=<?=date('Y-m-d')?>&str_year=<?=date('Y')?>&str_month=<?=date('m')?>&str_day=<?=date('d')?>"><img src="/designs/<?=HOST?>/images/sub/reserve_ban03.jpg"></a></li>
-        </ul>
+        </ul>-->
 
-<div class="card table-responsive  ">
+<div class="card   ">
 
     <div class="card-heading bg-light lt  pos_r">
 
@@ -58,9 +58,9 @@
 
 
                 <div class="month padding clearfix">
-                    <img src="/images/prev.jpg" onclick="InoutInList.leftdates()" style="cursor:pointer;" >
+                    <img src="/images/prev.jpg" onclick="InoutInList.leftdates()" style="cursor:pointer;margin-top:5px" >
                     <span id="temp_year">{year}</span>.<span id="temp_month">{month}</span>
-                    <img src="/images/next.jpg" onclick="InoutInList.rightdates()" style="cursor:pointer;">
+                    <img src="/images/next.jpg" onclick="InoutInList.rightdates()" style="cursor:pointer;margin-top:5px">
                 </div>
             </form>
             <br>

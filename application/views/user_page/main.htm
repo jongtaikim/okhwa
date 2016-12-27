@@ -23,7 +23,7 @@
         </li>-->
      </ul>
 
-    <div class=" pos_a pos_center_w"  style="top:22%">
+    <div class=" pos_a pos_center_w"  style="top:25%">
 
         <div class="text" ><img src="/designs/{HOST}/images/visuai_text.png"></div>
         <div class="navi m-t30" >
@@ -45,27 +45,12 @@
         $('#main_vis').carousel({  interval: 5000 }).on('slide.bs.carousel', function () {
             inits = 'y';
         });
+
+
     });
-
-
 
 </script>
 
-<div class="sitemapwrap">
-    <div class="sitemap">
-        {@ site_menu}
-        <ul>
-            <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_{=sprintf('%02d', (.index_+1))}.png"></li>
-            {@ .submenu}
-                 {? ..title2 !='PLAY GROUND' && ..title2 !='RESERVE CHECK'}
-                    <li><a href="{..link}" title="{..title}"><img src="/designs/{HOST}/images/sitemap_{=sprintf('%02d', (.index_+1))}_{=sprintf('%02d', (..index_+1))}.png"></a></li>
-                 {/}
-            {/}
-        </ul>
-        {/}
-
-    </div>
-</div>
 
 <!--
 <br>

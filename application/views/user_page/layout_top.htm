@@ -52,6 +52,7 @@
 </div>
 
 <script type="text/javascript">
+    var ov ='';
     $('.top_menu_item').each(function () {
         $(this).attr('eng',$(this).text());
     });
@@ -60,9 +61,15 @@
         var rs = $(this).children().children();
         if(!rs.attr('nc')) {
             rs.text(rs.attr('han')).attr('nc',1).delay(300).attr('nc','');
-            if(rs.attr('to_submenu')){
-                $('.to_submenu').hide();
-                $('.'+rs.attr('to_submenu')).show();
+            if(!ov) {
+                if (rs.attr('to_submenu')) {
+                    ov='1';
+                    $('.to_submenu').hide();
+                    $('.' + rs.attr('to_submenu')).show();
+                    setTimeout(function () {
+                        ov='';
+                    },500);
+                }
             }
         }
     },function () {

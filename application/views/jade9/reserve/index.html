@@ -1,7 +1,7 @@
 <style type="text/css" title="">
     #container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
 </style>
-<div class="reserve_top" style="height:{? !_GET.tod}420{:}320{/}px;background-position: center;"></div>
+<div class="reserve_top" ></div>
 <div id="cont" style="padding-top: 20px">
 
     <!-- <div class="tit"><img src="/designs/<?=HOST?>/images/sub/reserve_tt.jpg"></div>-->
@@ -25,9 +25,9 @@
                     <input type="hidden" name="str_day" id="str_day" value="{_GET.str_day}" />
 
                     <div class="month padding clearfix">
-                        <img src="/images/prev.jpg" onclick="InoutInList.leftdates()" style="cursor:pointer;" >
+                        <img src="/images/prev.jpg" onclick="InoutInList.leftdates()" style="cursor:pointer;margin-top:5px" >
                         <span id="temp_year"><?=date('Y')?></span>.<span id="temp_month"><?=date('m')?></span>
-                        <img src="/images/next.jpg" onclick="InoutInList.rightdates()" style="cursor:pointer;">
+                        <img src="/images/next.jpg" onclick="InoutInList.rightdates()" style="cursor:pointer;margin-top:5px">
                     </div>
                 </form>
                 <br>

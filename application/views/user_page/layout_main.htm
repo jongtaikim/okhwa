@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.7, maximum-scale=2, user-scalable=no">
     <meta name="description" content="">
 
-    <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <style type="text/css" title="">
         @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
         /* reset */
@@ -65,9 +65,28 @@
 <div id="wrap">
     <div id="container">
         <div id="contents" class="pos_r">
-            <div class="section" id="content-box">
+            <div class="section" id="content-box" style="min-height: 500px;">
 
             </div>
+
+
+
+            <div class="sitemapwrap" id="sitemapwrap">
+                <div class="sitemap">
+                    {@ site_menu}
+                    <ul>
+                        <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_{=sprintf('%02d', (.index_+1))}.png"></li>
+                        {@ .submenu}
+                        {? ..title2 !='PLAY GROUND' && ..title2 !='RESERVE CHECK'}
+                        <li><a href="{..link}" title="{..title}"><img src="/designs/{HOST}/images/sitemap_{=sprintf('%02d', (.index_+1))}_{=sprintf('%02d', (..index_+1))}.png"></a></li>
+                        {/}
+                        {/}
+                    </ul>
+                    {/}
+
+                </div>
+            </div>
+
         </div>
     </div>
 </div>
@@ -236,6 +255,7 @@ function popup_view(url,w,h){
                             $('#content-box').html(html);
                             bootbox.hideAll();
                             s_top();
+                            winset();
                         }
 
                     },
@@ -282,8 +302,14 @@ function popup_view(url,w,h){
     $(document).ready(function () {
         if (!window.location.hash) {
            window.location = "#/user/page/main";
+
+
             winset();
+        }else{
+
         }
+
+
     });
 
     function winset(){
@@ -291,6 +317,12 @@ function popup_view(url,w,h){
         $('.autoheight').height($(document).height());
         $('.pos_center').center();
         $('.pos_center_w').center_w();
+
+        if(window.location.hash=='#/user/page/main'){
+            $('#sitemapwrap').addClass('pos_a').css('bottom',0);
+        }else{
+            $('#sitemapwrap').removeClass('pos_a');
+        }
 
     }
 
