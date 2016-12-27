@@ -1,0 +1,35 @@
+<div class=" openEditorStyles" style="border:0px">
+    {? str_file_url2}
+    <div class="text-center m-b20 p-b20 " id="">
+        <img src="{str_file_url2}" alt="" style="max-width:600px" />
+    </div>
+    {/}
+
+    {? strstr(str_mov,'//youtu.be/')}
+    <?
+					$utb_code = {str_mov};
+					$utb_code_ = explode("youtu.be/",$utb_code);
+					$utb_codes = $utb_code_[1];
+					?>
+    <div class="text-center m-b20 p-b20 " id="">
+        <iframe width="860" height="615" src="https://www.youtube.com/embed/<?=$utb_codes?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
+    </div>
+    {/}
+    {str_text}
+</div>
+
+
+<script type="text/javascript">
+
+
+    $('.openEditorStyles').find('img').each(function(){
+        if($(this).width() >=300){
+            $(this).addClass('pointer');
+            $(this).click(function(){
+                d_alert('<div style="width:960px;height:600px;overflow:auto"><img src="'+$(this).attr('src')+'" style="max-width:960px;max-height:600px;border:3px solid #cdcdcd"></div>',960,600);
+            })
+        }
+    })
+
+
+</script>
