@@ -286,7 +286,7 @@ class reserve extends CI_Controller {
 
                        $btns = '  <a href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '" style="text-decoration: none" class="btn btn-default btn-xs">
                                         예약가능
-                                      </a>';
+                                      </a><span class="hide">'.$room_list[$ii]['no'].'</span>';
 
                     }
 
