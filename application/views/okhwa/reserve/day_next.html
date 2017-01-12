@@ -60,6 +60,7 @@
 
                         </select>
 
+
                             <script type="text/javascript">
                                 {? _GET.seongin_val}
                                     $('#seongin_val').val('{_GET.seongin_val}');
@@ -70,7 +71,9 @@
                                 {/}
                             </script>
 
-                            아동 <select name="adong_val" id="adong_val" onchange="InoutInList.viewnext(1);">
+
+
+                            {? room_info.add_human_price3 <1}추가인원{:}아동{/} <select name="adong_val" id="adong_val" onchange="InoutInList.viewnext(1);">
                             <option value="0" selected="">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -90,6 +93,8 @@
                                 $('#adong_val').val('{_GET.adong_val}');
                             </script>
                             {/}
+
+                            {? room_info.add_human_price3 >0}
                             유아 <select name="yua_val" id="yua_val" onchange="InoutInList.viewnext(1);">
                             <option value="0" selected="">0</option>
                             <option value="1">1</option>
@@ -109,6 +114,7 @@
                             <script type="text/javascript">
                                 $('#yua_val').val('{_GET.yua_val}');
                             </script>
+                            {/}
                             {/}
 
                             <input type="hidden" id="max_hum_to" value="{max_hum_to}"/>
