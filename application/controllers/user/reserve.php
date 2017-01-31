@@ -409,7 +409,7 @@ class reserve extends CI_Controller {
            
             $room_info = $this->db->where('no',$_GET['room_no'])->get('rooms')->row_array();
             if($room_info){
-                $data['op_info'] = $this->db->where_in('no',explode(",",$room_info['options']))->get('room_options')->result_array();
+                $data['op_info'] = $this->db->where_in('no',explode(",",$room_info['options']))->order_by('no','asc')->get('room_options')->result_array();
 
                 if($_GET['options']){
                     $options = $_GET['options'];
@@ -553,7 +553,7 @@ class reserve extends CI_Controller {
 
         if($_POST['options']){
 
-            $op_info = $this->db->where_in('no',$_POST['options'])->get('room_options')->result_array();
+            $op_info = $this->db->where_in('no',$_POST['options'])->order_by('text','asc')->get('room_options')->result_array();
 
             for($ii=0; $ii<count($op_info); $ii++) {
             	$opname .= $op_info[$ii]['name']." + ".$op_info[$ii]['price']."원 ,";

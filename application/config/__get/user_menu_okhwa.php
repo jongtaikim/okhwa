@@ -156,13 +156,13 @@ $menu[$cate1]['submenu'][$cate2]['link'] = "javascript:alert('페이지를 준�
 $cate1++;
 
 $menu[$cate1]['title'] = "실시간예약";
-$menu[$cate1]['title2'] = "RESERVE";
+$menu[$cate1]['title2'] = "RESERVATION";
 $menu[$cate1]['link'] = "#/user/reserve/lists2";;
 
 
 $cate2 = 0;
 $menu[$cate1]['submenu'][$cate2]['title'] = "실시간예약";
-$menu[$cate1]['submenu'][$cate2]['title2'] = "RESERVE";
+$menu[$cate1]['submenu'][$cate2]['title2'] = "RESERVATION";
 $menu[$cate1]['submenu'][$cate2]['w'] = "12%;margin-left:55%";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#/user/reserve/lists2";
 
