@@ -77,8 +77,8 @@
                     <ul>
                         <li class="sitemap_tt"><img src="/designs/{HOST}/images/sitemap_tt_{=sprintf('%02d', (.index_+1))}.png"></li>
                         {@ .submenu}
-                        {? ..title2 !='PLAY GROUND' && ..title2 !='RESERVE CHECK'}
-                        <li><a href="{..link}" title="{..title}"><img src="/designs/{HOST}/images/sitemap_{=sprintf('%02d', (.index_+1))}_{=sprintf('%02d', (..index_+1))}.png"></a></li>
+                        {?  ..title2 !='RESERVE CHECK'}
+                        <li><a href="{..link}" title="{..title}"><img src="/designs/{HOST}/images/sitemap_{=sprintf('%02d', (.index_+1))}_{=sprintf('%02d', (..index_+1))}.png?v=1"></a></li>
                         {/}
                         {/}
                     </ul>
