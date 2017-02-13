@@ -27,9 +27,9 @@
     $i++;
 
     $faq[$i]['q'] = "객실 내에 물품은 어떤 것들이 구비되어 있나요?";
-    $faq[$i]['a'] = "*욕실용품 - 샴프, 린스, 바디워시, 비누, 타올, 치약, 드라이기
+    $faq[$i]['a'] = "*욕실용품 - 샴프, 린스, 바디워시, 비누, 타올,  드라이기
         *주방용품 - 인덕션, 접시, 냄비, 컵, 식기도구,
-        *전자제품 - TV, 냉장고, 에어컨, 스크린, 빔프로젝트, 무선인터넷 등이 구비되어있습니다.
+        *전자제품 - TV, 냉장고, 에어컨, 무선인터넷 등이 구비되어있습니다.
         ";
     $i++;
 
@@ -41,7 +41,8 @@
     $i++;
 
     $faq[$i]['q'] = "주변 관광지가 있나요?";
-    $faq[$i]['a'] = "옥화 9경, 미동산 수목원, 속리산 국립공원, 수안보온천 등이 있습니다.";
+    $faq[$i]['a'] = "옥화 9경, 미동산 수목원, 속리산 국립공원, 수안보온천 등이 있습니다.
+    주변여행지 페이지를 확인하시면 더 정확한 정보를 얻으실수 있습니다.";
     $i++;
 
  
@@ -69,30 +70,31 @@
 
 
 
-                <div class="" id="accordion" style="width:100%;margin:20px auto;">
+            <div class="" id="accordion" style="width:100%;margin:20px auto;">
 
-                    <? for($ii=0; $ii<count($faq); $ii++) {?>
+                <? for($ii=0; $ii<count($faq); $ii++) {?>
 
 
-                    <div class=" box   b-b b-l b-r b-t">
-                        <div class="box-header padding b-b">
+                <div class=" box   b-b b-l b-r b-t">
+                    <div class="box-header padding b-b">
 
-                            <a data-toggle="collapse" data-parent="#accordion" data-target="#c_<?=$ii?>" aria-expanded="false" class="collapsed">
-                                Q: <strong class="h4"><?=$faq[$ii]['q']?></strong>
-                            </a>
-                        </div>
-                        <div id="c_<?=$ii?>" class="collapse " aria-expanded="false" style="height: 0px;">
-                            <div class="box-body padding" style="min-height:100px">
-                                <p class="h4" style="line-height:130%">
-                                    <span class="text-md pull-left w-32 m-r rounded success m-r20">A</span>
-                                    <?= nl2br($faq[$ii]['a'])?>
-                                </p>
-                            </div>
+                        <a data-toggle="collapse" data-parent="#accordion" data-target="#c_<?=$ii?>" aria-expanded="false" class="collapsed" >
+                            Q: <strong class="h4"><?=$faq[$ii]['q']?></strong>
+                        </a>
+                    </div>
+                    <div id="c_<?=$ii?>" class="collapse " aria-expanded="false" style="height: 0px;">
+                        <div class="box-body padding" style="min-height:100px">
+                            <p class="h4" style="line-height:130%">
+                            <div class="f_l " style="width:4%"><span class="text-md pull-left w-32 m-r rounded success m-r20">A</span></div>
+                            <div class="f_l"  style="width:90%;line-height: 120%;padding-bottom:20px"><?= nl2br($faq[$ii]['a'])?></div>
+
+                            </p>
                         </div>
                     </div>
-                    <?}?>
-
                 </div>
+                <?}?>
+
+            </div>
 
 
 

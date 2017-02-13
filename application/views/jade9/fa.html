@@ -1,7 +1,56 @@
+
+
 <style type="text/css" title="">
     #container #contents{ background-color:#fff; overflow:hidden; padding:133px 0 0 0}
 </style>
 
 <div class="{_GET.fa} animated fadeInUp">
-    <div class="text"><img src="images/sub/{_GET.fa}_txt.png"></div>
+    <div class="text"><img src="images/sub/{_GET.fa}_txt.png" usemap="#Map_{_GET.fa}_{HOST}"></div>
+    <map name="Map_{_GET.fa}_{HOST}" id="Map_{_GET.fa}_{HOST}">
+
+        <area shape="rect" coords="60,471,210,621" href='javascript:' onclick="javascript:$('#pt1').unbind('click').trigger('click');" />
+        <area shape="rect" coords="211,471,361,621" href='javascript:'  onclick="javascript:$('#pt2').unbind('click').trigger('click');" />
+        <area shape="rect" coords="60,622,210,772" href='javascript:'  onclick="javascript:$('#pt3').unbind('click').trigger('click');" />
+        <area shape="rect" coords="211,622,361,772"  href='javascript:'  onclick="javascript:$('#pt4').unbind('click').trigger('click');" />
+    </map>
+    </map>
 </div>
+
+
+<div class="row hide">
+    {? _GET.fa == 'bbq' }
+    <a href="/designs/fa/{_GET.fa}_{HOST}_01.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt1" onclick="$('#pt1').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_{HOST}_01.jpg" class="img-fluid">
+    </a>
+
+    <a href="/designs/fa/{_GET.fa}_{HOST}_02.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt2" onclick="$('#pt2').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_{HOST}_02.jpg" class="img-fluid">
+    </a>
+
+    <a href="/designs/fa/{_GET.fa}_{HOST}_03.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt3" onclick="$('#pt3').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_{HOST}_03.jpg" class="img-fluid">
+    </a>
+
+    <a href="/designs/fa/{_GET.fa}_{HOST}_04.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt4" onclick="$('#pt4').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_{HOST}_04.jpg" class="img-fluid">
+    </a>
+    {:}
+    <a href="/designs/fa/{_GET.fa}_01.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt1" onclick="$('#pt1').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_01.jpg" class="img-fluid">
+    </a>
+
+    <a href="/designs/fa/{_GET.fa}_02.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt2" onclick="$('#pt2').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_02.jpg" class="img-fluid">
+    </a>
+
+    <a href="/designs/fa/{_GET.fa}_03.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt3" onclick="$('#pt3').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_03.jpg" class="img-fluid">
+    </a>
+
+    <a href="/designs/fa/{_GET.fa}_04.jpg" data-toggle="lightbox" data-gallery="example-gallery" class="col-sm-4 cts" id="pt4" onclick="$('#pt4').ekkoLightbox()">
+        <img src="/designs/fa/{_GET.fa}_04.jpg" class="img-fluid">
+    </a>
+    {/}
+
+</div>
+

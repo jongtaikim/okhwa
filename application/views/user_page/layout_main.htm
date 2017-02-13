@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/uiset/assets/styles/now_to.css" type="text/css" />
 
     <link rel="stylesheet" href="/trunk/libs/jquery/bootstrap/dist/css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="/uiset/libs/jquery/lightbox/ekko-lightbox.css" type="text/css" />
 
 
     <link rel="stylesheet" href="./css/sub.css" type="text/css" />
@@ -187,6 +188,9 @@ function popup_view(url,w,h){
 <script type="text/javascript" src="/trunk/scripts/jquery.cookie.js"></script>
 <script type="text/javascript" src="/trunk/libs/jquery/bootbox/bootbox.js"></script>
 
+<script src="/uiset/libs/jquery/lightbox/ekko-lightbox.js"></script>
+
+
 <!-- endbuild -->
 
 <script type="text/javascript">
@@ -256,6 +260,9 @@ function popup_view(url,w,h){
                             bootbox.hideAll();
                             s_top();
                             winset();
+
+
+
                         }
 
                     },
@@ -333,6 +340,8 @@ function popup_view(url,w,h){
     $(window).resize(function(){
         winset();
     });
+
+
 
 
     jQuery.fn.center = function () {

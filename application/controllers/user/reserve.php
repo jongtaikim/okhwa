@@ -273,40 +273,40 @@ class reserve extends CI_Controller {
                 $tt = sprintf("%02d", $n++) ;
                 $udate = $year."-".$month."-".$tt ;
 
-                $room_txt='<div class="hide date_'.$udate.' text-center clearfix" style="overflow:auto">';
+
+                if(HOST != 'okhwa') {
+                    $room_txt = '<div class="hide date_' . $udate . ' text-center clearfix" style="overflow:auto">';
 
 
+                    for ($ii = 0; $ii < count($room_list); $ii++) {
 
+                        $room_list[$ii]['to_realpan'] = $this->db->where('todate <=', $udate)->where('lastdate >=', $udate)->where('room_no', $room_list[$ii]['no'])->get('realpans')->row_array();
 
-                for($ii=0; $ii<count($room_list); $ii++) {
+                        if (!$room_list[$ii]['to_realpan']) {
 
-                    $room_list[$ii]['to_realpan'] = $this->db->where('todate <=',$udate)->where('lastdate >=',$udate)->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
-
-                    if(!$room_list[$ii]['to_realpan']){
-
-                       $btns = '  <a href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '" style="text-decoration: none" class="btn btn-default btn-xs">
+                            $btns = '  <a href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '" style="text-decoration: none" class="btn btn-default btn-xs">
                                         예약가능
-                                      </a><span class="hide">'.$room_list[$ii]['no'].'</span>';
+                                      </a><span class="hide">' . $room_list[$ii]['no'] . '</span>';
 
-                    }
+                        }
 
-                    $room_txt .='
+                        $room_txt .= '
                         
                         <div class="col-sm-6 col-xs-6 col-md-3 col-lg-3">
                             <div class="panel panel-card box-shadow2">
-                                <div class="item" style="height:90px;background: url('.$room_list[$ii]['img_url'].');background-size:cover ">
+                                <div class="item" style="height:90px;background: url(' . $room_list[$ii]['img_url'] . ');background-size:cover ">
             
             
                                 </div>
             
                                 <div class="text-center">
                                     <div class="text-center p-t10">
-                                        <strong class="ft12">'.$room_list[$ii]['room_name'].' '.$room_list[$ii]['room_number'].'</strong>
+                                        <strong class="ft12">' . $room_list[$ii]['room_name'] . ' ' . $room_list[$ii]['room_number'] . '</strong>
                                     </div>
                                     <div style="p-b20">
                                         
                                         <div class="m-t10 ft10 p-b15 ">
-                                            '.$btns.'
+                                            ' . $btns . '
                                         </div>
                                         
                                     </div>
@@ -316,13 +316,41 @@ class reserve extends CI_Controller {
                         
                         ';
 
-                }
+                    }
 
-                if(date("Y-m-d")<=$udate) {
-                    $room_txt .= "</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('" . $udate . "');>예약하기</a></div>";
-                }else{
-                    $room_txt .= "</div>";
+                    if (date("Y-m-d") <= $udate) {
+                        $room_txt .= "</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('" . $udate . "');>예약하기</a></div>";
+                    } else {
+                        $room_txt .= "</div>";
+                    }
+
                 }
+                if(HOST == 'okhwa'){
+
+                    $room_txt='<div>';
+                    $room_txt .='<div class="hide date_'.$udate.' text-center clearfix" style="overflow:auto">';
+                    $room_txt .='
+                        <ul class="" style="width:100%">
+                            <li class="f_l" style="width:25%">
+                                <a href="#/user/reserve/index?no=13&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '"><img src="/designs/'.HOST.'/images/sub/reserve_ban01.jpg" width="100%"></a>
+                            </li>
+                            <li class="f_l" style="width:25%">
+                                <a href="#/user/reserve/index?no=17&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '"><img src="/designs/'.HOST.'/images/sub/reserve_ban02.jpg" width="100%"></a>
+                            </li>
+                            <li class="f_l" style="width:25%">
+                                <a href="#/user/reserve/index?no=25&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '"><img src="/designs/'.HOST.'/images/sub/reserve_ban03.jpg" width="100%"></a>
+                            </li>
+                            <li class="f_l" style="width:25%">
+                                <a href="#/user/reserve/index?no=33&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '"><img src="/designs/'.HOST.'/images/sub/reserve_ban04.jpg" width="100%"></a>
+                            </li>
+                        </ul>
+                </div>';
+
+                    $room_txt .= "</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('" . $udate . "');>예약하기</a></div>";
+                }
+                //href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '"
+                /*$room_txt = '
+                ';*/
 
                 $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
                 $sda = array_pop(explode("-",$varprice_row['start_date']));

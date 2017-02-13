@@ -24,10 +24,10 @@
                 <div class="col-md-12 m-t20" >
                     <table width="100%" border="0" cellpadding="0" cellspacing="0" class="m-b30">
                         <colgroup>
-                            <col width="15%">
+                            <col width="20%">
                             <col width="15%">
                             <col width="10%">
-                            <col width="30%">
+                            <col width="20%">
                             <col width="20%">
                             <col width="10%">
                         </colgroup>
@@ -51,9 +51,11 @@
                             <td>{room_info.human_min}/{room_info.human_max}</td>
                             <td>
 
-                                성인 <select name="seongin_val" id="seongin_val" onchange="InoutInList.viewnext(1);">
+                                {? room_info.add_human_price3 <1}{:}성인{/} <select name="seongin_val" id="seongin_val" onchange="InoutInList.viewnext(1);">
                                 <? for($ii=2; $ii<51; $ii++) {?>
-                                <option value="<?=$ii?>"><?=$ii?></option>
+                                    <? if($ii < {room_info.human_max+1}){?>
+                                     <option value="<?=$ii?>"><?=$ii?>명</option>
+                                    <?}?>
                                 <?}?>
 
 
@@ -72,7 +74,7 @@
                                 </script>
 
 
-
+                                {? room_info.add_human_price3 >0}
                                 {? room_info.add_human_price3 <1}추가인원{:}아동{/} <select name="adong_val" id="adong_val" onchange="InoutInList.viewnext(1);">
                                 <option value="0" selected="">0</option>
                                 <option value="1">1</option>
@@ -92,6 +94,7 @@
                                 <script type="text/javascript">
                                     $('#adong_val').val('{_GET.adong_val}');
                                 </script>
+                                {/}
                                 {/}
 
                                 {? room_info.add_human_price3 >0}
