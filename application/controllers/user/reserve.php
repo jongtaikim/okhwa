@@ -421,10 +421,10 @@ class reserve extends CI_Controller {
 
 
             //당일이 아닌경우! 12시간
-            $this->db->where('todate',$_GET['day'])->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-1440 minutes',time())))->delete('realpans');
+            $this->db->where('todate',$_GET['day'])->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-720 minutes',time())))->delete('realpans');
 
-            //당일! 3시간 지난 입금 예약 안되거 취소시켜
-            $this->db->where('todate',$_GET['day'])->where('created >=',$_GET['day']." 00:00:00")->where('created <=',$_GET['day']." 23:59:59")->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-180 minutes',time())))->delete('realpans');
+         /*   //당일! 3시간 지난 입금 예약 안되거 취소시켜
+            $this->db->where('todate',$_GET['day'])->where('created >=',$_GET['day']." 00:00:00")->where('created <=',$_GET['day']." 23:59:59")->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-180 minutes',time())))->delete('realpans');*/
 
 
 

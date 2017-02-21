@@ -63,6 +63,8 @@
                             </select>
 
 
+
+
                                 <script type="text/javascript">
                                     {? _GET.seongin_val}
                                     $('#seongin_val').val('{_GET.seongin_val}');
@@ -145,6 +147,11 @@
 
                             </td>
                         </tr>
+                        {? room_info.room_cp=='옥화용소절경'}
+                        <tr>
+                            <td colspan="6" class="ft12">숙박인원은 성인/ 청소년/ 미취학아동/ 유아(만 2세이상) 를 포함한 인원입니다.</td>
+                        </tr>
+                        {/}
                         </tbody>
                     </table>
                 </div>
@@ -153,11 +160,11 @@
                 <div class="clearfix m-b25 m-t30">
                     <div class="col-md-12 clearfix " >
                         <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
-                            <div class="col-md-2 col-xs-3 padding p-l30 p-r30 p-t51 p-b51" style=";text-align: center;background-color: #f6f6f6;;border: none;">옵션선택</div>
+                            <div class="col-md-2 col-xs-3 padding p-l30 p-r30  {? count(op_info)>2}p-t51 p-b51{:}p-t28 p-b21{/}" style=";text-align: center;background-color: #f6f6f6;;border: none;">옵션선택</div>
                             <div class="col-md-10 col-xs-9 padding p-t21 p-b21 " style=";border: none;">
                                 {@ op_info}
                                 <label style="font-bold:100">
-                                    <input type="checkbox" name="options[]" value="{.no}" {.checked} onchange="InoutInList.viewnext(1);"> {=str_replace('(강당)','',str_replace('(대형)','',str_replace('(소형)','',.name)))} ({.text})  + <strong>{=number_format(.price)}</strong>원
+                                    <input type="checkbox" name="options[]" value="{.no}" {.checked} onchange="InoutInList.viewnext(1);"> {=str_replace('(강당)','',str_replace('바비큐 (대형)','',str_replace('바비큐 (소형)','',.name)))} {.text}  + <strong>{=number_format(.price)}</strong>원
                                 </label>
                                 <br>
                                 {/}
@@ -205,7 +212,7 @@
 
                 <div class="clearfix m-b65 m-t0 col-md-12 text-center" >
 
-                    <a href="javascript:$('.step2').toggle();$('.step1').toggle();$('#name').focus();bootbox.alert('<div class=\'text-center padding\'>카드결제시 대표번호로 문의 주세요.<br><br>{phone}</div>')" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 다음단계</a>
+                    <a href="javascript:$('.step2').toggle();$('.step1').toggle();$('#name').focus();" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 다음단계</a>
 
                 </div>
             </div>
@@ -388,8 +395,10 @@
                             <p>* {this_price_name} {day_type} 요금
                                 <input type="hidden" name="price_name" value="{this_price_name} {day_type} 요금"/>
                             </p>
-                            <p>* 기준인원 초과시 1인당 성인 {=number_format(room_info.add_human_price)}원,취학아동 {=number_format(room_info.add_human_price2)}원,
-                                미취학아동{=number_format(room_info.add_human_price3)}원이 추가됩니다.</p>
+                            <p>*
+                                기준인원 초과시 1인당(성인/청소년/미취학아동/유아 포함) {=number_format(room_info.add_human_price)}원이 추가됩니다.
+
+                               </p>
                         </div>
                     </div>
                 </div>
@@ -437,7 +446,7 @@
 
                 <div class="col-md-12" >
                     <div class="b-t b-b b-r b-l clearfix" style="border-color:#ccc">
-                        <div class="f_l padding p-l30 p-r30 p-t41 p-b41" style="width:20%;;text-align: center;background-color: #eee;;border: none;">결제방법</div>
+                        <div class="f_l padding p-l30 p-r30 p-t66 p-b61" style="width:20%;;text-align: center;background-color: #eee;;border: none;">결제방법</div>
                         <div class="f_l padding p-t21" style="width:80%;;border: none;">
 
                             <div class="clearfix">
@@ -458,9 +467,22 @@
                                 <div class="col-md-4">
                                     <input type="text" name="bankname" id="bankname" required_text="입금예정자 성함을 입력하세요." required="required" class="form-control w200 inline " placeholder="입금예정자">
                                 </div>
-                                <div class="col-md-12">
-                                    <small>※ {? !to_in_day}예약 신청 후 12시간 내로 전액을 입금하셔야 예약이 완료 되며, 12시간이 경과되면 예약신청이 취소 됩니다.{:}당일 예약과 하루 전 예약은 예약 후 3시간 내에 결재를 완료해 주셔야 합니다.{/}</small>
+
+                                <div class="col-md-12 m-t10">
+                                    <small>※ 카드결제를 원하시는 분은 펜션 대표번호로 문의주십시오.</small>
                                 </div>
+                                <div class="col-md-12">
+                                    <small>※ {? !to_in_day}예약 신청 후 6시간 내로 전액을 입금하셔야 예약이 완료 되며, 6시간이 경과되면 예약신청이 취소 됩니다.{:}당일 예약과 하루 전 예약은 예약 후 6시간 내에 결재를 완료해 주셔야 합니다.{/}</small>
+                                </div>
+
+
+                                <div class="col-md-12">
+                                    <small>※ 예약자와 입금자가 상이할 경우, 예약확인에 차질이 생길 수 있습니다.
+                                        예약자와 입금자명을 동일하게 기입하여 주십시오.</small>
+                                </div>
+
+
+
                             </div>
                         </div>
                     </div>

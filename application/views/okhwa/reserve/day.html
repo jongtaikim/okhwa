@@ -25,6 +25,7 @@
                         <input type="radio" name="room_no1" class="room_{.room_no}" value="{.room_no}" {? .realpans}disabled="disabled"{/}" {? .checked}checked{/} onclick="$('#room_no').val('{.no}');$('#room_no2').val('{.no}'); InoutInList.viewnext({.no});">
                         <i class="dark-white "></i>
                     {? room_info.room_cp=='옥화용소절경'}{=str_replace('호','',.room_number)}{:}{.room_number}{/} {? .realpans}(예약불가){:}(예약가능){/}
+
                     </label>
                 </div>
             </div>
@@ -37,7 +38,7 @@
                 {/}
             {/}
             {? room_info.room_cp=='옥화용소절경'}
-            <div class="col-md-12 ft12 m-t10" >“방 숫자는 항 호수가 아닙니다. 방 호수 배정은 입실 시 지정됩니다. 원하시는 방 호수가 있으실 경우에 문의 바랍니다.”</div>
+            <div class="col-md-12 ft12 m-t10" >“방 숫자는 방 호수가 아닙니다. 방 호수 배정은 입실 시 지정됩니다. 원하시는 방 호수가 있으실 경우에 문의 바랍니다.”</div>
             {/}
         </div>
 
