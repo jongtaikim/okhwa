@@ -9,7 +9,7 @@
 
         ?>
         <li>
-            <a href="#/user/page/p?designs=jade9&p=room_c&number=<?=$number?>" onclick="s_top()">
+            <a href="#/user/page/p?designs=jade9&p=room_c<?if($number>200){?>2<?}?>&number=<?=$number?>" onclick="s_top()">
                 <? if($_GET['number']==$number){?>
                     <img src="images/sub/room/tab_C0<?=$ii?>_on.png"  >
                 <?}else{?>
