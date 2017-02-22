@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9453e050-e17b-41a4-9c37-eebce91478f0" name="Default" comment="dsfdsf">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/jade9/room_c2.html" />
+    <list default="true" id="9453e050-e17b-41a4-9c37-eebce91478f0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/fa/pool_01.jpg" afterPath="$PROJECT_DIR$/designs/fa/pool_01.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/fa/pool_02.jpg" afterPath="$PROJECT_DIR$/designs/fa/pool_02.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/jade9/images/sub/setting_a.jpg" afterPath="$PROJECT_DIR$/designs/jade9/images/sub/setting_a.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/jade9/images/sub/setting_b.jpg" afterPath="$PROJECT_DIR$/designs/jade9/images/sub/setting_b.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/jade9/images/sub/setting_c.jpg" afterPath="$PROJECT_DIR$/designs/jade9/images/sub/setting_c.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/jade9/images/sub/setting_top.jpg" afterPath="$PROJECT_DIR$/designs/jade9/images/sub/setting_top.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/fa/pool_03.jpg" afterPath="$PROJECT_DIR$/designs/fa/pool_03.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/fa/pool_04.jpg" afterPath="$PROJECT_DIR$/designs/fa/pool_04.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/c_room_tab.html" afterPath="$PROJECT_DIR$/application/views/jade9/c_room_tab.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/room_c.html" afterPath="$PROJECT_DIR$/application/views/jade9/room_c.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/okhwa/guide.html" afterPath="$PROJECT_DIR$/application/views/okhwa/guide.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/designs/jade9/room_c202.html" afterPath="$PROJECT_DIR$/designs/jade9/room_c202.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/okhwa/faq.html" afterPath="$PROJECT_DIR$/application/views/okhwa/faq.html" />
     </list>
     <list id="aac9ecc5-750b-4b9f-b616-c2f5be7f943e" name="New changelist" comment="" />
     <ignored path="okhwa.iws" />
@@ -201,31 +195,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="room_c2.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="room_c2.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/jade9/room_c2.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="c_room_tab.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/jade9/c_room_tab.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="510">
+              <caret line="26" column="78" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="faq.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/designs/okhwa/faq.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="faq.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/okhwa/faq.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+            <state relative-caret-position="680">
+              <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
@@ -238,11 +232,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="day.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/okhwa/reserve/day.html">
+      <file leaf-file-name="c_room_tab.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/jade9/c_room_tab.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="340">
+              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -306,7 +300,6 @@
         <option value="$PROJECT_DIR$/application/views/okhwa/reserve/list2.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/reserve/list2.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/faq.html" />
-        <option value="$PROJECT_DIR$/application/views/okhwa/faq.html" />
         <option value="$PROJECT_DIR$/application/views/okhwa/reserve/day.html" />
         <option value="$PROJECT_DIR$/application/views/reserve/day_next.html" />
         <option value="$PROJECT_DIR$/application/controllers/user/reserve.php" />
@@ -314,6 +307,7 @@
         <option value="$PROJECT_DIR$/designs/jade9/room_c202.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/room_c.html" />
         <option value="$PROJECT_DIR$/application/views/jade9/c_room_tab.html" />
+        <option value="$PROJECT_DIR$/application/views/okhwa/faq.html" />
       </list>
     </option>
   </component>
@@ -422,6 +416,10 @@
               <option name="myItemId" value="designs" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -451,11 +449,51 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="designs" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa.git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa.git" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa.git" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa.git" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="application" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="okhwa" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -602,7 +640,7 @@
       <workItem from="1486962108917" duration="10312000" />
       <workItem from="1487125569482" duration="667000" />
       <workItem from="1487660260498" duration="3777000" />
-      <workItem from="1487667830555" duration="2788000" />
+      <workItem from="1487667830555" duration="4686000" />
     </task>
     <task id="LOCAL-00001" summary="dsfdsf">
       <created>1482604831243</created>
@@ -674,18 +712,25 @@
       <option name="project" value="LOCAL" />
       <updated>1487664425329</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="dsfdsf">
+      <created>1487729757703</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1487729757703</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87972000" />
+    <option name="totallyTimeSpent" value="89870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="2" width="1932" height="1045" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2719017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27136752" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -726,13 +771,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/controllers/admin/realpans.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7021">
-          <caret line="413" column="81" selection-start-line="408" selection-start-column="7" selection-end-line="413" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/designs/okhwa/css/default.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
@@ -980,10 +1018,10 @@
         <state relative-caret-position="578">
           <caret line="34" column="47" selection-start-line="34" selection-start-column="47" selection-end-line="34" selection-end-column="47" />
           <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#img#1;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
             <marker date="1486973051547" expanded="true" signature="4235:4249" ph="..." />
           </folding>
         </state>
@@ -1004,26 +1042,11 @@
         <state relative-caret-position="289">
           <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/okhwa/faq.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="35" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1192,9 +1215,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/jade9/room_c2.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="510">
+          <caret line="26" column="78" selection-start-line="26" selection-start-column="78" selection-end-line="26" selection-end-column="78" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/designs/okhwa/faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/okhwa/faq.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#2;n#div#1;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
