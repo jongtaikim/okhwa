@@ -1,6 +1,6 @@
 <div style="width:1124px">
     <form id="item-form">
-<div class="col-md-6">
+<div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-heading bg-white">
           <i class=" glyphicon  glyphicon-home"></i>
@@ -15,11 +15,11 @@
             </div>
 
 
-		 <div class="form-group">
+		 <!--<div class="form-group">
               <label for="str_title">홈페이지 타이틀</label>
 			 <input type="text" name="str_title" hname="홈페이지 타이틀" size="50" maxbyte="100" value="{str_title}" class="form-control"><br>
 			<div style="margin-top:-15px">* 홈페이지 접속시 브라이저 상단에 나타나는 제목입니다.</div>
-            </div>
+            </div>-->
 
 
             <div class="form-group">
@@ -96,10 +96,25 @@
               </div>
 
 
+              <div class="form-group">
+                  <label for="str_fax">결제안내(계좌번호)</label>
+                  <input type="text" name="str_bank" hname="계좌번호" value="{str_bank}"  trim="trim" class="form-control">
+              </div>
+
+              <div class="form-group">
+                  <label for="str_pickup">픽업 이용 여부</label>
+                  <select name="str_pickup" id="str_pickup" class="form-control">
+                      <option value="Y">가능</option>
+                      <option value="N">픽업 불가능</option>
+                  </select>
+                  <script type="text/javascript">
+                      {? str_pickup}$('#str_pickup').val('{str_pickup}');{/}
+                  </script>
+              </div>
 
 
 
-              <button type="button"  class="btn btn-dark m-b waves-effect">저장하기</button>
+              <button type="submit"  class="btn btn-dark m-b waves-effect">저장하기</button>
         
         </div>
       </div>
@@ -108,46 +123,13 @@
 
 
 
-<div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading bg-white">
-          <i class=" glyphicon   glyphicon-user"></i>
-	    
-	    환경설정<br>
-          <small class="text-muted">사이트에서 사용되는 주요 중요 정보를 설정합니다.</small>
-        </div>
-        <div class="panel-body">
 
-            <div class="form-group">
-                <label for="str_fax">결제안내(계좌번호)</label>
-                <input type="text" name="str_bank" hname="계좌번호" value="{str_bank}"  trim="trim" class="form-control">
-            </div>
-
-		 <div class="form-group">
-              <label for="str_pickup">픽업 이용 여부</label>
-             <select name="str_pickup" id="str_pickup" class="form-control">
-             	<option value="Y">가능</option>
-             	<option value="N">픽업 불가능</option>
-             </select>
-            <script type="text/javascript">
-                {? str_pickup}$('#str_pickup').val('{str_pickup}');{/}
-            </script>
-            </div>
-
-
-            
-
-            <button type="buutton" class="btn btn-dark m-b waves-effect">저장하기</button>
-          </form>
-        </div>
-      </div>
-    </div>
 
 
 <div class="col-md-12">
 	<div class="panel panel-default">
 		  <div class="panel-heading bg-white">
-		   ㆍ 기본 정보는 홈페이지 하단에 표출되는 정보입니다. 입력에 신중을 기해주시기 바랍니다.<br>
+		            <!--ㆍ 기본 정보는 홈페이지 하단에 표출되는 정보입니다. 입력에 신중을 기해주시기 바랍니다.<br>-->
 				ㆍ홈페이지 기본 정보는  웹브라우저(ie,firefox 등)에서 표출 되는 정보이며, 검색엔진에 등록되는 정보입니다.<br>
 				ㆍ관리자 정보는 항상 최신화되어야 홈페이지의  '운영 및 관리’가 수월하게 이루어질 수 있습니다.<br>
 		  </div>

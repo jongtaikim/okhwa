@@ -77,10 +77,10 @@ $menu[$cate1]['icon'] = "glyphicon  glyphicon-inbox";
 
 
 $cate2 = 0;
-$menu[$cate1]['submenu'][$cate2]['title'] = "메뉴관리";
+/*$menu[$cate1]['submenu'][$cate2]['title'] = "메뉴관리";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/menu_adm/menu/frame";
 
-$cate2++;
+$cate2++;*/
 $menu[$cate1]['submenu'][$cate2]['title'] = "게시판 관리";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#admin/menu_adm/menu/board";
 
