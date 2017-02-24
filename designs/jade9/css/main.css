@@ -2,9 +2,9 @@
 /* CSS Document */
 
 /* sitemap */
-.sitemapwrap{ background:url(../images/bottom_bg_01.png);height:269px;width:100%;margin:0 auto;  overflow:hidden;}
+.sitemapwrap{ background:url(../images/bottom_bg_01.png);height:300px;width:100%;margin:0 auto;  overflow:hidden;}
 .sitemapwrap .sitemap{ width:1200px; margin:auto; text-align:left;}
-.sitemapwrap .sitemap ul{ height:200px; border-left:1px solid #ddd; float:left; margin-top:30px; padding:0 95px 0 30px}
+.sitemapwrap .sitemap ul{ height:200px; border-left:1px solid #ddd; float:left; margin-top:30px; padding:0 91px 0 30px}
 .sitemapwrap .sitemap ul li{ height:28px}
 .sitemapwrap .sitemap ul .sitemap_tt{ margin-bottom:18px;}
 

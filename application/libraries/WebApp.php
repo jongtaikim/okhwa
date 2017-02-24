@@ -38,8 +38,24 @@ class WebApp  {
 		}
 
 
-        $hosts_t = explode(".",$_SERVER['HTTP_HOST']);
-        define('HOST', $hosts_t[0]);
+        /*
+         * www.resortstay.co.kr (신규 구매)
+
+            www.jadenine.co.kr (신규 구매)
+
+            www.okhwapension.com/ (기존 사용)
+         * */
+
+        if(strstr($_SERVER['HTTP_HOST'],'jadenine.co.kr')){
+            define('HOST', 'jade9');
+        }else if(strstr($_SERVER['HTTP_HOST'],'okhwapension.com')){
+            define('HOST', 'okhwa');
+        }else {
+            $hosts_t = explode(".", $_SERVER['HTTP_HOST']);
+            define('HOST', $hosts_t[0]);
+        }
+
+
         define('THEME', $theme_set);
 		define('_SITEID', $CI->config->item('siteid'));
 		define('_DOC_ROOT', $CI->config->item('document_root'));

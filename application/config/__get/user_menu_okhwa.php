@@ -189,9 +189,9 @@ $menu[$cate1]['link'] = "#/user/board/list_view/1010";
 
 
 $cate2 = 0;
-$menu[$cate1]['submenu'][$cate2]['title'] = "공지사항";
-$menu[$cate1]['submenu'][$cate2]['title2'] = "NOTICE";
-$menu[$cate1]['submenu'][$cate2]['w'] = "8%;margin-left:70%";
+$menu[$cate1]['submenu'][$cate2]['title'] = "공지사항&포토갤러리";
+$menu[$cate1]['submenu'][$cate2]['title2'] = "NOTICE&PHOTO GALLERY";
+$menu[$cate1]['submenu'][$cate2]['w'] = "20%;margin-left:60%";
 $menu[$cate1]['submenu'][$cate2]['link'] = "#/user/board/list_view/1110";
 
 $cate2++;
