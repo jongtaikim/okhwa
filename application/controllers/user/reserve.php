@@ -195,6 +195,12 @@ class reserve extends CI_Controller {
 
     function lists2() {
 
+
+        $this->db->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-720 minutes',time())))->delete('realpans');
+
+        //당일! 3시간 지난 입금 예약 안되거 취소시켜
+        $this->db->where('todate',date("Y-m-d"))->where('created >=',date("Y-m-d")." 00:00:00")->where('created <=',date("Y-m-d")." 23:59:59")->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-180 minutes',time())))->delete('realpans');
+
         //http://okhwa.it-company.kr/#/user/reserve/lists2?room_cp=제이드나인
         //http://okhwa.it-company.kr/#/user/reserve/lists2?room_cp=옥화용소절경
 
@@ -271,6 +277,7 @@ class reserve extends CI_Controller {
 
 
                 $tt = sprintf("%02d", $n++) ;
+
                 $udate = $year."-".$month."-".$tt ;
 
 
@@ -279,7 +286,7 @@ class reserve extends CI_Controller {
 
 
                     for ($ii = 0; $ii < count($room_list); $ii++) {
-
+                        unset($btns);
                         $room_list[$ii]['to_realpan'] = $this->db->where('todate <=', $udate)->where('lastdate >=', $udate)->where('room_no', $room_list[$ii]['no'])->get('realpans')->row_array();
 
                         if (!$room_list[$ii]['to_realpan']) {
@@ -288,6 +295,10 @@ class reserve extends CI_Controller {
                                         예약가능
                                       </a><span class="hide">' . $room_list[$ii]['no'] . '</span>';
 
+                        }else{
+                            $btns = '  <a style="text-decoration: none;color:red" class="btn btn-default btn-xs" style="">
+                                        예약불가
+                                      </a><span class="hide">' . $room_list[$ii]['no'] . '</span>';
                         }
 
                         $room_txt .= '
@@ -301,7 +312,7 @@ class reserve extends CI_Controller {
             
                                 <div class="text-center">
                                     <div class="text-center p-t10">
-                                        <strong class="ft12">' . $room_list[$ii]['room_name'] . ' ' . $room_list[$ii]['room_number'] . '</strong>
+                                        <strong class="ft12">'.$udate.'<br>' . $room_list[$ii]['room_name'] . ' ' . $room_list[$ii]['room_number'] . '</strong>
                                     </div>
                                     <div style="p-b20">
                                         
@@ -320,6 +331,8 @@ class reserve extends CI_Controller {
 
                     if (date("Y-m-d") <= $udate) {
                         $room_txt .= "</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('" . $udate . "');>예약하기</a></div>";
+
+
                     } else {
                         $room_txt .= "</div>";
                     }
@@ -346,7 +359,11 @@ class reserve extends CI_Controller {
                         </ul>
                 </div>';
 
-                    $room_txt .= "</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('" . $udate . "');>예약하기</a></div>";
+                    if (date("Y-m-d") <= $udate) {
+                        $room_txt .= "</div><div class='text-center'><a  class='btn btn-sm btn-default' href=javascript:view_day('" . $udate . "');>예약하기</a></div>";
+                    } else {
+                        $room_txt .= "</div>";
+                    }
                 }
                 //href="#/user/reserve/index?no=' . $room_list[$ii]['no'] . '&day=' . $udate . '&str_year=' . $year . '&str_month=' . $month . '&str_day=' . $tt . '"
                 /*$room_txt = '
@@ -420,11 +437,11 @@ class reserve extends CI_Controller {
             }
 
 
-            //당일이 아닌경우! 12시간
-            $this->db->where('todate',$_GET['day'])->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-720 minutes',time())))->delete('realpans');
+            //당일이 아닌경우! 6시간
+            $this->db->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-720 minutes',time())))->delete('realpans');
 
-         /*   //당일! 3시간 지난 입금 예약 안되거 취소시켜
-            $this->db->where('todate',$_GET['day'])->where('created >=',$_GET['day']." 00:00:00")->where('created <=',$_GET['day']." 23:59:59")->where('room_no',$_GET['room_no'])->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-180 minutes',time())))->delete('realpans');*/
+            //당일! 3시간 지난 입금 예약 안되거 취소시켜
+            $this->db->where('todate',date("Y-m-d"))->where('created >=',date("Y-m-d")." 00:00:00")->where('created <=',date("Y-m-d")." 23:59:59")->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-180 minutes',time())))->delete('realpans');
 
 
 
@@ -435,7 +452,7 @@ class reserve extends CI_Controller {
 
             $data['to_realpan'] =  $this->db->where('todate',$_GET['day'])->where('room_no',$_GET['room_no'])->get('realpans')->row_array();
            
-            $room_info = $this->db->where('no',$_GET['room_no'])->get('rooms')->row_array();
+
             if($room_info){
                 $data['op_info'] = $this->db->where_in('no',explode(",",$room_info['options']))->order_by('no','asc')->get('room_options')->result_array();
 
@@ -628,12 +645,95 @@ class reserve extends CI_Controller {
             	$in_data['created'] = date("y-m-d H:i:s");
 
                 $this->db->insert('realpans',$in_data);
+
+
+
+
+
             }
+            $oinfo = $this->db->get('tab_organ')->row_array();
+            if($oinfo['STR_EMAIL']) {
+                $email = $oinfo['STR_EMAIL'];
+            }else{
+                $email = $oinfo['str_email'];
+            }
+/*
+
+
+            $this->load->library('email');
+            $this->email->from('noreply@it-compay.kr','펜션관리자');
+            $this->email->to($email);
+
+            $this->email->subject('신규예약이 들어왔습니다. - '.$in_data['name'] );
+*/
+
+            $msg_text .= '['.$in_data['room_cp'].'] 신규예약이 들어왔습니다.
+            
+';
+            $msg_text .= "예약정보 : ".$in_data['room_cp']." ".$in_data['room_name']." ".$in_data['room_number']."
+";
+            $msg_text .= "예약자 : ".$in_data['name']."
+";
+            $msg_text .= "날짜 : ".$in_data['startdate']."~".$in_data['lastdate']."
+";
+
+            $msg_text .= "입금예정자 : ".$in_data['bankname']."
+";
+
+
+         /*   $this->email->message($msg_text);
+
+            $this->email->send();*/
+
+            /*$bot_info = json_decode(file_get_contents('https://api.telegram.org/bot314765110:AAG09gfr4x1ephvZHoEbqwtRKask0OP6M0k/getUpdates'),true);
+            for($ii=0; $ii<count($bot_info['result']); $ii++) {
+
+            }*/
+            $bot = file_get_contents('https://api.telegram.org/bot314765110:AAG09gfr4x1ephvZHoEbqwtRKask0OP6M0k/sendmessage?chat_id=-215602523&text='.urlencode($msg_text));
 
             $this->_send_json('', 200, '예약이 완료되었습니다.');
         }
     }
-    
+
+
+    function email_test(){
+
+        $oinfo = $this->db->get('tab_organ')->row_array();
+        if($oinfo['STR_EMAIL']) {
+            $email = $oinfo['STR_EMAIL'];
+        }else{
+            $email = $oinfo['str_email'];
+        }
+
+        echo $email;
+
+
+        $this->load->library('email');
+
+
+        $this->email->from('noreply@it-compay.kr','펜션관리자');
+        $this->email->to($email);
+
+        $this->email->subject('신규예약이 들어왔습니다. - '.$in_data['name'] );
+
+
+        $msg_text .= "예약자 : ".$in_data['name']."
+";
+        $msg_text .= "날짜 : ".$in_data['startdate']."~".$in_data['lastdate']."
+";
+        $msg_text .= "예약정보 : ".$in_data['room_cp']." ".$in_data['room_name']." ".$in_data['room_number']."
+";
+        $msg_text .= "입금예정자 : ".$in_data['bankname']."
+";
+
+
+        $this->email->message($msg_text);
+
+        $this->email->send();
+
+        echo $this->email->print_debugger();
+
+    }
 
     function dateweeks( $srt_date , $end_date ) {
 

@@ -112,6 +112,7 @@
                 type: 'POST',
                 url: '/user/reserve/lists',
                 data : _data,
+                cache:false,
                 dataType : "html", //전송받을 데이터의 타입
                 success : function(jsondata) {
                     $('#search_result').html(jsondata) ;
@@ -133,7 +134,8 @@
             $.ajax({
                 type: 'GET',
                 url: '/user/reserve/day',
-                data : _data+"&toda="+toda+'&'+_data2,
+                cache:false,
+                data : _data+"&toda="+toda+'&'+_data2+'&v='+date("Ymdhis"),
                 dataType : "html", //전송받을 데이터의 타입
                 success : function(jsondata) {
 
@@ -156,7 +158,8 @@
             $.ajax({
                 type: 'GET',
                 url: '/user/reserve/day',
-                data : "day="+day+'&room_no={_GET.no}',
+                cache:false,
+                data : "day="+day+'&room_no={_GET.no}&v='+date("Ymdhis"),
                 dataType : "html", //전송받을 데이터의 타입
                 success : function(html) {
                     $('#day_info').html(html) ;

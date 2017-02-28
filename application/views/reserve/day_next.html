@@ -212,7 +212,7 @@
 
                 <div class="clearfix m-b65 m-t0 col-md-12 text-center" >
 
-                    <a href="javascript:$('.step2').toggle();$('.step1').toggle();$('#name').focus();" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 다음단계</a>
+                    <a href="javascript:" onclick="$('.step2').toggle();$('.step1').toggle();$('#name').focus();" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 다음단계</a>
 
                 </div>
             </div>
@@ -493,8 +493,8 @@
 
             <div class="clearfix m-b65 m-t0 col-md-12 text-center" >
 
-                <a href="javascript:$('.step2').toggle();$('.step1').toggle();" class="btn-lg btn btn-white white"> 예약수정</a>
-                <a href="javascript:reserve_cp()" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 예약확정</a>
+                <a href="javascript:" onclick="$('.step2').toggle();$('.step1').toggle();" class="btn-lg btn btn-white white"> 예약수정</a>
+                <a href="javascript:" onclick="reserve_cp()" class="btn-lg btn dark"><i class="fa fa-clock-o" aria-hidden="true"></i> 예약확정</a>
 
             </div>
 
@@ -546,7 +546,7 @@
 
             bootbox.confirm({
                 title:'예약 확정하기',
-                message: "<div class='padding'><strong>예약을 확정하시겠습니까?</strong><br>{? !to_in_day}(예약 신청 후 12시간 내로 전액을 입금하셔야 예약이 완료 되며, 12시간이 경과되면 예약신청이 취소 됩니다.){:}(당일 예약과 하루 전 예약은 예약 후 3시간 내에 결재를 완료해 주셔야 합니다.){/}</div>",
+                message: "<div class='padding'><strong>예약을 확정하시겠습니까?</strong><br>{? !to_in_day}(예약 신청 후 6시간 내로 전액을 입금하셔야 예약이 완료 되며, 6시간이 경과되면 예약신청이 취소 됩니다.){:}(당일 예약과 하루 전 예약은 예약 후 3시간 내에 결재를 완료해 주셔야 합니다.){/}</div>",
                 buttons: {
                     confirm: {
                         label: '예약 확정',

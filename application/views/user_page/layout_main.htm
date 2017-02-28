@@ -248,6 +248,7 @@ function popup_view(url,w,h){
                 $.ajax({
                     type: 'get',
                     url: url,
+                    cache:false,
                     data: {},
                     dataType: 'html',
                     error: function(xhr, e){

@@ -204,8 +204,8 @@ class Realpans extends Scaffolder
         //합계 데이터
         $t_data = $this->db->select(' room_cp, room_name,  count(*) as cu ')->group_by("room_name")->from('rooms')->order_by('room_cp, room_name','asc')->get()->result_array();
         for($ii=0; $ii<count($t_data); $ii++) {
-            $t_data[$ii]['to_realpan']  = $this->db->set('name')->where('todate >=',date('Y-m-d',$time))->where('todate <=',date('Y-m-d',$time2))->where('room_name',$t_data[$ii]['room_name'])->group_by('name')->get('realpans')->result_array();
-            
+            $t_data[$ii]['to_realpan']  = $this->db->set('name')->where('todate >=',date('Y-m-d',$time))->where('todate <=',date('Y-m-d',$time2))->where('room_name',$t_data[$ii]['room_name'])->get('realpans')->result_array();
+
             $to_total = $to_total + count($t_data[$ii]['to_realpan']);
             
         }
@@ -284,13 +284,12 @@ class Realpans extends Scaffolder
                       
 
                         if($room_list[$ii]['to_realpan']['pay_state'] == 'N'){
-                            $room_txt .='<div class="m-t15 ft10 p-l10">
-                                                    <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)"><span class="label blue">입금대기 :  '
-                                                    . $room_list[$ii]['to_realpan']['name'].' :  <span style="color:#">'.$room_list[$ii]['room_number'].'</span></a> </span></div>';
+                            $room_txt .='<div class="blue m-b10 r p-l10 p-b10 m-l5 m-r5"><a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)"><span >  '
+                                                    .' <br><span style="color:#">'.$room_list[$ii]['room_cp']."<br>".$room_list[$ii]['room_name']." ".$room_list[$ii]['room_number'].'</span><div class="b-t" style="margin-left:-10px;padding-left:10px;padding-top:10px;;margin-top:5px">'. $room_list[$ii]['to_realpan']['name'].' : <strong>입금대기</strong><br>'.$this->to_phone($room_list[$ii]['to_realpan']['phone']).'</div></a> </div>';
                         }else{
-                            $room_txt .='<div class="m-t15 ft10 p-l10">
-                                <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)"><span class="label red">입금완료 : '. $room_list[$ii]['to_realpan']['name'].' : 
-                                 <span style="color:#">'.$room_list[$ii]['room_number'].'</span></a> </span></div>';
+                            $room_txt .='<div class="red  m-b10 r p-l10 p-b10 m-l5 m-r5">
+                                <a href="javascript:view_reserve('.$room_list[$ii]['to_realpan']['no'].',\''.$room_list[$ii]['to_realpan']['pay_state'].'\',jsondata)"><br><span class=" ">'. ' 
+                                 <span style="color:#">'.$room_list[$ii]['room_cp']."<br>".$room_list[$ii]['room_name']." ".$room_list[$ii]['room_number'].'</span><div  class="b-t" style="margin-left:-10px;padding-left:10px;padding-top:10px;margin-top:5px">'.$room_list[$ii]['to_realpan']['name'].' : <strong>입금완료</strong><br>'.$this->to_phone($room_list[$ii]['to_realpan']['phone']).'</div></a> </div>';
                         }
 
 
@@ -361,6 +360,14 @@ class Realpans extends Scaffolder
         echo $content;
     }
 
+
+    function to_phone($phone){
+        if(strlen($phone>10)) {
+            return substr($phone, 0, 3) . '-' . substr($phone, 3, 4) . '-' . substr($phone, 7, 4);
+        }else{
+            return substr($phone, 0, 3) . '-' . substr($phone, 3, 3) . '-' . substr($phone, 6, 4);
+        }
+    }
 
     public function list_json()
     {

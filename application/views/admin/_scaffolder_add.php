@@ -32,10 +32,13 @@ $(document).ready(function (){
                         bootbox.alert(word+"하였습니다.",function () {
                             bootbox.hideAll();
                             if(strstr(location.hash,"?")){
-                                document.location.href=location.hash+"&v="+date("YmdHis");
+                            //    document.location.href=location.hash+"&v="+date("YmdHis");
                             }else{
-                                document.location.href=location.hash+"?v="+date("YmdHis");
+                              //  document.location.href=location.hash+"?v="+date("YmdHis");
                             }
+
+                            location.reload();
+
 
                         });
 
@@ -77,10 +80,12 @@ $(document).ready(function (){
                         bootbox.alert("삭제 하였습니다.",function () {
                             bootbox.hideAll();
                             if(strstr(location.hash,"?")){
-                                document.location.href=location.hash+"&v="+date("YmdHis");
+                            //    document.location.href=location.hash+"&v="+date("YmdHis");
                             }else{
-                                document.location.href=location.hash+"?v="+date("YmdHis");
+                              //  document.location.href=location.hash+"?v="+date("YmdHis");
                             }
+
+                            location.reload();
                         });
 					}
 				}
@@ -196,8 +201,9 @@ if(!$to_col_mo) $to_col_mo = '6';
 
                     <div class="controls text-right col-md-12  p-t15 m-t5">
                         <hr/>
-
+                        <? if($enable_add){?>
                         <button type="button" id="del-button" class="btn btn-danger f_l" <?=$is_edit?"":"style='display:none'"?>><i class="icon-warning-sign"></i> 삭제하기</button>
+                        <?}?>
 
 
                         <a href="javascript:" class="btn btn-default bootbox-close-button f_r">취소</a>

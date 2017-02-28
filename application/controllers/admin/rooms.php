@@ -68,8 +68,8 @@ class Rooms extends Scaffolder
         $this->data['top_text'] = "객실별 가격설정 및 인원정보를 세팅합니다.";
 
         $this->data['one_page'] = true;
-        $this->data['enable_add'] = true;
-        
+        $this->data['enable_add'] = false;
+
 
         //-----------define fields-------------------------------------------
         // 속성값은 scaffoler.php의 상단 주석 참고.
@@ -84,7 +84,7 @@ class Rooms extends Scaffolder
         $cps['옥화용소절경'] = '옥화용소절경';
 
         $this->data['fields'] = array(
-            'img_url' => array('title' => '대표이미지', 'type' => 'input', 'rule'=>'required', 'list_style' => 'text-align:center;width:100px','html'=>false,'image'=>true,'img_w'=>'100px'),
+            'img_url' => array('title' => '대표이미지', 'type' => 'hidden', 'rule'=>'required', 'list_style' => 'text-align:center;width:100px','html'=>false,'image'=>true,'img_w'=>'100px'),
             'room_cp' => array('title' => '객실소속', 'type' => 'select', 'rule'=>'required','options'=>$cps , 'list_style' => 'text-align:center;width:120px;font-weight: bold','html'=>true),
             'room_name' => array('title' => '객실명', 'type' => 'input', 'rule'=>'required', 'list_style' => 'text-align:center;width:280px;font-weight: bold','html'=>true),
             'room_number' => array('title' => '객실번호', 'type' => 'input', 'rule'=>'required', 'list_style' => 'text-align:center;width:100px','html'=>true),

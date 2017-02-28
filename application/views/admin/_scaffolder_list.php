@@ -178,7 +178,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
                 <?}?>
 
                 <? if($val['list_hide']) continue; ?>
-                <? if($key=="no" && !$enable_add) continue ?>
+
                 <? if($key=="no") : ?>
                     <th class="text-center"><?=$edit_btn_name?></th>
                 <? else : ?>
@@ -209,7 +209,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 
                     <? if($val['list_hide']) continue; ?>
 
-                    <? if($key=="no" && !$enable_add) continue ?>
+
 
 
                 <td style="<?=$val['list_style']?>"  class="<? if($key=="no") {?> text-center <?}?>"><span style="<?=$val['sub_style']?>" class="" <? if($key!="no" && $val['html']) { ?>ng-bind-html-unsafe="item.<?=$key?>"<?}?> >
@@ -218,7 +218,9 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 
                                 <? if($key=="no") { ?>
                                            <a href="javascript:" onclick="page_view('/<?=$schema['id']?>/edit?no={{item.no}}');" class=" btn btn-default btn-xs" style="<?=$val['sub_style']?>"><?=$edit_btn_name?></a>
+                                    <? if($enable_add){?>
                                            <a href="javascript:" onclick="delete_action({{item.no}})" class=" btn btn-default btn-xs" style="<?=$val['sub_style']?>">삭제</a>
+                                    <?}?>
 
                                 <? }else{?>
                                         

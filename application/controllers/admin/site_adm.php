@@ -196,7 +196,7 @@ class Site_adm extends CI_Controller {
 
         $t_data = $this->db->select('img_url, room_cp, room_name,  count(*) as cu ')->group_by("room_name")->from('rooms')->order_by('room_cp, room_name','asc')->get()->result_array();
         for($ii=0; $ii<count($t_data); $ii++) {
-            $t_data[$ii]['to_realpan']  = $this->db->set('name')->where('todate >=',$a_week_ago)->where('todate <=',$e_week_ago)->where('room_name',$t_data[$ii]['room_name'])->group_by('name')->get('realpans')->result_array();
+            $t_data[$ii]['to_realpan']  = $this->db->set('name')->where('todate >=',$a_week_ago)->where('todate <=',$e_week_ago)->where('room_name',$t_data[$ii]['room_name'])->order_by('room_number','asc')->get('realpans')->result_array();
 
             $to_total = $to_total + count($t_data[$ii]['to_realpan']);
 

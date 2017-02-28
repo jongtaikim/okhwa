@@ -11,11 +11,11 @@
     <span class="label blue">대</span> 입금대기 , <span class="label red">완</span> 입금완료
 </div>
 
-<div class="col-md-10 col-lg-10  m-b20">
-<div class="row">
+<div class="col-md-12 col-lg-12  m-b20" style="width:100%;">
+<div class="row" style="zoom:0.9">
             {@ t_data}
 
-            <div class="col-sm-6 col-xs-6 col-md-3 col-lg-3">
+            <div class="col-sm-3 col-xs-3 col-md-2" style="width:13.8%">
                 <div class="panel panel-card box-shadow2">
                     <div class="item" style="height:150px;background: url({.img_url});background-size:cover ">
 
@@ -23,19 +23,18 @@
                     </div>
 
                     <div class="text-center">
-                        <div class="text-center p-t10">
-                            <strong>{.room_cp} {.room_name}</strong>
+                        <div class="text-center p-t10  p-b5" style="border-bottom:1px solid #e9e9e9;">
+                            <strong>{.room_cp}<br>{.room_name}</strong>
                         </div>
-                        <div style="height:168px;overflow:auto">
+                        <div style="" class="p-l10 p-r10 p-b10">
                             {@ .to_realpan}
-                            <div class="m-t10 ft10 ">
-                                {? ..pay_state == 'N'}
-                                <span class="label blue">
-                                {:}
-                                <span class="label red">
-                                {/}
-                                <a href="javascript:view_reserve('{..no}','{..pay_state}')">{=substr(..todate,5,2)}월 {=substr(..todate,8,10)}일 | <span style="color:">{..room_number}</span> | {..name} | {..ptime} | {..seongin_val+..adong_val+..yua_val}명 -   {? ..pay_state == 'N'}입금대기 {:}입금완료{/}</a>
-                                    </span>
+                            <div class="m-t10 ft10 {? ..pay_state == 'N'}blue{:}red{/} r hand" style="line-height:150%;cursor: pointer" onclick="view_reserve('{..no}','{..pay_state}')">
+
+
+
+                                        {=substr(..todate,5,2)}월 {=substr(..todate,8,10)}일  <span style="color:">{..room_number}</span> <br>{..name}님  {..ptime}시 {..seongin_val+..adong_val+..yua_val}명 <br><span class="ft10">{? ..pay_state == 'N'}입금대기 {:}입금완료{/}</span>
+
+
                             </div>
                             {:}
                             <div class="m-t10 ft10 "><small>예약없음</small></div>
