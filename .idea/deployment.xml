@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" autoUpload="Always" serverName="okhwa" promptOnLocalOverwrite="false">
+  <component name="PublishConfigData" autoUpload="Always" serverName="cafe_okhwa" promptOnLocalOverwrite="false">
     <serverData>
+      <paths name="cafe_okhwa">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="okhwa">
         <serverdata>
           <mappings>

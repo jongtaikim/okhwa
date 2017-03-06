@@ -154,7 +154,7 @@ class Realpans extends Scaffolder
             'yua_val' => array('title' => '유아', 'type' => 'input', 'list_style' => 'text-align:center;','html'=>true,'list_hide'=>true,'col-md'=>'4','uneditable'=>true),
             'pay_state' => array('title' => '입금상태', 'type' => 'select', 'options'=>array('Y'=>'입금확인됨','N'=>'입금대기'),'list_style' => 'text-align:center;width:50px','html'=>true,'list_hide'=>false,'col-md'=>'12'),
 
-
+            
             'created'=>array('title'=>'예약날짜','type'=>'now','list_style'=>'text-align:center;width:100px'),
             'no'=>array('title'=>'번호','type'=>'hidden','is_key'=>true)
         );

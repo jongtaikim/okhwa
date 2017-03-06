@@ -10,6 +10,14 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
+      <webServer id="5e5710ee-4702-4588-9113-b08cad3505aa" name="cafe_okhwa" url="http://okhwa8811.cafe24.com/">
+        <fileTransfer host="okhwa8811.cafe24.com" port="22" rootFolder="/home/hosting_users/okhwa8811/www" accessType="SFTP" password="dfcedfc2dfd8dfcddfc2dfc1df9ddf9ddfd4" username="okhwa8811">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

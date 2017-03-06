@@ -754,7 +754,90 @@ class CI_DB_mysqli_driver extends CI_DB {
 		return $sql;
 	}
 
-	// --------------------------------------------------------------------
+
+    //2012-02-10 종태 기존 사용하던 방식의 문법
+    function sqlFetchAll($sql){
+        $query =  $this->query($sql);
+        $row = $query->result_array();
+        //2012-06-27 종태 어드민 성능을 올리기 위하여 임시
+        if($_SESSION[ADMIN]) ini_set('memory_limit', "1000M");
+        foreach( $row as $val => $value ){
+            $row[$val] = array_change_key_case($row[$val],CASE_LOWER);
+        }
+        if($_SESSION[ADMIN]) ini_set('memory_limit', "100M");
+        $query->free_result();
+        return $row;
+    }
+
+    function sqlFetch($sql){
+        $query =  $this->query($sql);
+        $row = $query->row_array();
+        $query->free_result();
+        return  array_change_key_case($row,CASE_LOWER);
+    }
+
+    function sqlFetchOne($sql){
+        $query =  $this->query($sql);
+        $data = $query->row_array();
+        if (is_array($data)) $ret = @array_slice($data,0,1);
+        else return;
+        if (count($ret) < 2) {	// 결과값이 하나일경우 array가 아닌 스칼라값으로..
+            $ret = array_values($ret);
+            $ret = $ret[0];
+        }
+        $query->free_result();
+        return $ret;
+
+    }
+
+    // {{{ 쿼리 자동화
+    function insertQuery($table,$data,$sqlV="") {
+
+        if (is_array($data)) {
+            foreach ($data as $key=>$val) $item[$key] = $this->quote($val);
+        }
+        if (count($item)) {
+            $columns = implode(', ',array_keys($item));
+            $values = implode(', ',array_values($item));
+            $query = "INSERT INTO $table ($columns) VALUES ($values)";
+            //echo $query."<br>";
+            if($sqlV) echo $query."<br>";
+            return $this->sqlQuery($query);
+        }
+    }
+
+    function updateQuery($table,$data,$cond,$sqlV="") {
+
+        if (is_array($data)) {
+            foreach ($data as $key=>$val) $item[$key] = $this->quote($val);
+        }
+        if (count($item)) {
+            $str = array();
+            foreach ($item as $key=>$val) {
+                $str[] = $key."=".$item[$key];
+            }
+            $query = "UPDATE $table SET ".implode(', ',$str)." WHERE $cond";
+            if($sqlV) echo $query."<br>";
+            return $this->sqlQuery($query);
+        }
+    }
+
+    function deleteQuery($table,$cond) {
+        $query = "DELETE FROM $table WHERE $cond";
+        return $this->sqlQuery($query);
+    }
+
+    function quote($value) {
+        if(!strstr($value,'password')){
+            return "'".$value."'";
+        }else{
+            return $value;
+        }
+    }
+
+
+
+    // --------------------------------------------------------------------
 
 	/**
 	 * Close DB Connection
