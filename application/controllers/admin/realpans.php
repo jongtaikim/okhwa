@@ -277,7 +277,7 @@ class Realpans extends Scaffolder
 
                 for($ii=0; $ii<count($room_list); $ii++) {
 
-                    $room_list[$ii]['to_realpan'] = $this->db->where('todate <=',$udate)->where('lastdate >=',$udate)->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
+                    $room_list[$ii]['to_realpan'] = $this->db->where('todate <=',$udate)->where('lastdate >',$udate)->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
 
                     if($room_list[$ii]['to_realpan']){
 
