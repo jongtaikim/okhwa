@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9453e050-e17b-41a4-9c37-eebce91478f0" name="Default" comment="">
+    <list default="true" id="9453e050-e17b-41a4-9c37-eebce91478f0" name="Default" comment="dsfdsf">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/user/board.php" afterPath="$PROJECT_DIR$/application/controllers/user/board.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list_gallery.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list_gallery.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/board/skin/board/list_media.htm" afterPath="$PROJECT_DIR$/application/views/board/skin/board/list_media.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/jade9/board/skin/board/list_media.htm" afterPath="$PROJECT_DIR$/application/views/jade9/board/skin/board/list_media.htm" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/okhwa/board/skin/board/list_media.htm" afterPath="$PROJECT_DIR$/application/views/okhwa/board/skin/board/list_media.htm" />
     </list>
     <list id="aac9ecc5-750b-4b9f-b616-c2f5be7f943e" name="New changelist" comment="" />
     <ignored path="okhwa.iws" />
@@ -153,8 +147,8 @@
       <file leaf-file-name="list_media.htm" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/okhwa/board/skin/board/list_media.htm">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+            <state relative-caret-position="306">
+              <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -700,7 +694,7 @@
       <workItem from="1488260029814" duration="2561000" />
       <workItem from="1488768362012" duration="5235000" />
       <workItem from="1488848671701" duration="7648000" />
-      <workItem from="1488893346929" duration="433000" />
+      <workItem from="1488893346929" duration="1064000" />
     </task>
     <task id="LOCAL-00001" summary="dsfdsf">
       <created>1482604831243</created>
@@ -828,11 +822,18 @@
       <option name="project" value="LOCAL" />
       <updated>1488858602405</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="dsfdsf">
+      <created>1488893802752</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1488893802752</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125031000" />
+    <option name="totallyTimeSpent" value="125662000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="606" y="11" width="1957" height="1040" extended-state="0" />
@@ -1349,8 +1350,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/okhwa/board/skin/board/list_media.htm">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="41" column="29" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="29" />
+        <state relative-caret-position="306">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
           <folding />
         </state>
       </provider>
