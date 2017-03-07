@@ -20,7 +20,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
 
     function tableListCtrl($scope, $http) {
         $scope.init = function(id) {
-            $http.get(id + '/list_json?page=<?=$_GET['page']?>&keyword=<?=$_GET['keyword']?>&config_id=<?=$_GET['config_id']?><?=$sch_text?>')
+            $http.get(id + '/list_json?page=<?=$_GET['page']?>&keyword=<?=urlencode($_GET['keyword'])?>&config_id=<?=$_GET['config_id']?><?=$sch_text?>&v=<?=date("YmdHis")?>')
                 .then(function(res){
                     $scope.items = res.data.items;
                     //$scope.pagehtml = res.data.pagehtml;
@@ -297,14 +297,15 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
     }
     $('.search-btn').click(function(){
         var ast = explode("?",location.hash);
-        location.href=ast[0]+"?keyword="+$('#keyword').val()+"&time_s_<?=$date_filter?>="+$('#time_s_<?=$date_filter?>').val()+"&time_e_<?=$date_filter?>="+$('#time_e_<?=$date_filter?>').val();
+        location.href=ast[0]+"?keyword="+encodeURIComponent($('#keyword').val())+"&time_s_<?=$date_filter?>="+$('#time_s_<?=$date_filter?>').val()+"&time_e_<?=$date_filter?>="+$('#time_e_<?=$date_filter?>').val()+'&v='+date("YmdHis");
 
     });
 
     $('#keyword').keyup(function(evert){
         if(evert.keyCode == 13) {
+
             var ast = explode("?", location.hash);
-            location.href = ast[0] + "?keyword=" + $('#keyword').val()+"&time_s_<?=$date_filter?>="+$('#time_s_<?=$date_filter?>').val()+"&time_e_<?=$date_filter?>="+$('#time_e_<?=$date_filter?>').val();
+            location.href = ast[0] + "?keyword=" + encodeURIComponent($('#keyword').val())+"&time_s_<?=$date_filter?>="+$('#time_s_<?=$date_filter?>').val()+"&time_e_<?=$date_filter?>="+$('#time_e_<?=$date_filter?>').val()+'&v='+date("YmdHis");
 
         }
 
@@ -389,6 +390,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
            $.ajax({
                type: 'post',
                url: url,
+               cache:false,
                data: "no="+no,
                dataType: 'json',
                error: function(xhr, e){
@@ -423,7 +425,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
         $.ajax({
             type: 'GET',
             url: url,
-
+            cache:false,
             dataType: 'html',
             success: function(html, status) {
                 bootbox.alert({
@@ -444,6 +446,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
             type: 'GET',
             url: url,
             data:'&ajax=y',
+            cache:false,
             dataType: 'html',
             success: function(html, status) {
                 $('#content_body').html(html);
