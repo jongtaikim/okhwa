@@ -27,7 +27,7 @@ class common extends CI_Model {
     
     function load_data(){
 		$sql = "select * from tab_organ where num_oid = '"._OID."' ";
-		$data = $this->db -> sqlFetch($sql);
+		$data = $this->db->query($sql)->row_array();
 		$email = explode("@",$data[str_master_email]);
 
 		$data[str_master_email1] = $email[0] ;
@@ -53,8 +53,8 @@ class common extends CI_Model {
 				$datas[$val] = $value;
 			}
 		}
-
-		$this->db->updateQuery('tab_organ',$datas," num_oid = '"._OID."'");
+        $this->db->where('num_oid',_OID);
+		$this->db->update('tab_organ',$datas);
 		
 		$this->load->library('iniconf');
 		$this->load->helper('file');
@@ -86,7 +86,9 @@ class common extends CI_Model {
 
 		if($site_data[admin_pw] == md5($_POST_DATA[def_passwd]) && $_POST_DATA[def_passwd] !=""){
 			
-			$this->db->updateQuery($this->ORGAN_TABLE,$datas," num_oid = '"._OID."'");
+            $this->db->where('num_oid',_OID);
+            $this->db->update($this->ORGAN_TABLE,$datas);
+
 			$this->load->library('iniconf');
 			$this->load->helper('file');
 			$this->iniconf->load('application/config/'.THEME."/site_config.php");

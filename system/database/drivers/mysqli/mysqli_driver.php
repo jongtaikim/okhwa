@@ -793,38 +793,19 @@ class CI_DB_mysqli_driver extends CI_DB {
     // {{{ 쿼리 자동화
     function insertQuery($table,$data,$sqlV="") {
 
-        if (is_array($data)) {
-            foreach ($data as $key=>$val) $item[$key] = $this->quote($val);
-        }
-        if (count($item)) {
-            $columns = implode(', ',array_keys($item));
-            $values = implode(', ',array_values($item));
-            $query = "INSERT INTO $table ($columns) VALUES ($values)";
-            //echo $query."<br>";
-            if($sqlV) echo $query."<br>";
-            return $this->sqlQuery($query);
-        }
+        return $this->insert($table,$data);
+
     }
 
     function updateQuery($table,$data,$cond,$sqlV="") {
 
-        if (is_array($data)) {
-            foreach ($data as $key=>$val) $item[$key] = $this->quote($val);
-        }
-        if (count($item)) {
-            $str = array();
-            foreach ($item as $key=>$val) {
-                $str[] = $key."=".$item[$key];
-            }
-            $query = "UPDATE $table SET ".implode(', ',$str)." WHERE $cond";
-            if($sqlV) echo $query."<br>";
-            return $this->sqlQuery($query);
-        }
+        return $this->update($table,$data,$cond);
+
     }
 
     function deleteQuery($table,$cond) {
         $query = "DELETE FROM $table WHERE $cond";
-        return $this->sqlQuery($query);
+        return $this->query($query);
     }
 
     function quote($value) {

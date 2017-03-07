@@ -678,8 +678,9 @@ class reserve extends CI_Controller {
 ";
 
             $msg_text .= "입금예정자 : ".$in_data['bankname']."
-";
 
+";
+            $msg_text .= "관리자 : http://resortstay.co.kr/adm";
 
          /*   $this->email->message($msg_text);
 

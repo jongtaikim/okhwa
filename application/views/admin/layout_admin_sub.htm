@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <title> [<?=_OID?>] <?=_ONAME?> - 관리자</title>
   <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <link rel="stylesheet" href="/trunk/libs/assets/animate.css/animate.css" type="text/css" />
     <link rel="stylesheet" href="/trunk/libs/assets/font-awesome-4.6.3/css/font-awesome.css" type="text/css" />
   <link rel="stylesheet" href="/trunk/libs/jquery/waves/dist/waves.css" type="text/css" />
@@ -100,7 +100,7 @@ $colors = "grey-900";
         </div>
         <div class="box-row">
           <div class="box-cell scrollable hover" >
-            <div class="box-inner" >
+            <div class="box-inner">
 
   
 
@@ -136,11 +136,7 @@ $colors = "grey-900";
       <!-- / -->
       <!-- Common tools -->
       <ul class="nav nav-sm navbar-tool pull-right">
-        <li class="hide">
-          <a md-ink-ripple ui-toggle-class="show" target="#search">
-            <i class="mdi-action-search i-24"></i>
-          </a>
-        </li>
+
 	   <li>
           <a md-ink-ripple href="/">
             <i class="glyphicon glyphicon-home "></i> 
@@ -177,10 +173,10 @@ $colors = "grey-900";
 
       <div class="box-row">
         <div class="box-cell">
-          <div class="box-inner p-t30 p-l20 p-r30">
+          <div class="box-inner p-t14 ">
             
-		<div class="content-box p-r20" >
-
+		<div class=" p-r10" style="overflow-x: auto">
+            <div class="content-box" style="min-width:1000px"></div>
 		</div>
 
           </div>
