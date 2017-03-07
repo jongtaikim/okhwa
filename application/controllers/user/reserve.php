@@ -689,7 +689,17 @@ class reserve extends CI_Controller {
             for($ii=0; $ii<count($bot_info['result']); $ii++) {
 
             }*/
-            $bot = file_get_contents('https://api.telegram.org/bot314765110:AAG09gfr4x1ephvZHoEbqwtRKask0OP6M0k/sendmessage?chat_id=-215602523&text='.urlencode($msg_text));
+            $ch = curl_init();
+            $urls = 'https://api.telegram.org/bot314765110:AAG09gfr4x1ephvZHoEbqwtRKask0OP6M0k/sendmessage?chat_id=-215602523&text='.urlencode($msg_text);
+            curl_setopt($ch, CURLOPT_URL, $urls);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+            ob_start();      // prevent any output
+            $res = curl_exec ($ch); // execute the curl command
+
+            ob_end_clean();  // stop preventing output
+            curl_close($ch);
+
 
             $this->_send_json('', 200, '예약이 완료되었습니다.');
         }

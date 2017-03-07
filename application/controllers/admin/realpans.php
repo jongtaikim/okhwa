@@ -130,7 +130,7 @@ class Realpans extends Scaffolder
             'todate' => array('title' => '사용일', 'type' => 'date', 'list_style' => 'text-align:center;width:100px','col-md'=>6,'uneditable'=>true),
             'lastdate' => array('title' => '마지막날', 'type' => 'date', 'list_style' => 'text-align:center;width:100px','col-md'=>6,'uneditable'=>true),
 
-            '' => array('title' => '', 'type' => 'hidden', 'list_style' => 'text-align:center;width:','col-md'=>6, 'custom_field'=>true,'list_hide'=>true),
+            '' => array('title' => '', 'type' => 'hidden', 'list_style' => 'text-align:center;width:','col-md'=>6, 'custom_field'=>true,'custom_field'=>true,'list_hide'=>true),
 
             'name' => array('title' => '예약자', 'type' => 'input', 'list_style' => 'text-align:center;width:','col-md'=>6, 'rule'=>'required'),
             'phone' => array('title' => '전화번호', 'type' => 'input', 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>'required'),
@@ -173,7 +173,7 @@ class Realpans extends Scaffolder
 
 
         if($_GET['keyword']){
-
+            $where = " name like '%".$_GET['keyword']."%' ";
         }
 
         $row_data = $this->_listPageingRow($this->table_tn,$where,$orderby=" order by no desc");

@@ -130,7 +130,7 @@ $cate2 = 0;
 $menu[$cate1]['submenu'][$cate2]['title'] = "패키지1";
 $menu[$cate1]['submenu'][$cate2]['title2'] = "PACKAGE1";
 $menu[$cate1]['submenu'][$cate2]['w'] = "16%;margin-left:10%";
-$menu[$cate1]['submenu'][$cate2]['link'] = "javascript:alert('페이지를 준비중입니다.')";
+$menu[$cate1]['submenu'][$cate2]['link'] = "#/user/page/p?designs=".HOST."&p=package01";
 
 $cate2++;
 $menu[$cate1]['submenu'][$cate2]['title'] = "패키지2";

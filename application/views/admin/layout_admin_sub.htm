@@ -401,6 +401,7 @@ $colors = "grey-900";
             type: 'GET',
             url: '/admin/realpans/data_json?no='+no,
             data:'',
+            cache:false,
             dataType: 'json',
             success: function(data, status) {
                 console.log(data);
@@ -458,6 +459,7 @@ $colors = "grey-900";
             url: '/admin/realpans/edit_action_pay_state?',
             data:'code='+no+'&pay_state='+yn+'&name='+name+'&phone='+phone,
             dataType: 'json',
+            cache:false,
             success: function(result, status) {
                 if(result.error) {
                     bootbox.alert(result.messages);
@@ -493,6 +495,7 @@ $colors = "grey-900";
                 url: '/admin/realpans/delete_pe',
                 data: 'code=' + no,
                 dataType: 'json',
+                cache:false,
                 success: function (result, status) {
                     if (result.error) {
                         bootbox.alert(result.messages);

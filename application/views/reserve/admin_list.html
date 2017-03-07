@@ -22,7 +22,7 @@
     /*.calendar .caltable table td .day{ position:absolute; top:6px; left:6px; color:#999;}*/
     .calendar .caltable button{ background-color:#fff; border:1px solid #ccc; color:#999; padding:4px; width:80px; margin-top:5px; cursor:pointer}
 </style>
-<div class="col-md-11">
+<div class="">
 <div class="card table-responsive ">
 
     <div class="card-heading bg-light lt  pos_r">
@@ -96,7 +96,7 @@ function page_view(url){
     $.ajax({
         type: 'GET',
         url: url,
-
+        cache:false,
         dataType: 'html',
         success: function(html, status) {
             bootbox.alert({

@@ -335,18 +335,22 @@ abstract class Scaffolder extends CI_Controller
             foreach ($frow as $val => $value) {
                 $val_ = $val;
 
-                if(!$value['no_keyword']){
-                    if (!strstr($val, '[]')) {
-                        if ($tn1) {
-                            $val_ = $tn1 . ".`" . $val . "`";
-                        } else {
-                            $val_ = " `" . $val . "`";
-                        }
-                        if (!$tds) {
-                            $whereadd .= "  " . $val_ . " LIKE '%" . $_GET['keyword'] . "%'";
-                            $tds++;
-                        } else {
-                            $whereadd .= " or " . $val_ . " LIKE '%" . $_GET['keyword'] . "%'";
+                if($value['no_keyword']  || $val['custom_field']) {
+
+                }else {
+                    if ($val) {
+                        if (!strstr($val, '[]')) {
+                            if ($tn1) {
+                                $val_ = $tn1 . ".`" . $val . "`";
+                            } else {
+                                $val_ = " `" . $val . "`";
+                            }
+                            if (!$tds) {
+                                $whereadd .= "  " . $val_ . " LIKE '%" . $_GET['keyword'] . "%'";
+                                $tds++;
+                            } else {
+                                $whereadd .= " or " . $val_ . " LIKE '%" . $_GET['keyword'] . "%'";
+                            }
                         }
                     }
                 }
