@@ -25,7 +25,7 @@
 
 
                     <td>
-                        <a href="javascript:pv_layer('/user/board/read_view/{.num_mcode}/{.num_serial}?cate={cate}','{.str_title} | {=substr(.dt_date,0,10)} / Hit {=number_format(.num_hit)}')"><strong class="label dark m-r10">공지</strong> {.str_title}</strong></a>
+                        <a href="javascript:" onclick="pv_layer('/user/board/read_view/{.num_mcode}/{.num_serial}?cate={cate}','{.str_title} | {=substr(.dt_date,0,10)} / Hit {=number_format(.num_hit)}')"><strong class="label dark m-r10">공지</strong> {.str_title}</strong></a>
                         <span class="text-muted"> {=str_replace('-','.',substr(.dt_date,0,10))}</span>
                     </td>
 
@@ -41,8 +41,8 @@
 
                 {@ TAB_BOARD}
                 {? .num_notice <1}
-                <div class="col-md-3 ">
-                    <a href="javascript:pv_layer('/user/board/read_view/{.num_mcode}/{.num_serial}?cate={cate}','{.str_title}','{.str_title} | {=substr(.dt_date,0,10)} / Hit {=number_format(.num_hit)}')">
+                <div class="col-md-3 hand" onclick="pv_layer('/user/board/read_view/{.num_mcode}/{.num_serial}?cate={cate}','{.str_title}','{.str_title} | {=substr(.dt_date,0,10)} / Hit {=number_format(.num_hit)}')">
+                    <a href="javascript:" >
                     <div class="box box-shadow2 r">
                         <div class="item" style="height:160px;overflow: hidden">
                             <div class="item-overlay active p-a">

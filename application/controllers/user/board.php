@@ -244,6 +244,7 @@ class board extends CI_Controller {
                     $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/list_' . $_conf[str_skin] . '.htm'));
                     $tpl->printAll();
                 }else {
+                    
                     $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/list_' . $_conf[str_skin] . '.htm'));
                     $content = $this->display->fetch('CONTENT');
                     $content = str_replace('/application/views/', '/designs/', $content);
