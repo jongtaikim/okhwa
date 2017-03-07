@@ -293,7 +293,7 @@ $sch_text_info = substr($sch_text_info,0,strlen($sch_text_info)-3);
             $('#items_tbody').html('<tr><td colspan="'+f_roe+'" class="text-center padding">데이터가 없습니다.</td></tr>');
         }
 
-        $('#keyword').focus();
+
     }
     $('.search-btn').click(function(){
         var ast = explode("?",location.hash);

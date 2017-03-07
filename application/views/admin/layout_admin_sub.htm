@@ -124,7 +124,7 @@ $colors = "grey-900";
           <!-- Content Navbar -->
     <div class="navbar md-whiteframe-z1 no-radius <?=$colors?>">
       <!-- Open side - Naviation on mobile -->
-      <a md-ink-ripple  data-toggle="modal" data-target="#aside" class="navbar-item pull-left visible-xs visible-sm"><i class="mdi-navigation-menu i-24"></i></a>
+      <a md-ink-ripple  data-toggle="modal" data-target="#aside" class="navbar-item pull-left visible-xs visible-sm" id="top_menu_btn"><i class="mdi-navigation-menu i-24"></i></a>
       <!-- / -->
       <!-- Page title - Bind to $state's title -->
       <div class="navbar-item pull-left h4">
@@ -176,7 +176,7 @@ $colors = "grey-900";
           <div class="box-inner p-t14 ">
             
 		<div class=" p-r10" style="overflow-x: auto">
-            <div class="content-box" style="min-width:1000px"></div>
+            <div class="content-box" style="min-width:1200px"></div>
 		</div>
 
           </div>
@@ -322,6 +322,8 @@ $colors = "grey-900";
                      },
                     complete: function(xhr, textStatus) {
                         loading_end();
+
+                        if($('#aside').hasClass('in')) $('#top_menu_btn').trigger('click');
                     }
                 });
                 //endLoading(); // 한번 더 호출
@@ -520,6 +522,14 @@ $colors = "grey-900";
             });
         }
     }
+
+    $(document).ready(function(){
+       if($(window).width() <600){
+           $('.content-box').css('zoom','0.5');
+       }else{
+           $('.content-box').css('zoom','1');
+       }
+    });
 </script>
 
 </body>

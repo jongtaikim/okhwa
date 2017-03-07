@@ -132,7 +132,7 @@ class Realpans extends Scaffolder
 
             '' => array('title' => '', 'type' => 'hidden', 'list_style' => 'text-align:center;width:','col-md'=>6, 'custom_field'=>true,'custom_field'=>true,'list_hide'=>true),
 
-            'name' => array('title' => '예약자', 'type' => 'input', 'list_style' => 'text-align:center;width:','col-md'=>6, 'rule'=>'required'),
+            'name' => array('title' => '예약자', 'type' => 'input', 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>'required'),
             'phone' => array('title' => '전화번호', 'type' => 'input', 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>'required'),
             'ptime' => array('title' => '입실<br>시간', 'type' => 'select', 'options'=>$ptime ,'list_style' => 'text-align:center;width:','col-md'=>6, 'rule'=>''),
             'area' => array('title' => '출발<br>지역', 'type' => 'select','options'=>$area, 'list_style' => 'text-align:center;width:100px','col-md'=>6, 'rule'=>''),
