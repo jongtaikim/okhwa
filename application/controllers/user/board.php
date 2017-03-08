@@ -696,7 +696,10 @@ class board extends CI_Controller {
 				}
 
 
-				$DB->updateQuery($this->BOARD_TABLE,$datas," num_oid = '"._OID."'  and num_serial = '".$_POST[id]."' ");
+                $this->db->where('num_oid',_OID);
+                $this->db->where('num_serial',$_POST[id]);
+                $this->db->update($this->BOARD_TABLE,$datas);
+				
 				
 				
 
