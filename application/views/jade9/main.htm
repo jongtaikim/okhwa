@@ -1,0 +1,198 @@
+<!-- Layer popup -->
+<script language="JavaScript">
+
+    function setCookie(cname,cvalue,exdays)
+    {
+        var d = new Date();
+        d.setTime(d.getTime()+(exdays*24*60*60*1000));
+        var expires = "expires="+d.toGMTString();
+        document.cookie = cname + "=" + cvalue + "; " + expires;
+    }
+
+    function getCookie(cname)
+    {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0; i<ca.length; i++)
+        {
+            var c = ca[i].trim();
+            if (c.indexOf(name)==0) return c.substring(name.length,c.length);
+        }
+        return "";
+    }
+
+    function closeWin(flag) {
+        if ( flag == true ) {
+            setCookie( "ncookie", "done" , 1 );
+        }
+        document.getElementById("popup").style.display = "none";
+    }
+
+
+
+    function closeWin2(flag) {
+        if ( flag == true ) {
+            setCookie( "ncookie2", "done" , 1 );
+        }
+        document.getElementById("popup2").style.display = "none";
+    }
+
+
+</script>
+
+<style>
+    #popup {
+        /*display:none;*/
+        position:absolute;
+        width:420px;
+        height:500px;
+        margin-left:340px;
+        margin-top:300px;
+        z-index:100;
+        color:#fff;
+    }
+
+    #popup img {
+        position:absolute;
+    }
+
+    div.popupUI {
+        width:100%;
+        position:absolute;
+        left:0;
+        bottom:0;
+        padding:0;
+        float:left;
+        text-align:right;
+        height:20px;
+        background-color:#1f1f1f;
+        color:#fff;
+    }
+
+    .popupUI a {
+        line-height:20px;
+        color:#eee;
+        margin-right:10px;
+    }
+
+
+    #popup2 {
+        /*display:none;*/
+        position:absolute;
+        width:461px;
+        height:480px;
+        margin-left:801px;
+        margin-top:300px;
+        z-index:100;
+        color:#fff;
+    }
+
+    #popup2 img {
+        position:absolute;
+    }
+
+    div.popupUI2 {
+        width:100%;
+        position:absolute;
+        left:0;
+        bottom:0;
+        padding:0;
+        float:left;
+        text-align:right;
+        height:20px;
+        background-color:#1f1f1f;
+        color:#fff;
+    }
+
+    .popupUI2 a {
+        line-height:20px;
+        color:#eee;
+        margin-right:10px;
+    }
+</style>
+
+<!-- Layer popup Start -->
+<? if($_COOKIE['ncookie'] != 'done'){?>
+    <div id="popup">
+        <a href="#"><img src="/designs/jade9/images/popup_20170315.jpg" /></a>
+        <div class="popupUI">
+            <a href="#" onclick="closeWin(true);" class="todayCloseDiv">오늘하루열지않기</a>
+            <a href="#" onclick="closeWin();" class="closeDiv">닫기</a>
+        </div>
+    </div>
+<?}?>
+
+<!-- Layer popup End -->
+
+<div class=" carousel slide auto pos_r " id="main_vis" >
+
+    <ul class="carousel-inner opa00 animated fadeIn" style="padding:0px;magin-bottom:0px" >
+        <li class="item active">
+            <div class="visual_01">
+
+            </div>
+        </li>
+        <li class="item ">
+            <div class="visual_02">
+
+            </div>
+        </li>
+        <li class="item ">
+            <div class="visual_03">
+
+            </div>
+        </li>
+       <!-- <li class="item ">
+            <div class="visual_04">
+
+            </div>
+        </li>-->
+     </ul>
+
+    <div class=" pos_a pos_center_w"  style="top:25%">
+
+        <div class="text" ><img src="/designs/{HOST}/images/visuai_text.png"></div>
+        <div class="navi m-t30" >
+            <ol class="carousel-indicators">
+                <li data-target="#main_vis" data-slide-to="0" class="active"  style="zoom:1.2"></li>
+                <li data-target="#main_vis" data-slide-to="1"  style="zoom:1.2"></li>
+                <li data-target="#main_vis" data-slide-to="2"  style="zoom:1.2"></li>
+               <!-- <li data-target="#main_vis" data-slide-to="3"></li>-->
+            </ol>
+        </div>
+    </div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        var inits = '';
+        $('#main_vis').carousel({  interval: 5000 }).on('slide.bs.carousel', function () {
+            inits = 'y';
+        });
+
+
+    });
+
+</script>
+
+
+<!--
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="#/user/reserve/index?no=5">VIP형펜션 B동 (스파,복층)</a><br>
+<a href="#/user/reserve/index?no=9">VIP형펜션 C동 (스파,복층)</a><br>
+<a href="#/user/reserve/index?no=1">VIP형펜션 A동 (스파,복층)</a><br>
+<br>
+
+<a href="#/user/reserve/index?no=26">옥화용소절경 20평형</a><br>
+<a href="#/user/reserve/index?no=14">옥화용소절경 50평(복층)</a><br>
+<a href="#/user/reserve/index?no=18">옥화용소절경 40평</a><br>
+<a href="#/user/reserve/index?no=13">옥화용소절경 100평</a><br>-->
+
+
