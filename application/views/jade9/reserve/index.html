@@ -26,7 +26,7 @@
 
                     <div class="month padding clearfix">
                         <img src="/images/prev.jpg" onclick="InoutInList.leftdates()" style="cursor:pointer;margin-top:5px" >
-                        <span id="temp_year"><?=date('Y')?></span>.<span id="temp_month"><?=date('m')?></span>
+                        <span id="temp_year">{? _GET.str_year}{_GET.str_year}{:}<?=date('Y')?>{/}</span>.<span id="temp_month">{? _GET.str_month}{_GET.str_month}{:}<?=date('m')?>{/}</span>
                         <img src="/images/next.jpg" onclick="InoutInList.rightdates()" style="cursor:pointer;margin-top:5px">
                     </div>
                 </form>
