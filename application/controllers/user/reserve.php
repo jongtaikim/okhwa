@@ -121,39 +121,35 @@ class reserve extends CI_Controller {
 
                 $tt = sprintf("%02d", $n++) ;
                 $udate = $year."-".$month."-".$tt ;
-                $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
+                $varprice_row = $this->db->where('start_date >= ',$udate)->where('end_date <= ',$udate)->get('month_prices')->row_array();
+
+
                 $sda = array_pop(explode("-",$varprice_row['start_date']));
                 $eda = array_pop(explode("-",$varprice_row['end_date']));
 
                 //echo $sda." / ".$tt." / ".$eda;
 
-                if($sda <= $tt && $eda >= $tt ){
+                if($varprice_row['price_name'] == '성수기') {
+                    $kname = "sung_price";
+                }else if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') {
+                    $kname = "jun_price";
+                }
 
-                   // echo "<-1-"."<br>";
-
-                    if($varprice_row['price_name'] == '성수기') $kname = "sung_price";
-                    if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') $kname = "jun_price";
-
-                    if($to_day_type) {
-                        $kname_ = $kname."2";
-                        $varprinc = $room_info[$kname_];
-                    }else{
-                        $varprinc = $room_info[$kname];
-                    }
-
-                    $varprincname =  $varprice_row['price_name'].$to_day_type ;
-
-
+                if($to_day_type) {
+                    $kname_ = $kname."2";
+                    $varprinc = $room_info[$kname_];
                 }else{
+                    $varprinc = $room_info[$kname];
+                }
 
-                    //echo "<br>";
+                if($varprice_row['price_name']) {
                     if($to_day_type){
-                        $varprinc =  $room_info['bi_price2'] ;
+                        $varprincname =  $varprice_row['price_name']." - ".$to_day_type ;
                     }else{
-                        $varprinc =  $room_info['bi_price'] ;
+                        $varprincname =  $varprice_row['price_name'] ;
                     }
-
-                    $varprincname =  '비수기'.$to_day_type ;
+                }else{
+                    //$varprincname =  $to_day_type ;
                 }
 
 
@@ -253,11 +249,11 @@ class reserve extends CI_Controller {
                 switch (  $k ) {
                     case 5 :
                         $ncolor = "color:blue";
-                         $to_day_type = " - 주말(금)";
+                         $to_day_type = "주말(금)";
                         break ;
                     case 6 :
                         $ncolor = "color:red";
-                        $to_day_type = " - 주말";
+                        $to_day_type = "주말";
                         break ;
                     default :
                         $ncolor = "";
@@ -370,17 +366,25 @@ class reserve extends CI_Controller {
                 ';*/
 
                 $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
+            /*   echo '<xmp>';
+                echo print_r($varprice_row);
+                echo '</xmp>';*/
+
+
                 $sda = array_pop(explode("-",$varprice_row['start_date']));
                 $eda = array_pop(explode("-",$varprice_row['end_date']));
 
-                //echo $sda." / ".$tt." / ".$eda;
+//                echo $sda." / ".$tt." / ".$eda."<br>";
 
-                if($sda <= $tt && $eda >= $tt ){
+
 
                     // echo "<-1-"."<br>";
 
-                    if($varprice_row['price_name'] == '성수기') $kname = "sung_price";
-                    if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') $kname = "jun_price";
+                    if($varprice_row['price_name'] == '성수기') {
+                        $kname = "sung_price";
+                    }else if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') {
+                        $kname = "jun_price";
+                    }
 
                     if($to_day_type) {
                         $kname_ = $kname."2";
@@ -389,14 +393,18 @@ class reserve extends CI_Controller {
                         $varprinc = $room_info[$kname];
                     }
 
-                    $varprincname =  $varprice_row['price_name'].$to_day_type ;
+                    if($varprice_row['price_name']) {
+                        if($to_day_type){
+                            $varprincname =  $varprice_row['price_name']." - ".$to_day_type ;
+                        }else{
+                            $varprincname =  $varprice_row['price_name'] ;
+                        }
+                    }else{
+                        //$varprincname =  $to_day_type ;
+                    }
 
 
-                }else{
 
-
-                  //  $varprincname =  $to_day_type ;
-                }
 
 
                 $caltemp .= '<div class="day " >' . $tt .'일 <span style="color:#a1a1a1" class="ft11">' .$varprincname.'</span></div><div class="text-left m-t40" style="font-size:11px">'.$room_txt.'</div> ';

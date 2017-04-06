@@ -301,14 +301,14 @@ class Realpans extends Scaffolder
                     }
 
                 }
-                
+
                 $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
                 $sda = array_pop(explode("-",$varprice_row['start_date']));
                 $eda = array_pop(explode("-",$varprice_row['end_date']));
 
                 //echo $sda." / ".$tt." / ".$eda;
 
-                if($sda <= $tt && $eda >= $tt ){
+
 
                     // echo "<-1-"."<br>";
 
@@ -325,11 +325,7 @@ class Realpans extends Scaffolder
                     $varprincname =  $varprice_row['price_name'].$to_day_type ;
 
 
-                }else{
 
-
-                    $varprincname =  $to_day_type ;
-                }
 
 
                 $caltemp .= '<div class="day " >' . $tt .'일 <span style="color:#a1a1a1">' .$varprincname.'</span></div><div class="text-left m-t40" style="font-size:11px">'.$room_txt.'</div> ';
