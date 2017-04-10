@@ -29,6 +29,7 @@ class month_price extends Scaffolder {
 
             '준성수기'=>'준성수기',
             '성수기'=>'성수기',
+            '연휴'=>'연휴(주말가격)',
 
 
         );

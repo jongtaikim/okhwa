@@ -68,10 +68,10 @@ class reserve extends CI_Controller {
         $lweek = date('w', strtotime($year.'-'.$month.'-'.$tday));  // 마지막요일
 
 
-      $this->display->assign('str_year',$_POST['str_year']);
-      $this->display->assign('str_month',$_POST['str_month']);
-      $this->display->assign('str_day',$_POST['str_day']);
-        
+        $this->display->assign('str_year',$_POST['str_year']);
+        $this->display->assign('str_month',$_POST['str_month']);
+        $this->display->assign('str_day',$_POST['str_day']);
+
 
         $caltemp = '
 		<table  border="0" cellpadding="0" cellspacing="0" class="table table-bordered"  id="date_table">
@@ -96,7 +96,7 @@ class reserve extends CI_Controller {
                 switch (  $k ) {
                     case 6 :
                         $ncolor = "color:blue";
-                       // $to_day_type = " - 주말";
+                        // $to_day_type = " - 주말";
                         break ;
                     case 0 :
                         $ncolor = "color:red";
@@ -121,39 +121,35 @@ class reserve extends CI_Controller {
 
                 $tt = sprintf("%02d", $n++) ;
                 $udate = $year."-".$month."-".$tt ;
-                $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
+                $varprice_row = $this->db->where('start_date >= ',$udate)->where('end_date <= ',$udate)->get('month_prices')->row_array();
+
+
                 $sda = array_pop(explode("-",$varprice_row['start_date']));
                 $eda = array_pop(explode("-",$varprice_row['end_date']));
 
                 //echo $sda." / ".$tt." / ".$eda;
 
-                if($sda <= $tt && $eda >= $tt ){
+                if($varprice_row['price_name'] == '성수기') {
+                    $kname = "sung_price";
+                }else if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') {
+                    $kname = "jun_price";
+                }
 
-                   // echo "<-1-"."<br>";
-
-                    if($varprice_row['price_name'] == '성수기') $kname = "sung_price";
-                    if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') $kname = "jun_price";
-
-                    if($to_day_type) {
-                        $kname_ = $kname."2";
-                        $varprinc = $room_info[$kname_];
-                    }else{
-                        $varprinc = $room_info[$kname];
-                    }
-
-                    $varprincname =  $varprice_row['price_name'].$to_day_type ;
-
-
+                if($to_day_type) {
+                    $kname_ = $kname."2";
+                    $varprinc = $room_info[$kname_];
                 }else{
+                    $varprinc = $room_info[$kname];
+                }
 
-                    //echo "<br>";
+                if($varprice_row['price_name']) {
                     if($to_day_type){
-                        $varprinc =  $room_info['bi_price2'] ;
+                        $varprincname =  $varprice_row['price_name']." - ".$to_day_type ;
                     }else{
-                        $varprinc =  $room_info['bi_price'] ;
+                        $varprincname =  $varprice_row['price_name'] ;
                     }
-
-                    $varprincname =  '비수기'.$to_day_type ;
+                }else{
+                    //$varprincname =  $to_day_type ;
                 }
 
 
@@ -250,17 +246,20 @@ class reserve extends CI_Controller {
             $caltemp .= "<tr>" ;
             for ($k=0; $k<7; $k++):
                 $to_day_type = '';
+                $to_day_type2 = '';
                 switch (  $k ) {
                     case 5 :
                         $ncolor = "color:blue";
-                         $to_day_type = " - 주말(금)";
+                        $to_day_type = "주말(금)";
                         break ;
                     case 6 :
                         $ncolor = "color:red";
-                        $to_day_type = " - 주말";
+                        $to_day_type = "주말";
                         break ;
                     default :
                         $ncolor = "";
+                        $to_day_type = '';
+                        $to_day_type2 = '';
                         break;
                 }
 
@@ -370,38 +369,54 @@ class reserve extends CI_Controller {
                 ';*/
 
                 $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
+                /*  echo '<xmp>';
+                    echo print_r($varprice_row);
+                    echo '</xmp>';*/
+
                 $sda = array_pop(explode("-",$varprice_row['start_date']));
                 $eda = array_pop(explode("-",$varprice_row['end_date']));
 
-                //echo $sda." / ".$tt." / ".$eda;
-
-                if($sda <= $tt && $eda >= $tt ){
-
-                    // echo "<-1-"."<br>";
-
-                    if($varprice_row['price_name'] == '성수기') $kname = "sung_price";
-                    if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') $kname = "jun_price";
-
-                    if($to_day_type) {
-                        $kname_ = $kname."2";
-                        $varprinc = $room_info[$kname_];
-                    }else{
-                        $varprinc = $room_info[$kname];
-                    }
-
-                    $varprincname =  $varprice_row['price_name'].$to_day_type ;
 
 
-                }else{
+               if($varprice_row) {
+                   // echo "<-1-"."<br>";
+
+                   if ($varprice_row['price_name'] == '성수기') {
+                       $kname = "sung_price";
+                   } else if ($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') {
+                       $kname = "jun_price";
+                   } else if ($varprice_row['price_name'] == '연휴') {
+                       $to_day_type2 = 'y';
+                   }
+
+                   if ($to_day_type || $to_day_type2) {
+                       $kname_ = $kname . "2";
+                       $varprinc = $room_info[$kname_];
+                   } else {
+                       $varprinc = $room_info[$kname];
+                   }
+
+                   if ($varprice_row['price_name']) {
+                       if ($to_day_type) {
+                           $varprincname = $varprice_row['price_name'] . " - " . $to_day_type;
+                       } else {
+                           $varprincname = $varprice_row['price_name'] . "";
+                       }
+                   } else {
+                       //$varprincname =  $to_day_type ;
+                   }
+                   $to_day_type2 = '';
+                   $to_day_type = '';
+                   $kname = '';
+                   $kname_ = '';
+               }
 
 
-                  //  $varprincname =  $to_day_type ;
-                }
 
 
                 $caltemp .= '<div class="day " >' . $tt .'일 <span style="color:#a1a1a1" class="ft11">' .$varprincname.'</span></div><div class="text-left m-t40" style="font-size:11px">'.$room_txt.'</div> ';
 
-
+                $varprincname='';
 
 
 
@@ -427,9 +442,50 @@ class reserve extends CI_Controller {
         echo $content;
     }
 
-   
+
+    function get_price($udate){
+        $room_no =$this->input->get_post('room_no');
+
+        $room_info = $this->db->where('no',$room_no)->get('rooms')->row_array();
+
+        $varprice_row = $this->db->where('start_date <= ',$udate)->where('end_date >= ',$udate)->get('month_prices')->row_array();
+
+        $sda = array_pop(explode("-",$varprice_row['start_date']));
+        $eda = array_pop(explode("-",$varprice_row['end_date']));
+
+
+        $kname_='bi_price';
+        if($varprice_row['price_name'] == '성수기') {
+            $kname_ = "sung_price";
+        }else if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') {
+            $kname_ = "jun_price";
+        }else if ($varprice_row['price_name'] == '연휴') {
+            $to_day_type2 = 'y';
+        }
+
+
+
+        if(date('w', strtotime($udate)) == 5 || date('w', strtotime($udate)) == 6 || $to_day_type2){
+            $to_day_type = 'y';
+        }
+
+
+
+        if($to_day_type) {
+            $kname_ = $kname_."2";
+            $varprinc = $room_info[$kname_];
+        }else{
+            $varprinc = $room_info[$kname_];
+        }
+
+
+        return $varprinc;
+
+
+    }
+
     function day(){
-        
+
         if($_GET['day'] && $_GET['room_no']){
 
             if($_GET['day'] == date("Y-m-d")){
@@ -450,8 +506,9 @@ class reserve extends CI_Controller {
 
             $room_info = $this->db->where('no',$_GET['room_no'])->get('rooms')->row_array();
 
-            $data['to_realpan'] =  $this->db->where('todate',$_GET['day'])->where('room_no',$_GET['room_no'])->get('realpans')->row_array();
-           
+
+            $data['to_realpan'] =  $this->db->where('todate <=',$_GET['day'])->where('lastdate >=', $_GET['day'])->where('room_no',$_GET['room_no'])->get('realpans')->row_array();
+
 
             if($room_info){
                 $data['op_info'] = $this->db->where_in('no',explode(",",$room_info['options']))->order_by('no','asc')->get('room_options')->result_array();
@@ -460,7 +517,7 @@ class reserve extends CI_Controller {
                     $options = $_GET['options'];
 
                     for($ii=0; $ii<count($data['op_info']); $ii++) {
-                    	if(in_array($data['op_info'][$ii]['no'],$options)){
+                        if(in_array($data['op_info'][$ii]['no'],$options)){
 
                             $data['op_info'][$ii]['checked']='checked';
                             $data['this_price3'] = $data['this_price3']+$data['op_info'][$ii]['price'];
@@ -473,7 +530,7 @@ class reserve extends CI_Controller {
             $room_list = $this->db->where('room_name',$room_info['room_name'])->order_by('room_number','asc')->get('rooms')->result_array();
 
             for($ii=0; $ii<count($room_list); $ii++) {
-                $room_list[$ii]['realpans'] =  $this->db->where('todate',$_GET['day'])->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
+                $room_list[$ii]['realpans'] =  $this->db->where('todate <=',$_GET['day'])->where('lastdate >=', $_GET['day'])->where('room_no',$room_list[$ii]['no'])->get('realpans')->row_array();
                 /*if(!$room_list[$ii]['realpans'] && !$nos){
                     $room_list[$ii]['checked'] = 'checked';
                     $nos ='y';
@@ -529,7 +586,15 @@ class reserve extends CI_Controller {
             if($_GET['toda']){
                 $data['s_date'] = $_GET['day'];
                 $data['e_date'] = date("Y-m-d",strtotime($_GET['day'].' +'.$_GET['toda'].' day'));
-                $data['this_price'] = $data['this_price'] * $_GET['toda'];
+                // $data['this_price'] = $data['this_price'] * $_GET['toda'];
+
+                for($ii=0; $ii<$_GET['toda']; $ii++) {
+                    $to_date =  date("Y-m-d",strtotime($_GET['day'].' +'.$ii.' day'));
+
+                    $data['this_price'] = $data['this_price']+$this->get_price($to_date);
+
+                }
+
             }
 
             $data['this_price1'] = $data['this_price'];
@@ -579,7 +644,7 @@ class reserve extends CI_Controller {
             $this->display->assign('varprice_row',$varprice_row);
 
         }
-        
+
         $this->display->assign($data);
         if($_GET['mode']) {
             $this->display->define('CONTENT', $this->display->getTemplate('/reserve/day_'.$_GET['mode'].'.html'));
@@ -591,6 +656,8 @@ class reserve extends CI_Controller {
         echo $content;
     }
 
+
+
     function reserve_cp(){
 
 
@@ -601,7 +668,7 @@ class reserve extends CI_Controller {
             $op_info = $this->db->where_in('no',$_POST['options'])->order_by('text','asc')->get('room_options')->result_array();
 
             for($ii=0; $ii<count($op_info); $ii++) {
-            	$opname .= $op_info[$ii]['name']." + ".$op_info[$ii]['price']."원 ,";
+                $opname .= $op_info[$ii]['name']." + ".$op_info[$ii]['price']."원 ,";
             }
             $opname = substr($opname,0,strlen($opname)-1);
         }
@@ -617,32 +684,32 @@ class reserve extends CI_Controller {
             if(!$_POST['pickup']) $_POST['pickup'] = 'N';
 
             for($ii=0; $ii<count($dayLists); $ii++) {
-            	$in_data['code'] = $tcode;
-            	$in_data['room_no'] = $_POST['room_no'];
-            	$in_data['room_cp'] = $_POST['room_cp'];
-            	$in_data['room_name'] = $_POST['room_name'];
-            	$in_data['room_number'] = $_POST['room_number'];
-            	$in_data['startdate'] = $_POST['s_date'];
-            	$in_data['todate'] = $dayLists[$ii];
-            	$in_data['lastdate'] = $_POST['e_date'];
-            	$in_data['name'] = $_POST['name'];
-            	$in_data['phone'] = $_POST['phone'];
-            	$in_data['ptime'] = $_POST['ptime'];
-            	$in_data['pickup'] = $_POST['pickup'];
-            	$in_data['area'] = $_POST['area'];
-            	$in_data['memo'] = $_POST['memo'];
+                $in_data['code'] = $tcode;
+                $in_data['room_no'] = $_POST['room_no'];
+                $in_data['room_cp'] = $_POST['room_cp'];
+                $in_data['room_name'] = $_POST['room_name'];
+                $in_data['room_number'] = $_POST['room_number'];
+                $in_data['startdate'] = $_POST['s_date'];
+                $in_data['todate'] = $dayLists[$ii];
+                $in_data['lastdate'] = $_POST['e_date'];
+                $in_data['name'] = $_POST['name'];
+                $in_data['phone'] = $_POST['phone'];
+                $in_data['ptime'] = $_POST['ptime'];
+                $in_data['pickup'] = $_POST['pickup'];
+                $in_data['area'] = $_POST['area'];
+                $in_data['memo'] = $_POST['memo'];
                 $in_data['price_name'] = $_POST['price_name'];
                 $in_data['totalprice'] = $_POST['totalprice']+0;
-            	$in_data['price1'] = $_POST['price1']+0;
-            	$in_data['price2'] = $_POST['price2']+0;
-            	$in_data['price3'] = $_POST['price3']+0;
-            	$in_data['seongin_val'] = $_POST['seongin_val'];
-            	$in_data['adong_val'] = $_POST['adong_val'];
-            	$in_data['yua_val'] = $_POST['yua_val'];
-            	$in_data['pay_type'] = $_POST['pay_type'];
-            	$in_data['bankname'] = $_POST['bankname'];
-            	$in_data['options'] = $opname;
-            	$in_data['created'] = date("y-m-d H:i:s");
+                $in_data['price1'] = $_POST['price1']+0;
+                $in_data['price2'] = $_POST['price2']+0;
+                $in_data['price3'] = $_POST['price3']+0;
+                $in_data['seongin_val'] = $_POST['seongin_val'];
+                $in_data['adong_val'] = $_POST['adong_val'];
+                $in_data['yua_val'] = $_POST['yua_val'];
+                $in_data['pay_type'] = $_POST['pay_type'];
+                $in_data['bankname'] = $_POST['bankname'];
+                $in_data['options'] = $opname;
+                $in_data['created'] = date("y-m-d H:i:s");
 
                 $this->db->insert('realpans',$in_data);
 
@@ -657,15 +724,15 @@ class reserve extends CI_Controller {
             }else{
                 $email = $oinfo['str_email'];
             }
-/*
+            /*
 
 
-            $this->load->library('email');
-            $this->email->from('noreply@it-compay.kr','펜션관리자');
-            $this->email->to($email);
+                        $this->load->library('email');
+                        $this->email->from('noreply@it-compay.kr','펜션관리자');
+                        $this->email->to($email);
 
-            $this->email->subject('신규예약이 들어왔습니다. - '.$in_data['name'] );
-*/
+                        $this->email->subject('신규예약이 들어왔습니다. - '.$in_data['name'] );
+            */
 
             $msg_text .= '['.$in_data['room_cp'].'] 신규예약이 들어왔습니다.
             
@@ -682,9 +749,9 @@ class reserve extends CI_Controller {
 ";
             $msg_text .= "관리자 : http://resortstay.co.kr/adm#admin/realpans/index/";
 
-         /*   $this->email->message($msg_text);
+            /*   $this->email->message($msg_text);
 
-            $this->email->send();*/
+               $this->email->send();*/
 
             /*$bot_info = json_decode(file_get_contents('https://api.telegram.org/bot314765110:AAG09gfr4x1ephvZHoEbqwtRKask0OP6M0k/getUpdates'),true);
             for($ii=0; $ii<count($bot_info['result']); $ii++) {
