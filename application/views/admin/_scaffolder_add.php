@@ -155,6 +155,11 @@ if(!$to_col_mo) $to_col_mo = '6';
 
                             <? } ?>
 
+
+                                <? if($val['memo'] ){?>
+                                    <div class="text-muted ft12 text-danger m-t5" style="color:blue;font-size:12px"><?=$val['memo']?></div>
+                                <?}?>
+
                             <? if($val['image']){?>
                                 <div class="p-t10">
                                     <img src="<?=$val['value']?$val['value']:$rows[$key]?>" <?if($val['img_w']){?>width="<?=$val['img_w']?>"<?}?> <?if($val['img_h']){?>height="<?=$val['img_h']?>"<?}?> style="<?=$val['sub_style']?>" />

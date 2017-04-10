@@ -63,7 +63,7 @@ class month_price extends Scaffolder {
         $this->data['fields'] = array(
             'year'=>array('title'=>'년','type'=>'select','options' => $years, 'rule'=>'required', 'list_hide'=>false,'list_style'=>'text-align:center;color:blue','label'=>'년'),
             
-            'price_name'=>array('title'=>'구분','type'=>'select','options' => $price_names,'list_style'=>'text-align:center;width:','rule'=>'required'),
+            'price_name'=>array('title'=>'구분','type'=>'select','options' => $price_names,'list_style'=>'text-align:center;width:','rule'=>'required','memo'=>'※ 연휴를 선택하면 주말가격으로 결제됩니다.'),
             'start_date'=>array('title'=>'구분시작일','type'=>'date','list_style'=>'text-align:center;width:150px','rule'=>'required','placeholder'=>'0000-00-00'),
 
             'end_date'=>array('title'=>'구분종료일','type'=>'date','list_style'=>'text-align:center;width:150px','rule'=>'required','placeholder'=>'0000-00-00'),
