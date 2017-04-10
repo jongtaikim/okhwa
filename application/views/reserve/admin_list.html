@@ -22,7 +22,7 @@
     /*.calendar .caltable table td .day{ position:absolute; top:6px; left:6px; color:#999;}*/
     .calendar .caltable button{ background-color:#fff; border:1px solid #ccc; color:#999; padding:4px; width:80px; margin-top:5px; cursor:pointer}
 </style>
-<div class="" >
+<div class="col-md-11" >
 <div class="card  ">
 
     <div class="card-heading bg-light lt  pos_r">
@@ -32,9 +32,9 @@
             예약현황을 관리합니다.
         </small>
     </div>
-    <div class="card-body b-t calendar">
+    <div class="card-body b-t calendar" style="width:100%">
 
-        <div class="caltable text-center m-b20" style="zoom:1.2">
+        <div class="caltable text-center m-b20" style="">
             <form id="FrmAttendanceSearchs"  onsubmit='return false;'>
                 <input type="hidden" name="mode" value="next"/>
 
@@ -44,7 +44,7 @@
                 <input type="hidden" name="str_month" id="str_month" value="{month}" />
 
 
-                <div class="month padding clearfix">
+                <div class="month padding clearfix" style="width:100%">
                     <img src="/images/prev.jpg" onclick="InoutInList.leftdates()" style="cursor:pointer;" >
                     <span id="temp_year">{year}</span>.<span id="temp_month">{month}</span>
                     <img src="/images/next.jpg" onclick="InoutInList.rightdates()" style="cursor:pointer;">
@@ -170,7 +170,7 @@ var InoutInList = {
     lodeindex: function() {
 
         var _data = $('#FrmAttendanceSearchs').serialize()  ;
-        location.href='#admin/realpans/view_cl?year='+$('#str_year').val()+'&month='+$('#str_month').val();
+        location.href='#admin/realpans/view_cl?year='+$('#str_year').val()+'&month='+$('#str_month').val()+'&v='+date("YmdHis");
 
     },
 }

@@ -279,6 +279,7 @@ $colors = "grey-900";
                     url: url,
                     data: {},
                     dataType: 'html',
+                    cache:false,
                     error: function(xhr, e){
                         console.log(e);
                         console.log(xhr);
@@ -349,6 +350,7 @@ $colors = "grey-900";
             type: 'post',
             url: action,
             data: $('form[name='+name+']').serialize(),
+            cache:false,
             dataType:"json",
             error: function(xhr, e){
                 showAlert(word+' 페이지에 접속할 수 없습니다.', 'error', 3000);

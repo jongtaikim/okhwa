@@ -117,7 +117,7 @@ class page extends CI_Controller {
         $row = $this->db -> sqlFetchAll($sql);
         $tpl->assign(array('gong_LIST'=>$row));*/
 
-        $this->display->define('CONTENT', $this->display->getTemplate('/user_page/main.htm'));
+        $this->display->define('CONTENT', $this->display->getTemplate('/'.HOST.'/main.htm'));
         $content = $this->display->fetch('CONTENT');
 
         echo $content;
