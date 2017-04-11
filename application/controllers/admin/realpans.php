@@ -313,9 +313,10 @@ class Realpans extends Scaffolder
                     // echo "<-1-"."<br>";
 
                     if($varprice_row['price_name'] == '성수기') $kname = "sung_price";
+                    if($varprice_row['price_name'] == '연휴') $to_day_type2 = "y";
                     if($varprice_row['price_name'] == '준성수기' || $varprice_row['price_name'] == '준성수기2') $kname = "jun_price";
 
-                    if($to_day_type) {
+                    if($to_day_type || $to_day_type2) {
                         $kname_ = $kname."2";
                         $varprinc = $room_info[$kname_];
                     }else{
