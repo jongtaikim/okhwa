@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="9453e050-e17b-41a4-9c37-eebce91478f0" name="Default" comment="dsfdsf">
+=======
+    <list default="true" id="9453e050-e17b-41a4-9c37-eebce91478f0" name="Default" comment="">
+>>>>>>> Stashed changes
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/admin/month_price.php" afterPath="$PROJECT_DIR$/application/controllers/admin/month_price.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/admin/_scaffolder_add.php" afterPath="$PROJECT_DIR$/application/views/admin/_scaffolder_add.php" />
@@ -100,21 +104,135 @@
       <file leaf-file-name="_scaffolder_add.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/admin/_scaffolder_add.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="323">
               <caret line="155" column="35" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+=======
+            <state relative-caret-position="731">
+              <caret line="534" column="32" selection-start-line="534" selection-start-column="32" selection-end-line="534" selection-end-column="32" />
+              <folding>
+                <marker date="1491873407540" expanded="true" signature="1048:1119" ph="SELECT str_t... ${tab_menu}" />
+                <marker date="1491873407540" expanded="true" signature="1394:1482" ph="SELECT str_t... ${tab_menu}" />
+                <marker date="1491873407540" expanded="true" signature="2618:2964" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="2629:2941" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="2638:2929" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="5376:5389" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="5475:5511" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="5716:5729" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="5806:5841" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="6010:6020" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8390:8862" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8401:8839" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8410:8827" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8453:8464" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8510:8521" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8567:8578" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8624:8635" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8681:8692" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8738:8749" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="8799:8810" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="9788:9800" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11085:11116" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11157:11245" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11467:12554" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11538:12523" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11597:11683" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11684:11749" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11820:12488" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="11888:12091" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="12141:12146" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="12147:12449" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="12260:12365" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13235:13245" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13246:14592" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13299:13308" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13309:13575" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13628:13637" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13638:13904" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13957:13966" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="13967:14233" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="14286:14295" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="14296:14562" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="16997:17010" ph="..." />
+                <marker date="1491873407540" expanded="true" signature="17092:17106" ph="..." />
+>>>>>>> Stashed changes
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="list_web_board.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/board/skin/board/list_web_board.htm">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1411">
               <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="main.htm" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/jade9/main.htm">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reserve_test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/user/reserve_test.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9571">
+              <caret line="563" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="858" selection-end-column="0" />
+              <folding>
+                <marker date="1491536632485" expanded="true" signature="1053:1124" ph="SELECT str_t... ${tab_menu}" />
+                <marker date="1491536632485" expanded="true" signature="1399:1487" ph="SELECT str_t... ${tab_menu}" />
+                <marker date="1491536632485" expanded="true" signature="2625:2971" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="2636:2948" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="2645:2936" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="5382:5395" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="5481:5517" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="5722:5735" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="5812:5847" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="6016:6026" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="8396:8868" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="8407:8845" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="8416:8833" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="8459:8470" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="8516:8527" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="8573:8584" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="8630:8641" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="8687:8698" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="8744:8755" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="8805:8816" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="9672:9684" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="10970:11001" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="11042:11130" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="11352:12439" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="11423:12408" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="11482:11568" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="11569:11634" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="11705:12373" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="11773:11976" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="12026:12031" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="12032:12334" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="12145:12250" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="13120:13130" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="13131:14477" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="13184:13193" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="13194:13460" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="13513:13522" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="13523:13789" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="13842:13851" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="13852:14118" ph="..." />
+                <marker date="1491536632485" expanded="false" signature="14171:14180" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="14181:14447" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="16608:16621" ph="..." />
+                <marker date="1491536632485" expanded="true" signature="16703:16717" ph="..." />
+              </folding>
+>>>>>>> Stashed changes
             </state>
           </provider>
         </entry>
@@ -122,8 +240,13 @@
       <file leaf-file-name="list.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/board/skin/board/list.htm">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
             <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="182" selection-end-column="25" />
+=======
+            <state relative-caret-position="5134">
+              <caret line="302" column="17" selection-start-line="302" selection-start-column="17" selection-end-line="302" selection-end-column="17" />
+>>>>>>> Stashed changes
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#2;n#tbody#0;n#table#0;n#div#1;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#1;n#!!top" expanded="true" />
@@ -133,6 +256,7 @@
           </provider>
         </entry>
       </file>
+<<<<<<< Updated upstream
       <file leaf-file-name="list_gallery.htm" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/board/skin/board/list_gallery.htm">
           <provider selected="true" editor-type-id="text-editor">
@@ -147,6 +271,8 @@
           </provider>
         </entry>
       </file>
+=======
+>>>>>>> Stashed changes
       <file leaf-file-name="board.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/user/board.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -400,6 +526,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -587,6 +715,7 @@
               <option name="myItemId" value="application" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+<<<<<<< Updated upstream
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
@@ -625,6 +754,8 @@
               <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
+=======
+>>>>>>> Stashed changes
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -704,8 +835,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -806,8 +935,21 @@
       <workItem from="1488768362012" duration="5235000" />
       <workItem from="1488848671701" duration="7648000" />
       <workItem from="1488893346929" duration="1064000" />
+<<<<<<< Updated upstream
       <workItem from="1491824515669" duration="622000" />
       <workItem from="1491825708986" duration="262000" />
+=======
+      <workItem from="1488935799626" duration="2693000" />
+      <workItem from="1489551121583" duration="1683000" />
+      <workItem from="1489552855807" duration="1803000" />
+      <workItem from="1489626541679" duration="19000" />
+      <workItem from="1490073405077" duration="260000" />
+      <workItem from="1491197662335" duration="1610000" />
+      <workItem from="1491446563913" duration="2602000" />
+      <workItem from="1491535704161" duration="2536000" />
+      <workItem from="1491551523992" duration="44000" />
+      <workItem from="1491873315064" duration="161000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="dsfdsf">
       <created>1482604831243</created>
@@ -942,18 +1084,65 @@
       <option name="project" value="LOCAL" />
       <updated>1488893802752</updated>
     </task>
+<<<<<<< Updated upstream
     <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="126546000" />
+=======
+    <task id="LOCAL-00020" summary="dsfdsf">
+      <created>1488938188348</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1488938188348</updated>
+    </task>
+    <task id="LOCAL-00021" summary="dsfdsf">
+      <created>1489552798903</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1489552798903</updated>
+    </task>
+    <task id="LOCAL-00022" summary="dsfdsf">
+      <created>1490073586629</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1490073586629</updated>
+    </task>
+    <task id="LOCAL-00023" summary="dsfdsf">
+      <created>1491452622517</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1491452622517</updated>
+    </task>
+    <task id="LOCAL-00024" summary="dsfdsf">
+      <created>1491536680315</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1491536680315</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="139073000" />
+>>>>>>> Stashed changes
   </component>
   <component name="ToolWindowManager">
     <frame x="64" y="54" width="1624" height="973" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+<<<<<<< Updated upstream
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31713554" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34594882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> Stashed changes
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1255,7 +1444,40 @@
         </state>
       </provider>
     </entry>
+<<<<<<< Updated upstream
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/realpans.php">
+=======
+    <entry file="file://$PROJECT_DIR$/application/views/user_page/layout_main.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4675">
+          <caret line="275" column="19" selection-start-line="275" selection-start-column="19" selection-end-line="275" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/user_page/main.htm" />
+    <entry file="file://$PROJECT_DIR$/application/views/user_page/layout_foot.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/okhwa/main.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="23" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user/page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="55" selection-start-line="98" selection-start-column="55" selection-end-line="98" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/reserve/admin_list.html">
+>>>>>>> Stashed changes
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2295">
           <caret line="135" column="111" selection-start-line="135" selection-start-column="111" selection-end-line="135" selection-end-column="111" />
@@ -1265,6 +1487,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/user/reserve.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="11951">
           <caret line="754" column="0" selection-start-line="754" selection-start-column="0" selection-end-line="754" selection-end-column="0" />
           <folding>
@@ -1343,14 +1566,23 @@
             <marker date="1491824550596" expanded="true" signature="34210:34228" ph="..." />
             <marker date="1491824550596" expanded="true" signature="34259:34336" ph="..." />
           </folding>
+=======
+        <state relative-caret-position="459">
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/board/skin/board/list_web_board.htm">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="1411">
           <caret line="83" column="0" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
           <folding />
+=======
+        <state relative-caret-position="646">
+          <caret line="38" column="40" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
@@ -1558,14 +1790,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/jade9/main.htm">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="340">
           <caret line="20" column="18" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
           <folding />
+=======
+        <state relative-caret-position="5134">
+          <caret line="302" column="17" selection-start-line="302" selection-start-column="17" selection-end-line="302" selection-end-column="17" />
+          <folding>
+            <marker date="1491450038262" expanded="true" signature="10201:10673" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="10212:10650" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="10221:10638" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="10264:10275" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="10321:10332" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="10378:10389" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="10435:10446" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="10492:10503" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="10549:10560" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="10610:10621" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="12505:12512" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="12646:12714" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="12984:13580" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="13152:13573" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="13172:13569" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="13225:13232" ph="..." />
+            <marker date="1491450038262" expanded="false" signature="13367:13434" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="14857:14870" ph="..." />
+            <marker date="1491450038262" expanded="true" signature="14939:14953" ph="..." />
+          </folding>
+>>>>>>> Stashed changes
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/admin/month_price.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< Updated upstream
         <state relative-caret-position="255">
           <caret line="66" column="158" selection-start-line="66" selection-start-column="158" selection-end-line="66" selection-end-column="158" />
           <folding />
@@ -1578,6 +1837,116 @@
           <caret line="155" column="35" selection-start-line="155" selection-start-column="35" selection-end-line="155" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#!!top" expanded="true" />
+=======
+        <state relative-caret-position="9571">
+          <caret line="563" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="858" selection-end-column="0" />
+          <folding>
+            <marker date="1491536632485" expanded="true" signature="1053:1124" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1491536632485" expanded="true" signature="1399:1487" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1491536632485" expanded="true" signature="2625:2971" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="2636:2948" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="2645:2936" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="5382:5395" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="5481:5517" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="5722:5735" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="5812:5847" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="6016:6026" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="8396:8868" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="8407:8845" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="8416:8833" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="8459:8470" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="8516:8527" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="8573:8584" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="8630:8641" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="8687:8698" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="8744:8755" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="8805:8816" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="9672:9684" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="10970:11001" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="11042:11130" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="11352:12439" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="11423:12408" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="11482:11568" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="11569:11634" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="11705:12373" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="11773:11976" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="12026:12031" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="12032:12334" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="12145:12250" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="13120:13130" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="13131:14477" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="13184:13193" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="13194:13460" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="13513:13522" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="13523:13789" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="13842:13851" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="13852:14118" ph="..." />
+            <marker date="1491536632485" expanded="false" signature="14171:14180" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="14181:14447" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="16608:16621" ph="..." />
+            <marker date="1491536632485" expanded="true" signature="16703:16717" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/jade9/main.htm">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/user/reserve.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="534" column="32" selection-start-line="534" selection-start-column="32" selection-end-line="534" selection-end-column="32" />
+          <folding>
+            <marker date="1491873407540" expanded="true" signature="1048:1119" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1491873407540" expanded="true" signature="1394:1482" ph="SELECT str_t... ${tab_menu}" />
+            <marker date="1491873407540" expanded="true" signature="2618:2964" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="2629:2941" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="2638:2929" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="5376:5389" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="5475:5511" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="5716:5729" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="5806:5841" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="6010:6020" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8390:8862" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8401:8839" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8410:8827" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8453:8464" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8510:8521" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8567:8578" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8624:8635" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8681:8692" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8738:8749" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="8799:8810" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="9788:9800" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11085:11116" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11157:11245" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11467:12554" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11538:12523" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11597:11683" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11684:11749" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11820:12488" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="11888:12091" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="12141:12146" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="12147:12449" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="12260:12365" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13235:13245" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13246:14592" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13299:13308" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13309:13575" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13628:13637" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13638:13904" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13957:13966" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="13967:14233" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="14286:14295" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="14296:14562" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="16997:17010" ph="..." />
+            <marker date="1491873407540" expanded="true" signature="17092:17106" ph="..." />
+>>>>>>> Stashed changes
           </folding>
         </state>
       </provider>
