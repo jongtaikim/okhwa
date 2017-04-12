@@ -148,8 +148,6 @@ class reserve extends CI_Controller {
                     if ($to_day_type || $to_day_type2) {
                         $kname_ = $kname . "2";
                         $varprinc = $room_info[$kname_];
-                        $to_color =';color:#a5a5ef';
-
                     } else {
                         $varprinc = $room_info[$kname];
                     }
@@ -177,18 +175,17 @@ class reserve extends CI_Controller {
 
 
 
+
                 if(date('Y-m-d') == $udate){
-                    $caltemp .= '<div class="ft11 " style="color:#c2c2c2">' .$varprincname.'&nbsp;</div><div class="day day'.$tt.'  circle danger p-t5 hand" style="width:30px;height:30px;margin: auto;;" onclick="InoutInList.viewday(\''.$udate.'\');">'.$tt.'</div>';
+                    $caltemp .= '<div class="ft11 " style="color:#c2c2c2">' .$varprincname.'&nbsp;</div><div class="day day'.$tt.'  circle danger p-t5 hand" style="width:30px;height:30px;margin: auto;" onclick="InoutInList.viewday(\''.$udate.'\');">'.$tt.'</div>';
                 }else{
                     if(date('Y-m-d') <= $udate) {
-                        $caltemp .= '<div class="ft11 " style="color:#c2c2c2">'.$varprincname.'&nbsp;</div><div class="day day'.$tt.' hand circle p-t5" style="width:30px;height:30px;margin: auto;'.$to_color.'" onclick="javascript:InoutInList.viewday(\''.$udate.'\');">' . $tt . '</div>';
+                        $caltemp .= '<div class="ft11 " style="color:#c2c2c2">'.$varprincname.'&nbsp;</div><div class="day day'.$tt.' hand circle p-t5" style="width:30px;height:30px;margin: auto" onclick="javascript:InoutInList.viewday(\''.$udate.'\');">' . $tt . '</div>';
                     }else{
-
                         $caltemp .= '<div class="day " style="color:#eee">' . $tt . '</div>';
                     }
                 }
                 $varprincname='';
-                $to_color='';
 
                 $caltemp .= '</div>';
 
