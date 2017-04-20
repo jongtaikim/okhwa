@@ -29,8 +29,7 @@ class Site_adm extends CI_Controller {
 		//관리자 공통 모델
 		$this->load->model('admin/admin_init');
 
-        //당일이 아닌경우! 6시간
-        $this->db->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-720 minutes',time())))->delete('realpans');
+        $this->db->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-360 minutes',time())))->delete('realpans');
 
         //당일! 3시간 지난 입금 예약 안되거 취소시켜
         $this->db->where('todate',date("Y-m-d"))->where('created >=',date("Y-m-d")." 00:00:00")->where('created <=',date("Y-m-d")." 23:59:59")->where('pay_state','N')->where('created <',date("Y-m-d H:i:s",strtotime('-180 minutes',time())))->delete('realpans');
