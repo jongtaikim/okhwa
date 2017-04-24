@@ -74,7 +74,8 @@ class pra extends CI_Model {
 		if($_POST_DATA[str_text2]) $datas[str_text2] = addslashes($datas[str_text2]);
 		if($_POST_DATA[str_text3]) $datas[str_text3] = addslashes($datas[str_text3]);
 
-		$this->db->updateQuery($this->ORGAN_TABLE,$datas," num_oid = '"._OID."'");
+        $this->db->where('num_oid',_OID)->update($this->ORGAN_TABLE,$datas);
+
 
 	/*	$this->load->model('/admin/pra');
 		$data = $this->pra->load_text();
