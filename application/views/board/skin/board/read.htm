@@ -30,7 +30,7 @@
 						<iframe width="860" height="615" src="https://www.youtube.com/embed/<?=$utb_codes?>?autoplay=1" frameborder="0" allowfullscreen></iframe>
 					</div>
 					{/}
-					{str_text}
+					{=stripslashes(str_text)}
 			</div>
 		</div>
 		<plug:load src="filelist" sect="{sect}"/>

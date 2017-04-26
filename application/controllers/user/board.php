@@ -239,6 +239,8 @@ class board extends CI_Controller {
                 $tpl->printAll();
 			}else{
 
+
+
                 if($_GET['ch']){
                     $tpl->setLayout('@sub');
                     $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/list_' . $_conf[str_skin] . '.htm'));
@@ -380,7 +382,7 @@ class board extends CI_Controller {
                     $tpl->define('CONTENT', $this->display->getTemplate('board/skin/board/read.htm'));
                     $content = $this->display->fetch('CONTENT');
                     $content = str_replace('/application/views/', '/designs/', $content);
-                    echo $content;
+                    echo stripslashes($content);
                 }
 
 
